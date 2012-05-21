@@ -1787,7 +1787,8 @@ struct per_target_buffer
 	size_t size;
 };
 
-static int per_output(const void *data, size_t size, void *op_key)
+static int
+per_output(const void *data, size_t size, void *op_key)
 {
 	struct per_target_buffer *pb = op_key;
 	if (pb->size < (pb->pos + size)) {
@@ -1803,6 +1804,25 @@ static int per_output(const void *data, size_t size, void *op_key)
 	pb->pos += size;
 
 	return 0;
+}
+
+static const char *
+asn_dec_rval_code_str(enum asn_dec_rval_code_e code)
+{
+    switch(code)
+    {
+    case RC_OK:
+	return "RC_OK - Decoded successfully";
+
+    case RC_WMORE:
+	return "RC_WMORE - More data expected, call again";
+
+    case RC_FAIL:
+	return "RC_FAIL - Failure to decode data";
+
+    default:
+	return "Unknown decoder error code";
+    }
 }
 
 MsgBuffer
@@ -1823,9 +1843,11 @@ encode_ulp_pdu(struct ULP_PDU *pdu)
 
 	if (rval.encoded == -1) {
 		free(per_buf.buf);
-		croak("error encoding ULP pdu: (insert asn1c error here)");
+		croak("error encoding ULP pdu %s: %s",
+			rval.failed_type->name,
+			strerror(errno));
 
-		return retbuf;
+		return retbuf; /* unreached */
 	}
 
 	if (0 == pdu->length) {
@@ -1843,9 +1865,11 @@ encode_ulp_pdu(struct ULP_PDU *pdu)
 
 	if (rval.encoded == -1) {
 		free(per_buf.buf);
-		croak("error encoding ULP pdu: (insert asn1c error here)");
+		croak("error encoding ULP pdu %s: %s",
+			rval.failed_type->name,
+			strerror(errno));
 
-		return retbuf;
+		return retbuf; /* unreached */
 	}
 
 	retbuf.buf = per_buf.buf;
@@ -1868,15 +1892,20 @@ decode_ulp_pdu(MsgBuffer buf)
 					NULL, (void **)&ulp_pdu,
 					&per_data);
 	if (rval.code != RC_OK) {
-		croak("error parsing ULP pdu: (insert asn1c error here)");
-
 		/* Free partially decoded ulp-pdu */
 		asn_DEF_ULP_PDU.free_struct(
 			&asn_DEF_ULP_PDU, ulp_pdu, 0);
-		return;
+
+		croak("error parsing ULP pdu on byte %u with %s",
+			(unsigned)rval.consumed,
+			asn_dec_rval_code_str(rval.code));
+
+		return NULL; /* unreached */
 	}
 
+#if 0
 	xer_fprint(stdout, &asn_DEF_ULP_PDU, ulp_pdu);
+#endif
 
 	return ulp_pdu;
 }
@@ -9385,6 +9414,7 @@ XS(_wrap_decode_ulp_pdu) {
       }
       else if( SvFLAGS(ST(0)) & (SVf_OK & ~SVf_ROK) ) {
         char *svbuf = SvPV(ST(0), (&arg1)->size);
+        /* XXX leaking memory here ... find better version */
         (&arg1)->buf = malloc((&arg1)->size); /* XXX prove non-NULL return */
         memcpy((&arg1)->buf, svbuf, (&arg1)->size);
       }
