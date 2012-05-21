@@ -99,8 +99,1042 @@ sub ACQUIRE {
 }
 
 
+############# Class : ULP_PDU::Version_t ##############
+
+package ULP_PDU::Version_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( ULP_PDU );
+%OWNER = ();
+%ITERATORS = ();
+*swig_maj_get = *ULP_PDUc::Version_t_maj_get;
+*swig_maj_set = *ULP_PDUc::Version_t_maj_set;
+*swig_min_get = *ULP_PDUc::Version_t_min_get;
+*swig_min_set = *ULP_PDUc::Version_t_min_set;
+*swig_servind_get = *ULP_PDUc::Version_t_servind_get;
+*swig_servind_set = *ULP_PDUc::Version_t_servind_set;
+*swig__asn_ctx_get = *ULP_PDUc::Version_t__asn_ctx_get;
+*swig__asn_ctx_set = *ULP_PDUc::Version_t__asn_ctx_set;
+sub new {
+    my $pkg = shift;
+    my $self = ULP_PDUc::new_Version_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        ULP_PDUc::delete_Version_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : ULP_PDU::IPAddress_t ##############
+
+package ULP_PDU::IPAddress_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( ULP_PDU );
+%OWNER = ();
+%ITERATORS = ();
+*swig_present_get = *ULP_PDUc::IPAddress_t_present_get;
+*swig_present_set = *ULP_PDUc::IPAddress_t_present_set;
+*swig__asn_ctx_get = *ULP_PDUc::IPAddress_t__asn_ctx_get;
+*swig__asn_ctx_set = *ULP_PDUc::IPAddress_t__asn_ctx_set;
+*swig_choice_get = *ULP_PDUc::IPAddress_t_choice_get;
+*swig_choice_set = *ULP_PDUc::IPAddress_t_choice_set;
+sub new {
+    my $pkg = shift;
+    my $self = ULP_PDUc::new_IPAddress_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        ULP_PDUc::delete_IPAddress_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : ULP_PDU::IPAddress_t_choice ##############
+
+package ULP_PDU::IPAddress_t_choice;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( ULP_PDU );
+%OWNER = ();
+%ITERATORS = ();
+*swig_ipv4Address_get = *ULP_PDUc::IPAddress_t_choice_ipv4Address_get;
+*swig_ipv4Address_set = *ULP_PDUc::IPAddress_t_choice_ipv4Address_set;
+*swig_ipv6Address_get = *ULP_PDUc::IPAddress_t_choice_ipv6Address_get;
+*swig_ipv6Address_set = *ULP_PDUc::IPAddress_t_choice_ipv6Address_set;
+sub new {
+    my $pkg = shift;
+    my $self = ULP_PDUc::new_IPAddress_t_choice(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        ULP_PDUc::delete_IPAddress_t_choice($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : ULP_PDU::SETId_t ##############
+
+package ULP_PDU::SETId_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( ULP_PDU );
+%OWNER = ();
+%ITERATORS = ();
+*swig_present_get = *ULP_PDUc::SETId_t_present_get;
+*swig_present_set = *ULP_PDUc::SETId_t_present_set;
+*swig__asn_ctx_get = *ULP_PDUc::SETId_t__asn_ctx_get;
+*swig__asn_ctx_set = *ULP_PDUc::SETId_t__asn_ctx_set;
+*swig_choice_get = *ULP_PDUc::SETId_t_choice_get;
+*swig_choice_set = *ULP_PDUc::SETId_t_choice_set;
+sub new {
+    my $pkg = shift;
+    my $self = ULP_PDUc::new_SETId_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        ULP_PDUc::delete_SETId_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : ULP_PDU::SETId_t_choice ##############
+
+package ULP_PDU::SETId_t_choice;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( ULP_PDU );
+%OWNER = ();
+%ITERATORS = ();
+*swig_msisdn_get = *ULP_PDUc::SETId_t_choice_msisdn_get;
+*swig_msisdn_set = *ULP_PDUc::SETId_t_choice_msisdn_set;
+*swig_mdn_get = *ULP_PDUc::SETId_t_choice_mdn_get;
+*swig_mdn_set = *ULP_PDUc::SETId_t_choice_mdn_set;
+*swig_min_get = *ULP_PDUc::SETId_t_choice_min_get;
+*swig_min_set = *ULP_PDUc::SETId_t_choice_min_set;
+*swig_imsi_get = *ULP_PDUc::SETId_t_choice_imsi_get;
+*swig_imsi_set = *ULP_PDUc::SETId_t_choice_imsi_set;
+*swig_nai_get = *ULP_PDUc::SETId_t_choice_nai_get;
+*swig_nai_set = *ULP_PDUc::SETId_t_choice_nai_set;
+*swig_iPAddress_get = *ULP_PDUc::SETId_t_choice_iPAddress_get;
+*swig_iPAddress_set = *ULP_PDUc::SETId_t_choice_iPAddress_set;
+sub new {
+    my $pkg = shift;
+    my $self = ULP_PDUc::new_SETId_t_choice(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        ULP_PDUc::delete_SETId_t_choice($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : ULP_PDU::SetSessionID_t ##############
+
+package ULP_PDU::SetSessionID_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( ULP_PDU );
+%OWNER = ();
+%ITERATORS = ();
+*swig_sessionId_get = *ULP_PDUc::SetSessionID_t_sessionId_get;
+*swig_sessionId_set = *ULP_PDUc::SetSessionID_t_sessionId_set;
+*swig_setId_get = *ULP_PDUc::SetSessionID_t_setId_get;
+*swig_setId_set = *ULP_PDUc::SetSessionID_t_setId_set;
+*swig__asn_ctx_get = *ULP_PDUc::SetSessionID_t__asn_ctx_get;
+*swig__asn_ctx_set = *ULP_PDUc::SetSessionID_t__asn_ctx_set;
+sub new {
+    my $pkg = shift;
+    my $self = ULP_PDUc::new_SetSessionID_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        ULP_PDUc::delete_SetSessionID_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : ULP_PDU::SLPAddress_t ##############
+
+package ULP_PDU::SLPAddress_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( ULP_PDU );
+%OWNER = ();
+%ITERATORS = ();
+*swig_present_get = *ULP_PDUc::SLPAddress_t_present_get;
+*swig_present_set = *ULP_PDUc::SLPAddress_t_present_set;
+*swig__asn_ctx_get = *ULP_PDUc::SLPAddress_t__asn_ctx_get;
+*swig__asn_ctx_set = *ULP_PDUc::SLPAddress_t__asn_ctx_set;
+*swig_choice_get = *ULP_PDUc::SLPAddress_t_choice_get;
+*swig_choice_set = *ULP_PDUc::SLPAddress_t_choice_set;
+sub new {
+    my $pkg = shift;
+    my $self = ULP_PDUc::new_SLPAddress_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        ULP_PDUc::delete_SLPAddress_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : ULP_PDU::SLPAddress_t_choice ##############
+
+package ULP_PDU::SLPAddress_t_choice;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( ULP_PDU );
+%OWNER = ();
+%ITERATORS = ();
+*swig_iPAddress_get = *ULP_PDUc::SLPAddress_t_choice_iPAddress_get;
+*swig_iPAddress_set = *ULP_PDUc::SLPAddress_t_choice_iPAddress_set;
+*swig_fQDN_get = *ULP_PDUc::SLPAddress_t_choice_fQDN_get;
+*swig_fQDN_set = *ULP_PDUc::SLPAddress_t_choice_fQDN_set;
+sub new {
+    my $pkg = shift;
+    my $self = ULP_PDUc::new_SLPAddress_t_choice(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        ULP_PDUc::delete_SLPAddress_t_choice($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : ULP_PDU::SlpSessionID_t ##############
+
+package ULP_PDU::SlpSessionID_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( ULP_PDU );
+%OWNER = ();
+%ITERATORS = ();
+*swig_sessionID_get = *ULP_PDUc::SlpSessionID_t_sessionID_get;
+*swig_sessionID_set = *ULP_PDUc::SlpSessionID_t_sessionID_set;
+*swig_slpId_get = *ULP_PDUc::SlpSessionID_t_slpId_get;
+*swig_slpId_set = *ULP_PDUc::SlpSessionID_t_slpId_set;
+*swig__asn_ctx_get = *ULP_PDUc::SlpSessionID_t__asn_ctx_get;
+*swig__asn_ctx_set = *ULP_PDUc::SlpSessionID_t__asn_ctx_set;
+sub new {
+    my $pkg = shift;
+    my $self = ULP_PDUc::new_SlpSessionID_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        ULP_PDUc::delete_SlpSessionID_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : ULP_PDU::SessionID_t ##############
+
+package ULP_PDU::SessionID_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( ULP_PDU );
+%OWNER = ();
+%ITERATORS = ();
+*swig_setSessionID_get = *ULP_PDUc::SessionID_t_setSessionID_get;
+*swig_setSessionID_set = *ULP_PDUc::SessionID_t_setSessionID_set;
+*swig_slpSessionID_get = *ULP_PDUc::SessionID_t_slpSessionID_get;
+*swig_slpSessionID_set = *ULP_PDUc::SessionID_t_slpSessionID_set;
+*swig__asn_ctx_get = *ULP_PDUc::SessionID_t__asn_ctx_get;
+*swig__asn_ctx_set = *ULP_PDUc::SessionID_t__asn_ctx_set;
+sub new {
+    my $pkg = shift;
+    my $self = ULP_PDUc::new_SessionID_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        ULP_PDUc::delete_SessionID_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : ULP_PDU::UlpMessage_t ##############
+
+package ULP_PDU::UlpMessage_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( ULP_PDU );
+%OWNER = ();
+%ITERATORS = ();
+*swig_present_get = *ULP_PDUc::UlpMessage_t_present_get;
+*swig_present_set = *ULP_PDUc::UlpMessage_t_present_set;
+*swig__asn_ctx_get = *ULP_PDUc::UlpMessage_t__asn_ctx_get;
+*swig__asn_ctx_set = *ULP_PDUc::UlpMessage_t__asn_ctx_set;
+*swig_choice_get = *ULP_PDUc::UlpMessage_t_choice_get;
+*swig_choice_set = *ULP_PDUc::UlpMessage_t_choice_set;
+sub new {
+    my $pkg = shift;
+    my $self = ULP_PDUc::new_UlpMessage_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        ULP_PDUc::delete_UlpMessage_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : ULP_PDU::UlpMessage_t_choice ##############
+
+package ULP_PDU::UlpMessage_t_choice;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( ULP_PDU );
+%OWNER = ();
+%ITERATORS = ();
+*swig_msSUPLINIT_get = *ULP_PDUc::UlpMessage_t_choice_msSUPLINIT_get;
+*swig_msSUPLINIT_set = *ULP_PDUc::UlpMessage_t_choice_msSUPLINIT_set;
+*swig_msSUPLSTART_get = *ULP_PDUc::UlpMessage_t_choice_msSUPLSTART_get;
+*swig_msSUPLSTART_set = *ULP_PDUc::UlpMessage_t_choice_msSUPLSTART_set;
+*swig_msSUPLRESPONSE_get = *ULP_PDUc::UlpMessage_t_choice_msSUPLRESPONSE_get;
+*swig_msSUPLRESPONSE_set = *ULP_PDUc::UlpMessage_t_choice_msSUPLRESPONSE_set;
+*swig_msSUPLPOSINIT_get = *ULP_PDUc::UlpMessage_t_choice_msSUPLPOSINIT_get;
+*swig_msSUPLPOSINIT_set = *ULP_PDUc::UlpMessage_t_choice_msSUPLPOSINIT_set;
+*swig_msSUPLPOS_get = *ULP_PDUc::UlpMessage_t_choice_msSUPLPOS_get;
+*swig_msSUPLPOS_set = *ULP_PDUc::UlpMessage_t_choice_msSUPLPOS_set;
+*swig_msSUPLEND_get = *ULP_PDUc::UlpMessage_t_choice_msSUPLEND_get;
+*swig_msSUPLEND_set = *ULP_PDUc::UlpMessage_t_choice_msSUPLEND_set;
+*swig_msSUPLAUTHREQ_get = *ULP_PDUc::UlpMessage_t_choice_msSUPLAUTHREQ_get;
+*swig_msSUPLAUTHREQ_set = *ULP_PDUc::UlpMessage_t_choice_msSUPLAUTHREQ_set;
+*swig_msSUPLAUTHRESP_get = *ULP_PDUc::UlpMessage_t_choice_msSUPLAUTHRESP_get;
+*swig_msSUPLAUTHRESP_set = *ULP_PDUc::UlpMessage_t_choice_msSUPLAUTHRESP_set;
+sub new {
+    my $pkg = shift;
+    my $self = ULP_PDUc::new_UlpMessage_t_choice(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        ULP_PDUc::delete_UlpMessage_t_choice($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : ULP_PDU::Notification_t ##############
+
+package ULP_PDU::Notification_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( ULP_PDU );
+%OWNER = ();
+%ITERATORS = ();
+*swig_notificationType_get = *ULP_PDUc::Notification_t_notificationType_get;
+*swig_notificationType_set = *ULP_PDUc::Notification_t_notificationType_set;
+*swig_encodingType_get = *ULP_PDUc::Notification_t_encodingType_get;
+*swig_encodingType_set = *ULP_PDUc::Notification_t_encodingType_set;
+*swig_requestorId_get = *ULP_PDUc::Notification_t_requestorId_get;
+*swig_requestorId_set = *ULP_PDUc::Notification_t_requestorId_set;
+*swig_requestorIdType_get = *ULP_PDUc::Notification_t_requestorIdType_get;
+*swig_requestorIdType_set = *ULP_PDUc::Notification_t_requestorIdType_set;
+*swig_clientName_get = *ULP_PDUc::Notification_t_clientName_get;
+*swig_clientName_set = *ULP_PDUc::Notification_t_clientName_set;
+*swig_clientNameType_get = *ULP_PDUc::Notification_t_clientNameType_get;
+*swig_clientNameType_set = *ULP_PDUc::Notification_t_clientNameType_set;
+*swig__asn_ctx_get = *ULP_PDUc::Notification_t__asn_ctx_get;
+*swig__asn_ctx_set = *ULP_PDUc::Notification_t__asn_ctx_set;
+sub new {
+    my $pkg = shift;
+    my $self = ULP_PDUc::new_Notification_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        ULP_PDUc::delete_Notification_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : ULP_PDU::QoP_t ##############
+
+package ULP_PDU::QoP_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( ULP_PDU );
+%OWNER = ();
+%ITERATORS = ();
+*swig_horacc_get = *ULP_PDUc::QoP_t_horacc_get;
+*swig_horacc_set = *ULP_PDUc::QoP_t_horacc_set;
+*swig_veracc_get = *ULP_PDUc::QoP_t_veracc_get;
+*swig_veracc_set = *ULP_PDUc::QoP_t_veracc_set;
+*swig_maxLocAge_get = *ULP_PDUc::QoP_t_maxLocAge_get;
+*swig_maxLocAge_set = *ULP_PDUc::QoP_t_maxLocAge_set;
+*swig_delay_get = *ULP_PDUc::QoP_t_delay_get;
+*swig_delay_set = *ULP_PDUc::QoP_t_delay_set;
+*swig__asn_ctx_get = *ULP_PDUc::QoP_t__asn_ctx_get;
+*swig__asn_ctx_set = *ULP_PDUc::QoP_t__asn_ctx_set;
+sub new {
+    my $pkg = shift;
+    my $self = ULP_PDUc::new_QoP_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        ULP_PDUc::delete_QoP_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : ULP_PDU::SUPLINIT_t ##############
+
+package ULP_PDU::SUPLINIT_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( ULP_PDU );
+%OWNER = ();
+%ITERATORS = ();
+*swig_posMethod_get = *ULP_PDUc::SUPLINIT_t_posMethod_get;
+*swig_posMethod_set = *ULP_PDUc::SUPLINIT_t_posMethod_set;
+*swig_notification_get = *ULP_PDUc::SUPLINIT_t_notification_get;
+*swig_notification_set = *ULP_PDUc::SUPLINIT_t_notification_set;
+*swig_sLPAddress_get = *ULP_PDUc::SUPLINIT_t_sLPAddress_get;
+*swig_sLPAddress_set = *ULP_PDUc::SUPLINIT_t_sLPAddress_set;
+*swig_qoP_get = *ULP_PDUc::SUPLINIT_t_qoP_get;
+*swig_qoP_set = *ULP_PDUc::SUPLINIT_t_qoP_set;
+*swig_sLPMode_get = *ULP_PDUc::SUPLINIT_t_sLPMode_get;
+*swig_sLPMode_set = *ULP_PDUc::SUPLINIT_t_sLPMode_set;
+*swig_mAC_get = *ULP_PDUc::SUPLINIT_t_mAC_get;
+*swig_mAC_set = *ULP_PDUc::SUPLINIT_t_mAC_set;
+*swig_keyIdentity_get = *ULP_PDUc::SUPLINIT_t_keyIdentity_get;
+*swig_keyIdentity_set = *ULP_PDUc::SUPLINIT_t_keyIdentity_set;
+*swig__asn_ctx_get = *ULP_PDUc::SUPLINIT_t__asn_ctx_get;
+*swig__asn_ctx_set = *ULP_PDUc::SUPLINIT_t__asn_ctx_set;
+sub new {
+    my $pkg = shift;
+    my $self = ULP_PDUc::new_SUPLINIT_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        ULP_PDUc::delete_SUPLINIT_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : ULP_PDU::SUPLSTART_t ##############
+
+package ULP_PDU::SUPLSTART_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( ULP_PDU );
+%OWNER = ();
+%ITERATORS = ();
+*swig_sETCapabilities_get = *ULP_PDUc::SUPLSTART_t_sETCapabilities_get;
+*swig_sETCapabilities_set = *ULP_PDUc::SUPLSTART_t_sETCapabilities_set;
+*swig_locationId_get = *ULP_PDUc::SUPLSTART_t_locationId_get;
+*swig_locationId_set = *ULP_PDUc::SUPLSTART_t_locationId_set;
+*swig_qoP_get = *ULP_PDUc::SUPLSTART_t_qoP_get;
+*swig_qoP_set = *ULP_PDUc::SUPLSTART_t_qoP_set;
+*swig__asn_ctx_get = *ULP_PDUc::SUPLSTART_t__asn_ctx_get;
+*swig__asn_ctx_set = *ULP_PDUc::SUPLSTART_t__asn_ctx_set;
+sub new {
+    my $pkg = shift;
+    my $self = ULP_PDUc::new_SUPLSTART_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        ULP_PDUc::delete_SUPLSTART_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : ULP_PDU::SUPLRESPONSE_t ##############
+
+package ULP_PDU::SUPLRESPONSE_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( ULP_PDU );
+%OWNER = ();
+%ITERATORS = ();
+*swig_posMethod_get = *ULP_PDUc::SUPLRESPONSE_t_posMethod_get;
+*swig_posMethod_set = *ULP_PDUc::SUPLRESPONSE_t_posMethod_set;
+*swig_sLPAddress_get = *ULP_PDUc::SUPLRESPONSE_t_sLPAddress_get;
+*swig_sLPAddress_set = *ULP_PDUc::SUPLRESPONSE_t_sLPAddress_set;
+*swig_sETAuthKey_get = *ULP_PDUc::SUPLRESPONSE_t_sETAuthKey_get;
+*swig_sETAuthKey_set = *ULP_PDUc::SUPLRESPONSE_t_sETAuthKey_set;
+*swig_keyIdentity4_get = *ULP_PDUc::SUPLRESPONSE_t_keyIdentity4_get;
+*swig_keyIdentity4_set = *ULP_PDUc::SUPLRESPONSE_t_keyIdentity4_set;
+*swig__asn_ctx_get = *ULP_PDUc::SUPLRESPONSE_t__asn_ctx_get;
+*swig__asn_ctx_set = *ULP_PDUc::SUPLRESPONSE_t__asn_ctx_set;
+sub new {
+    my $pkg = shift;
+    my $self = ULP_PDUc::new_SUPLRESPONSE_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        ULP_PDUc::delete_SUPLRESPONSE_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : ULP_PDU::SUPLPOSINIT_t ##############
+
+package ULP_PDU::SUPLPOSINIT_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( ULP_PDU );
+%OWNER = ();
+%ITERATORS = ();
+*swig_sETCapabilities_get = *ULP_PDUc::SUPLPOSINIT_t_sETCapabilities_get;
+*swig_sETCapabilities_set = *ULP_PDUc::SUPLPOSINIT_t_sETCapabilities_set;
+*swig_requestedAssistData_get = *ULP_PDUc::SUPLPOSINIT_t_requestedAssistData_get;
+*swig_requestedAssistData_set = *ULP_PDUc::SUPLPOSINIT_t_requestedAssistData_set;
+*swig_locationId_get = *ULP_PDUc::SUPLPOSINIT_t_locationId_get;
+*swig_locationId_set = *ULP_PDUc::SUPLPOSINIT_t_locationId_set;
+*swig_position_get = *ULP_PDUc::SUPLPOSINIT_t_position_get;
+*swig_position_set = *ULP_PDUc::SUPLPOSINIT_t_position_set;
+*swig_sUPLPOS_get = *ULP_PDUc::SUPLPOSINIT_t_sUPLPOS_get;
+*swig_sUPLPOS_set = *ULP_PDUc::SUPLPOSINIT_t_sUPLPOS_set;
+*swig_ver_get = *ULP_PDUc::SUPLPOSINIT_t_ver_get;
+*swig_ver_set = *ULP_PDUc::SUPLPOSINIT_t_ver_set;
+*swig__asn_ctx_get = *ULP_PDUc::SUPLPOSINIT_t__asn_ctx_get;
+*swig__asn_ctx_set = *ULP_PDUc::SUPLPOSINIT_t__asn_ctx_set;
+sub new {
+    my $pkg = shift;
+    my $self = ULP_PDUc::new_SUPLPOSINIT_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        ULP_PDUc::delete_SUPLPOSINIT_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : ULP_PDU::SUPLPOS_t ##############
+
+package ULP_PDU::SUPLPOS_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( ULP_PDU );
+%OWNER = ();
+%ITERATORS = ();
+*swig_posPayLoad_get = *ULP_PDUc::SUPLPOS_t_posPayLoad_get;
+*swig_posPayLoad_set = *ULP_PDUc::SUPLPOS_t_posPayLoad_set;
+*swig_velocity_get = *ULP_PDUc::SUPLPOS_t_velocity_get;
+*swig_velocity_set = *ULP_PDUc::SUPLPOS_t_velocity_set;
+*swig__asn_ctx_get = *ULP_PDUc::SUPLPOS_t__asn_ctx_get;
+*swig__asn_ctx_set = *ULP_PDUc::SUPLPOS_t__asn_ctx_set;
+sub new {
+    my $pkg = shift;
+    my $self = ULP_PDUc::new_SUPLPOS_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        ULP_PDUc::delete_SUPLPOS_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : ULP_PDU::SUPLEND_t ##############
+
+package ULP_PDU::SUPLEND_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( ULP_PDU );
+%OWNER = ();
+%ITERATORS = ();
+*swig_position_get = *ULP_PDUc::SUPLEND_t_position_get;
+*swig_position_set = *ULP_PDUc::SUPLEND_t_position_set;
+*swig_statusCode_get = *ULP_PDUc::SUPLEND_t_statusCode_get;
+*swig_statusCode_set = *ULP_PDUc::SUPLEND_t_statusCode_set;
+*swig_ver_get = *ULP_PDUc::SUPLEND_t_ver_get;
+*swig_ver_set = *ULP_PDUc::SUPLEND_t_ver_set;
+*swig__asn_ctx_get = *ULP_PDUc::SUPLEND_t__asn_ctx_get;
+*swig__asn_ctx_set = *ULP_PDUc::SUPLEND_t__asn_ctx_set;
+sub new {
+    my $pkg = shift;
+    my $self = ULP_PDUc::new_SUPLEND_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        ULP_PDUc::delete_SUPLEND_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : ULP_PDU::SUPLAUTHREQ_t ##############
+
+package ULP_PDU::SUPLAUTHREQ_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( ULP_PDU );
+%OWNER = ();
+%ITERATORS = ();
+*swig_sETNonce_get = *ULP_PDUc::SUPLAUTHREQ_t_sETNonce_get;
+*swig_sETNonce_set = *ULP_PDUc::SUPLAUTHREQ_t_sETNonce_set;
+*swig_keyIdentity2_get = *ULP_PDUc::SUPLAUTHREQ_t_keyIdentity2_get;
+*swig_keyIdentity2_set = *ULP_PDUc::SUPLAUTHREQ_t_keyIdentity2_set;
+*swig__asn_ctx_get = *ULP_PDUc::SUPLAUTHREQ_t__asn_ctx_get;
+*swig__asn_ctx_set = *ULP_PDUc::SUPLAUTHREQ_t__asn_ctx_set;
+sub new {
+    my $pkg = shift;
+    my $self = ULP_PDUc::new_SUPLAUTHREQ_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        ULP_PDUc::delete_SUPLAUTHREQ_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : ULP_PDU::SUPLAUTHRESP_t ##############
+
+package ULP_PDU::SUPLAUTHRESP_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( ULP_PDU );
+%OWNER = ();
+%ITERATORS = ();
+*swig_sPCAuthKey_get = *ULP_PDUc::SUPLAUTHRESP_t_sPCAuthKey_get;
+*swig_sPCAuthKey_set = *ULP_PDUc::SUPLAUTHRESP_t_sPCAuthKey_set;
+*swig_keyIdentity3_get = *ULP_PDUc::SUPLAUTHRESP_t_keyIdentity3_get;
+*swig_keyIdentity3_set = *ULP_PDUc::SUPLAUTHRESP_t_keyIdentity3_set;
+*swig_statusCode_get = *ULP_PDUc::SUPLAUTHRESP_t_statusCode_get;
+*swig_statusCode_set = *ULP_PDUc::SUPLAUTHRESP_t_statusCode_set;
+*swig__asn_ctx_get = *ULP_PDUc::SUPLAUTHRESP_t__asn_ctx_get;
+*swig__asn_ctx_set = *ULP_PDUc::SUPLAUTHRESP_t__asn_ctx_set;
+sub new {
+    my $pkg = shift;
+    my $self = ULP_PDUc::new_SUPLAUTHRESP_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        ULP_PDUc::delete_SUPLAUTHRESP_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
 # ------- VARIABLE STUBS --------
 
 package ULP_PDU;
 
+*IPAddress_PR_NOTHING = *ULP_PDUc::IPAddress_PR_NOTHING;
+*IPAddress_PR_ipv4Address = *ULP_PDUc::IPAddress_PR_ipv4Address;
+*IPAddress_PR_ipv6Address = *ULP_PDUc::IPAddress_PR_ipv6Address;
+*SETId_PR_NOTHING = *ULP_PDUc::SETId_PR_NOTHING;
+*SETId_PR_msisdn = *ULP_PDUc::SETId_PR_msisdn;
+*SETId_PR_mdn = *ULP_PDUc::SETId_PR_mdn;
+*SETId_PR_min = *ULP_PDUc::SETId_PR_min;
+*SETId_PR_imsi = *ULP_PDUc::SETId_PR_imsi;
+*SETId_PR_nai = *ULP_PDUc::SETId_PR_nai;
+*SETId_PR_iPAddress = *ULP_PDUc::SETId_PR_iPAddress;
+*SLPAddress_PR_NOTHING = *ULP_PDUc::SLPAddress_PR_NOTHING;
+*SLPAddress_PR_iPAddress = *ULP_PDUc::SLPAddress_PR_iPAddress;
+*SLPAddress_PR_fQDN = *ULP_PDUc::SLPAddress_PR_fQDN;
+*UlpMessage_PR_NOTHING = *ULP_PDUc::UlpMessage_PR_NOTHING;
+*UlpMessage_PR_msSUPLINIT = *ULP_PDUc::UlpMessage_PR_msSUPLINIT;
+*UlpMessage_PR_msSUPLSTART = *ULP_PDUc::UlpMessage_PR_msSUPLSTART;
+*UlpMessage_PR_msSUPLRESPONSE = *ULP_PDUc::UlpMessage_PR_msSUPLRESPONSE;
+*UlpMessage_PR_msSUPLPOSINIT = *ULP_PDUc::UlpMessage_PR_msSUPLPOSINIT;
+*UlpMessage_PR_msSUPLPOS = *ULP_PDUc::UlpMessage_PR_msSUPLPOS;
+*UlpMessage_PR_msSUPLEND = *ULP_PDUc::UlpMessage_PR_msSUPLEND;
+*UlpMessage_PR_msSUPLAUTHREQ = *ULP_PDUc::UlpMessage_PR_msSUPLAUTHREQ;
+*UlpMessage_PR_msSUPLAUTHRESP = *ULP_PDUc::UlpMessage_PR_msSUPLAUTHRESP;
+*PosMethod_agpsSETassisted = *ULP_PDUc::PosMethod_agpsSETassisted;
+*PosMethod_agpsSETbased = *ULP_PDUc::PosMethod_agpsSETbased;
+*PosMethod_agpsSETassistedpref = *ULP_PDUc::PosMethod_agpsSETassistedpref;
+*PosMethod_agpsSETbasedpref = *ULP_PDUc::PosMethod_agpsSETbasedpref;
+*PosMethod_autonomousGPS = *ULP_PDUc::PosMethod_autonomousGPS;
+*PosMethod_aFLT = *ULP_PDUc::PosMethod_aFLT;
+*PosMethod_eCID = *ULP_PDUc::PosMethod_eCID;
+*PosMethod_eOTD = *ULP_PDUc::PosMethod_eOTD;
+*PosMethod_oTDOA = *ULP_PDUc::PosMethod_oTDOA;
+*PosMethod_noPosition = *ULP_PDUc::PosMethod_noPosition;
+*SLPMode_proxy = *ULP_PDUc::SLPMode_proxy;
+*SLPMode_nonProxy = *ULP_PDUc::SLPMode_nonProxy;
 1;
