@@ -20,9 +20,6 @@ sub new
 
     bless( $self, $class );
 
-    use Data::Dumper;
-    print Dumper $self;
-
     return $self;
 }
 
@@ -47,7 +44,11 @@ sub Notify
     eval {
 	my $supl_init = ULP_PDU::decode_ulp_pdu($body);
 	print Dumper $supl_init;
-	print Dumper $supl_init->{length};
+	print Dumper $supl_init->{message}->{present};
+	if( $supl_init->{message}->{present} == $ULP_PDU::UlpMessage_PR_msSUPLINIT )
+	{
+	    print "SUPLINIT.PosMethod: ", Dumper $supl_init->{message}->{choice}->{msSUPLINIT}->{posMethod};
+	}
     };
     if($@) {
 	print STDERR "$@\n";
