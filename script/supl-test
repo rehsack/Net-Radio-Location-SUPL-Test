@@ -1,0 +1,28 @@
+#!/usr/bin/perl -w
+
+use strict;
+use warnings;
+
+use 5.010;
+
+use SUPL::RecvPushMsg;
+use SUPL::MainLoop;
+use File::ConfigDir;
+use Config::Any;
+
+sub setup
+{
+    # read config file
+    # if( enable watch suplinit ... ) {
+    my $rpm = SUPL::RecvPushMsg->new();
+    $rpm or die "Can't initialize SUPL PushMessage receiver";
+
+    # if( enable supl translator ... ) {
+    # my $tl = SUPL::Translator->new();
+    # $tl or die "Can't initialize SUPL Translator";
+
+}
+
+setup();
+
+SUPL::MainLoop->run();

@@ -7,6 +7,8 @@ our $VERSION = 0.001;
 
 use ULP_PDU;
 
+use Net::DBus;
+
 =pod
 
 =head1 NAME
@@ -29,6 +31,10 @@ XXX
 =head1 DESCRIPTION
 
 Some Secure UserPlane Location Tests
+
+=cut
+
+=pod
 
 =head1 AUTHOR
 
