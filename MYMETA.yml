@@ -1,11 +1,11 @@
 ---
-abstract: 'Some Secure UserPlane Location Tests'
+abstract: 'Run Test Use-Cases for SUPL'
 author:
   - 'Jens Rehsack <rehsack@cpan.org>'
 build_requires:
   ExtUtils::CBuilder: 0.27
   ExtUtils::ParseXS: 0
-  Test::More: 0
+  Test::More: 0.90
 configure_requires:
   Module::Build: 0.38
 dynamic_config: 0
@@ -20,7 +20,13 @@ provides:
     file: lib/SUPL/Test.pm
     version: 0.001
 requires:
-  perl: 5.008
+  Config::Any: 0
+  Digest::SHA: 0
+  File::ConfigDir: 0.003
+  File::Find::Rule: 0.32
+  Net::DBus: v1.0.0
+  Params::Util: 0.37
+  perl: 5.01
 resources:
   license: http://dev.perl.org/licenses/
 version: 0.001

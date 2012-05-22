@@ -1,5 +1,5 @@
 {
-   "abstract" : "Some Secure UserPlane Location Tests",
+   "abstract" : "Run Test Use-Cases for SUPL",
    "author" : [
       "Jens Rehsack <rehsack@cpan.org>"
    ],
@@ -18,7 +18,7 @@
          "requires" : {
             "ExtUtils::CBuilder" : "0.27",
             "ExtUtils::ParseXS" : "0",
-            "Test::More" : "0"
+            "Test::More" : "0.90"
          }
       },
       "configure" : {
@@ -28,7 +28,13 @@
       },
       "runtime" : {
          "requires" : {
-            "perl" : "5.008"
+            "Config::Any" : "0",
+            "Digest::SHA" : "0",
+            "File::ConfigDir" : "0.003",
+            "File::Find::Rule" : "0.32",
+            "Net::DBus" : "v1.0.0",
+            "Params::Util" : "0.37",
+            "perl" : "5.01"
          }
       }
    },

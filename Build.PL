@@ -25,7 +25,9 @@ my $builder = MyBuilder->new(
 			   'Config::Any' => 0,
 			   'Digest::SHA' => 0,
 			   'File::ConfigDir' => '0.003',
+			   'File::Find::Rule' => '0.32',
 			   'Net::DBus' => '1.0.0',
+			   'Params::Util' => '0.37',
                           },
    add_to_cleanup      => [
                            '*.o',
