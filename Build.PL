@@ -1,4 +1,4 @@
-use 5.008;
+use 5.010;
 use strict;
 use warnings;
 
@@ -15,13 +15,17 @@ my $builder = MyBuilder->new(
    build_requires      => {
                            'ExtUtils::CBuilder'   => '0.27',
                            'ExtUtils::ParseXS'    => 0,
-                           'Test::More'           => 0,
+                           'Test::More'           => '0.90',
                           },
    configure_requires  => {
                            'Module::Build'        => '0.38',
                           },
    requires            => {
-                           'perl' => 5.008,
+                           'perl' => 5.010,
+			   'Config::Any' => 0,
+			   'Digest::SHA' => 0,
+			   'File::ConfigDir' => '0.003',
+			   'Net::DBus' => '1.0.0',
                           },
    add_to_cleanup      => [
                            '*.o',
