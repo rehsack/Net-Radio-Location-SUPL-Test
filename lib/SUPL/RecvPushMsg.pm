@@ -14,6 +14,8 @@ use Net::DBus::Exporter qw(org.ofono.mms.PushConsumer);
 
 use Digest::SHA qw(hmac_sha1);
 
+use SUPL::Test;
+
 sub new
 {
     my $class = $_[0];
@@ -42,26 +44,10 @@ sub Notify
     my $header = shift;
     my $body = shift;
 
-    use Data::Dumper;
-    print Dumper $body;
-
     my $body_str = join( "", map { chr($_) } @$body );
-    print Dumper $body_str;
 
-    # init SUPL::Test and call it's recv'd()
-
-    eval {
-	my $supl_init = ULP_PDU::decode_ulp_pdu($body_str);
-	print Dumper $supl_init;
-	print Dumper $supl_init->{message}->{present};
-	if( $supl_init->{message}->{present} == $ULP_PDU::UlpMessage_PR_msSUPLINIT )
-	{
-	    print "SUPLINIT.PosMethod: ", Dumper $supl_init->{message}->{choice}->{msSUPLINIT}->{posMethod};
-	}
-    };
-    if($@) {
-	print STDERR "$@\n";
-    }
+    my $test = SUPL::Test->new();
+    $test->handle_supl_pdu($body_str);
 
     return 0;
 }
