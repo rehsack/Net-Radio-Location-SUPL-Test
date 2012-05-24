@@ -1847,11 +1847,11 @@ BCD_OCTET_STRING_fromBuf(OCTET_STRING_t *st, const char *str, int len) {
 		}
 
 		if(i%2) {
-			/* lower half-byte */
+			/* lower half-byte - overwrites previously written 0xF */
 			buf[i/2] |= c;
 		} else {
-			/* upper half-byte */
-			buf[i/2] = c * 16;
+			/* upper half-byte - always write 0xF into lower half-byte */
+			buf[i/2] = c * 16 + 15;
 		}
 	}
 	buf[siz] = '\0';	/* Couldn't use memcpy(len+1)! */
@@ -1894,15 +1894,19 @@ BCD_OCTET_STRING_toBuf(OCTET_STRING_t *s, uint8_t *buf, ssize_t bufsiz)
 		if(i%2) {
 			/* lower half-byte */
 			c &= 16;
+			if(0xF == c)
+				break;
 		} else {
 			/* upper half-byte */
 			c /= 16;
 		}
+		if(c > 9)
+			return -EINVAL;
 		c += '0';
 		buf[i] = c;
 	}
 
-	return s->size * 2;
+	return i;
 }
 
 ssize_t

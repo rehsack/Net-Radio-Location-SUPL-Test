@@ -63,8 +63,8 @@ OCTET_STRING_t *OCTET_STRING_new_fromBuf(asn_TYPE_descriptor_t *td,
  * This function clears the previous value of the OCTET STRING (if any)
  * and then allocates a new memory with the specified content (str/size)
  * and copies the source alternating into the upper and lower half-bytes
- * of the OCTET STRING. Odd sources always create a trailing '0' lower
- * half-byte.
+ * of the OCTET STRING. Odd sources always create a trailing '-1' lower
+ * half-byte (0xF).
  * If size = -1, the size of the original string will be determined
  * using strlen(str).
  * If str equals to NULL, the function will silently clear the
@@ -93,7 +93,9 @@ ssize_t OCTET_STRING_toBuf(OCTET_STRING_t *s, uint8_t *buf, ssize_t bufsiz);
 /*
  * This function extracts the content of an octet string which contains
  * binary coded decimals into the given buffer. Each half-byte is expanded
- * and put separately.
+ * and put separately. A lower half-byte of -1 (0xF) signals end of
+ * BCD number and stops decoding there. Any other value greater than 9
+ * leads directly to EINVAL.
  * Returns the number of bytes written into buffer or a negative error
  * code from errno.h (EINVAL for invalid argument, ENOMEM when not
  * enough memory for copying)
