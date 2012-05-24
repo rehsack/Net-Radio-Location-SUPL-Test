@@ -5,22 +5,70 @@ use warnings;
 
 use 5.010;
 
-use SUPL::RecvPushMsg;
-use SUPL::MainLoop;
-use File::ConfigDir;
+use File::ConfigDir qw(:ALL);
 use Config::Any;
+use File::Find::Rule;
+
+require SUPL::MainLoop;
+require SUPL::DBusObject;
 
 sub setup
 {
-    # read config file
-    # if( enable watch suplinit ... ) {
-    my $rpm = SUPL::RecvPushMsg->new();
-    $rpm or die "Can't initialize SUPL PushMessage receiver";
 
-    # if( enable supl translator ... ) {
-    # my $tl = SUPL::Translator->new();
-    # $tl or die "Can't initialize SUPL Translator";
+    # find config file
+    my @cfg_dirs    = config_dirs();
+    my @cfg_pattern = map { "supl-test." . $_ } Config::Any->extensions();
+    my @cfg_files   = File::Find::Rule->file()->name(@cfg_pattern)->maxdepth(1)->in(@cfg_dirs);
 
+    # default config
+    my %cfg = (
+                "dbus-objects" => {
+                                    "default" => {
+                                                   "bus-name"    => "org.vfnet.supl",
+                                                 },
+                                    "RecvPushMsg" => {
+					"object-path" => "/org/vfnet/supl/PushConsumer",
+				    },
+                                    "Translator"  => {
+					"object-path" => "/org/vfnet/supl/Translator",
+				    },
+                                  }
+              );
+
+    if (@cfg_files)
+    {
+
+        # read config file
+        my $all_cfg = Config::Any->load_files(
+                                               {
+                                                 files           => [@cfg_files],
+                                                 use_ext         => 1,
+                                                 flatten_to_hash => 1,
+                                               }
+                                             );
+
+        foreach my $filename (@cfg_files)
+        {
+            defined( $all_cfg->{$filename} )
+              or next;    # file not found or not parsable ...
+            %cfg =
+              ( %cfg, %{ $all_cfg->{$filename} } )
+              ;           # merge into default and previous loaded config ...
+        }
+    }
+
+    defined( $cfg{"dbus-objects"}->{"default"} )
+      and SUPL::DBusObject::set_default_config( %{ $cfg{"dbus-objects"}->{"default"} } );
+
+    my @dbusObjects = grep { $_ ne "default" } keys %{ $cfg{"dbus-objects"} };
+    foreach my $dbusObj (@dbusObjects)
+    {
+        my $module = "SUPL::DBusObject::$dbusObj";
+        eval "require $module;";
+	$@ and die $@;
+        my $dbusIf = $module->new( %{ $cfg{"dbus-objects"}->{$dbusObj} } );
+        $dbusIf or die "Can't initialize $module";
+    }
 }
 
 setup();
