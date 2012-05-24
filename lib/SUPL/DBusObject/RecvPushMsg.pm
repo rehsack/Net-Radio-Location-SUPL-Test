@@ -7,7 +7,7 @@ use 5.014;
 
 our $VERSION = 0.001;
 
-use base qw(Net::DBus::Object);
+use base qw(SUPL::DBusObject);
 use Net::DBus::Exporter qw(org.ofono.mms.PushConsumer);
 
 use Digest::SHA qw(hmac_sha1);
