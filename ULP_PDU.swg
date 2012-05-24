@@ -435,11 +435,8 @@ decode_ulp_pdu(MsgBuffer buf)
 {
 	struct ULP_PDU *ulp_pdu = NULL;
 	asn_dec_rval_t rval;
-	asn_per_data_t per_data;
+	asn_per_data_t per_data = { buf.buf, 0, ((size_t)buf.size) * 8 };
 
-	per_data.buffer = buf.buf;
-	per_data.nboff = 0;
-	per_data.nbits = ((size_t)buf.size) * 8;
 	rval = asn_DEF_ULP_PDU.uper_decoder( 0, &asn_DEF_ULP_PDU,
 					NULL, (void **)&ulp_pdu,
 					&per_data);
@@ -516,13 +513,11 @@ ulp_pdu_to_xml(MsgBuffer buf)
 %typemap(newfree) ULP_PDU_t * "asn_DEF_ULP_PDU.free_struct(&asn_DEF_ULP_PDU, $1, 0);"
 
 %typemap(out) MsgBuffer {
-#if 0
-void      sv_setpvn(SV *, char *val, STRLEN len);
-SV       *newSVpv(char *value, STRLEN len);
-#endif
-    $result = newSVpv($1.buf, $1.size);
-    /* XXX This covers a bug */
-    ++argvi;
+    if (argvi >= items) {            
+	EXTEND(sp,1); /* Extend the stack by 1 object */
+    }
+    $result = sv_2mortal(newSVpv($1.buf, $1.size));
+    ++argvi; /* intentional - not portable between languages */
 }
 
 %newobject encode_ulp_pdu;

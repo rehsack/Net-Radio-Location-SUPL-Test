@@ -1883,11 +1883,8 @@ decode_ulp_pdu(MsgBuffer buf)
 {
 	struct ULP_PDU *ulp_pdu = NULL;
 	asn_dec_rval_t rval;
-	asn_per_data_t per_data;
+	asn_per_data_t per_data = { buf.buf, 0, ((size_t)buf.size) * 8 };
 
-	per_data.buffer = buf.buf;
-	per_data.nboff = 0;
-	per_data.nbits = ((size_t)buf.size) * 8;
 	rval = asn_DEF_ULP_PDU.uper_decoder( 0, &asn_DEF_ULP_PDU,
 					NULL, (void **)&ulp_pdu,
 					&per_data);
@@ -9392,9 +9389,11 @@ XS(_wrap_encode_ulp_pdu) {
     arg1 = (struct ULP_PDU *)(argp1);
     result = encode_ulp_pdu(arg1);
     {
-      ST(argvi) = newSVpv((&result)->buf, (&result)->size);
-      /* XXX This covers a bug */
-      ++argvi;
+      if (argvi >= items) {
+        EXTEND(sp,1); /* Extend the stack by 1 object */
+      }
+      ST(argvi) = sv_2mortal(newSVpv((&result)->buf, (&result)->size));
+      ++argvi; /* intentional - not portable between languages */
     }
     
     do {
@@ -9465,9 +9464,11 @@ XS(_wrap_ulp_pdu_to_xml) {
     }
     result = ulp_pdu_to_xml(arg1);
     {
-      ST(argvi) = newSVpv((&result)->buf, (&result)->size);
-      /* XXX This covers a bug */
-      ++argvi;
+      if (argvi >= items) {
+        EXTEND(sp,1); /* Extend the stack by 1 object */
+      }
+      ST(argvi) = sv_2mortal(newSVpv((&result)->buf, (&result)->size));
+      ++argvi; /* intentional - not portable between languages */
     }
     do {
       if( (&result)->buf ) free((&result)->buf); 
