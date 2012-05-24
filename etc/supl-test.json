@@ -1,0 +1,26 @@
+{
+    "dbus-objects" : {
+	"default" : {
+	    "bus-name" : "org.vfnet.supl",
+	},
+	"RecvPushMsg" : {
+	    "object-path" : "/org/vfnet/supl/PushConsumer"
+	},
+	"Translator" : {
+	    "object-path" : "/org/vfnet/supl/Translator"
+	}
+    },
+    "test-setup" : {
+	"SUPLINIT" : {
+	    "action" : "reply",
+	    "target" : "supl.vodafone.com:7275",
+	    "modes" : ["proxy"],
+	},
+	"SUPLPOSINIT" : {
+	    "request-assistant-data" : true,
+	    "estimated-location" : [ 13, 13 ],
+	},
+	"SUPLPOS" : {
+	}
+    }
+}
