@@ -1825,7 +1825,7 @@ asn_dec_rval_code_str(enum asn_dec_rval_code_e code)
     }
 }
 
-MsgBuffer
+static MsgBuffer
 encode_ulp_pdu(struct ULP_PDU *pdu)
 {
 	/* asn_per_data_t per_data; */
@@ -1908,6 +1908,39 @@ decode_ulp_pdu(MsgBuffer buf)
 #endif
 
 	return ulp_pdu;
+}
+
+static MsgBuffer
+ulp_pdu_to_xml(MsgBuffer buf)
+{
+	MsgBuffer retbuf = { NULL, -1 };
+	asn_enc_rval_t rval;
+	struct per_target_buffer per_buf;
+	struct ULP_PDU *tmp_pdu = decode_ulp_pdu(buf);
+
+	if (NULL == tmp_pdu)
+		return retbuf;
+
+	per_buf.buf = calloc( 4096, sizeof(uint8_t) );
+	per_buf.pos = 0;
+	per_buf.size = 4096;
+	rval = xer_encode( &asn_DEF_ULP_PDU, tmp_pdu, XER_F_BASIC, &per_output, &per_buf);
+
+	asn_DEF_ULP_PDU.free_struct(&asn_DEF_ULP_PDU, tmp_pdu, 0);
+
+	if (rval.encoded == -1) {
+		free(per_buf.buf);
+		croak("error encoding ULP pdu %s: %s",
+			rval.failed_type->name,
+			strerror(errno));
+
+		return retbuf; /* unreached */
+	}
+
+	retbuf.buf = per_buf.buf;
+	retbuf.size = per_buf.size;
+
+	return retbuf;
 }
 
 #ifdef __cplusplus
@@ -9360,9 +9393,13 @@ XS(_wrap_encode_ulp_pdu) {
     result = encode_ulp_pdu(arg1);
     {
       ST(argvi) = newSVpv((&result)->buf, (&result)->size);
-      free((&result)->buf);
+      /* XXX This covers a bug */
+      ++argvi;
     }
     
+    do {
+      if( (&result)->buf ) free((&result)->buf); 
+    } while(0);
     XSRETURN(argvi);
   fail:
     
@@ -9387,36 +9424,8 @@ XS(_wrap_decode_ulp_pdu) {
       if(ST(0) == NULL) {
         SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "decode_ulp_pdu" "', argument " "buf" " of type '" "MsgBuffer""'");
       }
-      if( SvROK(ST(0)) && ( SVt_PVAV == SvTYPE(SvRV(ST(0)) ) ) ) {
-        ssize_t i;
-        AV *av = (AV *)(SvRV(ST(0)));
-        
-        (&arg1)->size = av_len(av);
-        if((&arg1)->size < 0) {
-          SWIG_exception_fail(SWIG_ArgError(SWIG_OverflowError), "in method '" "decode_ulp_pdu" "', argument " "buf" " of type '" "MsgBuffer""' is empty");
-        }
-        ++(&arg1)->size;
-        (&arg1)->buf = malloc((&arg1)->size); /* XXX prove non-NULL return */
-        for( i = 0; i < (&arg1)->size; ++i ) {
-          SV **val = av_fetch(av, i, 0 );
-          if( val && *val && (SvTYPE(*val) == SVt_IV ) ) {
-            IV intval = SvIV(*val);
-            if( intval > UINT8_MAX ) {
-              SWIG_exception_fail(SWIG_ArgError(SWIG_OverflowError), "in method '" "decode_ulp_pdu" "', argument " "buf" " of type '" "MsgBuffer""' exceeds range");
-            }
-            (&arg1)->buf[i] = intval;
-          }
-          else {
-            free((&arg1)->buf);
-            SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "decode_ulp_pdu" "', argument " "buf" " of type '" "MsgBuffer""' contains invalid elements");
-          }
-        }
-      }
-      else if( SvFLAGS(ST(0)) & (SVf_OK & ~SVf_ROK) ) {
-        char *svbuf = SvPV(ST(0), (&arg1)->size);
-        /* XXX leaking memory here ... find better version */
-        (&arg1)->buf = malloc((&arg1)->size); /* XXX prove non-NULL return */
-        memcpy((&arg1)->buf, svbuf, (&arg1)->size);
+      if( SvFLAGS(ST(0)) & (SVf_OK & ~SVf_ROK) ) {
+        (&arg1)->buf = SvPV(ST(0), (&arg1)->size);
       }
       else {
         SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "decode_ulp_pdu" "', argument " "buf" " of type '" "MsgBuffer""'");
@@ -9424,6 +9433,45 @@ XS(_wrap_decode_ulp_pdu) {
     }
     result = (struct ULP_PDU *)decode_ulp_pdu(arg1);
     ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_ULP_PDU, 0 | SWIG_SHADOW); argvi++ ;
+    XSRETURN(argvi);
+  fail:
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_ulp_pdu_to_xml) {
+  {
+    MsgBuffer arg1 ;
+    int argvi = 0;
+    MsgBuffer result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: ulp_pdu_to_xml(buf);");
+    }
+    {
+      // arg1 = AV2MsgBuf(ST(0));
+      // MsgBuffer retval = { NULL, -1 };
+      if(ST(0) == NULL) {
+        SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "ulp_pdu_to_xml" "', argument " "buf" " of type '" "MsgBuffer""'");
+      }
+      if( SvFLAGS(ST(0)) & (SVf_OK & ~SVf_ROK) ) {
+        (&arg1)->buf = SvPV(ST(0), (&arg1)->size);
+      }
+      else {
+        SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "ulp_pdu_to_xml" "', argument " "buf" " of type '" "MsgBuffer""'");
+      }
+    }
+    result = ulp_pdu_to_xml(arg1);
+    {
+      ST(argvi) = newSVpv((&result)->buf, (&result)->size);
+      /* XXX This covers a bug */
+      ++argvi;
+    }
+    do {
+      if( (&result)->buf ) free((&result)->buf); 
+    } while(0);
     XSRETURN(argvi);
   fail:
     SWIG_croak_null();
@@ -9911,6 +9959,7 @@ static swig_command_info swig_commands[] = {
 {"ULP_PDUc::delete_SUPLAUTHRESP_t", _wrap_delete_SUPLAUTHRESP_t},
 {"ULP_PDUc::encode_ulp_pdu", _wrap_encode_ulp_pdu},
 {"ULP_PDUc::decode_ulp_pdu", _wrap_decode_ulp_pdu},
+{"ULP_PDUc::ulp_pdu_to_xml", _wrap_ulp_pdu_to_xml},
 {0,0}
 };
 /* -----------------------------------------------------------------------------

@@ -51,6 +51,7 @@ package ULP_PDU;
 
 *encode_ulp_pdu = *ULP_PDUc::encode_ulp_pdu;
 *decode_ulp_pdu = *ULP_PDUc::decode_ulp_pdu;
+*ulp_pdu_to_xml = *ULP_PDUc::ulp_pdu_to_xml;
 
 ############# Class : ULP_PDU::ULP_PDU_t ##############
 
