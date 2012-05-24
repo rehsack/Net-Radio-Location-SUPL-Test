@@ -1096,11 +1096,19 @@ sub ACTION_code {
     my $self = shift;
 
     $self->dispatch("create_objects");
+    # $self->dispatch("compile_swig");
     $self->dispatch("compile_xscode");
 
     $self->SUPER::ACTION_code;
 }
 
+sub ACTION_compile_swig {
+    #my $self = shift;
+
+    #my $swig_exe = IPC::Cmd->can_run( "swig" );
+    #$self->execute_command( $swig_exe, "-Iasn1", "-perl", "ULP_PDU.swg" );
+    #...
+}
 
 sub ACTION_compile_xscode {
     my $self = shift;
