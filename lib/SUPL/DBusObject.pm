@@ -22,14 +22,13 @@ This module manages right dbus initialisation for derived interfaces
 =cut
 
 my %config;
-
-# my $services
+my %services;
 
 sub new
 {
-    my ($class, %cfg) = @_;
+    my ( $class, %cfg ) = @_;
     my $service = _service(%cfg);
-    my $self = $class->SUPER::new($service, _bus_name(%cfg));
+    my $self = $class->SUPER::new( $service, _object_path(%cfg) );
 
     bless( $self, $class );
 
@@ -39,21 +38,25 @@ sub new
 sub _bus_name
 {
     my %cfg = @_;
-    return $cfg{'bus-name'} // $config{'bus-name'} // "org.ofono.supl";
+    return $cfg{'bus-name'} // $config{'bus-name'} // "org.vfnet.supl";
 }
 
 sub _service
 {
-    my $bus = Net::DBus->find();
-    my $service = Net::DBus::Service->new($bus, _bus_name(@_));
+    my $bus_name = _bus_name(@_);
+    unless ( defined( $services{$bus_name} ) )
+    {
+        my $bus = Net::DBus->find();
+        $services{$bus_name} = Net::DBus::Service->new( $bus, $bus_name );
+    }
 
-    return $service;
+    return $services{$bus_name};
 }
 
 sub _object_path
 {
     my %cfg = @_;
-    return $cfg{'object-path'} // $config{'object-path'} // "/org/ofono/supl";
+    return $cfg{'object-path'} // $config{'object-path'} // "/org/vfnet/supl";
 }
 
 sub set_default_config
