@@ -3,44 +3,81 @@ package SUPL::Test;
 use strict;
 use warnings;
 
-our $VERSION = 0.001;
+use 5.010;
+
+use Carp qw/croak/;
 
 use ULP_PDU;
 
-use Net::DBus;
+use Digest::SHA;
+use SUPL::MainLoop;
 
-=pod
+use Params::Util qw(_STRING);
 
 =head1 NAME
 
-SUPL::Test - Some Secure UserPlane Location Tests
+SUPL::Test - Run Test Use-Cases for SUPL
+
+=head1 DESCRIPTION
+
+This module implements state machine for handling SUPL packets.
+
+=head1 METHODS
 
 =cut
 
 our $VERSION = '0.001';
 
-=head1 SYNOPSIS
+=head2 new
 
-XXX
-
-  $ dbus-codegen server --config-file descr.json --lang C
-    --api GDBus
-  $ dbus-codegen client --config-file descr.json --lang Perl5
-    --api Net::DBus
-
-=head1 DESCRIPTION
-
-Some Secure UserPlane Location Tests
+instantiates new SUPL::Test state machine
 
 =cut
 
-=pod
+sub new
+{
+    my $class = shift;
+    return bless( {}, $class );
+}
 
-=head1 AUTHOR
+=head2 setup
 
-Jens Rehsack, C<< <rehsack at cpan.org> >>
+set parameters depending on state
 
 =cut
 
+sub setup
+{
+}
+
+sub handle_supl_pdu
+{
+    my ($self, $enc_pdu) = @_;
+
+    _STRING($enc_pdu) or croak "Invalid argument for \$enc_pdu";
+
+    my $supl_pdu = ULP_PDU::decode_ulp_pdu($enc_pdu);
+
+    # decode_ulp_pdu croaks on error ...
+    given($supl_pdu->{message}->{present})
+    {
+	when($ULP_PDU::UlpMessage_PR_msSUPLINIT)
+	{
+	    # ...
+	}
+	default
+	{
+	    # ... 
+	}
+    }
+}
+
+sub trigger_read
+{
+}
+
+sub get_read_trigger
+{
+}
 
 1;
