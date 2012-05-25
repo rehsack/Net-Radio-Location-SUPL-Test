@@ -1485,62 +1485,47 @@ SWIG_Perl_SetModule(swig_module_info *module) {
 
 /* -------- TYPES TABLE (BEGIN) -------- */
 
-#define SWIGTYPE_p_BIT_STRING_t swig_types[0]
-#define SWIGTYPE_p_EncodingType_t swig_types[1]
-#define SWIGTYPE_p_FQDN_t swig_types[2]
-#define SWIGTYPE_p_FormatIndicator_t swig_types[3]
-#define SWIGTYPE_p_IA5String_t swig_types[4]
-#define SWIGTYPE_p_IPAddress swig_types[5]
-#define SWIGTYPE_p_IPAddress_PR swig_types[6]
-#define SWIGTYPE_p_IPAddress_t_choice swig_types[7]
-#define SWIGTYPE_p_KeyIdentity2_t swig_types[8]
-#define SWIGTYPE_p_KeyIdentity3_t swig_types[9]
-#define SWIGTYPE_p_KeyIdentity4_t swig_types[10]
-#define SWIGTYPE_p_LocationId_t swig_types[11]
-#define SWIGTYPE_p_MsgBuffer swig_types[12]
-#define SWIGTYPE_p_Notification swig_types[13]
-#define SWIGTYPE_p_NotificationType_t swig_types[14]
-#define SWIGTYPE_p_OCTET_STRING_t swig_types[15]
-#define SWIGTYPE_p_PosMethod swig_types[16]
-#define SWIGTYPE_p_PosPayLoad_t swig_types[17]
-#define SWIGTYPE_p_Position swig_types[18]
-#define SWIGTYPE_p_QoP swig_types[19]
-#define SWIGTYPE_p_RequestedAssistData swig_types[20]
-#define SWIGTYPE_p_SETAuthKey swig_types[21]
-#define SWIGTYPE_p_SETCapabilities_t swig_types[22]
-#define SWIGTYPE_p_SETId swig_types[23]
-#define SWIGTYPE_p_SETId_PR swig_types[24]
-#define SWIGTYPE_p_SETId_t_choice swig_types[25]
-#define SWIGTYPE_p_SETNonce_t swig_types[26]
-#define SWIGTYPE_p_SLPAddress swig_types[27]
-#define SWIGTYPE_p_SLPAddress_PR swig_types[28]
-#define SWIGTYPE_p_SLPAddress_t_choice swig_types[29]
-#define SWIGTYPE_p_SLPMode swig_types[30]
-#define SWIGTYPE_p_SPCAuthKey swig_types[31]
-#define SWIGTYPE_p_SUPLAUTHREQ swig_types[32]
-#define SWIGTYPE_p_SUPLAUTHRESP swig_types[33]
-#define SWIGTYPE_p_SUPLEND swig_types[34]
-#define SWIGTYPE_p_SUPLINIT swig_types[35]
-#define SWIGTYPE_p_SUPLPOS swig_types[36]
-#define SWIGTYPE_p_SUPLPOSINIT swig_types[37]
-#define SWIGTYPE_p_SUPLRESPONSE swig_types[38]
-#define SWIGTYPE_p_SUPLSTART swig_types[39]
-#define SWIGTYPE_p_SessionID swig_types[40]
-#define SWIGTYPE_p_SetSessionID swig_types[41]
-#define SWIGTYPE_p_SlpSessionID swig_types[42]
-#define SWIGTYPE_p_StatusCode_t swig_types[43]
-#define SWIGTYPE_p_ULP_PDU swig_types[44]
-#define SWIGTYPE_p_UlpMessage swig_types[45]
-#define SWIGTYPE_p_UlpMessage_PR swig_types[46]
-#define SWIGTYPE_p_UlpMessage_t_choice swig_types[47]
-#define SWIGTYPE_p_Velocity swig_types[48]
-#define SWIGTYPE_p_Ver_t swig_types[49]
-#define SWIGTYPE_p_Version swig_types[50]
-#define SWIGTYPE_p_asn_struct_ctx_t swig_types[51]
-#define SWIGTYPE_p_char swig_types[52]
-#define SWIGTYPE_p_long swig_types[53]
-static swig_type_info *swig_types[55];
-static swig_module_info swig_module = {swig_types, 54, 0, 0, 0, 0};
+#define SWIGTYPE_p_KeyIdentity2_t swig_types[0]
+#define SWIGTYPE_p_KeyIdentity3_t swig_types[1]
+#define SWIGTYPE_p_KeyIdentity4_t swig_types[2]
+#define SWIGTYPE_p_KeyIdentity_t swig_types[3]
+#define SWIGTYPE_p_LocationId_t swig_types[4]
+#define SWIGTYPE_p_MAC_t swig_types[5]
+#define SWIGTYPE_p_MsgBuffer swig_types[6]
+#define SWIGTYPE_p_Notification swig_types[7]
+#define SWIGTYPE_p_PosMethod_t swig_types[8]
+#define SWIGTYPE_p_PosPayLoad_t swig_types[9]
+#define SWIGTYPE_p_Position swig_types[10]
+#define SWIGTYPE_p_QoP swig_types[11]
+#define SWIGTYPE_p_RequestedAssistData swig_types[12]
+#define SWIGTYPE_p_SETAuthKey swig_types[13]
+#define SWIGTYPE_p_SETCapabilities_t swig_types[14]
+#define SWIGTYPE_p_SETNonce_t swig_types[15]
+#define SWIGTYPE_p_SLPAddress swig_types[16]
+#define SWIGTYPE_p_SLPMode_t swig_types[17]
+#define SWIGTYPE_p_SPCAuthKey swig_types[18]
+#define SWIGTYPE_p_SUPLAUTHREQ swig_types[19]
+#define SWIGTYPE_p_SUPLAUTHRESP swig_types[20]
+#define SWIGTYPE_p_SUPLEND swig_types[21]
+#define SWIGTYPE_p_SUPLINIT swig_types[22]
+#define SWIGTYPE_p_SUPLPOS swig_types[23]
+#define SWIGTYPE_p_SUPLPOSINIT swig_types[24]
+#define SWIGTYPE_p_SUPLRESPONSE swig_types[25]
+#define SWIGTYPE_p_SUPLSTART swig_types[26]
+#define SWIGTYPE_p_SessionID_t swig_types[27]
+#define SWIGTYPE_p_StatusCode_t swig_types[28]
+#define SWIGTYPE_p_ULP_PDU swig_types[29]
+#define SWIGTYPE_p_UlpMessage swig_types[30]
+#define SWIGTYPE_p_UlpMessage_PR swig_types[31]
+#define SWIGTYPE_p_UlpMessage_t_choice swig_types[32]
+#define SWIGTYPE_p_Velocity swig_types[33]
+#define SWIGTYPE_p_Ver_t swig_types[34]
+#define SWIGTYPE_p_Version_t swig_types[35]
+#define SWIGTYPE_p_asn_TYPE_descriptor_t swig_types[36]
+#define SWIGTYPE_p_asn_struct_ctx_t swig_types[37]
+#define SWIGTYPE_p_char swig_types[38]
+static swig_type_info *swig_types[40];
+static swig_module_info swig_module = {swig_types, 39, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -1703,13 +1688,18 @@ SWIG_From_long  SWIG_PERL_DECL_ARGS_1(long value)
   return sv_2mortal(sv);
 }
 
-
-SWIGINTERNINLINE SV *
-SWIG_From_int  SWIG_PERL_DECL_ARGS_1(int value)
-{    
-  return SWIG_From_long  SWIG_PERL_CALL_ARGS_1(value);
-}
-
+SWIGINTERN struct ULP_PDU *new_ULP_PDU(){
+	ULP_PDU_t *newobj;
+	newobj = calloc( 1, sizeof(*newobj) );
+	/* XXX croak on NULL */
+	newobj->version.maj = 1;
+	newobj->version.min = 0;
+	newobj->version.servind = 0;
+	return newobj;
+    }
+SWIGINTERN void delete_ULP_PDU(struct ULP_PDU *self){
+	asn_DEF_ULP_PDU.free_struct(&asn_DEF_ULP_PDU, self, 0);
+    }
 
 #include <limits.h>
 #if !defined(SWIG_NO_LLONG_MAX)
@@ -1736,29 +1726,160 @@ SWIG_AsVal_int SWIG_PERL_DECL_ARGS_2(SV * obj, int *val)
   return res;
 }
 
-typedef union {
-  OCTET_STRING_t	 ipv4Address;
-  OCTET_STRING_t	 ipv6Address;
-} IPAddress_t_choice;
+SWIGINTERN void ULP_PDU_set_version(struct ULP_PDU *self,int maj,int min,int servind){
+	if( maj == 1 && min == 0 && servind == 0 ) {
+	    self->version.maj = maj;
+	    self->version.min = min;
+	    self->version.servind = servind;
+	}
+	else {
+	    croak( "Unsupported SUPL version" );
+	}
+    }
+
+SWIGINTERN swig_type_info*
+SWIG_pchar_descriptor(void)
+{
+  static int init = 0;
+  static swig_type_info* info = 0;
+  if (!init) {
+    info = SWIG_TypeQuery("_p_char");
+    init = 1;
+  }
+  return info;
+}
 
 
-typedef union {
-  OCTET_STRING_t	 msisdn;
-  OCTET_STRING_t	 mdn;
-  BIT_STRING_t	 min;
-  OCTET_STRING_t	 imsi;
-  IA5String_t	 nai;
-  IPAddress_t	 iPAddress;
-  
-} SETId_t_choice;
+SWIGINTERN int
+SWIG_AsCharPtrAndSize(SV *obj, char** cptr, size_t* psize, int *alloc)
+{
+  if (SvMAGICAL(obj)) {
+     SV *tmp = sv_newmortal();
+     SvSetSV(tmp, obj);
+     obj = tmp;
+  }
+  if (SvPOK(obj)) {
+    STRLEN len = 0;
+    char *cstr = SvPV(obj, len); 
+    size_t size = len + 1;
+    if (cptr)  {
+      if (alloc) {
+	if (*alloc == SWIG_NEWOBJ) {
+	  *cptr = (char *)memcpy((char *)malloc((size)*sizeof(char)), cstr, sizeof(char)*(size));
+	} else {
+	  *cptr = cstr;
+	  *alloc = SWIG_OLDOBJ;
+	}
+      }
+    }
+    if (psize) *psize = size;
+    return SWIG_OK;
+  } else {
+    swig_type_info* pchar_descriptor = SWIG_pchar_descriptor();
+    if (pchar_descriptor) {
+      char* vptr = 0; 
+      if (SWIG_ConvertPtr(obj, (void**)&vptr, pchar_descriptor, 0) == SWIG_OK) {
+	if (cptr) *cptr = vptr;
+	if (psize) *psize = vptr ? (strlen(vptr) + 1) : 0;
+	if (alloc) *alloc = SWIG_OLDOBJ;
+	return SWIG_OK;
+      }
+    }
+  }
+  return SWIG_TypeError;
+}
 
 
-typedef union {
-  IPAddress_t	 iPAddress;
-  FQDN_t	 fQDN;
-  
-} SLPAddress_t_choice;
 
+
+SWIGINTERN void ULP_PDU_setSetSessionId_to_imsi(struct ULP_PDU *self,int sessionId,char *imsi){
+	if( NULL != self->sessionID.setSessionID ) {
+	    asn_DEF_ULP_PDU.free_struct(&asn_DEF_SetSessionID, self->sessionID.setSessionID, 0);
+	    self->sessionID.setSessionID = NULL;
+	}
+	self->sessionID.setSessionID = calloc(1, sizeof(*(self->sessionID.setSessionID)));
+	self->sessionID.setSessionID->setId.present = SETId_PR_imsi;
+	BCD_OCTET_STRING_fromString(&self->sessionID.setSessionID->setId.choice.imsi, imsi);
+    }
+SWIGINTERN void ULP_PDU_setSetSessionId_to_msisdn(struct ULP_PDU *self,int sessionId,char *msisdn){
+	if( NULL != self->sessionID.setSessionID ) {
+	    asn_DEF_ULP_PDU.free_struct(&asn_DEF_SetSessionID, self->sessionID.setSessionID, 0);
+	    self->sessionID.setSessionID = NULL;
+	}
+	self->sessionID.setSessionID = calloc(1, sizeof(*(self->sessionID.setSessionID)));
+	self->sessionID.setSessionID->setId.present = SETId_PR_msisdn;
+	BCD_OCTET_STRING_fromString(&self->sessionID.setSessionID->setId.choice.msisdn, msisdn);
+    }
+SWIGINTERN void ULP_PDU_copy_SlpSessionId(struct ULP_PDU *self,ULP_PDU_t *src_pdu){
+	struct SlpSessionID *src, *dst;
+	OCTET_STRING_t *srcaddr;
+	OCTET_STRING_t *dstaddr;
+
+	src = src_pdu->sessionID.slpSessionID;
+
+	if( NULL == src )
+	    return; /* nothing to do */
+
+	if( NULL != self->sessionID.slpSessionID ) {
+	    asn_DEF_ULP_PDU.free_struct(&asn_DEF_SlpSessionID, self->sessionID.slpSessionID, 0);
+	    self->sessionID.slpSessionID = NULL;
+	}
+
+	self->sessionID.slpSessionID = calloc(1, sizeof(*(self->sessionID.slpSessionID)));
+	dst = self->sessionID.slpSessionID;
+
+	OCTET_STRING_fromBuf(&dst->sessionID, src->sessionID.buf, src->sessionID.size);
+	switch (src->slpId.present)
+	{
+	case SLPAddress_PR_iPAddress:
+	    dst->slpId.present = SLPAddress_PR_iPAddress;
+	    switch (src->slpId.choice.iPAddress.present)
+	    {
+	    case IPAddress_PR_ipv4Address:
+		dst->slpId.choice.iPAddress.present = IPAddress_PR_ipv4Address;
+		srcaddr = &src->slpId.choice.iPAddress.choice.ipv4Address;
+		dstaddr = &dst->slpId.choice.iPAddress.choice.ipv4Address;
+
+		break;
+
+	    case IPAddress_PR_ipv6Address:
+		dst->slpId.choice.iPAddress.present = IPAddress_PR_ipv6Address;
+		srcaddr = &src->slpId.choice.iPAddress.choice.ipv6Address;
+		dstaddr = &dst->slpId.choice.iPAddress.choice.ipv6Address;
+
+		break;
+
+	    default:
+		dst->slpId.choice.iPAddress.present = IPAddress_PR_NOTHING;
+		croak("Invalid: source has slpSessionId but neither IP-Address nor FQDN content");
+
+		break;
+	    }
+
+	    break;
+
+	case SLPAddress_PR_fQDN:
+	    dst->slpId.present = SLPAddress_PR_fQDN;
+	    srcaddr = &src->slpId.choice.fQDN;
+	    dstaddr = &dst->slpId.choice.fQDN;
+
+	    break;
+
+	default:
+	    /* error */
+	    dst->slpId.present = SLPAddress_PR_NOTHING;
+	    croak("Invalid: source has slpSessionId but neither IP-Address nor FQDN content");
+
+	    break;
+	}
+	OCTET_STRING_fromBuf(dstaddr, srcaddr->buf, srcaddr->size);
+    }
+
+SWIGINTERNINLINE SV *
+SWIG_From_int  SWIG_PERL_DECL_ARGS_1(int value)
+{    
+  return SWIG_From_long  SWIG_PERL_CALL_ARGS_1(value);
+}
 
 typedef union {
   SUPLINIT_t	 msSUPLINIT;
@@ -1956,6 +2077,266 @@ SWIGCLASS_STATIC int swig_magic_readonly(pTHX_ SV *SWIGUNUSEDPARM(sv), MAGIC *SW
     croak("Value is read-only.");
     return 0;
 }
+SWIGCLASS_STATIC int _wrap_asn_DEF_SUPLAUTHREQ_set(pTHX_ SV* sv, MAGIC * SWIGUNUSEDPARM(mg)) {
+  MAGIC_PPERL
+  {
+    void *argp = 0;
+    int res = SWIG_ConvertPtr(sv, &argp, SWIGTYPE_p_asn_TYPE_descriptor_t,  0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in variable '""asn_DEF_SUPLAUTHREQ""' of type '""asn_TYPE_descriptor_t""'");
+    }
+    if (!argp) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in variable '""asn_DEF_SUPLAUTHREQ""' of type '""asn_TYPE_descriptor_t""'");
+    } else {
+      asn_DEF_SUPLAUTHREQ = *((asn_TYPE_descriptor_t *)(argp));
+    }
+  }
+fail:
+  return 1;
+}
+
+
+SWIGCLASS_STATIC int _wrap_asn_DEF_SUPLAUTHREQ_get(pTHX_ SV *sv, MAGIC *SWIGUNUSEDPARM(mg)) {
+  MAGIC_PPERL
+  sv_setiv(SvRV(sv), PTR2IV(&asn_DEF_SUPLAUTHREQ));
+  return 1;
+}
+
+
+SWIGCLASS_STATIC int _wrap_asn_DEF_SUPLAUTHRESP_set(pTHX_ SV* sv, MAGIC * SWIGUNUSEDPARM(mg)) {
+  MAGIC_PPERL
+  {
+    void *argp = 0;
+    int res = SWIG_ConvertPtr(sv, &argp, SWIGTYPE_p_asn_TYPE_descriptor_t,  0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in variable '""asn_DEF_SUPLAUTHRESP""' of type '""asn_TYPE_descriptor_t""'");
+    }
+    if (!argp) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in variable '""asn_DEF_SUPLAUTHRESP""' of type '""asn_TYPE_descriptor_t""'");
+    } else {
+      asn_DEF_SUPLAUTHRESP = *((asn_TYPE_descriptor_t *)(argp));
+    }
+  }
+fail:
+  return 1;
+}
+
+
+SWIGCLASS_STATIC int _wrap_asn_DEF_SUPLAUTHRESP_get(pTHX_ SV *sv, MAGIC *SWIGUNUSEDPARM(mg)) {
+  MAGIC_PPERL
+  sv_setiv(SvRV(sv), PTR2IV(&asn_DEF_SUPLAUTHRESP));
+  return 1;
+}
+
+
+SWIGCLASS_STATIC int _wrap_asn_DEF_SUPLEND_set(pTHX_ SV* sv, MAGIC * SWIGUNUSEDPARM(mg)) {
+  MAGIC_PPERL
+  {
+    void *argp = 0;
+    int res = SWIG_ConvertPtr(sv, &argp, SWIGTYPE_p_asn_TYPE_descriptor_t,  0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in variable '""asn_DEF_SUPLEND""' of type '""asn_TYPE_descriptor_t""'");
+    }
+    if (!argp) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in variable '""asn_DEF_SUPLEND""' of type '""asn_TYPE_descriptor_t""'");
+    } else {
+      asn_DEF_SUPLEND = *((asn_TYPE_descriptor_t *)(argp));
+    }
+  }
+fail:
+  return 1;
+}
+
+
+SWIGCLASS_STATIC int _wrap_asn_DEF_SUPLEND_get(pTHX_ SV *sv, MAGIC *SWIGUNUSEDPARM(mg)) {
+  MAGIC_PPERL
+  sv_setiv(SvRV(sv), PTR2IV(&asn_DEF_SUPLEND));
+  return 1;
+}
+
+
+SWIGCLASS_STATIC int _wrap_asn_DEF_SUPLINIT_set(pTHX_ SV* sv, MAGIC * SWIGUNUSEDPARM(mg)) {
+  MAGIC_PPERL
+  {
+    void *argp = 0;
+    int res = SWIG_ConvertPtr(sv, &argp, SWIGTYPE_p_asn_TYPE_descriptor_t,  0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in variable '""asn_DEF_SUPLINIT""' of type '""asn_TYPE_descriptor_t""'");
+    }
+    if (!argp) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in variable '""asn_DEF_SUPLINIT""' of type '""asn_TYPE_descriptor_t""'");
+    } else {
+      asn_DEF_SUPLINIT = *((asn_TYPE_descriptor_t *)(argp));
+    }
+  }
+fail:
+  return 1;
+}
+
+
+SWIGCLASS_STATIC int _wrap_asn_DEF_SUPLINIT_get(pTHX_ SV *sv, MAGIC *SWIGUNUSEDPARM(mg)) {
+  MAGIC_PPERL
+  sv_setiv(SvRV(sv), PTR2IV(&asn_DEF_SUPLINIT));
+  return 1;
+}
+
+
+SWIGCLASS_STATIC int _wrap_asn_DEF_SUPLPOS_set(pTHX_ SV* sv, MAGIC * SWIGUNUSEDPARM(mg)) {
+  MAGIC_PPERL
+  {
+    void *argp = 0;
+    int res = SWIG_ConvertPtr(sv, &argp, SWIGTYPE_p_asn_TYPE_descriptor_t,  0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in variable '""asn_DEF_SUPLPOS""' of type '""asn_TYPE_descriptor_t""'");
+    }
+    if (!argp) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in variable '""asn_DEF_SUPLPOS""' of type '""asn_TYPE_descriptor_t""'");
+    } else {
+      asn_DEF_SUPLPOS = *((asn_TYPE_descriptor_t *)(argp));
+    }
+  }
+fail:
+  return 1;
+}
+
+
+SWIGCLASS_STATIC int _wrap_asn_DEF_SUPLPOS_get(pTHX_ SV *sv, MAGIC *SWIGUNUSEDPARM(mg)) {
+  MAGIC_PPERL
+  sv_setiv(SvRV(sv), PTR2IV(&asn_DEF_SUPLPOS));
+  return 1;
+}
+
+
+SWIGCLASS_STATIC int _wrap_asn_DEF_SUPLPOSINIT_set(pTHX_ SV* sv, MAGIC * SWIGUNUSEDPARM(mg)) {
+  MAGIC_PPERL
+  {
+    void *argp = 0;
+    int res = SWIG_ConvertPtr(sv, &argp, SWIGTYPE_p_asn_TYPE_descriptor_t,  0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in variable '""asn_DEF_SUPLPOSINIT""' of type '""asn_TYPE_descriptor_t""'");
+    }
+    if (!argp) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in variable '""asn_DEF_SUPLPOSINIT""' of type '""asn_TYPE_descriptor_t""'");
+    } else {
+      asn_DEF_SUPLPOSINIT = *((asn_TYPE_descriptor_t *)(argp));
+    }
+  }
+fail:
+  return 1;
+}
+
+
+SWIGCLASS_STATIC int _wrap_asn_DEF_SUPLPOSINIT_get(pTHX_ SV *sv, MAGIC *SWIGUNUSEDPARM(mg)) {
+  MAGIC_PPERL
+  sv_setiv(SvRV(sv), PTR2IV(&asn_DEF_SUPLPOSINIT));
+  return 1;
+}
+
+
+SWIGCLASS_STATIC int _wrap_asn_DEF_SUPLRESPONSE_set(pTHX_ SV* sv, MAGIC * SWIGUNUSEDPARM(mg)) {
+  MAGIC_PPERL
+  {
+    void *argp = 0;
+    int res = SWIG_ConvertPtr(sv, &argp, SWIGTYPE_p_asn_TYPE_descriptor_t,  0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in variable '""asn_DEF_SUPLRESPONSE""' of type '""asn_TYPE_descriptor_t""'");
+    }
+    if (!argp) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in variable '""asn_DEF_SUPLRESPONSE""' of type '""asn_TYPE_descriptor_t""'");
+    } else {
+      asn_DEF_SUPLRESPONSE = *((asn_TYPE_descriptor_t *)(argp));
+    }
+  }
+fail:
+  return 1;
+}
+
+
+SWIGCLASS_STATIC int _wrap_asn_DEF_SUPLRESPONSE_get(pTHX_ SV *sv, MAGIC *SWIGUNUSEDPARM(mg)) {
+  MAGIC_PPERL
+  sv_setiv(SvRV(sv), PTR2IV(&asn_DEF_SUPLRESPONSE));
+  return 1;
+}
+
+
+SWIGCLASS_STATIC int _wrap_asn_DEF_SUPLSTART_set(pTHX_ SV* sv, MAGIC * SWIGUNUSEDPARM(mg)) {
+  MAGIC_PPERL
+  {
+    void *argp = 0;
+    int res = SWIG_ConvertPtr(sv, &argp, SWIGTYPE_p_asn_TYPE_descriptor_t,  0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in variable '""asn_DEF_SUPLSTART""' of type '""asn_TYPE_descriptor_t""'");
+    }
+    if (!argp) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in variable '""asn_DEF_SUPLSTART""' of type '""asn_TYPE_descriptor_t""'");
+    } else {
+      asn_DEF_SUPLSTART = *((asn_TYPE_descriptor_t *)(argp));
+    }
+  }
+fail:
+  return 1;
+}
+
+
+SWIGCLASS_STATIC int _wrap_asn_DEF_SUPLSTART_get(pTHX_ SV *sv, MAGIC *SWIGUNUSEDPARM(mg)) {
+  MAGIC_PPERL
+  sv_setiv(SvRV(sv), PTR2IV(&asn_DEF_SUPLSTART));
+  return 1;
+}
+
+
+SWIGCLASS_STATIC int _wrap_asn_DEF_ULP_PDU_set(pTHX_ SV* sv, MAGIC * SWIGUNUSEDPARM(mg)) {
+  MAGIC_PPERL
+  {
+    void *argp = 0;
+    int res = SWIG_ConvertPtr(sv, &argp, SWIGTYPE_p_asn_TYPE_descriptor_t,  0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in variable '""asn_DEF_ULP_PDU""' of type '""asn_TYPE_descriptor_t""'");
+    }
+    if (!argp) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in variable '""asn_DEF_ULP_PDU""' of type '""asn_TYPE_descriptor_t""'");
+    } else {
+      asn_DEF_ULP_PDU = *((asn_TYPE_descriptor_t *)(argp));
+    }
+  }
+fail:
+  return 1;
+}
+
+
+SWIGCLASS_STATIC int _wrap_asn_DEF_ULP_PDU_get(pTHX_ SV *sv, MAGIC *SWIGUNUSEDPARM(mg)) {
+  MAGIC_PPERL
+  sv_setiv(SvRV(sv), PTR2IV(&asn_DEF_ULP_PDU));
+  return 1;
+}
+
+
+SWIGCLASS_STATIC int _wrap_asn_DEF_UlpMessage_set(pTHX_ SV* sv, MAGIC * SWIGUNUSEDPARM(mg)) {
+  MAGIC_PPERL
+  {
+    void *argp = 0;
+    int res = SWIG_ConvertPtr(sv, &argp, SWIGTYPE_p_asn_TYPE_descriptor_t,  0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in variable '""asn_DEF_UlpMessage""' of type '""asn_TYPE_descriptor_t""'");
+    }
+    if (!argp) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in variable '""asn_DEF_UlpMessage""' of type '""asn_TYPE_descriptor_t""'");
+    } else {
+      asn_DEF_UlpMessage = *((asn_TYPE_descriptor_t *)(argp));
+    }
+  }
+fail:
+  return 1;
+}
+
+
+SWIGCLASS_STATIC int _wrap_asn_DEF_UlpMessage_get(pTHX_ SV *sv, MAGIC *SWIGUNUSEDPARM(mg)) {
+  MAGIC_PPERL
+  sv_setiv(SvRV(sv), PTR2IV(&asn_DEF_UlpMessage));
+  return 1;
+}
+
+
 
 
 #ifdef PERL_OBJECT
@@ -1969,6 +2350,2908 @@ SWIGCLASS_STATIC int swig_magic_readonly(pTHX_ SV *SWIGUNUSEDPARM(sv), MAGIC *SW
 #ifdef __cplusplus
 extern "C" {
 #endif
+XS(_wrap_SUPLAUTHREQ_t_sETNonce_set) {
+  {
+    struct SUPLAUTHREQ *arg1 = (struct SUPLAUTHREQ *) 0 ;
+    SETNonce_t arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLAUTHREQ_t_sETNonce_set(self,sETNonce);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLAUTHREQ, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLAUTHREQ_t_sETNonce_set" "', argument " "1"" of type '" "struct SUPLAUTHREQ *""'"); 
+    }
+    arg1 = (struct SUPLAUTHREQ *)(argp1);
+    {
+      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_SETNonce_t,  0 );
+      if (!SWIG_IsOK(res2)) {
+        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLAUTHREQ_t_sETNonce_set" "', argument " "2"" of type '" "SETNonce_t""'"); 
+      }  
+      if (!argp2) {
+        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLAUTHREQ_t_sETNonce_set" "', argument " "2"" of type '" "SETNonce_t""'");
+      } else {
+        arg2 = *((SETNonce_t *)(argp2));
+      }
+    }
+    if (arg1) (arg1)->sETNonce = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLAUTHREQ_t_sETNonce_get) {
+  {
+    struct SUPLAUTHREQ *arg1 = (struct SUPLAUTHREQ *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    SETNonce_t result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLAUTHREQ_t_sETNonce_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLAUTHREQ, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLAUTHREQ_t_sETNonce_get" "', argument " "1"" of type '" "struct SUPLAUTHREQ *""'"); 
+    }
+    arg1 = (struct SUPLAUTHREQ *)(argp1);
+    result =  ((arg1)->sETNonce);
+    ST(argvi) = SWIG_NewPointerObj((SETNonce_t *)memcpy((SETNonce_t *)malloc(sizeof(SETNonce_t)),&result,sizeof(SETNonce_t)), SWIGTYPE_p_SETNonce_t, SWIG_POINTER_OWN | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLAUTHREQ_t_keyIdentity2_set) {
+  {
+    struct SUPLAUTHREQ *arg1 = (struct SUPLAUTHREQ *) 0 ;
+    KeyIdentity2_t arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLAUTHREQ_t_keyIdentity2_set(self,keyIdentity2);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLAUTHREQ, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLAUTHREQ_t_keyIdentity2_set" "', argument " "1"" of type '" "struct SUPLAUTHREQ *""'"); 
+    }
+    arg1 = (struct SUPLAUTHREQ *)(argp1);
+    {
+      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_KeyIdentity2_t,  0 );
+      if (!SWIG_IsOK(res2)) {
+        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLAUTHREQ_t_keyIdentity2_set" "', argument " "2"" of type '" "KeyIdentity2_t""'"); 
+      }  
+      if (!argp2) {
+        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLAUTHREQ_t_keyIdentity2_set" "', argument " "2"" of type '" "KeyIdentity2_t""'");
+      } else {
+        arg2 = *((KeyIdentity2_t *)(argp2));
+      }
+    }
+    if (arg1) (arg1)->keyIdentity2 = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLAUTHREQ_t_keyIdentity2_get) {
+  {
+    struct SUPLAUTHREQ *arg1 = (struct SUPLAUTHREQ *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    KeyIdentity2_t result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLAUTHREQ_t_keyIdentity2_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLAUTHREQ, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLAUTHREQ_t_keyIdentity2_get" "', argument " "1"" of type '" "struct SUPLAUTHREQ *""'"); 
+    }
+    arg1 = (struct SUPLAUTHREQ *)(argp1);
+    result =  ((arg1)->keyIdentity2);
+    ST(argvi) = SWIG_NewPointerObj((KeyIdentity2_t *)memcpy((KeyIdentity2_t *)malloc(sizeof(KeyIdentity2_t)),&result,sizeof(KeyIdentity2_t)), SWIGTYPE_p_KeyIdentity2_t, SWIG_POINTER_OWN | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLAUTHREQ_t__asn_ctx_set) {
+  {
+    struct SUPLAUTHREQ *arg1 = (struct SUPLAUTHREQ *) 0 ;
+    asn_struct_ctx_t arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLAUTHREQ_t__asn_ctx_set(self,_asn_ctx);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLAUTHREQ, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLAUTHREQ_t__asn_ctx_set" "', argument " "1"" of type '" "struct SUPLAUTHREQ *""'"); 
+    }
+    arg1 = (struct SUPLAUTHREQ *)(argp1);
+    {
+      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_asn_struct_ctx_t,  0 );
+      if (!SWIG_IsOK(res2)) {
+        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLAUTHREQ_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'"); 
+      }  
+      if (!argp2) {
+        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLAUTHREQ_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'");
+      } else {
+        arg2 = *((asn_struct_ctx_t *)(argp2));
+      }
+    }
+    if (arg1) (arg1)->_asn_ctx = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLAUTHREQ_t__asn_ctx_get) {
+  {
+    struct SUPLAUTHREQ *arg1 = (struct SUPLAUTHREQ *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    asn_struct_ctx_t result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLAUTHREQ_t__asn_ctx_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLAUTHREQ, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLAUTHREQ_t__asn_ctx_get" "', argument " "1"" of type '" "struct SUPLAUTHREQ *""'"); 
+    }
+    arg1 = (struct SUPLAUTHREQ *)(argp1);
+    result =  ((arg1)->_asn_ctx);
+    ST(argvi) = SWIG_NewPointerObj((asn_struct_ctx_t *)memcpy((asn_struct_ctx_t *)malloc(sizeof(asn_struct_ctx_t)),&result,sizeof(asn_struct_ctx_t)), SWIGTYPE_p_asn_struct_ctx_t, SWIG_POINTER_OWN | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_SUPLAUTHREQ_t) {
+  {
+    int argvi = 0;
+    struct SUPLAUTHREQ *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 0) || (items > 0)) {
+      SWIG_croak("Usage: new_SUPLAUTHREQ_t();");
+    }
+    result = (struct SUPLAUTHREQ *)calloc(1, sizeof(struct SUPLAUTHREQ));
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SUPLAUTHREQ, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    XSRETURN(argvi);
+  fail:
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_delete_SUPLAUTHREQ_t) {
+  {
+    struct SUPLAUTHREQ *arg1 = (struct SUPLAUTHREQ *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: delete_SUPLAUTHREQ_t(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLAUTHREQ, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_SUPLAUTHREQ_t" "', argument " "1"" of type '" "struct SUPLAUTHREQ *""'"); 
+    }
+    arg1 = (struct SUPLAUTHREQ *)(argp1);
+    free((char *) arg1);
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLAUTHRESP_t_sPCAuthKey_set) {
+  {
+    struct SUPLAUTHRESP *arg1 = (struct SUPLAUTHRESP *) 0 ;
+    struct SPCAuthKey *arg2 = (struct SPCAuthKey *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLAUTHRESP_t_sPCAuthKey_set(self,sPCAuthKey);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLAUTHRESP, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLAUTHRESP_t_sPCAuthKey_set" "', argument " "1"" of type '" "struct SUPLAUTHRESP *""'"); 
+    }
+    arg1 = (struct SUPLAUTHRESP *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_SPCAuthKey, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLAUTHRESP_t_sPCAuthKey_set" "', argument " "2"" of type '" "struct SPCAuthKey *""'"); 
+    }
+    arg2 = (struct SPCAuthKey *)(argp2);
+    if (arg1) (arg1)->sPCAuthKey = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLAUTHRESP_t_sPCAuthKey_get) {
+  {
+    struct SUPLAUTHRESP *arg1 = (struct SUPLAUTHRESP *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    struct SPCAuthKey *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLAUTHRESP_t_sPCAuthKey_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLAUTHRESP, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLAUTHRESP_t_sPCAuthKey_get" "', argument " "1"" of type '" "struct SUPLAUTHRESP *""'"); 
+    }
+    arg1 = (struct SUPLAUTHRESP *)(argp1);
+    result = (struct SPCAuthKey *) ((arg1)->sPCAuthKey);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SPCAuthKey, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLAUTHRESP_t_keyIdentity3_set) {
+  {
+    struct SUPLAUTHRESP *arg1 = (struct SUPLAUTHRESP *) 0 ;
+    KeyIdentity3_t *arg2 = (KeyIdentity3_t *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLAUTHRESP_t_keyIdentity3_set(self,keyIdentity3);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLAUTHRESP, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLAUTHRESP_t_keyIdentity3_set" "', argument " "1"" of type '" "struct SUPLAUTHRESP *""'"); 
+    }
+    arg1 = (struct SUPLAUTHRESP *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_KeyIdentity3_t, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLAUTHRESP_t_keyIdentity3_set" "', argument " "2"" of type '" "KeyIdentity3_t *""'"); 
+    }
+    arg2 = (KeyIdentity3_t *)(argp2);
+    if (arg1) (arg1)->keyIdentity3 = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLAUTHRESP_t_keyIdentity3_get) {
+  {
+    struct SUPLAUTHRESP *arg1 = (struct SUPLAUTHRESP *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    KeyIdentity3_t *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLAUTHRESP_t_keyIdentity3_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLAUTHRESP, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLAUTHRESP_t_keyIdentity3_get" "', argument " "1"" of type '" "struct SUPLAUTHRESP *""'"); 
+    }
+    arg1 = (struct SUPLAUTHRESP *)(argp1);
+    result = (KeyIdentity3_t *) ((arg1)->keyIdentity3);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_KeyIdentity3_t, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLAUTHRESP_t_statusCode_set) {
+  {
+    struct SUPLAUTHRESP *arg1 = (struct SUPLAUTHRESP *) 0 ;
+    StatusCode_t *arg2 = (StatusCode_t *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLAUTHRESP_t_statusCode_set(self,statusCode);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLAUTHRESP, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLAUTHRESP_t_statusCode_set" "', argument " "1"" of type '" "struct SUPLAUTHRESP *""'"); 
+    }
+    arg1 = (struct SUPLAUTHRESP *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_StatusCode_t, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLAUTHRESP_t_statusCode_set" "', argument " "2"" of type '" "StatusCode_t *""'"); 
+    }
+    arg2 = (StatusCode_t *)(argp2);
+    if (arg1) (arg1)->statusCode = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLAUTHRESP_t_statusCode_get) {
+  {
+    struct SUPLAUTHRESP *arg1 = (struct SUPLAUTHRESP *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    StatusCode_t *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLAUTHRESP_t_statusCode_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLAUTHRESP, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLAUTHRESP_t_statusCode_get" "', argument " "1"" of type '" "struct SUPLAUTHRESP *""'"); 
+    }
+    arg1 = (struct SUPLAUTHRESP *)(argp1);
+    result = (StatusCode_t *) ((arg1)->statusCode);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_StatusCode_t, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLAUTHRESP_t__asn_ctx_set) {
+  {
+    struct SUPLAUTHRESP *arg1 = (struct SUPLAUTHRESP *) 0 ;
+    asn_struct_ctx_t arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLAUTHRESP_t__asn_ctx_set(self,_asn_ctx);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLAUTHRESP, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLAUTHRESP_t__asn_ctx_set" "', argument " "1"" of type '" "struct SUPLAUTHRESP *""'"); 
+    }
+    arg1 = (struct SUPLAUTHRESP *)(argp1);
+    {
+      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_asn_struct_ctx_t,  0 );
+      if (!SWIG_IsOK(res2)) {
+        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLAUTHRESP_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'"); 
+      }  
+      if (!argp2) {
+        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLAUTHRESP_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'");
+      } else {
+        arg2 = *((asn_struct_ctx_t *)(argp2));
+      }
+    }
+    if (arg1) (arg1)->_asn_ctx = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLAUTHRESP_t__asn_ctx_get) {
+  {
+    struct SUPLAUTHRESP *arg1 = (struct SUPLAUTHRESP *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    asn_struct_ctx_t result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLAUTHRESP_t__asn_ctx_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLAUTHRESP, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLAUTHRESP_t__asn_ctx_get" "', argument " "1"" of type '" "struct SUPLAUTHRESP *""'"); 
+    }
+    arg1 = (struct SUPLAUTHRESP *)(argp1);
+    result =  ((arg1)->_asn_ctx);
+    ST(argvi) = SWIG_NewPointerObj((asn_struct_ctx_t *)memcpy((asn_struct_ctx_t *)malloc(sizeof(asn_struct_ctx_t)),&result,sizeof(asn_struct_ctx_t)), SWIGTYPE_p_asn_struct_ctx_t, SWIG_POINTER_OWN | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_SUPLAUTHRESP_t) {
+  {
+    int argvi = 0;
+    struct SUPLAUTHRESP *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 0) || (items > 0)) {
+      SWIG_croak("Usage: new_SUPLAUTHRESP_t();");
+    }
+    result = (struct SUPLAUTHRESP *)calloc(1, sizeof(struct SUPLAUTHRESP));
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SUPLAUTHRESP, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    XSRETURN(argvi);
+  fail:
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_delete_SUPLAUTHRESP_t) {
+  {
+    struct SUPLAUTHRESP *arg1 = (struct SUPLAUTHRESP *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: delete_SUPLAUTHRESP_t(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLAUTHRESP, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_SUPLAUTHRESP_t" "', argument " "1"" of type '" "struct SUPLAUTHRESP *""'"); 
+    }
+    arg1 = (struct SUPLAUTHRESP *)(argp1);
+    free((char *) arg1);
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLEND_t_position_set) {
+  {
+    struct SUPLEND *arg1 = (struct SUPLEND *) 0 ;
+    struct Position *arg2 = (struct Position *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLEND_t_position_set(self,position);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLEND, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLEND_t_position_set" "', argument " "1"" of type '" "struct SUPLEND *""'"); 
+    }
+    arg1 = (struct SUPLEND *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_Position, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLEND_t_position_set" "', argument " "2"" of type '" "struct Position *""'"); 
+    }
+    arg2 = (struct Position *)(argp2);
+    if (arg1) (arg1)->position = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLEND_t_position_get) {
+  {
+    struct SUPLEND *arg1 = (struct SUPLEND *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    struct Position *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLEND_t_position_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLEND, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLEND_t_position_get" "', argument " "1"" of type '" "struct SUPLEND *""'"); 
+    }
+    arg1 = (struct SUPLEND *)(argp1);
+    result = (struct Position *) ((arg1)->position);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_Position, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLEND_t_statusCode_set) {
+  {
+    struct SUPLEND *arg1 = (struct SUPLEND *) 0 ;
+    StatusCode_t *arg2 = (StatusCode_t *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLEND_t_statusCode_set(self,statusCode);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLEND, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLEND_t_statusCode_set" "', argument " "1"" of type '" "struct SUPLEND *""'"); 
+    }
+    arg1 = (struct SUPLEND *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_StatusCode_t, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLEND_t_statusCode_set" "', argument " "2"" of type '" "StatusCode_t *""'"); 
+    }
+    arg2 = (StatusCode_t *)(argp2);
+    if (arg1) (arg1)->statusCode = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLEND_t_statusCode_get) {
+  {
+    struct SUPLEND *arg1 = (struct SUPLEND *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    StatusCode_t *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLEND_t_statusCode_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLEND, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLEND_t_statusCode_get" "', argument " "1"" of type '" "struct SUPLEND *""'"); 
+    }
+    arg1 = (struct SUPLEND *)(argp1);
+    result = (StatusCode_t *) ((arg1)->statusCode);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_StatusCode_t, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLEND_t_ver_set) {
+  {
+    struct SUPLEND *arg1 = (struct SUPLEND *) 0 ;
+    Ver_t *arg2 = (Ver_t *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLEND_t_ver_set(self,ver);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLEND, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLEND_t_ver_set" "', argument " "1"" of type '" "struct SUPLEND *""'"); 
+    }
+    arg1 = (struct SUPLEND *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_Ver_t, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLEND_t_ver_set" "', argument " "2"" of type '" "Ver_t *""'"); 
+    }
+    arg2 = (Ver_t *)(argp2);
+    if (arg1) (arg1)->ver = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLEND_t_ver_get) {
+  {
+    struct SUPLEND *arg1 = (struct SUPLEND *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    Ver_t *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLEND_t_ver_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLEND, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLEND_t_ver_get" "', argument " "1"" of type '" "struct SUPLEND *""'"); 
+    }
+    arg1 = (struct SUPLEND *)(argp1);
+    result = (Ver_t *) ((arg1)->ver);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_Ver_t, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLEND_t__asn_ctx_set) {
+  {
+    struct SUPLEND *arg1 = (struct SUPLEND *) 0 ;
+    asn_struct_ctx_t arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLEND_t__asn_ctx_set(self,_asn_ctx);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLEND, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLEND_t__asn_ctx_set" "', argument " "1"" of type '" "struct SUPLEND *""'"); 
+    }
+    arg1 = (struct SUPLEND *)(argp1);
+    {
+      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_asn_struct_ctx_t,  0 );
+      if (!SWIG_IsOK(res2)) {
+        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLEND_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'"); 
+      }  
+      if (!argp2) {
+        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLEND_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'");
+      } else {
+        arg2 = *((asn_struct_ctx_t *)(argp2));
+      }
+    }
+    if (arg1) (arg1)->_asn_ctx = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLEND_t__asn_ctx_get) {
+  {
+    struct SUPLEND *arg1 = (struct SUPLEND *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    asn_struct_ctx_t result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLEND_t__asn_ctx_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLEND, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLEND_t__asn_ctx_get" "', argument " "1"" of type '" "struct SUPLEND *""'"); 
+    }
+    arg1 = (struct SUPLEND *)(argp1);
+    result =  ((arg1)->_asn_ctx);
+    ST(argvi) = SWIG_NewPointerObj((asn_struct_ctx_t *)memcpy((asn_struct_ctx_t *)malloc(sizeof(asn_struct_ctx_t)),&result,sizeof(asn_struct_ctx_t)), SWIGTYPE_p_asn_struct_ctx_t, SWIG_POINTER_OWN | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_SUPLEND_t) {
+  {
+    int argvi = 0;
+    struct SUPLEND *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 0) || (items > 0)) {
+      SWIG_croak("Usage: new_SUPLEND_t();");
+    }
+    result = (struct SUPLEND *)calloc(1, sizeof(struct SUPLEND));
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SUPLEND, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    XSRETURN(argvi);
+  fail:
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_delete_SUPLEND_t) {
+  {
+    struct SUPLEND *arg1 = (struct SUPLEND *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: delete_SUPLEND_t(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLEND, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_SUPLEND_t" "', argument " "1"" of type '" "struct SUPLEND *""'"); 
+    }
+    arg1 = (struct SUPLEND *)(argp1);
+    free((char *) arg1);
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLINIT_t_posMethod_set) {
+  {
+    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
+    PosMethod_t arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLINIT_t_posMethod_set(self,posMethod);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLINIT_t_posMethod_set" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
+    }
+    arg1 = (struct SUPLINIT *)(argp1);
+    {
+      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_PosMethod_t,  0 );
+      if (!SWIG_IsOK(res2)) {
+        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLINIT_t_posMethod_set" "', argument " "2"" of type '" "PosMethod_t""'"); 
+      }  
+      if (!argp2) {
+        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLINIT_t_posMethod_set" "', argument " "2"" of type '" "PosMethod_t""'");
+      } else {
+        arg2 = *((PosMethod_t *)(argp2));
+      }
+    }
+    if (arg1) (arg1)->posMethod = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLINIT_t_posMethod_get) {
+  {
+    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    PosMethod_t result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLINIT_t_posMethod_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLINIT_t_posMethod_get" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
+    }
+    arg1 = (struct SUPLINIT *)(argp1);
+    result =  ((arg1)->posMethod);
+    ST(argvi) = SWIG_NewPointerObj((PosMethod_t *)memcpy((PosMethod_t *)malloc(sizeof(PosMethod_t)),&result,sizeof(PosMethod_t)), SWIGTYPE_p_PosMethod_t, SWIG_POINTER_OWN | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLINIT_t_notification_set) {
+  {
+    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
+    struct Notification *arg2 = (struct Notification *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLINIT_t_notification_set(self,notification);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLINIT_t_notification_set" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
+    }
+    arg1 = (struct SUPLINIT *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_Notification, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLINIT_t_notification_set" "', argument " "2"" of type '" "struct Notification *""'"); 
+    }
+    arg2 = (struct Notification *)(argp2);
+    if (arg1) (arg1)->notification = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLINIT_t_notification_get) {
+  {
+    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    struct Notification *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLINIT_t_notification_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLINIT_t_notification_get" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
+    }
+    arg1 = (struct SUPLINIT *)(argp1);
+    result = (struct Notification *) ((arg1)->notification);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_Notification, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLINIT_t_sLPAddress_set) {
+  {
+    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
+    struct SLPAddress *arg2 = (struct SLPAddress *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLINIT_t_sLPAddress_set(self,sLPAddress);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLINIT_t_sLPAddress_set" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
+    }
+    arg1 = (struct SUPLINIT *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_SLPAddress, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLINIT_t_sLPAddress_set" "', argument " "2"" of type '" "struct SLPAddress *""'"); 
+    }
+    arg2 = (struct SLPAddress *)(argp2);
+    if (arg1) (arg1)->sLPAddress = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLINIT_t_sLPAddress_get) {
+  {
+    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    struct SLPAddress *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLINIT_t_sLPAddress_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLINIT_t_sLPAddress_get" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
+    }
+    arg1 = (struct SUPLINIT *)(argp1);
+    result = (struct SLPAddress *) ((arg1)->sLPAddress);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SLPAddress, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLINIT_t_qoP_set) {
+  {
+    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
+    struct QoP *arg2 = (struct QoP *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLINIT_t_qoP_set(self,qoP);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLINIT_t_qoP_set" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
+    }
+    arg1 = (struct SUPLINIT *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_QoP, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLINIT_t_qoP_set" "', argument " "2"" of type '" "struct QoP *""'"); 
+    }
+    arg2 = (struct QoP *)(argp2);
+    if (arg1) (arg1)->qoP = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLINIT_t_qoP_get) {
+  {
+    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    struct QoP *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLINIT_t_qoP_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLINIT_t_qoP_get" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
+    }
+    arg1 = (struct SUPLINIT *)(argp1);
+    result = (struct QoP *) ((arg1)->qoP);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_QoP, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLINIT_t_sLPMode_set) {
+  {
+    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
+    SLPMode_t arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLINIT_t_sLPMode_set(self,sLPMode);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLINIT_t_sLPMode_set" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
+    }
+    arg1 = (struct SUPLINIT *)(argp1);
+    {
+      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_SLPMode_t,  0 );
+      if (!SWIG_IsOK(res2)) {
+        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLINIT_t_sLPMode_set" "', argument " "2"" of type '" "SLPMode_t""'"); 
+      }  
+      if (!argp2) {
+        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLINIT_t_sLPMode_set" "', argument " "2"" of type '" "SLPMode_t""'");
+      } else {
+        arg2 = *((SLPMode_t *)(argp2));
+      }
+    }
+    if (arg1) (arg1)->sLPMode = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLINIT_t_sLPMode_get) {
+  {
+    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    SLPMode_t result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLINIT_t_sLPMode_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLINIT_t_sLPMode_get" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
+    }
+    arg1 = (struct SUPLINIT *)(argp1);
+    result =  ((arg1)->sLPMode);
+    ST(argvi) = SWIG_NewPointerObj((SLPMode_t *)memcpy((SLPMode_t *)malloc(sizeof(SLPMode_t)),&result,sizeof(SLPMode_t)), SWIGTYPE_p_SLPMode_t, SWIG_POINTER_OWN | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLINIT_t_mAC_set) {
+  {
+    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
+    MAC_t *arg2 = (MAC_t *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLINIT_t_mAC_set(self,mAC);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLINIT_t_mAC_set" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
+    }
+    arg1 = (struct SUPLINIT *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_MAC_t, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLINIT_t_mAC_set" "', argument " "2"" of type '" "MAC_t *""'"); 
+    }
+    arg2 = (MAC_t *)(argp2);
+    if (arg1) (arg1)->mAC = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLINIT_t_mAC_get) {
+  {
+    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    MAC_t *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLINIT_t_mAC_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLINIT_t_mAC_get" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
+    }
+    arg1 = (struct SUPLINIT *)(argp1);
+    result = (MAC_t *) ((arg1)->mAC);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_MAC_t, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLINIT_t_keyIdentity_set) {
+  {
+    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
+    KeyIdentity_t *arg2 = (KeyIdentity_t *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLINIT_t_keyIdentity_set(self,keyIdentity);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLINIT_t_keyIdentity_set" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
+    }
+    arg1 = (struct SUPLINIT *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_KeyIdentity_t, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLINIT_t_keyIdentity_set" "', argument " "2"" of type '" "KeyIdentity_t *""'"); 
+    }
+    arg2 = (KeyIdentity_t *)(argp2);
+    if (arg1) (arg1)->keyIdentity = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLINIT_t_keyIdentity_get) {
+  {
+    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    KeyIdentity_t *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLINIT_t_keyIdentity_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLINIT_t_keyIdentity_get" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
+    }
+    arg1 = (struct SUPLINIT *)(argp1);
+    result = (KeyIdentity_t *) ((arg1)->keyIdentity);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_KeyIdentity_t, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLINIT_t__asn_ctx_set) {
+  {
+    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
+    asn_struct_ctx_t arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLINIT_t__asn_ctx_set(self,_asn_ctx);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLINIT_t__asn_ctx_set" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
+    }
+    arg1 = (struct SUPLINIT *)(argp1);
+    {
+      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_asn_struct_ctx_t,  0 );
+      if (!SWIG_IsOK(res2)) {
+        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLINIT_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'"); 
+      }  
+      if (!argp2) {
+        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLINIT_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'");
+      } else {
+        arg2 = *((asn_struct_ctx_t *)(argp2));
+      }
+    }
+    if (arg1) (arg1)->_asn_ctx = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLINIT_t__asn_ctx_get) {
+  {
+    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    asn_struct_ctx_t result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLINIT_t__asn_ctx_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLINIT_t__asn_ctx_get" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
+    }
+    arg1 = (struct SUPLINIT *)(argp1);
+    result =  ((arg1)->_asn_ctx);
+    ST(argvi) = SWIG_NewPointerObj((asn_struct_ctx_t *)memcpy((asn_struct_ctx_t *)malloc(sizeof(asn_struct_ctx_t)),&result,sizeof(asn_struct_ctx_t)), SWIGTYPE_p_asn_struct_ctx_t, SWIG_POINTER_OWN | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_SUPLINIT_t) {
+  {
+    int argvi = 0;
+    struct SUPLINIT *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 0) || (items > 0)) {
+      SWIG_croak("Usage: new_SUPLINIT_t();");
+    }
+    result = (struct SUPLINIT *)calloc(1, sizeof(struct SUPLINIT));
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SUPLINIT, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    XSRETURN(argvi);
+  fail:
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_delete_SUPLINIT_t) {
+  {
+    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: delete_SUPLINIT_t(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_SUPLINIT_t" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
+    }
+    arg1 = (struct SUPLINIT *)(argp1);
+    free((char *) arg1);
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLPOS_t_posPayLoad_set) {
+  {
+    struct SUPLPOS *arg1 = (struct SUPLPOS *) 0 ;
+    PosPayLoad_t arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLPOS_t_posPayLoad_set(self,posPayLoad);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOS, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOS_t_posPayLoad_set" "', argument " "1"" of type '" "struct SUPLPOS *""'"); 
+    }
+    arg1 = (struct SUPLPOS *)(argp1);
+    {
+      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_PosPayLoad_t,  0 );
+      if (!SWIG_IsOK(res2)) {
+        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLPOS_t_posPayLoad_set" "', argument " "2"" of type '" "PosPayLoad_t""'"); 
+      }  
+      if (!argp2) {
+        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLPOS_t_posPayLoad_set" "', argument " "2"" of type '" "PosPayLoad_t""'");
+      } else {
+        arg2 = *((PosPayLoad_t *)(argp2));
+      }
+    }
+    if (arg1) (arg1)->posPayLoad = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLPOS_t_posPayLoad_get) {
+  {
+    struct SUPLPOS *arg1 = (struct SUPLPOS *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    PosPayLoad_t result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLPOS_t_posPayLoad_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOS, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOS_t_posPayLoad_get" "', argument " "1"" of type '" "struct SUPLPOS *""'"); 
+    }
+    arg1 = (struct SUPLPOS *)(argp1);
+    result =  ((arg1)->posPayLoad);
+    ST(argvi) = SWIG_NewPointerObj((PosPayLoad_t *)memcpy((PosPayLoad_t *)malloc(sizeof(PosPayLoad_t)),&result,sizeof(PosPayLoad_t)), SWIGTYPE_p_PosPayLoad_t, SWIG_POINTER_OWN | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLPOS_t_velocity_set) {
+  {
+    struct SUPLPOS *arg1 = (struct SUPLPOS *) 0 ;
+    struct Velocity *arg2 = (struct Velocity *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLPOS_t_velocity_set(self,velocity);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOS, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOS_t_velocity_set" "', argument " "1"" of type '" "struct SUPLPOS *""'"); 
+    }
+    arg1 = (struct SUPLPOS *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_Velocity, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLPOS_t_velocity_set" "', argument " "2"" of type '" "struct Velocity *""'"); 
+    }
+    arg2 = (struct Velocity *)(argp2);
+    if (arg1) (arg1)->velocity = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLPOS_t_velocity_get) {
+  {
+    struct SUPLPOS *arg1 = (struct SUPLPOS *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    struct Velocity *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLPOS_t_velocity_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOS, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOS_t_velocity_get" "', argument " "1"" of type '" "struct SUPLPOS *""'"); 
+    }
+    arg1 = (struct SUPLPOS *)(argp1);
+    result = (struct Velocity *) ((arg1)->velocity);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_Velocity, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLPOS_t__asn_ctx_set) {
+  {
+    struct SUPLPOS *arg1 = (struct SUPLPOS *) 0 ;
+    asn_struct_ctx_t arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLPOS_t__asn_ctx_set(self,_asn_ctx);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOS, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOS_t__asn_ctx_set" "', argument " "1"" of type '" "struct SUPLPOS *""'"); 
+    }
+    arg1 = (struct SUPLPOS *)(argp1);
+    {
+      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_asn_struct_ctx_t,  0 );
+      if (!SWIG_IsOK(res2)) {
+        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLPOS_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'"); 
+      }  
+      if (!argp2) {
+        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLPOS_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'");
+      } else {
+        arg2 = *((asn_struct_ctx_t *)(argp2));
+      }
+    }
+    if (arg1) (arg1)->_asn_ctx = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLPOS_t__asn_ctx_get) {
+  {
+    struct SUPLPOS *arg1 = (struct SUPLPOS *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    asn_struct_ctx_t result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLPOS_t__asn_ctx_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOS, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOS_t__asn_ctx_get" "', argument " "1"" of type '" "struct SUPLPOS *""'"); 
+    }
+    arg1 = (struct SUPLPOS *)(argp1);
+    result =  ((arg1)->_asn_ctx);
+    ST(argvi) = SWIG_NewPointerObj((asn_struct_ctx_t *)memcpy((asn_struct_ctx_t *)malloc(sizeof(asn_struct_ctx_t)),&result,sizeof(asn_struct_ctx_t)), SWIGTYPE_p_asn_struct_ctx_t, SWIG_POINTER_OWN | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_SUPLPOS_t) {
+  {
+    int argvi = 0;
+    struct SUPLPOS *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 0) || (items > 0)) {
+      SWIG_croak("Usage: new_SUPLPOS_t();");
+    }
+    result = (struct SUPLPOS *)calloc(1, sizeof(struct SUPLPOS));
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SUPLPOS, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    XSRETURN(argvi);
+  fail:
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_delete_SUPLPOS_t) {
+  {
+    struct SUPLPOS *arg1 = (struct SUPLPOS *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: delete_SUPLPOS_t(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOS, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_SUPLPOS_t" "', argument " "1"" of type '" "struct SUPLPOS *""'"); 
+    }
+    arg1 = (struct SUPLPOS *)(argp1);
+    free((char *) arg1);
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLPOSINIT_t_sETCapabilities_set) {
+  {
+    struct SUPLPOSINIT *arg1 = (struct SUPLPOSINIT *) 0 ;
+    SETCapabilities_t arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLPOSINIT_t_sETCapabilities_set(self,sETCapabilities);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOSINIT, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOSINIT_t_sETCapabilities_set" "', argument " "1"" of type '" "struct SUPLPOSINIT *""'"); 
+    }
+    arg1 = (struct SUPLPOSINIT *)(argp1);
+    {
+      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_SETCapabilities_t,  0 );
+      if (!SWIG_IsOK(res2)) {
+        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLPOSINIT_t_sETCapabilities_set" "', argument " "2"" of type '" "SETCapabilities_t""'"); 
+      }  
+      if (!argp2) {
+        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLPOSINIT_t_sETCapabilities_set" "', argument " "2"" of type '" "SETCapabilities_t""'");
+      } else {
+        arg2 = *((SETCapabilities_t *)(argp2));
+      }
+    }
+    if (arg1) (arg1)->sETCapabilities = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLPOSINIT_t_sETCapabilities_get) {
+  {
+    struct SUPLPOSINIT *arg1 = (struct SUPLPOSINIT *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    SETCapabilities_t result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLPOSINIT_t_sETCapabilities_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOSINIT, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOSINIT_t_sETCapabilities_get" "', argument " "1"" of type '" "struct SUPLPOSINIT *""'"); 
+    }
+    arg1 = (struct SUPLPOSINIT *)(argp1);
+    result =  ((arg1)->sETCapabilities);
+    ST(argvi) = SWIG_NewPointerObj((SETCapabilities_t *)memcpy((SETCapabilities_t *)malloc(sizeof(SETCapabilities_t)),&result,sizeof(SETCapabilities_t)), SWIGTYPE_p_SETCapabilities_t, SWIG_POINTER_OWN | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLPOSINIT_t_requestedAssistData_set) {
+  {
+    struct SUPLPOSINIT *arg1 = (struct SUPLPOSINIT *) 0 ;
+    struct RequestedAssistData *arg2 = (struct RequestedAssistData *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLPOSINIT_t_requestedAssistData_set(self,requestedAssistData);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOSINIT, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOSINIT_t_requestedAssistData_set" "', argument " "1"" of type '" "struct SUPLPOSINIT *""'"); 
+    }
+    arg1 = (struct SUPLPOSINIT *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_RequestedAssistData, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLPOSINIT_t_requestedAssistData_set" "', argument " "2"" of type '" "struct RequestedAssistData *""'"); 
+    }
+    arg2 = (struct RequestedAssistData *)(argp2);
+    if (arg1) (arg1)->requestedAssistData = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLPOSINIT_t_requestedAssistData_get) {
+  {
+    struct SUPLPOSINIT *arg1 = (struct SUPLPOSINIT *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    struct RequestedAssistData *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLPOSINIT_t_requestedAssistData_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOSINIT, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOSINIT_t_requestedAssistData_get" "', argument " "1"" of type '" "struct SUPLPOSINIT *""'"); 
+    }
+    arg1 = (struct SUPLPOSINIT *)(argp1);
+    result = (struct RequestedAssistData *) ((arg1)->requestedAssistData);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_RequestedAssistData, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLPOSINIT_t_locationId_set) {
+  {
+    struct SUPLPOSINIT *arg1 = (struct SUPLPOSINIT *) 0 ;
+    LocationId_t arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLPOSINIT_t_locationId_set(self,locationId);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOSINIT, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOSINIT_t_locationId_set" "', argument " "1"" of type '" "struct SUPLPOSINIT *""'"); 
+    }
+    arg1 = (struct SUPLPOSINIT *)(argp1);
+    {
+      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_LocationId_t,  0 );
+      if (!SWIG_IsOK(res2)) {
+        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLPOSINIT_t_locationId_set" "', argument " "2"" of type '" "LocationId_t""'"); 
+      }  
+      if (!argp2) {
+        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLPOSINIT_t_locationId_set" "', argument " "2"" of type '" "LocationId_t""'");
+      } else {
+        arg2 = *((LocationId_t *)(argp2));
+      }
+    }
+    if (arg1) (arg1)->locationId = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLPOSINIT_t_locationId_get) {
+  {
+    struct SUPLPOSINIT *arg1 = (struct SUPLPOSINIT *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    LocationId_t result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLPOSINIT_t_locationId_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOSINIT, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOSINIT_t_locationId_get" "', argument " "1"" of type '" "struct SUPLPOSINIT *""'"); 
+    }
+    arg1 = (struct SUPLPOSINIT *)(argp1);
+    result =  ((arg1)->locationId);
+    ST(argvi) = SWIG_NewPointerObj((LocationId_t *)memcpy((LocationId_t *)malloc(sizeof(LocationId_t)),&result,sizeof(LocationId_t)), SWIGTYPE_p_LocationId_t, SWIG_POINTER_OWN | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLPOSINIT_t_position_set) {
+  {
+    struct SUPLPOSINIT *arg1 = (struct SUPLPOSINIT *) 0 ;
+    struct Position *arg2 = (struct Position *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLPOSINIT_t_position_set(self,position);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOSINIT, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOSINIT_t_position_set" "', argument " "1"" of type '" "struct SUPLPOSINIT *""'"); 
+    }
+    arg1 = (struct SUPLPOSINIT *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_Position, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLPOSINIT_t_position_set" "', argument " "2"" of type '" "struct Position *""'"); 
+    }
+    arg2 = (struct Position *)(argp2);
+    if (arg1) (arg1)->position = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLPOSINIT_t_position_get) {
+  {
+    struct SUPLPOSINIT *arg1 = (struct SUPLPOSINIT *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    struct Position *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLPOSINIT_t_position_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOSINIT, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOSINIT_t_position_get" "', argument " "1"" of type '" "struct SUPLPOSINIT *""'"); 
+    }
+    arg1 = (struct SUPLPOSINIT *)(argp1);
+    result = (struct Position *) ((arg1)->position);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_Position, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLPOSINIT_t_sUPLPOS_set) {
+  {
+    struct SUPLPOSINIT *arg1 = (struct SUPLPOSINIT *) 0 ;
+    struct SUPLPOS *arg2 = (struct SUPLPOS *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLPOSINIT_t_sUPLPOS_set(self,sUPLPOS);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOSINIT, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOSINIT_t_sUPLPOS_set" "', argument " "1"" of type '" "struct SUPLPOSINIT *""'"); 
+    }
+    arg1 = (struct SUPLPOSINIT *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_SUPLPOS, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLPOSINIT_t_sUPLPOS_set" "', argument " "2"" of type '" "struct SUPLPOS *""'"); 
+    }
+    arg2 = (struct SUPLPOS *)(argp2);
+    if (arg1) (arg1)->sUPLPOS = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLPOSINIT_t_sUPLPOS_get) {
+  {
+    struct SUPLPOSINIT *arg1 = (struct SUPLPOSINIT *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    struct SUPLPOS *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLPOSINIT_t_sUPLPOS_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOSINIT, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOSINIT_t_sUPLPOS_get" "', argument " "1"" of type '" "struct SUPLPOSINIT *""'"); 
+    }
+    arg1 = (struct SUPLPOSINIT *)(argp1);
+    result = (struct SUPLPOS *) ((arg1)->sUPLPOS);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SUPLPOS, 0 | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLPOSINIT_t_ver_set) {
+  {
+    struct SUPLPOSINIT *arg1 = (struct SUPLPOSINIT *) 0 ;
+    Ver_t *arg2 = (Ver_t *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLPOSINIT_t_ver_set(self,ver);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOSINIT, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOSINIT_t_ver_set" "', argument " "1"" of type '" "struct SUPLPOSINIT *""'"); 
+    }
+    arg1 = (struct SUPLPOSINIT *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_Ver_t, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLPOSINIT_t_ver_set" "', argument " "2"" of type '" "Ver_t *""'"); 
+    }
+    arg2 = (Ver_t *)(argp2);
+    if (arg1) (arg1)->ver = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLPOSINIT_t_ver_get) {
+  {
+    struct SUPLPOSINIT *arg1 = (struct SUPLPOSINIT *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    Ver_t *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLPOSINIT_t_ver_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOSINIT, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOSINIT_t_ver_get" "', argument " "1"" of type '" "struct SUPLPOSINIT *""'"); 
+    }
+    arg1 = (struct SUPLPOSINIT *)(argp1);
+    result = (Ver_t *) ((arg1)->ver);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_Ver_t, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLPOSINIT_t__asn_ctx_set) {
+  {
+    struct SUPLPOSINIT *arg1 = (struct SUPLPOSINIT *) 0 ;
+    asn_struct_ctx_t arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLPOSINIT_t__asn_ctx_set(self,_asn_ctx);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOSINIT, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOSINIT_t__asn_ctx_set" "', argument " "1"" of type '" "struct SUPLPOSINIT *""'"); 
+    }
+    arg1 = (struct SUPLPOSINIT *)(argp1);
+    {
+      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_asn_struct_ctx_t,  0 );
+      if (!SWIG_IsOK(res2)) {
+        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLPOSINIT_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'"); 
+      }  
+      if (!argp2) {
+        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLPOSINIT_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'");
+      } else {
+        arg2 = *((asn_struct_ctx_t *)(argp2));
+      }
+    }
+    if (arg1) (arg1)->_asn_ctx = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLPOSINIT_t__asn_ctx_get) {
+  {
+    struct SUPLPOSINIT *arg1 = (struct SUPLPOSINIT *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    asn_struct_ctx_t result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLPOSINIT_t__asn_ctx_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOSINIT, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOSINIT_t__asn_ctx_get" "', argument " "1"" of type '" "struct SUPLPOSINIT *""'"); 
+    }
+    arg1 = (struct SUPLPOSINIT *)(argp1);
+    result =  ((arg1)->_asn_ctx);
+    ST(argvi) = SWIG_NewPointerObj((asn_struct_ctx_t *)memcpy((asn_struct_ctx_t *)malloc(sizeof(asn_struct_ctx_t)),&result,sizeof(asn_struct_ctx_t)), SWIGTYPE_p_asn_struct_ctx_t, SWIG_POINTER_OWN | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_SUPLPOSINIT_t) {
+  {
+    int argvi = 0;
+    struct SUPLPOSINIT *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 0) || (items > 0)) {
+      SWIG_croak("Usage: new_SUPLPOSINIT_t();");
+    }
+    result = (struct SUPLPOSINIT *)calloc(1, sizeof(struct SUPLPOSINIT));
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SUPLPOSINIT, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    XSRETURN(argvi);
+  fail:
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_delete_SUPLPOSINIT_t) {
+  {
+    struct SUPLPOSINIT *arg1 = (struct SUPLPOSINIT *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: delete_SUPLPOSINIT_t(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOSINIT, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_SUPLPOSINIT_t" "', argument " "1"" of type '" "struct SUPLPOSINIT *""'"); 
+    }
+    arg1 = (struct SUPLPOSINIT *)(argp1);
+    free((char *) arg1);
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLRESPONSE_t_posMethod_set) {
+  {
+    struct SUPLRESPONSE *arg1 = (struct SUPLRESPONSE *) 0 ;
+    PosMethod_t arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLRESPONSE_t_posMethod_set(self,posMethod);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLRESPONSE, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLRESPONSE_t_posMethod_set" "', argument " "1"" of type '" "struct SUPLRESPONSE *""'"); 
+    }
+    arg1 = (struct SUPLRESPONSE *)(argp1);
+    {
+      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_PosMethod_t,  0 );
+      if (!SWIG_IsOK(res2)) {
+        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLRESPONSE_t_posMethod_set" "', argument " "2"" of type '" "PosMethod_t""'"); 
+      }  
+      if (!argp2) {
+        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLRESPONSE_t_posMethod_set" "', argument " "2"" of type '" "PosMethod_t""'");
+      } else {
+        arg2 = *((PosMethod_t *)(argp2));
+      }
+    }
+    if (arg1) (arg1)->posMethod = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLRESPONSE_t_posMethod_get) {
+  {
+    struct SUPLRESPONSE *arg1 = (struct SUPLRESPONSE *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    PosMethod_t result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLRESPONSE_t_posMethod_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLRESPONSE, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLRESPONSE_t_posMethod_get" "', argument " "1"" of type '" "struct SUPLRESPONSE *""'"); 
+    }
+    arg1 = (struct SUPLRESPONSE *)(argp1);
+    result =  ((arg1)->posMethod);
+    ST(argvi) = SWIG_NewPointerObj((PosMethod_t *)memcpy((PosMethod_t *)malloc(sizeof(PosMethod_t)),&result,sizeof(PosMethod_t)), SWIGTYPE_p_PosMethod_t, SWIG_POINTER_OWN | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLRESPONSE_t_sLPAddress_set) {
+  {
+    struct SUPLRESPONSE *arg1 = (struct SUPLRESPONSE *) 0 ;
+    struct SLPAddress *arg2 = (struct SLPAddress *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLRESPONSE_t_sLPAddress_set(self,sLPAddress);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLRESPONSE, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLRESPONSE_t_sLPAddress_set" "', argument " "1"" of type '" "struct SUPLRESPONSE *""'"); 
+    }
+    arg1 = (struct SUPLRESPONSE *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_SLPAddress, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLRESPONSE_t_sLPAddress_set" "', argument " "2"" of type '" "struct SLPAddress *""'"); 
+    }
+    arg2 = (struct SLPAddress *)(argp2);
+    if (arg1) (arg1)->sLPAddress = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLRESPONSE_t_sLPAddress_get) {
+  {
+    struct SUPLRESPONSE *arg1 = (struct SUPLRESPONSE *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    struct SLPAddress *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLRESPONSE_t_sLPAddress_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLRESPONSE, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLRESPONSE_t_sLPAddress_get" "', argument " "1"" of type '" "struct SUPLRESPONSE *""'"); 
+    }
+    arg1 = (struct SUPLRESPONSE *)(argp1);
+    result = (struct SLPAddress *) ((arg1)->sLPAddress);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SLPAddress, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLRESPONSE_t_sETAuthKey_set) {
+  {
+    struct SUPLRESPONSE *arg1 = (struct SUPLRESPONSE *) 0 ;
+    struct SETAuthKey *arg2 = (struct SETAuthKey *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLRESPONSE_t_sETAuthKey_set(self,sETAuthKey);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLRESPONSE, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLRESPONSE_t_sETAuthKey_set" "', argument " "1"" of type '" "struct SUPLRESPONSE *""'"); 
+    }
+    arg1 = (struct SUPLRESPONSE *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_SETAuthKey, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLRESPONSE_t_sETAuthKey_set" "', argument " "2"" of type '" "struct SETAuthKey *""'"); 
+    }
+    arg2 = (struct SETAuthKey *)(argp2);
+    if (arg1) (arg1)->sETAuthKey = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLRESPONSE_t_sETAuthKey_get) {
+  {
+    struct SUPLRESPONSE *arg1 = (struct SUPLRESPONSE *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    struct SETAuthKey *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLRESPONSE_t_sETAuthKey_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLRESPONSE, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLRESPONSE_t_sETAuthKey_get" "', argument " "1"" of type '" "struct SUPLRESPONSE *""'"); 
+    }
+    arg1 = (struct SUPLRESPONSE *)(argp1);
+    result = (struct SETAuthKey *) ((arg1)->sETAuthKey);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SETAuthKey, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLRESPONSE_t_keyIdentity4_set) {
+  {
+    struct SUPLRESPONSE *arg1 = (struct SUPLRESPONSE *) 0 ;
+    KeyIdentity4_t *arg2 = (KeyIdentity4_t *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLRESPONSE_t_keyIdentity4_set(self,keyIdentity4);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLRESPONSE, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLRESPONSE_t_keyIdentity4_set" "', argument " "1"" of type '" "struct SUPLRESPONSE *""'"); 
+    }
+    arg1 = (struct SUPLRESPONSE *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_KeyIdentity4_t, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLRESPONSE_t_keyIdentity4_set" "', argument " "2"" of type '" "KeyIdentity4_t *""'"); 
+    }
+    arg2 = (KeyIdentity4_t *)(argp2);
+    if (arg1) (arg1)->keyIdentity4 = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLRESPONSE_t_keyIdentity4_get) {
+  {
+    struct SUPLRESPONSE *arg1 = (struct SUPLRESPONSE *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    KeyIdentity4_t *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLRESPONSE_t_keyIdentity4_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLRESPONSE, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLRESPONSE_t_keyIdentity4_get" "', argument " "1"" of type '" "struct SUPLRESPONSE *""'"); 
+    }
+    arg1 = (struct SUPLRESPONSE *)(argp1);
+    result = (KeyIdentity4_t *) ((arg1)->keyIdentity4);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_KeyIdentity4_t, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLRESPONSE_t__asn_ctx_set) {
+  {
+    struct SUPLRESPONSE *arg1 = (struct SUPLRESPONSE *) 0 ;
+    asn_struct_ctx_t arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLRESPONSE_t__asn_ctx_set(self,_asn_ctx);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLRESPONSE, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLRESPONSE_t__asn_ctx_set" "', argument " "1"" of type '" "struct SUPLRESPONSE *""'"); 
+    }
+    arg1 = (struct SUPLRESPONSE *)(argp1);
+    {
+      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_asn_struct_ctx_t,  0 );
+      if (!SWIG_IsOK(res2)) {
+        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLRESPONSE_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'"); 
+      }  
+      if (!argp2) {
+        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLRESPONSE_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'");
+      } else {
+        arg2 = *((asn_struct_ctx_t *)(argp2));
+      }
+    }
+    if (arg1) (arg1)->_asn_ctx = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLRESPONSE_t__asn_ctx_get) {
+  {
+    struct SUPLRESPONSE *arg1 = (struct SUPLRESPONSE *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    asn_struct_ctx_t result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLRESPONSE_t__asn_ctx_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLRESPONSE, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLRESPONSE_t__asn_ctx_get" "', argument " "1"" of type '" "struct SUPLRESPONSE *""'"); 
+    }
+    arg1 = (struct SUPLRESPONSE *)(argp1);
+    result =  ((arg1)->_asn_ctx);
+    ST(argvi) = SWIG_NewPointerObj((asn_struct_ctx_t *)memcpy((asn_struct_ctx_t *)malloc(sizeof(asn_struct_ctx_t)),&result,sizeof(asn_struct_ctx_t)), SWIGTYPE_p_asn_struct_ctx_t, SWIG_POINTER_OWN | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_SUPLRESPONSE_t) {
+  {
+    int argvi = 0;
+    struct SUPLRESPONSE *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 0) || (items > 0)) {
+      SWIG_croak("Usage: new_SUPLRESPONSE_t();");
+    }
+    result = (struct SUPLRESPONSE *)calloc(1, sizeof(struct SUPLRESPONSE));
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SUPLRESPONSE, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    XSRETURN(argvi);
+  fail:
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_delete_SUPLRESPONSE_t) {
+  {
+    struct SUPLRESPONSE *arg1 = (struct SUPLRESPONSE *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: delete_SUPLRESPONSE_t(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLRESPONSE, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_SUPLRESPONSE_t" "', argument " "1"" of type '" "struct SUPLRESPONSE *""'"); 
+    }
+    arg1 = (struct SUPLRESPONSE *)(argp1);
+    free((char *) arg1);
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLSTART_t_sETCapabilities_set) {
+  {
+    struct SUPLSTART *arg1 = (struct SUPLSTART *) 0 ;
+    SETCapabilities_t arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLSTART_t_sETCapabilities_set(self,sETCapabilities);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLSTART, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLSTART_t_sETCapabilities_set" "', argument " "1"" of type '" "struct SUPLSTART *""'"); 
+    }
+    arg1 = (struct SUPLSTART *)(argp1);
+    {
+      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_SETCapabilities_t,  0 );
+      if (!SWIG_IsOK(res2)) {
+        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLSTART_t_sETCapabilities_set" "', argument " "2"" of type '" "SETCapabilities_t""'"); 
+      }  
+      if (!argp2) {
+        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLSTART_t_sETCapabilities_set" "', argument " "2"" of type '" "SETCapabilities_t""'");
+      } else {
+        arg2 = *((SETCapabilities_t *)(argp2));
+      }
+    }
+    if (arg1) (arg1)->sETCapabilities = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLSTART_t_sETCapabilities_get) {
+  {
+    struct SUPLSTART *arg1 = (struct SUPLSTART *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    SETCapabilities_t result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLSTART_t_sETCapabilities_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLSTART, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLSTART_t_sETCapabilities_get" "', argument " "1"" of type '" "struct SUPLSTART *""'"); 
+    }
+    arg1 = (struct SUPLSTART *)(argp1);
+    result =  ((arg1)->sETCapabilities);
+    ST(argvi) = SWIG_NewPointerObj((SETCapabilities_t *)memcpy((SETCapabilities_t *)malloc(sizeof(SETCapabilities_t)),&result,sizeof(SETCapabilities_t)), SWIGTYPE_p_SETCapabilities_t, SWIG_POINTER_OWN | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLSTART_t_locationId_set) {
+  {
+    struct SUPLSTART *arg1 = (struct SUPLSTART *) 0 ;
+    LocationId_t arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLSTART_t_locationId_set(self,locationId);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLSTART, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLSTART_t_locationId_set" "', argument " "1"" of type '" "struct SUPLSTART *""'"); 
+    }
+    arg1 = (struct SUPLSTART *)(argp1);
+    {
+      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_LocationId_t,  0 );
+      if (!SWIG_IsOK(res2)) {
+        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLSTART_t_locationId_set" "', argument " "2"" of type '" "LocationId_t""'"); 
+      }  
+      if (!argp2) {
+        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLSTART_t_locationId_set" "', argument " "2"" of type '" "LocationId_t""'");
+      } else {
+        arg2 = *((LocationId_t *)(argp2));
+      }
+    }
+    if (arg1) (arg1)->locationId = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLSTART_t_locationId_get) {
+  {
+    struct SUPLSTART *arg1 = (struct SUPLSTART *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    LocationId_t result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLSTART_t_locationId_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLSTART, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLSTART_t_locationId_get" "', argument " "1"" of type '" "struct SUPLSTART *""'"); 
+    }
+    arg1 = (struct SUPLSTART *)(argp1);
+    result =  ((arg1)->locationId);
+    ST(argvi) = SWIG_NewPointerObj((LocationId_t *)memcpy((LocationId_t *)malloc(sizeof(LocationId_t)),&result,sizeof(LocationId_t)), SWIGTYPE_p_LocationId_t, SWIG_POINTER_OWN | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLSTART_t_qoP_set) {
+  {
+    struct SUPLSTART *arg1 = (struct SUPLSTART *) 0 ;
+    struct QoP *arg2 = (struct QoP *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLSTART_t_qoP_set(self,qoP);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLSTART, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLSTART_t_qoP_set" "', argument " "1"" of type '" "struct SUPLSTART *""'"); 
+    }
+    arg1 = (struct SUPLSTART *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_QoP, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLSTART_t_qoP_set" "', argument " "2"" of type '" "struct QoP *""'"); 
+    }
+    arg2 = (struct QoP *)(argp2);
+    if (arg1) (arg1)->qoP = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLSTART_t_qoP_get) {
+  {
+    struct SUPLSTART *arg1 = (struct SUPLSTART *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    struct QoP *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLSTART_t_qoP_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLSTART, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLSTART_t_qoP_get" "', argument " "1"" of type '" "struct SUPLSTART *""'"); 
+    }
+    arg1 = (struct SUPLSTART *)(argp1);
+    result = (struct QoP *) ((arg1)->qoP);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_QoP, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLSTART_t__asn_ctx_set) {
+  {
+    struct SUPLSTART *arg1 = (struct SUPLSTART *) 0 ;
+    asn_struct_ctx_t arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SUPLSTART_t__asn_ctx_set(self,_asn_ctx);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLSTART, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLSTART_t__asn_ctx_set" "', argument " "1"" of type '" "struct SUPLSTART *""'"); 
+    }
+    arg1 = (struct SUPLSTART *)(argp1);
+    {
+      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_asn_struct_ctx_t,  0 );
+      if (!SWIG_IsOK(res2)) {
+        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLSTART_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'"); 
+      }  
+      if (!argp2) {
+        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLSTART_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'");
+      } else {
+        arg2 = *((asn_struct_ctx_t *)(argp2));
+      }
+    }
+    if (arg1) (arg1)->_asn_ctx = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SUPLSTART_t__asn_ctx_get) {
+  {
+    struct SUPLSTART *arg1 = (struct SUPLSTART *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    asn_struct_ctx_t result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SUPLSTART_t__asn_ctx_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLSTART, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLSTART_t__asn_ctx_get" "', argument " "1"" of type '" "struct SUPLSTART *""'"); 
+    }
+    arg1 = (struct SUPLSTART *)(argp1);
+    result =  ((arg1)->_asn_ctx);
+    ST(argvi) = SWIG_NewPointerObj((asn_struct_ctx_t *)memcpy((asn_struct_ctx_t *)malloc(sizeof(asn_struct_ctx_t)),&result,sizeof(asn_struct_ctx_t)), SWIGTYPE_p_asn_struct_ctx_t, SWIG_POINTER_OWN | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_SUPLSTART_t) {
+  {
+    int argvi = 0;
+    struct SUPLSTART *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 0) || (items > 0)) {
+      SWIG_croak("Usage: new_SUPLSTART_t();");
+    }
+    result = (struct SUPLSTART *)calloc(1, sizeof(struct SUPLSTART));
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SUPLSTART, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    XSRETURN(argvi);
+  fail:
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_delete_SUPLSTART_t) {
+  {
+    struct SUPLSTART *arg1 = (struct SUPLSTART *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: delete_SUPLSTART_t(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLSTART, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_SUPLSTART_t" "', argument " "1"" of type '" "struct SUPLSTART *""'"); 
+    }
+    arg1 = (struct SUPLSTART *)(argp1);
+    free((char *) arg1);
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
 XS(_wrap_ULP_PDU_t_length_set) {
   {
     struct ULP_PDU *arg1 = (struct ULP_PDU *) 0 ;
@@ -2037,10 +5320,10 @@ XS(_wrap_ULP_PDU_t_length_get) {
 XS(_wrap_ULP_PDU_t_version_set) {
   {
     struct ULP_PDU *arg1 = (struct ULP_PDU *) 0 ;
-    Version_t *arg2 = (Version_t *) 0 ;
+    Version_t arg2 ;
     void *argp1 = 0 ;
     int res1 = 0 ;
-    void *argp2 = 0 ;
+    void *argp2 ;
     int res2 = 0 ;
     int argvi = 0;
     dXSARGS;
@@ -2053,18 +5336,22 @@ XS(_wrap_ULP_PDU_t_version_set) {
       SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ULP_PDU_t_version_set" "', argument " "1"" of type '" "struct ULP_PDU *""'"); 
     }
     arg1 = (struct ULP_PDU *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_Version, 0 |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ULP_PDU_t_version_set" "', argument " "2"" of type '" "Version_t *""'"); 
+    {
+      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_Version_t,  0 );
+      if (!SWIG_IsOK(res2)) {
+        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ULP_PDU_t_version_set" "', argument " "2"" of type '" "Version_t""'"); 
+      }  
+      if (!argp2) {
+        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "ULP_PDU_t_version_set" "', argument " "2"" of type '" "Version_t""'");
+      } else {
+        arg2 = *((Version_t *)(argp2));
+      }
     }
-    arg2 = (Version_t *)(argp2);
-    if (arg1) (arg1)->version = *arg2;
+    if (arg1) (arg1)->version = arg2;
     ST(argvi) = sv_newmortal();
-    
     
     XSRETURN(argvi);
   fail:
-    
     
     SWIG_croak_null();
   }
@@ -2077,7 +5364,7 @@ XS(_wrap_ULP_PDU_t_version_get) {
     void *argp1 = 0 ;
     int res1 = 0 ;
     int argvi = 0;
-    Version_t *result = 0 ;
+    Version_t result;
     dXSARGS;
     
     if ((items < 1) || (items > 1)) {
@@ -2088,8 +5375,8 @@ XS(_wrap_ULP_PDU_t_version_get) {
       SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ULP_PDU_t_version_get" "', argument " "1"" of type '" "struct ULP_PDU *""'"); 
     }
     arg1 = (struct ULP_PDU *)(argp1);
-    result = (Version_t *)& ((arg1)->version);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_Version, 0 | SWIG_SHADOW); argvi++ ;
+    result =  ((arg1)->version);
+    ST(argvi) = SWIG_NewPointerObj((Version_t *)memcpy((Version_t *)malloc(sizeof(Version_t)),&result,sizeof(Version_t)), SWIGTYPE_p_Version_t, SWIG_POINTER_OWN | 0); argvi++ ;
     
     XSRETURN(argvi);
   fail:
@@ -2102,10 +5389,10 @@ XS(_wrap_ULP_PDU_t_version_get) {
 XS(_wrap_ULP_PDU_t_sessionID_set) {
   {
     struct ULP_PDU *arg1 = (struct ULP_PDU *) 0 ;
-    SessionID_t *arg2 = (SessionID_t *) 0 ;
+    SessionID_t arg2 ;
     void *argp1 = 0 ;
     int res1 = 0 ;
-    void *argp2 = 0 ;
+    void *argp2 ;
     int res2 = 0 ;
     int argvi = 0;
     dXSARGS;
@@ -2118,18 +5405,22 @@ XS(_wrap_ULP_PDU_t_sessionID_set) {
       SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ULP_PDU_t_sessionID_set" "', argument " "1"" of type '" "struct ULP_PDU *""'"); 
     }
     arg1 = (struct ULP_PDU *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_SessionID, 0 |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ULP_PDU_t_sessionID_set" "', argument " "2"" of type '" "SessionID_t *""'"); 
+    {
+      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_SessionID_t,  0 );
+      if (!SWIG_IsOK(res2)) {
+        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ULP_PDU_t_sessionID_set" "', argument " "2"" of type '" "SessionID_t""'"); 
+      }  
+      if (!argp2) {
+        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "ULP_PDU_t_sessionID_set" "', argument " "2"" of type '" "SessionID_t""'");
+      } else {
+        arg2 = *((SessionID_t *)(argp2));
+      }
     }
-    arg2 = (SessionID_t *)(argp2);
-    if (arg1) (arg1)->sessionID = *arg2;
+    if (arg1) (arg1)->sessionID = arg2;
     ST(argvi) = sv_newmortal();
-    
     
     XSRETURN(argvi);
   fail:
-    
     
     SWIG_croak_null();
   }
@@ -2142,7 +5433,7 @@ XS(_wrap_ULP_PDU_t_sessionID_get) {
     void *argp1 = 0 ;
     int res1 = 0 ;
     int argvi = 0;
-    SessionID_t *result = 0 ;
+    SessionID_t result;
     dXSARGS;
     
     if ((items < 1) || (items > 1)) {
@@ -2153,8 +5444,8 @@ XS(_wrap_ULP_PDU_t_sessionID_get) {
       SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ULP_PDU_t_sessionID_get" "', argument " "1"" of type '" "struct ULP_PDU *""'"); 
     }
     arg1 = (struct ULP_PDU *)(argp1);
-    result = (SessionID_t *)& ((arg1)->sessionID);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SessionID, 0 | SWIG_SHADOW); argvi++ ;
+    result =  ((arg1)->sessionID);
+    ST(argvi) = SWIG_NewPointerObj((SessionID_t *)memcpy((SessionID_t *)malloc(sizeof(SessionID_t)),&result,sizeof(SessionID_t)), SWIGTYPE_p_SessionID_t, SWIG_POINTER_OWN | 0); argvi++ ;
     
     XSRETURN(argvi);
   fail:
@@ -2307,7 +5598,7 @@ XS(_wrap_new_ULP_PDU_t) {
     if ((items < 0) || (items > 0)) {
       SWIG_croak("Usage: new_ULP_PDU_t();");
     }
-    result = (struct ULP_PDU *)calloc(1, sizeof(struct ULP_PDU));
+    result = (struct ULP_PDU *)new_ULP_PDU();
     ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_ULP_PDU, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
     XSRETURN(argvi);
   fail:
@@ -2332,7 +5623,7 @@ XS(_wrap_delete_ULP_PDU_t) {
       SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_ULP_PDU_t" "', argument " "1"" of type '" "struct ULP_PDU *""'"); 
     }
     arg1 = (struct ULP_PDU *)(argp1);
-    free((char *) arg1);
+    delete_ULP_PDU(arg1);
     ST(argvi) = sv_newmortal();
     
     XSRETURN(argvi);
@@ -2343,345 +5634,56 @@ XS(_wrap_delete_ULP_PDU_t) {
 }
 
 
-XS(_wrap_Version_t_maj_set) {
+XS(_wrap_ULP_PDU_t_set_version) {
   {
-    struct Version *arg1 = (struct Version *) 0 ;
-    long arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    long val2 ;
-    int ecode2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: Version_t_maj_set(self,maj);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_Version, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Version_t_maj_set" "', argument " "1"" of type '" "struct Version *""'"); 
-    }
-    arg1 = (struct Version *)(argp1);
-    ecode2 = SWIG_AsVal_long SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
-    if (!SWIG_IsOK(ecode2)) {
-      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Version_t_maj_set" "', argument " "2"" of type '" "long""'");
-    } 
-    arg2 = (long)(val2);
-    if (arg1) (arg1)->maj = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_Version_t_maj_get) {
-  {
-    struct Version *arg1 = (struct Version *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    long result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: Version_t_maj_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_Version, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Version_t_maj_get" "', argument " "1"" of type '" "struct Version *""'"); 
-    }
-    arg1 = (struct Version *)(argp1);
-    result = (long) ((arg1)->maj);
-    ST(argvi) = SWIG_From_long  SWIG_PERL_CALL_ARGS_1((long)(result)); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_Version_t_min_set) {
-  {
-    struct Version *arg1 = (struct Version *) 0 ;
-    long arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    long val2 ;
-    int ecode2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: Version_t_min_set(self,min);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_Version, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Version_t_min_set" "', argument " "1"" of type '" "struct Version *""'"); 
-    }
-    arg1 = (struct Version *)(argp1);
-    ecode2 = SWIG_AsVal_long SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
-    if (!SWIG_IsOK(ecode2)) {
-      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Version_t_min_set" "', argument " "2"" of type '" "long""'");
-    } 
-    arg2 = (long)(val2);
-    if (arg1) (arg1)->min = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_Version_t_min_get) {
-  {
-    struct Version *arg1 = (struct Version *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    long result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: Version_t_min_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_Version, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Version_t_min_get" "', argument " "1"" of type '" "struct Version *""'"); 
-    }
-    arg1 = (struct Version *)(argp1);
-    result = (long) ((arg1)->min);
-    ST(argvi) = SWIG_From_long  SWIG_PERL_CALL_ARGS_1((long)(result)); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_Version_t_servind_set) {
-  {
-    struct Version *arg1 = (struct Version *) 0 ;
-    long arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    long val2 ;
-    int ecode2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: Version_t_servind_set(self,servind);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_Version, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Version_t_servind_set" "', argument " "1"" of type '" "struct Version *""'"); 
-    }
-    arg1 = (struct Version *)(argp1);
-    ecode2 = SWIG_AsVal_long SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
-    if (!SWIG_IsOK(ecode2)) {
-      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Version_t_servind_set" "', argument " "2"" of type '" "long""'");
-    } 
-    arg2 = (long)(val2);
-    if (arg1) (arg1)->servind = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_Version_t_servind_get) {
-  {
-    struct Version *arg1 = (struct Version *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    long result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: Version_t_servind_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_Version, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Version_t_servind_get" "', argument " "1"" of type '" "struct Version *""'"); 
-    }
-    arg1 = (struct Version *)(argp1);
-    result = (long) ((arg1)->servind);
-    ST(argvi) = SWIG_From_long  SWIG_PERL_CALL_ARGS_1((long)(result)); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_Version_t__asn_ctx_set) {
-  {
-    struct Version *arg1 = (struct Version *) 0 ;
-    asn_struct_ctx_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: Version_t__asn_ctx_set(self,_asn_ctx);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_Version, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Version_t__asn_ctx_set" "', argument " "1"" of type '" "struct Version *""'"); 
-    }
-    arg1 = (struct Version *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_asn_struct_ctx_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Version_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Version_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'");
-      } else {
-        arg2 = *((asn_struct_ctx_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->_asn_ctx = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_Version_t__asn_ctx_get) {
-  {
-    struct Version *arg1 = (struct Version *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    asn_struct_ctx_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: Version_t__asn_ctx_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_Version, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Version_t__asn_ctx_get" "', argument " "1"" of type '" "struct Version *""'"); 
-    }
-    arg1 = (struct Version *)(argp1);
-    result =  ((arg1)->_asn_ctx);
-    ST(argvi) = SWIG_NewPointerObj((asn_struct_ctx_t *)memcpy((asn_struct_ctx_t *)malloc(sizeof(asn_struct_ctx_t)),&result,sizeof(asn_struct_ctx_t)), SWIGTYPE_p_asn_struct_ctx_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_new_Version_t) {
-  {
-    int argvi = 0;
-    struct Version *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 0) || (items > 0)) {
-      SWIG_croak("Usage: new_Version_t();");
-    }
-    result = (struct Version *)calloc(1, sizeof(struct Version));
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_Version, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
-    XSRETURN(argvi);
-  fail:
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_delete_Version_t) {
-  {
-    struct Version *arg1 = (struct Version *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: delete_Version_t(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_Version, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_Version_t" "', argument " "1"" of type '" "struct Version *""'"); 
-    }
-    arg1 = (struct Version *)(argp1);
-    free((char *) arg1);
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_IPAddress_t_present_set) {
-  {
-    struct IPAddress *arg1 = (struct IPAddress *) 0 ;
-    IPAddress_PR arg2 ;
+    struct ULP_PDU *arg1 = (struct ULP_PDU *) 0 ;
+    int arg2 ;
+    int arg3 ;
+    int arg4 ;
     void *argp1 = 0 ;
     int res1 = 0 ;
     int val2 ;
     int ecode2 = 0 ;
+    int val3 ;
+    int ecode3 = 0 ;
+    int val4 ;
+    int ecode4 = 0 ;
     int argvi = 0;
     dXSARGS;
     
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: IPAddress_t_present_set(self,present);");
+    if ((items < 4) || (items > 4)) {
+      SWIG_croak("Usage: ULP_PDU_t_set_version(self,maj,min,servind);");
     }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_IPAddress, 0 |  0 );
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_ULP_PDU, 0 |  0 );
     if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IPAddress_t_present_set" "', argument " "1"" of type '" "struct IPAddress *""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ULP_PDU_t_set_version" "', argument " "1"" of type '" "struct ULP_PDU *""'"); 
     }
-    arg1 = (struct IPAddress *)(argp1);
+    arg1 = (struct ULP_PDU *)(argp1);
     ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
     if (!SWIG_IsOK(ecode2)) {
-      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "IPAddress_t_present_set" "', argument " "2"" of type '" "IPAddress_PR""'");
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "ULP_PDU_t_set_version" "', argument " "2"" of type '" "int""'");
     } 
-    arg2 = (IPAddress_PR)(val2);
-    if (arg1) (arg1)->present = arg2;
+    arg2 = (int)(val2);
+    ecode3 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(2), &val3);
+    if (!SWIG_IsOK(ecode3)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "ULP_PDU_t_set_version" "', argument " "3"" of type '" "int""'");
+    } 
+    arg3 = (int)(val3);
+    ecode4 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(3), &val4);
+    if (!SWIG_IsOK(ecode4)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "ULP_PDU_t_set_version" "', argument " "4"" of type '" "int""'");
+    } 
+    arg4 = (int)(val4);
+    ULP_PDU_set_version(arg1,arg2,arg3,arg4);
     ST(argvi) = sv_newmortal();
     
     
+    
+    
     XSRETURN(argvi);
   fail:
+    
+    
     
     
     SWIG_croak_null();
@@ -2689,1476 +5691,106 @@ XS(_wrap_IPAddress_t_present_set) {
 }
 
 
-XS(_wrap_IPAddress_t_present_get) {
+XS(_wrap_ULP_PDU_t_setSetSessionId_to_imsi) {
   {
-    struct IPAddress *arg1 = (struct IPAddress *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    IPAddress_PR result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: IPAddress_t_present_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_IPAddress, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IPAddress_t_present_get" "', argument " "1"" of type '" "struct IPAddress *""'"); 
-    }
-    arg1 = (struct IPAddress *)(argp1);
-    result = (IPAddress_PR) ((arg1)->present);
-    ST(argvi) = SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(result)); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_IPAddress_t__asn_ctx_set) {
-  {
-    struct IPAddress *arg1 = (struct IPAddress *) 0 ;
-    asn_struct_ctx_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: IPAddress_t__asn_ctx_set(self,_asn_ctx);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_IPAddress, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IPAddress_t__asn_ctx_set" "', argument " "1"" of type '" "struct IPAddress *""'"); 
-    }
-    arg1 = (struct IPAddress *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_asn_struct_ctx_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "IPAddress_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IPAddress_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'");
-      } else {
-        arg2 = *((asn_struct_ctx_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->_asn_ctx = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_IPAddress_t__asn_ctx_get) {
-  {
-    struct IPAddress *arg1 = (struct IPAddress *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    asn_struct_ctx_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: IPAddress_t__asn_ctx_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_IPAddress, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IPAddress_t__asn_ctx_get" "', argument " "1"" of type '" "struct IPAddress *""'"); 
-    }
-    arg1 = (struct IPAddress *)(argp1);
-    result =  ((arg1)->_asn_ctx);
-    ST(argvi) = SWIG_NewPointerObj((asn_struct_ctx_t *)memcpy((asn_struct_ctx_t *)malloc(sizeof(asn_struct_ctx_t)),&result,sizeof(asn_struct_ctx_t)), SWIGTYPE_p_asn_struct_ctx_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_IPAddress_t_choice_get) {
-  {
-    struct IPAddress *arg1 = (struct IPAddress *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    IPAddress_t_choice *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: IPAddress_t_choice_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_IPAddress, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IPAddress_t_choice_get" "', argument " "1"" of type '" "struct IPAddress *""'"); 
-    }
-    arg1 = (struct IPAddress *)(argp1);
-    result = (IPAddress_t_choice *)& ((arg1)->choice);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_IPAddress_t_choice, 0 | SWIG_SHADOW); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_new_IPAddress_t) {
-  {
-    int argvi = 0;
-    struct IPAddress *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 0) || (items > 0)) {
-      SWIG_croak("Usage: new_IPAddress_t();");
-    }
-    result = (struct IPAddress *)calloc(1, sizeof(struct IPAddress));
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_IPAddress, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
-    XSRETURN(argvi);
-  fail:
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_delete_IPAddress_t) {
-  {
-    struct IPAddress *arg1 = (struct IPAddress *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: delete_IPAddress_t(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_IPAddress, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_IPAddress_t" "', argument " "1"" of type '" "struct IPAddress *""'"); 
-    }
-    arg1 = (struct IPAddress *)(argp1);
-    free((char *) arg1);
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_IPAddress_t_choice_ipv4Address_set) {
-  {
-    IPAddress_t_choice *arg1 = (IPAddress_t_choice *) 0 ;
-    OCTET_STRING_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: IPAddress_t_choice_ipv4Address_set(self,ipv4Address);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_IPAddress_t_choice, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IPAddress_t_choice_ipv4Address_set" "', argument " "1"" of type '" "IPAddress_t_choice *""'"); 
-    }
-    arg1 = (IPAddress_t_choice *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_OCTET_STRING_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "IPAddress_t_choice_ipv4Address_set" "', argument " "2"" of type '" "OCTET_STRING_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IPAddress_t_choice_ipv4Address_set" "', argument " "2"" of type '" "OCTET_STRING_t""'");
-      } else {
-        arg2 = *((OCTET_STRING_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->ipv4Address = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_IPAddress_t_choice_ipv4Address_get) {
-  {
-    IPAddress_t_choice *arg1 = (IPAddress_t_choice *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    OCTET_STRING_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: IPAddress_t_choice_ipv4Address_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_IPAddress_t_choice, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IPAddress_t_choice_ipv4Address_get" "', argument " "1"" of type '" "IPAddress_t_choice *""'"); 
-    }
-    arg1 = (IPAddress_t_choice *)(argp1);
-    result =  ((arg1)->ipv4Address);
-    ST(argvi) = SWIG_NewPointerObj((OCTET_STRING_t *)memcpy((OCTET_STRING_t *)malloc(sizeof(OCTET_STRING_t)),&result,sizeof(OCTET_STRING_t)), SWIGTYPE_p_OCTET_STRING_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_IPAddress_t_choice_ipv6Address_set) {
-  {
-    IPAddress_t_choice *arg1 = (IPAddress_t_choice *) 0 ;
-    OCTET_STRING_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: IPAddress_t_choice_ipv6Address_set(self,ipv6Address);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_IPAddress_t_choice, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IPAddress_t_choice_ipv6Address_set" "', argument " "1"" of type '" "IPAddress_t_choice *""'"); 
-    }
-    arg1 = (IPAddress_t_choice *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_OCTET_STRING_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "IPAddress_t_choice_ipv6Address_set" "', argument " "2"" of type '" "OCTET_STRING_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IPAddress_t_choice_ipv6Address_set" "', argument " "2"" of type '" "OCTET_STRING_t""'");
-      } else {
-        arg2 = *((OCTET_STRING_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->ipv6Address = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_IPAddress_t_choice_ipv6Address_get) {
-  {
-    IPAddress_t_choice *arg1 = (IPAddress_t_choice *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    OCTET_STRING_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: IPAddress_t_choice_ipv6Address_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_IPAddress_t_choice, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IPAddress_t_choice_ipv6Address_get" "', argument " "1"" of type '" "IPAddress_t_choice *""'"); 
-    }
-    arg1 = (IPAddress_t_choice *)(argp1);
-    result =  ((arg1)->ipv6Address);
-    ST(argvi) = SWIG_NewPointerObj((OCTET_STRING_t *)memcpy((OCTET_STRING_t *)malloc(sizeof(OCTET_STRING_t)),&result,sizeof(OCTET_STRING_t)), SWIGTYPE_p_OCTET_STRING_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_new_IPAddress_t_choice) {
-  {
-    int argvi = 0;
-    IPAddress_t_choice *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 0) || (items > 0)) {
-      SWIG_croak("Usage: new_IPAddress_t_choice();");
-    }
-    result = (IPAddress_t_choice *)calloc(1, sizeof(IPAddress_t_choice));
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_IPAddress_t_choice, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
-    XSRETURN(argvi);
-  fail:
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_delete_IPAddress_t_choice) {
-  {
-    IPAddress_t_choice *arg1 = (IPAddress_t_choice *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: delete_IPAddress_t_choice(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_IPAddress_t_choice, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_IPAddress_t_choice" "', argument " "1"" of type '" "IPAddress_t_choice *""'"); 
-    }
-    arg1 = (IPAddress_t_choice *)(argp1);
-    free((char *) arg1);
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SETId_t_present_set) {
-  {
-    struct SETId *arg1 = (struct SETId *) 0 ;
-    SETId_PR arg2 ;
+    struct ULP_PDU *arg1 = (struct ULP_PDU *) 0 ;
+    int arg2 ;
+    char *arg3 = (char *) 0 ;
     void *argp1 = 0 ;
     int res1 = 0 ;
     int val2 ;
     int ecode2 = 0 ;
+    int res3 ;
+    char *buf3 = 0 ;
+    int alloc3 = 0 ;
     int argvi = 0;
     dXSARGS;
     
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SETId_t_present_set(self,present);");
+    if ((items < 3) || (items > 3)) {
+      SWIG_croak("Usage: ULP_PDU_t_setSetSessionId_to_imsi(self,sessionId,imsi);");
     }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SETId, 0 |  0 );
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_ULP_PDU, 0 |  0 );
     if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SETId_t_present_set" "', argument " "1"" of type '" "struct SETId *""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ULP_PDU_t_setSetSessionId_to_imsi" "', argument " "1"" of type '" "struct ULP_PDU *""'"); 
     }
-    arg1 = (struct SETId *)(argp1);
+    arg1 = (struct ULP_PDU *)(argp1);
     ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
     if (!SWIG_IsOK(ecode2)) {
-      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SETId_t_present_set" "', argument " "2"" of type '" "SETId_PR""'");
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "ULP_PDU_t_setSetSessionId_to_imsi" "', argument " "2"" of type '" "int""'");
     } 
-    arg2 = (SETId_PR)(val2);
-    if (arg1) (arg1)->present = arg2;
+    arg2 = (int)(val2);
+    res3 = SWIG_AsCharPtrAndSize(ST(2), &buf3, NULL, &alloc3);
+    if (!SWIG_IsOK(res3)) {
+      SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "ULP_PDU_t_setSetSessionId_to_imsi" "', argument " "3"" of type '" "char *""'");
+    }
+    arg3 = (char *)(buf3);
+    ULP_PDU_setSetSessionId_to_imsi(arg1,arg2,arg3);
     ST(argvi) = sv_newmortal();
     
     
+    if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
     XSRETURN(argvi);
   fail:
     
     
+    if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
     SWIG_croak_null();
   }
 }
 
 
-XS(_wrap_SETId_t_present_get) {
+XS(_wrap_ULP_PDU_t_setSetSessionId_to_msisdn) {
   {
-    struct SETId *arg1 = (struct SETId *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    SETId_PR result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SETId_t_present_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SETId, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SETId_t_present_get" "', argument " "1"" of type '" "struct SETId *""'"); 
-    }
-    arg1 = (struct SETId *)(argp1);
-    result = (SETId_PR) ((arg1)->present);
-    ST(argvi) = SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(result)); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SETId_t__asn_ctx_set) {
-  {
-    struct SETId *arg1 = (struct SETId *) 0 ;
-    asn_struct_ctx_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SETId_t__asn_ctx_set(self,_asn_ctx);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SETId, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SETId_t__asn_ctx_set" "', argument " "1"" of type '" "struct SETId *""'"); 
-    }
-    arg1 = (struct SETId *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_asn_struct_ctx_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SETId_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SETId_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'");
-      } else {
-        arg2 = *((asn_struct_ctx_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->_asn_ctx = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SETId_t__asn_ctx_get) {
-  {
-    struct SETId *arg1 = (struct SETId *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    asn_struct_ctx_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SETId_t__asn_ctx_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SETId, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SETId_t__asn_ctx_get" "', argument " "1"" of type '" "struct SETId *""'"); 
-    }
-    arg1 = (struct SETId *)(argp1);
-    result =  ((arg1)->_asn_ctx);
-    ST(argvi) = SWIG_NewPointerObj((asn_struct_ctx_t *)memcpy((asn_struct_ctx_t *)malloc(sizeof(asn_struct_ctx_t)),&result,sizeof(asn_struct_ctx_t)), SWIGTYPE_p_asn_struct_ctx_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SETId_t_choice_get) {
-  {
-    struct SETId *arg1 = (struct SETId *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    SETId_t_choice *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SETId_t_choice_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SETId, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SETId_t_choice_get" "', argument " "1"" of type '" "struct SETId *""'"); 
-    }
-    arg1 = (struct SETId *)(argp1);
-    result = (SETId_t_choice *)& ((arg1)->choice);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SETId_t_choice, 0 | SWIG_SHADOW); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_new_SETId_t) {
-  {
-    int argvi = 0;
-    struct SETId *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 0) || (items > 0)) {
-      SWIG_croak("Usage: new_SETId_t();");
-    }
-    result = (struct SETId *)calloc(1, sizeof(struct SETId));
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SETId, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
-    XSRETURN(argvi);
-  fail:
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_delete_SETId_t) {
-  {
-    struct SETId *arg1 = (struct SETId *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: delete_SETId_t(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SETId, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_SETId_t" "', argument " "1"" of type '" "struct SETId *""'"); 
-    }
-    arg1 = (struct SETId *)(argp1);
-    free((char *) arg1);
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SETId_t_choice_msisdn_set) {
-  {
-    SETId_t_choice *arg1 = (SETId_t_choice *) 0 ;
-    OCTET_STRING_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SETId_t_choice_msisdn_set(self,msisdn);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SETId_t_choice, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SETId_t_choice_msisdn_set" "', argument " "1"" of type '" "SETId_t_choice *""'"); 
-    }
-    arg1 = (SETId_t_choice *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_OCTET_STRING_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SETId_t_choice_msisdn_set" "', argument " "2"" of type '" "OCTET_STRING_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SETId_t_choice_msisdn_set" "', argument " "2"" of type '" "OCTET_STRING_t""'");
-      } else {
-        arg2 = *((OCTET_STRING_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->msisdn = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SETId_t_choice_msisdn_get) {
-  {
-    SETId_t_choice *arg1 = (SETId_t_choice *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    OCTET_STRING_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SETId_t_choice_msisdn_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SETId_t_choice, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SETId_t_choice_msisdn_get" "', argument " "1"" of type '" "SETId_t_choice *""'"); 
-    }
-    arg1 = (SETId_t_choice *)(argp1);
-    result =  ((arg1)->msisdn);
-    ST(argvi) = SWIG_NewPointerObj((OCTET_STRING_t *)memcpy((OCTET_STRING_t *)malloc(sizeof(OCTET_STRING_t)),&result,sizeof(OCTET_STRING_t)), SWIGTYPE_p_OCTET_STRING_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SETId_t_choice_mdn_set) {
-  {
-    SETId_t_choice *arg1 = (SETId_t_choice *) 0 ;
-    OCTET_STRING_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SETId_t_choice_mdn_set(self,mdn);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SETId_t_choice, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SETId_t_choice_mdn_set" "', argument " "1"" of type '" "SETId_t_choice *""'"); 
-    }
-    arg1 = (SETId_t_choice *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_OCTET_STRING_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SETId_t_choice_mdn_set" "', argument " "2"" of type '" "OCTET_STRING_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SETId_t_choice_mdn_set" "', argument " "2"" of type '" "OCTET_STRING_t""'");
-      } else {
-        arg2 = *((OCTET_STRING_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->mdn = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SETId_t_choice_mdn_get) {
-  {
-    SETId_t_choice *arg1 = (SETId_t_choice *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    OCTET_STRING_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SETId_t_choice_mdn_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SETId_t_choice, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SETId_t_choice_mdn_get" "', argument " "1"" of type '" "SETId_t_choice *""'"); 
-    }
-    arg1 = (SETId_t_choice *)(argp1);
-    result =  ((arg1)->mdn);
-    ST(argvi) = SWIG_NewPointerObj((OCTET_STRING_t *)memcpy((OCTET_STRING_t *)malloc(sizeof(OCTET_STRING_t)),&result,sizeof(OCTET_STRING_t)), SWIGTYPE_p_OCTET_STRING_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SETId_t_choice_min_set) {
-  {
-    SETId_t_choice *arg1 = (SETId_t_choice *) 0 ;
-    BIT_STRING_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SETId_t_choice_min_set(self,min);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SETId_t_choice, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SETId_t_choice_min_set" "', argument " "1"" of type '" "SETId_t_choice *""'"); 
-    }
-    arg1 = (SETId_t_choice *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_BIT_STRING_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SETId_t_choice_min_set" "', argument " "2"" of type '" "BIT_STRING_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SETId_t_choice_min_set" "', argument " "2"" of type '" "BIT_STRING_t""'");
-      } else {
-        arg2 = *((BIT_STRING_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->min = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SETId_t_choice_min_get) {
-  {
-    SETId_t_choice *arg1 = (SETId_t_choice *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    BIT_STRING_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SETId_t_choice_min_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SETId_t_choice, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SETId_t_choice_min_get" "', argument " "1"" of type '" "SETId_t_choice *""'"); 
-    }
-    arg1 = (SETId_t_choice *)(argp1);
-    result =  ((arg1)->min);
-    ST(argvi) = SWIG_NewPointerObj((BIT_STRING_t *)memcpy((BIT_STRING_t *)malloc(sizeof(BIT_STRING_t)),&result,sizeof(BIT_STRING_t)), SWIGTYPE_p_BIT_STRING_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SETId_t_choice_imsi_set) {
-  {
-    SETId_t_choice *arg1 = (SETId_t_choice *) 0 ;
-    OCTET_STRING_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SETId_t_choice_imsi_set(self,imsi);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SETId_t_choice, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SETId_t_choice_imsi_set" "', argument " "1"" of type '" "SETId_t_choice *""'"); 
-    }
-    arg1 = (SETId_t_choice *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_OCTET_STRING_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SETId_t_choice_imsi_set" "', argument " "2"" of type '" "OCTET_STRING_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SETId_t_choice_imsi_set" "', argument " "2"" of type '" "OCTET_STRING_t""'");
-      } else {
-        arg2 = *((OCTET_STRING_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->imsi = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SETId_t_choice_imsi_get) {
-  {
-    SETId_t_choice *arg1 = (SETId_t_choice *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    OCTET_STRING_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SETId_t_choice_imsi_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SETId_t_choice, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SETId_t_choice_imsi_get" "', argument " "1"" of type '" "SETId_t_choice *""'"); 
-    }
-    arg1 = (SETId_t_choice *)(argp1);
-    result =  ((arg1)->imsi);
-    ST(argvi) = SWIG_NewPointerObj((OCTET_STRING_t *)memcpy((OCTET_STRING_t *)malloc(sizeof(OCTET_STRING_t)),&result,sizeof(OCTET_STRING_t)), SWIGTYPE_p_OCTET_STRING_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SETId_t_choice_nai_set) {
-  {
-    SETId_t_choice *arg1 = (SETId_t_choice *) 0 ;
-    IA5String_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SETId_t_choice_nai_set(self,nai);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SETId_t_choice, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SETId_t_choice_nai_set" "', argument " "1"" of type '" "SETId_t_choice *""'"); 
-    }
-    arg1 = (SETId_t_choice *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_IA5String_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SETId_t_choice_nai_set" "', argument " "2"" of type '" "IA5String_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SETId_t_choice_nai_set" "', argument " "2"" of type '" "IA5String_t""'");
-      } else {
-        arg2 = *((IA5String_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->nai = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SETId_t_choice_nai_get) {
-  {
-    SETId_t_choice *arg1 = (SETId_t_choice *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    IA5String_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SETId_t_choice_nai_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SETId_t_choice, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SETId_t_choice_nai_get" "', argument " "1"" of type '" "SETId_t_choice *""'"); 
-    }
-    arg1 = (SETId_t_choice *)(argp1);
-    result =  ((arg1)->nai);
-    ST(argvi) = SWIG_NewPointerObj((IA5String_t *)memcpy((IA5String_t *)malloc(sizeof(IA5String_t)),&result,sizeof(IA5String_t)), SWIGTYPE_p_IA5String_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SETId_t_choice_iPAddress_set) {
-  {
-    SETId_t_choice *arg1 = (SETId_t_choice *) 0 ;
-    IPAddress_t *arg2 = (IPAddress_t *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SETId_t_choice_iPAddress_set(self,iPAddress);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SETId_t_choice, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SETId_t_choice_iPAddress_set" "', argument " "1"" of type '" "SETId_t_choice *""'"); 
-    }
-    arg1 = (SETId_t_choice *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_IPAddress, 0 |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SETId_t_choice_iPAddress_set" "', argument " "2"" of type '" "IPAddress_t *""'"); 
-    }
-    arg2 = (IPAddress_t *)(argp2);
-    if (arg1) (arg1)->iPAddress = *arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SETId_t_choice_iPAddress_get) {
-  {
-    SETId_t_choice *arg1 = (SETId_t_choice *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    IPAddress_t *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SETId_t_choice_iPAddress_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SETId_t_choice, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SETId_t_choice_iPAddress_get" "', argument " "1"" of type '" "SETId_t_choice *""'"); 
-    }
-    arg1 = (SETId_t_choice *)(argp1);
-    result = (IPAddress_t *)& ((arg1)->iPAddress);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_IPAddress, 0 | SWIG_SHADOW); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_new_SETId_t_choice) {
-  {
-    int argvi = 0;
-    SETId_t_choice *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 0) || (items > 0)) {
-      SWIG_croak("Usage: new_SETId_t_choice();");
-    }
-    result = (SETId_t_choice *)calloc(1, sizeof(SETId_t_choice));
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SETId_t_choice, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
-    XSRETURN(argvi);
-  fail:
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_delete_SETId_t_choice) {
-  {
-    SETId_t_choice *arg1 = (SETId_t_choice *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: delete_SETId_t_choice(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SETId_t_choice, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_SETId_t_choice" "', argument " "1"" of type '" "SETId_t_choice *""'"); 
-    }
-    arg1 = (SETId_t_choice *)(argp1);
-    free((char *) arg1);
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SetSessionID_t_sessionId_set) {
-  {
-    struct SetSessionID *arg1 = (struct SetSessionID *) 0 ;
-    long arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    long val2 ;
-    int ecode2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SetSessionID_t_sessionId_set(self,sessionId);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SetSessionID, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SetSessionID_t_sessionId_set" "', argument " "1"" of type '" "struct SetSessionID *""'"); 
-    }
-    arg1 = (struct SetSessionID *)(argp1);
-    ecode2 = SWIG_AsVal_long SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
-    if (!SWIG_IsOK(ecode2)) {
-      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SetSessionID_t_sessionId_set" "', argument " "2"" of type '" "long""'");
-    } 
-    arg2 = (long)(val2);
-    if (arg1) (arg1)->sessionId = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SetSessionID_t_sessionId_get) {
-  {
-    struct SetSessionID *arg1 = (struct SetSessionID *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    long result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SetSessionID_t_sessionId_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SetSessionID, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SetSessionID_t_sessionId_get" "', argument " "1"" of type '" "struct SetSessionID *""'"); 
-    }
-    arg1 = (struct SetSessionID *)(argp1);
-    result = (long) ((arg1)->sessionId);
-    ST(argvi) = SWIG_From_long  SWIG_PERL_CALL_ARGS_1((long)(result)); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SetSessionID_t_setId_set) {
-  {
-    struct SetSessionID *arg1 = (struct SetSessionID *) 0 ;
-    SETId_t *arg2 = (SETId_t *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SetSessionID_t_setId_set(self,setId);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SetSessionID, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SetSessionID_t_setId_set" "', argument " "1"" of type '" "struct SetSessionID *""'"); 
-    }
-    arg1 = (struct SetSessionID *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_SETId, 0 |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SetSessionID_t_setId_set" "', argument " "2"" of type '" "SETId_t *""'"); 
-    }
-    arg2 = (SETId_t *)(argp2);
-    if (arg1) (arg1)->setId = *arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SetSessionID_t_setId_get) {
-  {
-    struct SetSessionID *arg1 = (struct SetSessionID *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    SETId_t *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SetSessionID_t_setId_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SetSessionID, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SetSessionID_t_setId_get" "', argument " "1"" of type '" "struct SetSessionID *""'"); 
-    }
-    arg1 = (struct SetSessionID *)(argp1);
-    result = (SETId_t *)& ((arg1)->setId);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SETId, 0 | SWIG_SHADOW); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SetSessionID_t__asn_ctx_set) {
-  {
-    struct SetSessionID *arg1 = (struct SetSessionID *) 0 ;
-    asn_struct_ctx_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SetSessionID_t__asn_ctx_set(self,_asn_ctx);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SetSessionID, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SetSessionID_t__asn_ctx_set" "', argument " "1"" of type '" "struct SetSessionID *""'"); 
-    }
-    arg1 = (struct SetSessionID *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_asn_struct_ctx_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SetSessionID_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SetSessionID_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'");
-      } else {
-        arg2 = *((asn_struct_ctx_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->_asn_ctx = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SetSessionID_t__asn_ctx_get) {
-  {
-    struct SetSessionID *arg1 = (struct SetSessionID *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    asn_struct_ctx_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SetSessionID_t__asn_ctx_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SetSessionID, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SetSessionID_t__asn_ctx_get" "', argument " "1"" of type '" "struct SetSessionID *""'"); 
-    }
-    arg1 = (struct SetSessionID *)(argp1);
-    result =  ((arg1)->_asn_ctx);
-    ST(argvi) = SWIG_NewPointerObj((asn_struct_ctx_t *)memcpy((asn_struct_ctx_t *)malloc(sizeof(asn_struct_ctx_t)),&result,sizeof(asn_struct_ctx_t)), SWIGTYPE_p_asn_struct_ctx_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_new_SetSessionID_t) {
-  {
-    int argvi = 0;
-    struct SetSessionID *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 0) || (items > 0)) {
-      SWIG_croak("Usage: new_SetSessionID_t();");
-    }
-    result = (struct SetSessionID *)calloc(1, sizeof(struct SetSessionID));
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SetSessionID, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
-    XSRETURN(argvi);
-  fail:
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_delete_SetSessionID_t) {
-  {
-    struct SetSessionID *arg1 = (struct SetSessionID *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: delete_SetSessionID_t(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SetSessionID, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_SetSessionID_t" "', argument " "1"" of type '" "struct SetSessionID *""'"); 
-    }
-    arg1 = (struct SetSessionID *)(argp1);
-    free((char *) arg1);
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SLPAddress_t_present_set) {
-  {
-    struct SLPAddress *arg1 = (struct SLPAddress *) 0 ;
-    SLPAddress_PR arg2 ;
+    struct ULP_PDU *arg1 = (struct ULP_PDU *) 0 ;
+    int arg2 ;
+    char *arg3 = (char *) 0 ;
     void *argp1 = 0 ;
     int res1 = 0 ;
     int val2 ;
     int ecode2 = 0 ;
+    int res3 ;
+    char *buf3 = 0 ;
+    int alloc3 = 0 ;
     int argvi = 0;
     dXSARGS;
     
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SLPAddress_t_present_set(self,present);");
+    if ((items < 3) || (items > 3)) {
+      SWIG_croak("Usage: ULP_PDU_t_setSetSessionId_to_msisdn(self,sessionId,msisdn);");
     }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SLPAddress, 0 |  0 );
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_ULP_PDU, 0 |  0 );
     if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SLPAddress_t_present_set" "', argument " "1"" of type '" "struct SLPAddress *""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ULP_PDU_t_setSetSessionId_to_msisdn" "', argument " "1"" of type '" "struct ULP_PDU *""'"); 
     }
-    arg1 = (struct SLPAddress *)(argp1);
+    arg1 = (struct ULP_PDU *)(argp1);
     ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
     if (!SWIG_IsOK(ecode2)) {
-      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SLPAddress_t_present_set" "', argument " "2"" of type '" "SLPAddress_PR""'");
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "ULP_PDU_t_setSetSessionId_to_msisdn" "', argument " "2"" of type '" "int""'");
     } 
-    arg2 = (SLPAddress_PR)(val2);
-    if (arg1) (arg1)->present = arg2;
+    arg2 = (int)(val2);
+    res3 = SWIG_AsCharPtrAndSize(ST(2), &buf3, NULL, &alloc3);
+    if (!SWIG_IsOK(res3)) {
+      SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "ULP_PDU_t_setSetSessionId_to_msisdn" "', argument " "3"" of type '" "char *""'");
+    }
+    arg3 = (char *)(buf3);
+    ULP_PDU_setSetSessionId_to_msisdn(arg1,arg2,arg3);
     ST(argvi) = sv_newmortal();
     
     
+    if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
     XSRETURN(argvi);
   fail:
     
     
+    if (alloc3 == SWIG_NEWOBJ) free((char*)buf3);
     SWIG_croak_null();
   }
 }
 
 
-XS(_wrap_SLPAddress_t_present_get) {
+XS(_wrap_ULP_PDU_t_copy_SlpSessionId) {
   {
-    struct SLPAddress *arg1 = (struct SLPAddress *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    SLPAddress_PR result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SLPAddress_t_present_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SLPAddress, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SLPAddress_t_present_get" "', argument " "1"" of type '" "struct SLPAddress *""'"); 
-    }
-    arg1 = (struct SLPAddress *)(argp1);
-    result = (SLPAddress_PR) ((arg1)->present);
-    ST(argvi) = SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(result)); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SLPAddress_t__asn_ctx_set) {
-  {
-    struct SLPAddress *arg1 = (struct SLPAddress *) 0 ;
-    asn_struct_ctx_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SLPAddress_t__asn_ctx_set(self,_asn_ctx);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SLPAddress, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SLPAddress_t__asn_ctx_set" "', argument " "1"" of type '" "struct SLPAddress *""'"); 
-    }
-    arg1 = (struct SLPAddress *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_asn_struct_ctx_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SLPAddress_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SLPAddress_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'");
-      } else {
-        arg2 = *((asn_struct_ctx_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->_asn_ctx = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SLPAddress_t__asn_ctx_get) {
-  {
-    struct SLPAddress *arg1 = (struct SLPAddress *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    asn_struct_ctx_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SLPAddress_t__asn_ctx_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SLPAddress, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SLPAddress_t__asn_ctx_get" "', argument " "1"" of type '" "struct SLPAddress *""'"); 
-    }
-    arg1 = (struct SLPAddress *)(argp1);
-    result =  ((arg1)->_asn_ctx);
-    ST(argvi) = SWIG_NewPointerObj((asn_struct_ctx_t *)memcpy((asn_struct_ctx_t *)malloc(sizeof(asn_struct_ctx_t)),&result,sizeof(asn_struct_ctx_t)), SWIGTYPE_p_asn_struct_ctx_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SLPAddress_t_choice_get) {
-  {
-    struct SLPAddress *arg1 = (struct SLPAddress *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    SLPAddress_t_choice *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SLPAddress_t_choice_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SLPAddress, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SLPAddress_t_choice_get" "', argument " "1"" of type '" "struct SLPAddress *""'"); 
-    }
-    arg1 = (struct SLPAddress *)(argp1);
-    result = (SLPAddress_t_choice *)& ((arg1)->choice);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SLPAddress_t_choice, 0 | SWIG_SHADOW); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_new_SLPAddress_t) {
-  {
-    int argvi = 0;
-    struct SLPAddress *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 0) || (items > 0)) {
-      SWIG_croak("Usage: new_SLPAddress_t();");
-    }
-    result = (struct SLPAddress *)calloc(1, sizeof(struct SLPAddress));
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SLPAddress, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
-    XSRETURN(argvi);
-  fail:
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_delete_SLPAddress_t) {
-  {
-    struct SLPAddress *arg1 = (struct SLPAddress *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: delete_SLPAddress_t(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SLPAddress, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_SLPAddress_t" "', argument " "1"" of type '" "struct SLPAddress *""'"); 
-    }
-    arg1 = (struct SLPAddress *)(argp1);
-    free((char *) arg1);
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SLPAddress_t_choice_iPAddress_set) {
-  {
-    SLPAddress_t_choice *arg1 = (SLPAddress_t_choice *) 0 ;
-    IPAddress_t *arg2 = (IPAddress_t *) 0 ;
+    struct ULP_PDU *arg1 = (struct ULP_PDU *) 0 ;
+    ULP_PDU_t *arg2 = (ULP_PDU_t *) 0 ;
     void *argp1 = 0 ;
     int res1 = 0 ;
     void *argp2 = 0 ;
@@ -4167,659 +5799,25 @@ XS(_wrap_SLPAddress_t_choice_iPAddress_set) {
     dXSARGS;
     
     if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SLPAddress_t_choice_iPAddress_set(self,iPAddress);");
+      SWIG_croak("Usage: ULP_PDU_t_copy_SlpSessionId(self,src_pdu);");
     }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SLPAddress_t_choice, 0 |  0 );
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_ULP_PDU, 0 |  0 );
     if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SLPAddress_t_choice_iPAddress_set" "', argument " "1"" of type '" "SLPAddress_t_choice *""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ULP_PDU_t_copy_SlpSessionId" "', argument " "1"" of type '" "struct ULP_PDU *""'"); 
     }
-    arg1 = (SLPAddress_t_choice *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_IPAddress, 0 |  0 );
+    arg1 = (struct ULP_PDU *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_ULP_PDU, 0 |  0 );
     if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SLPAddress_t_choice_iPAddress_set" "', argument " "2"" of type '" "IPAddress_t *""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ULP_PDU_t_copy_SlpSessionId" "', argument " "2"" of type '" "ULP_PDU_t *""'"); 
     }
-    arg2 = (IPAddress_t *)(argp2);
-    if (arg1) (arg1)->iPAddress = *arg2;
+    arg2 = (ULP_PDU_t *)(argp2);
+    ULP_PDU_copy_SlpSessionId(arg1,arg2);
     ST(argvi) = sv_newmortal();
     
     
     XSRETURN(argvi);
   fail:
     
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SLPAddress_t_choice_iPAddress_get) {
-  {
-    SLPAddress_t_choice *arg1 = (SLPAddress_t_choice *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    IPAddress_t *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SLPAddress_t_choice_iPAddress_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SLPAddress_t_choice, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SLPAddress_t_choice_iPAddress_get" "', argument " "1"" of type '" "SLPAddress_t_choice *""'"); 
-    }
-    arg1 = (SLPAddress_t_choice *)(argp1);
-    result = (IPAddress_t *)& ((arg1)->iPAddress);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_IPAddress, 0 | SWIG_SHADOW); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SLPAddress_t_choice_fQDN_set) {
-  {
-    SLPAddress_t_choice *arg1 = (SLPAddress_t_choice *) 0 ;
-    FQDN_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SLPAddress_t_choice_fQDN_set(self,fQDN);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SLPAddress_t_choice, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SLPAddress_t_choice_fQDN_set" "', argument " "1"" of type '" "SLPAddress_t_choice *""'"); 
-    }
-    arg1 = (SLPAddress_t_choice *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_FQDN_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SLPAddress_t_choice_fQDN_set" "', argument " "2"" of type '" "FQDN_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SLPAddress_t_choice_fQDN_set" "', argument " "2"" of type '" "FQDN_t""'");
-      } else {
-        arg2 = *((FQDN_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->fQDN = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SLPAddress_t_choice_fQDN_get) {
-  {
-    SLPAddress_t_choice *arg1 = (SLPAddress_t_choice *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    FQDN_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SLPAddress_t_choice_fQDN_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SLPAddress_t_choice, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SLPAddress_t_choice_fQDN_get" "', argument " "1"" of type '" "SLPAddress_t_choice *""'"); 
-    }
-    arg1 = (SLPAddress_t_choice *)(argp1);
-    result =  ((arg1)->fQDN);
-    ST(argvi) = SWIG_NewPointerObj((FQDN_t *)memcpy((FQDN_t *)malloc(sizeof(FQDN_t)),&result,sizeof(FQDN_t)), SWIGTYPE_p_FQDN_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_new_SLPAddress_t_choice) {
-  {
-    int argvi = 0;
-    SLPAddress_t_choice *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 0) || (items > 0)) {
-      SWIG_croak("Usage: new_SLPAddress_t_choice();");
-    }
-    result = (SLPAddress_t_choice *)calloc(1, sizeof(SLPAddress_t_choice));
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SLPAddress_t_choice, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
-    XSRETURN(argvi);
-  fail:
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_delete_SLPAddress_t_choice) {
-  {
-    SLPAddress_t_choice *arg1 = (SLPAddress_t_choice *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: delete_SLPAddress_t_choice(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SLPAddress_t_choice, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_SLPAddress_t_choice" "', argument " "1"" of type '" "SLPAddress_t_choice *""'"); 
-    }
-    arg1 = (SLPAddress_t_choice *)(argp1);
-    free((char *) arg1);
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SlpSessionID_t_sessionID_set) {
-  {
-    struct SlpSessionID *arg1 = (struct SlpSessionID *) 0 ;
-    OCTET_STRING_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SlpSessionID_t_sessionID_set(self,sessionID);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SlpSessionID, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SlpSessionID_t_sessionID_set" "', argument " "1"" of type '" "struct SlpSessionID *""'"); 
-    }
-    arg1 = (struct SlpSessionID *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_OCTET_STRING_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SlpSessionID_t_sessionID_set" "', argument " "2"" of type '" "OCTET_STRING_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SlpSessionID_t_sessionID_set" "', argument " "2"" of type '" "OCTET_STRING_t""'");
-      } else {
-        arg2 = *((OCTET_STRING_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->sessionID = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SlpSessionID_t_sessionID_get) {
-  {
-    struct SlpSessionID *arg1 = (struct SlpSessionID *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    OCTET_STRING_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SlpSessionID_t_sessionID_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SlpSessionID, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SlpSessionID_t_sessionID_get" "', argument " "1"" of type '" "struct SlpSessionID *""'"); 
-    }
-    arg1 = (struct SlpSessionID *)(argp1);
-    result =  ((arg1)->sessionID);
-    ST(argvi) = SWIG_NewPointerObj((OCTET_STRING_t *)memcpy((OCTET_STRING_t *)malloc(sizeof(OCTET_STRING_t)),&result,sizeof(OCTET_STRING_t)), SWIGTYPE_p_OCTET_STRING_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SlpSessionID_t_slpId_set) {
-  {
-    struct SlpSessionID *arg1 = (struct SlpSessionID *) 0 ;
-    SLPAddress_t *arg2 = (SLPAddress_t *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SlpSessionID_t_slpId_set(self,slpId);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SlpSessionID, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SlpSessionID_t_slpId_set" "', argument " "1"" of type '" "struct SlpSessionID *""'"); 
-    }
-    arg1 = (struct SlpSessionID *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_SLPAddress, 0 |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SlpSessionID_t_slpId_set" "', argument " "2"" of type '" "SLPAddress_t *""'"); 
-    }
-    arg2 = (SLPAddress_t *)(argp2);
-    if (arg1) (arg1)->slpId = *arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SlpSessionID_t_slpId_get) {
-  {
-    struct SlpSessionID *arg1 = (struct SlpSessionID *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    SLPAddress_t *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SlpSessionID_t_slpId_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SlpSessionID, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SlpSessionID_t_slpId_get" "', argument " "1"" of type '" "struct SlpSessionID *""'"); 
-    }
-    arg1 = (struct SlpSessionID *)(argp1);
-    result = (SLPAddress_t *)& ((arg1)->slpId);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SLPAddress, 0 | SWIG_SHADOW); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SlpSessionID_t__asn_ctx_set) {
-  {
-    struct SlpSessionID *arg1 = (struct SlpSessionID *) 0 ;
-    asn_struct_ctx_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SlpSessionID_t__asn_ctx_set(self,_asn_ctx);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SlpSessionID, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SlpSessionID_t__asn_ctx_set" "', argument " "1"" of type '" "struct SlpSessionID *""'"); 
-    }
-    arg1 = (struct SlpSessionID *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_asn_struct_ctx_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SlpSessionID_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SlpSessionID_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'");
-      } else {
-        arg2 = *((asn_struct_ctx_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->_asn_ctx = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SlpSessionID_t__asn_ctx_get) {
-  {
-    struct SlpSessionID *arg1 = (struct SlpSessionID *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    asn_struct_ctx_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SlpSessionID_t__asn_ctx_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SlpSessionID, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SlpSessionID_t__asn_ctx_get" "', argument " "1"" of type '" "struct SlpSessionID *""'"); 
-    }
-    arg1 = (struct SlpSessionID *)(argp1);
-    result =  ((arg1)->_asn_ctx);
-    ST(argvi) = SWIG_NewPointerObj((asn_struct_ctx_t *)memcpy((asn_struct_ctx_t *)malloc(sizeof(asn_struct_ctx_t)),&result,sizeof(asn_struct_ctx_t)), SWIGTYPE_p_asn_struct_ctx_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_new_SlpSessionID_t) {
-  {
-    int argvi = 0;
-    struct SlpSessionID *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 0) || (items > 0)) {
-      SWIG_croak("Usage: new_SlpSessionID_t();");
-    }
-    result = (struct SlpSessionID *)calloc(1, sizeof(struct SlpSessionID));
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SlpSessionID, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
-    XSRETURN(argvi);
-  fail:
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_delete_SlpSessionID_t) {
-  {
-    struct SlpSessionID *arg1 = (struct SlpSessionID *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: delete_SlpSessionID_t(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SlpSessionID, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_SlpSessionID_t" "', argument " "1"" of type '" "struct SlpSessionID *""'"); 
-    }
-    arg1 = (struct SlpSessionID *)(argp1);
-    free((char *) arg1);
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SessionID_t_setSessionID_set) {
-  {
-    struct SessionID *arg1 = (struct SessionID *) 0 ;
-    struct SetSessionID *arg2 = (struct SetSessionID *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SessionID_t_setSessionID_set(self,setSessionID);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SessionID, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SessionID_t_setSessionID_set" "', argument " "1"" of type '" "struct SessionID *""'"); 
-    }
-    arg1 = (struct SessionID *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_SetSessionID, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SessionID_t_setSessionID_set" "', argument " "2"" of type '" "struct SetSessionID *""'"); 
-    }
-    arg2 = (struct SetSessionID *)(argp2);
-    if (arg1) (arg1)->setSessionID = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SessionID_t_setSessionID_get) {
-  {
-    struct SessionID *arg1 = (struct SessionID *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    struct SetSessionID *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SessionID_t_setSessionID_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SessionID, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SessionID_t_setSessionID_get" "', argument " "1"" of type '" "struct SessionID *""'"); 
-    }
-    arg1 = (struct SessionID *)(argp1);
-    result = (struct SetSessionID *) ((arg1)->setSessionID);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SetSessionID, 0 | SWIG_SHADOW); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SessionID_t_slpSessionID_set) {
-  {
-    struct SessionID *arg1 = (struct SessionID *) 0 ;
-    struct SlpSessionID *arg2 = (struct SlpSessionID *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SessionID_t_slpSessionID_set(self,slpSessionID);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SessionID, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SessionID_t_slpSessionID_set" "', argument " "1"" of type '" "struct SessionID *""'"); 
-    }
-    arg1 = (struct SessionID *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_SlpSessionID, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SessionID_t_slpSessionID_set" "', argument " "2"" of type '" "struct SlpSessionID *""'"); 
-    }
-    arg2 = (struct SlpSessionID *)(argp2);
-    if (arg1) (arg1)->slpSessionID = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SessionID_t_slpSessionID_get) {
-  {
-    struct SessionID *arg1 = (struct SessionID *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    struct SlpSessionID *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SessionID_t_slpSessionID_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SessionID, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SessionID_t_slpSessionID_get" "', argument " "1"" of type '" "struct SessionID *""'"); 
-    }
-    arg1 = (struct SessionID *)(argp1);
-    result = (struct SlpSessionID *) ((arg1)->slpSessionID);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SlpSessionID, 0 | SWIG_SHADOW); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SessionID_t__asn_ctx_set) {
-  {
-    struct SessionID *arg1 = (struct SessionID *) 0 ;
-    asn_struct_ctx_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SessionID_t__asn_ctx_set(self,_asn_ctx);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SessionID, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SessionID_t__asn_ctx_set" "', argument " "1"" of type '" "struct SessionID *""'"); 
-    }
-    arg1 = (struct SessionID *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_asn_struct_ctx_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SessionID_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SessionID_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'");
-      } else {
-        arg2 = *((asn_struct_ctx_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->_asn_ctx = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SessionID_t__asn_ctx_get) {
-  {
-    struct SessionID *arg1 = (struct SessionID *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    asn_struct_ctx_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SessionID_t__asn_ctx_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SessionID, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SessionID_t__asn_ctx_get" "', argument " "1"" of type '" "struct SessionID *""'"); 
-    }
-    arg1 = (struct SessionID *)(argp1);
-    result =  ((arg1)->_asn_ctx);
-    ST(argvi) = SWIG_NewPointerObj((asn_struct_ctx_t *)memcpy((asn_struct_ctx_t *)malloc(sizeof(asn_struct_ctx_t)),&result,sizeof(asn_struct_ctx_t)), SWIGTYPE_p_asn_struct_ctx_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_new_SessionID_t) {
-  {
-    int argvi = 0;
-    struct SessionID *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 0) || (items > 0)) {
-      SWIG_croak("Usage: new_SessionID_t();");
-    }
-    result = (struct SessionID *)calloc(1, sizeof(struct SessionID));
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SessionID, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
-    XSRETURN(argvi);
-  fail:
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_delete_SessionID_t) {
-  {
-    struct SessionID *arg1 = (struct SessionID *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: delete_SessionID_t(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SessionID, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_SessionID_t" "', argument " "1"" of type '" "struct SessionID *""'"); 
-    }
-    arg1 = (struct SessionID *)(argp1);
-    free((char *) arg1);
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
     
     SWIG_croak_null();
   }
@@ -5598,3778 +6596,6 @@ XS(_wrap_delete_UlpMessage_t_choice) {
 }
 
 
-XS(_wrap_Notification_t_notificationType_set) {
-  {
-    struct Notification *arg1 = (struct Notification *) 0 ;
-    NotificationType_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: Notification_t_notificationType_set(self,notificationType);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_Notification, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Notification_t_notificationType_set" "', argument " "1"" of type '" "struct Notification *""'"); 
-    }
-    arg1 = (struct Notification *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_NotificationType_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Notification_t_notificationType_set" "', argument " "2"" of type '" "NotificationType_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Notification_t_notificationType_set" "', argument " "2"" of type '" "NotificationType_t""'");
-      } else {
-        arg2 = *((NotificationType_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->notificationType = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_Notification_t_notificationType_get) {
-  {
-    struct Notification *arg1 = (struct Notification *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    NotificationType_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: Notification_t_notificationType_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_Notification, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Notification_t_notificationType_get" "', argument " "1"" of type '" "struct Notification *""'"); 
-    }
-    arg1 = (struct Notification *)(argp1);
-    result =  ((arg1)->notificationType);
-    ST(argvi) = SWIG_NewPointerObj((NotificationType_t *)memcpy((NotificationType_t *)malloc(sizeof(NotificationType_t)),&result,sizeof(NotificationType_t)), SWIGTYPE_p_NotificationType_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_Notification_t_encodingType_set) {
-  {
-    struct Notification *arg1 = (struct Notification *) 0 ;
-    EncodingType_t *arg2 = (EncodingType_t *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: Notification_t_encodingType_set(self,encodingType);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_Notification, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Notification_t_encodingType_set" "', argument " "1"" of type '" "struct Notification *""'"); 
-    }
-    arg1 = (struct Notification *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_EncodingType_t, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Notification_t_encodingType_set" "', argument " "2"" of type '" "EncodingType_t *""'"); 
-    }
-    arg2 = (EncodingType_t *)(argp2);
-    if (arg1) (arg1)->encodingType = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_Notification_t_encodingType_get) {
-  {
-    struct Notification *arg1 = (struct Notification *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    EncodingType_t *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: Notification_t_encodingType_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_Notification, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Notification_t_encodingType_get" "', argument " "1"" of type '" "struct Notification *""'"); 
-    }
-    arg1 = (struct Notification *)(argp1);
-    result = (EncodingType_t *) ((arg1)->encodingType);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_EncodingType_t, 0 | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_Notification_t_requestorId_set) {
-  {
-    struct Notification *arg1 = (struct Notification *) 0 ;
-    OCTET_STRING_t *arg2 = (OCTET_STRING_t *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: Notification_t_requestorId_set(self,requestorId);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_Notification, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Notification_t_requestorId_set" "', argument " "1"" of type '" "struct Notification *""'"); 
-    }
-    arg1 = (struct Notification *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_OCTET_STRING_t, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Notification_t_requestorId_set" "', argument " "2"" of type '" "OCTET_STRING_t *""'"); 
-    }
-    arg2 = (OCTET_STRING_t *)(argp2);
-    if (arg1) (arg1)->requestorId = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_Notification_t_requestorId_get) {
-  {
-    struct Notification *arg1 = (struct Notification *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    OCTET_STRING_t *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: Notification_t_requestorId_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_Notification, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Notification_t_requestorId_get" "', argument " "1"" of type '" "struct Notification *""'"); 
-    }
-    arg1 = (struct Notification *)(argp1);
-    result = (OCTET_STRING_t *) ((arg1)->requestorId);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_OCTET_STRING_t, 0 | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_Notification_t_requestorIdType_set) {
-  {
-    struct Notification *arg1 = (struct Notification *) 0 ;
-    FormatIndicator_t *arg2 = (FormatIndicator_t *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: Notification_t_requestorIdType_set(self,requestorIdType);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_Notification, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Notification_t_requestorIdType_set" "', argument " "1"" of type '" "struct Notification *""'"); 
-    }
-    arg1 = (struct Notification *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_FormatIndicator_t, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Notification_t_requestorIdType_set" "', argument " "2"" of type '" "FormatIndicator_t *""'"); 
-    }
-    arg2 = (FormatIndicator_t *)(argp2);
-    if (arg1) (arg1)->requestorIdType = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_Notification_t_requestorIdType_get) {
-  {
-    struct Notification *arg1 = (struct Notification *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    FormatIndicator_t *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: Notification_t_requestorIdType_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_Notification, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Notification_t_requestorIdType_get" "', argument " "1"" of type '" "struct Notification *""'"); 
-    }
-    arg1 = (struct Notification *)(argp1);
-    result = (FormatIndicator_t *) ((arg1)->requestorIdType);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_FormatIndicator_t, 0 | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_Notification_t_clientName_set) {
-  {
-    struct Notification *arg1 = (struct Notification *) 0 ;
-    OCTET_STRING_t *arg2 = (OCTET_STRING_t *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: Notification_t_clientName_set(self,clientName);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_Notification, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Notification_t_clientName_set" "', argument " "1"" of type '" "struct Notification *""'"); 
-    }
-    arg1 = (struct Notification *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_OCTET_STRING_t, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Notification_t_clientName_set" "', argument " "2"" of type '" "OCTET_STRING_t *""'"); 
-    }
-    arg2 = (OCTET_STRING_t *)(argp2);
-    if (arg1) (arg1)->clientName = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_Notification_t_clientName_get) {
-  {
-    struct Notification *arg1 = (struct Notification *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    OCTET_STRING_t *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: Notification_t_clientName_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_Notification, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Notification_t_clientName_get" "', argument " "1"" of type '" "struct Notification *""'"); 
-    }
-    arg1 = (struct Notification *)(argp1);
-    result = (OCTET_STRING_t *) ((arg1)->clientName);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_OCTET_STRING_t, 0 | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_Notification_t_clientNameType_set) {
-  {
-    struct Notification *arg1 = (struct Notification *) 0 ;
-    FormatIndicator_t *arg2 = (FormatIndicator_t *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: Notification_t_clientNameType_set(self,clientNameType);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_Notification, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Notification_t_clientNameType_set" "', argument " "1"" of type '" "struct Notification *""'"); 
-    }
-    arg1 = (struct Notification *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_FormatIndicator_t, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Notification_t_clientNameType_set" "', argument " "2"" of type '" "FormatIndicator_t *""'"); 
-    }
-    arg2 = (FormatIndicator_t *)(argp2);
-    if (arg1) (arg1)->clientNameType = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_Notification_t_clientNameType_get) {
-  {
-    struct Notification *arg1 = (struct Notification *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    FormatIndicator_t *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: Notification_t_clientNameType_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_Notification, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Notification_t_clientNameType_get" "', argument " "1"" of type '" "struct Notification *""'"); 
-    }
-    arg1 = (struct Notification *)(argp1);
-    result = (FormatIndicator_t *) ((arg1)->clientNameType);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_FormatIndicator_t, 0 | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_Notification_t__asn_ctx_set) {
-  {
-    struct Notification *arg1 = (struct Notification *) 0 ;
-    asn_struct_ctx_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: Notification_t__asn_ctx_set(self,_asn_ctx);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_Notification, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Notification_t__asn_ctx_set" "', argument " "1"" of type '" "struct Notification *""'"); 
-    }
-    arg1 = (struct Notification *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_asn_struct_ctx_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Notification_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Notification_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'");
-      } else {
-        arg2 = *((asn_struct_ctx_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->_asn_ctx = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_Notification_t__asn_ctx_get) {
-  {
-    struct Notification *arg1 = (struct Notification *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    asn_struct_ctx_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: Notification_t__asn_ctx_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_Notification, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Notification_t__asn_ctx_get" "', argument " "1"" of type '" "struct Notification *""'"); 
-    }
-    arg1 = (struct Notification *)(argp1);
-    result =  ((arg1)->_asn_ctx);
-    ST(argvi) = SWIG_NewPointerObj((asn_struct_ctx_t *)memcpy((asn_struct_ctx_t *)malloc(sizeof(asn_struct_ctx_t)),&result,sizeof(asn_struct_ctx_t)), SWIGTYPE_p_asn_struct_ctx_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_new_Notification_t) {
-  {
-    int argvi = 0;
-    struct Notification *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 0) || (items > 0)) {
-      SWIG_croak("Usage: new_Notification_t();");
-    }
-    result = (struct Notification *)calloc(1, sizeof(struct Notification));
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_Notification, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
-    XSRETURN(argvi);
-  fail:
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_delete_Notification_t) {
-  {
-    struct Notification *arg1 = (struct Notification *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: delete_Notification_t(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_Notification, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_Notification_t" "', argument " "1"" of type '" "struct Notification *""'"); 
-    }
-    arg1 = (struct Notification *)(argp1);
-    free((char *) arg1);
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_QoP_t_horacc_set) {
-  {
-    struct QoP *arg1 = (struct QoP *) 0 ;
-    long arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    long val2 ;
-    int ecode2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: QoP_t_horacc_set(self,horacc);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_QoP, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "QoP_t_horacc_set" "', argument " "1"" of type '" "struct QoP *""'"); 
-    }
-    arg1 = (struct QoP *)(argp1);
-    ecode2 = SWIG_AsVal_long SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
-    if (!SWIG_IsOK(ecode2)) {
-      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "QoP_t_horacc_set" "', argument " "2"" of type '" "long""'");
-    } 
-    arg2 = (long)(val2);
-    if (arg1) (arg1)->horacc = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_QoP_t_horacc_get) {
-  {
-    struct QoP *arg1 = (struct QoP *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    long result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: QoP_t_horacc_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_QoP, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "QoP_t_horacc_get" "', argument " "1"" of type '" "struct QoP *""'"); 
-    }
-    arg1 = (struct QoP *)(argp1);
-    result = (long) ((arg1)->horacc);
-    ST(argvi) = SWIG_From_long  SWIG_PERL_CALL_ARGS_1((long)(result)); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_QoP_t_veracc_set) {
-  {
-    struct QoP *arg1 = (struct QoP *) 0 ;
-    long *arg2 = (long *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: QoP_t_veracc_set(self,veracc);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_QoP, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "QoP_t_veracc_set" "', argument " "1"" of type '" "struct QoP *""'"); 
-    }
-    arg1 = (struct QoP *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_long, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "QoP_t_veracc_set" "', argument " "2"" of type '" "long *""'"); 
-    }
-    arg2 = (long *)(argp2);
-    if (arg1) (arg1)->veracc = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_QoP_t_veracc_get) {
-  {
-    struct QoP *arg1 = (struct QoP *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    long *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: QoP_t_veracc_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_QoP, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "QoP_t_veracc_get" "', argument " "1"" of type '" "struct QoP *""'"); 
-    }
-    arg1 = (struct QoP *)(argp1);
-    result = (long *) ((arg1)->veracc);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_long, 0 | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_QoP_t_maxLocAge_set) {
-  {
-    struct QoP *arg1 = (struct QoP *) 0 ;
-    long *arg2 = (long *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: QoP_t_maxLocAge_set(self,maxLocAge);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_QoP, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "QoP_t_maxLocAge_set" "', argument " "1"" of type '" "struct QoP *""'"); 
-    }
-    arg1 = (struct QoP *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_long, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "QoP_t_maxLocAge_set" "', argument " "2"" of type '" "long *""'"); 
-    }
-    arg2 = (long *)(argp2);
-    if (arg1) (arg1)->maxLocAge = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_QoP_t_maxLocAge_get) {
-  {
-    struct QoP *arg1 = (struct QoP *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    long *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: QoP_t_maxLocAge_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_QoP, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "QoP_t_maxLocAge_get" "', argument " "1"" of type '" "struct QoP *""'"); 
-    }
-    arg1 = (struct QoP *)(argp1);
-    result = (long *) ((arg1)->maxLocAge);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_long, 0 | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_QoP_t_delay_set) {
-  {
-    struct QoP *arg1 = (struct QoP *) 0 ;
-    long *arg2 = (long *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: QoP_t_delay_set(self,delay);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_QoP, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "QoP_t_delay_set" "', argument " "1"" of type '" "struct QoP *""'"); 
-    }
-    arg1 = (struct QoP *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_long, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "QoP_t_delay_set" "', argument " "2"" of type '" "long *""'"); 
-    }
-    arg2 = (long *)(argp2);
-    if (arg1) (arg1)->delay = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_QoP_t_delay_get) {
-  {
-    struct QoP *arg1 = (struct QoP *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    long *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: QoP_t_delay_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_QoP, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "QoP_t_delay_get" "', argument " "1"" of type '" "struct QoP *""'"); 
-    }
-    arg1 = (struct QoP *)(argp1);
-    result = (long *) ((arg1)->delay);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_long, 0 | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_QoP_t__asn_ctx_set) {
-  {
-    struct QoP *arg1 = (struct QoP *) 0 ;
-    asn_struct_ctx_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: QoP_t__asn_ctx_set(self,_asn_ctx);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_QoP, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "QoP_t__asn_ctx_set" "', argument " "1"" of type '" "struct QoP *""'"); 
-    }
-    arg1 = (struct QoP *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_asn_struct_ctx_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "QoP_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "QoP_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'");
-      } else {
-        arg2 = *((asn_struct_ctx_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->_asn_ctx = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_QoP_t__asn_ctx_get) {
-  {
-    struct QoP *arg1 = (struct QoP *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    asn_struct_ctx_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: QoP_t__asn_ctx_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_QoP, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "QoP_t__asn_ctx_get" "', argument " "1"" of type '" "struct QoP *""'"); 
-    }
-    arg1 = (struct QoP *)(argp1);
-    result =  ((arg1)->_asn_ctx);
-    ST(argvi) = SWIG_NewPointerObj((asn_struct_ctx_t *)memcpy((asn_struct_ctx_t *)malloc(sizeof(asn_struct_ctx_t)),&result,sizeof(asn_struct_ctx_t)), SWIGTYPE_p_asn_struct_ctx_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_new_QoP_t) {
-  {
-    int argvi = 0;
-    struct QoP *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 0) || (items > 0)) {
-      SWIG_croak("Usage: new_QoP_t();");
-    }
-    result = (struct QoP *)calloc(1, sizeof(struct QoP));
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_QoP, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
-    XSRETURN(argvi);
-  fail:
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_delete_QoP_t) {
-  {
-    struct QoP *arg1 = (struct QoP *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: delete_QoP_t(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_QoP, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_QoP_t" "', argument " "1"" of type '" "struct QoP *""'"); 
-    }
-    arg1 = (struct QoP *)(argp1);
-    free((char *) arg1);
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLINIT_t_posMethod_set) {
-  {
-    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
-    PosMethod_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    long val2 ;
-    int ecode2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLINIT_t_posMethod_set(self,posMethod);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLINIT_t_posMethod_set" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
-    }
-    arg1 = (struct SUPLINIT *)(argp1);
-    ecode2 = SWIG_AsVal_long SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
-    if (!SWIG_IsOK(ecode2)) {
-      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SUPLINIT_t_posMethod_set" "', argument " "2"" of type '" "PosMethod_t""'");
-    } 
-    arg2 = (PosMethod_t)(val2);
-    if (arg1) (arg1)->posMethod = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLINIT_t_posMethod_get) {
-  {
-    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    PosMethod_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLINIT_t_posMethod_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLINIT_t_posMethod_get" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
-    }
-    arg1 = (struct SUPLINIT *)(argp1);
-    result = (PosMethod_t) ((arg1)->posMethod);
-    ST(argvi) = SWIG_From_long  SWIG_PERL_CALL_ARGS_1((long)(result)); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLINIT_t_notification_set) {
-  {
-    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
-    struct Notification *arg2 = (struct Notification *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLINIT_t_notification_set(self,notification);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLINIT_t_notification_set" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
-    }
-    arg1 = (struct SUPLINIT *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_Notification, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLINIT_t_notification_set" "', argument " "2"" of type '" "struct Notification *""'"); 
-    }
-    arg2 = (struct Notification *)(argp2);
-    if (arg1) (arg1)->notification = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLINIT_t_notification_get) {
-  {
-    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    struct Notification *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLINIT_t_notification_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLINIT_t_notification_get" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
-    }
-    arg1 = (struct SUPLINIT *)(argp1);
-    result = (struct Notification *) ((arg1)->notification);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_Notification, 0 | SWIG_SHADOW); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLINIT_t_sLPAddress_set) {
-  {
-    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
-    struct SLPAddress *arg2 = (struct SLPAddress *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLINIT_t_sLPAddress_set(self,sLPAddress);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLINIT_t_sLPAddress_set" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
-    }
-    arg1 = (struct SUPLINIT *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_SLPAddress, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLINIT_t_sLPAddress_set" "', argument " "2"" of type '" "struct SLPAddress *""'"); 
-    }
-    arg2 = (struct SLPAddress *)(argp2);
-    if (arg1) (arg1)->sLPAddress = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLINIT_t_sLPAddress_get) {
-  {
-    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    struct SLPAddress *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLINIT_t_sLPAddress_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLINIT_t_sLPAddress_get" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
-    }
-    arg1 = (struct SUPLINIT *)(argp1);
-    result = (struct SLPAddress *) ((arg1)->sLPAddress);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SLPAddress, 0 | SWIG_SHADOW); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLINIT_t_qoP_set) {
-  {
-    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
-    struct QoP *arg2 = (struct QoP *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLINIT_t_qoP_set(self,qoP);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLINIT_t_qoP_set" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
-    }
-    arg1 = (struct SUPLINIT *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_QoP, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLINIT_t_qoP_set" "', argument " "2"" of type '" "struct QoP *""'"); 
-    }
-    arg2 = (struct QoP *)(argp2);
-    if (arg1) (arg1)->qoP = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLINIT_t_qoP_get) {
-  {
-    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    struct QoP *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLINIT_t_qoP_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLINIT_t_qoP_get" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
-    }
-    arg1 = (struct SUPLINIT *)(argp1);
-    result = (struct QoP *) ((arg1)->qoP);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_QoP, 0 | SWIG_SHADOW); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLINIT_t_sLPMode_set) {
-  {
-    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
-    SLPMode_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    long val2 ;
-    int ecode2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLINIT_t_sLPMode_set(self,sLPMode);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLINIT_t_sLPMode_set" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
-    }
-    arg1 = (struct SUPLINIT *)(argp1);
-    ecode2 = SWIG_AsVal_long SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
-    if (!SWIG_IsOK(ecode2)) {
-      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SUPLINIT_t_sLPMode_set" "', argument " "2"" of type '" "SLPMode_t""'");
-    } 
-    arg2 = (SLPMode_t)(val2);
-    if (arg1) (arg1)->sLPMode = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLINIT_t_sLPMode_get) {
-  {
-    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    SLPMode_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLINIT_t_sLPMode_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLINIT_t_sLPMode_get" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
-    }
-    arg1 = (struct SUPLINIT *)(argp1);
-    result = (SLPMode_t) ((arg1)->sLPMode);
-    ST(argvi) = SWIG_From_long  SWIG_PERL_CALL_ARGS_1((long)(result)); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLINIT_t_mAC_set) {
-  {
-    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
-    MAC_t *arg2 = (MAC_t *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLINIT_t_mAC_set(self,mAC);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLINIT_t_mAC_set" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
-    }
-    arg1 = (struct SUPLINIT *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_BIT_STRING_t, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLINIT_t_mAC_set" "', argument " "2"" of type '" "MAC_t *""'"); 
-    }
-    arg2 = (MAC_t *)(argp2);
-    if (arg1) (arg1)->mAC = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLINIT_t_mAC_get) {
-  {
-    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    MAC_t *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLINIT_t_mAC_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLINIT_t_mAC_get" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
-    }
-    arg1 = (struct SUPLINIT *)(argp1);
-    result = (MAC_t *) ((arg1)->mAC);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_BIT_STRING_t, 0 | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLINIT_t_keyIdentity_set) {
-  {
-    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
-    KeyIdentity_t *arg2 = (KeyIdentity_t *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLINIT_t_keyIdentity_set(self,keyIdentity);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLINIT_t_keyIdentity_set" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
-    }
-    arg1 = (struct SUPLINIT *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_BIT_STRING_t, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLINIT_t_keyIdentity_set" "', argument " "2"" of type '" "KeyIdentity_t *""'"); 
-    }
-    arg2 = (KeyIdentity_t *)(argp2);
-    if (arg1) (arg1)->keyIdentity = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLINIT_t_keyIdentity_get) {
-  {
-    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    KeyIdentity_t *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLINIT_t_keyIdentity_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLINIT_t_keyIdentity_get" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
-    }
-    arg1 = (struct SUPLINIT *)(argp1);
-    result = (KeyIdentity_t *) ((arg1)->keyIdentity);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_BIT_STRING_t, 0 | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLINIT_t__asn_ctx_set) {
-  {
-    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
-    asn_struct_ctx_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLINIT_t__asn_ctx_set(self,_asn_ctx);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLINIT_t__asn_ctx_set" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
-    }
-    arg1 = (struct SUPLINIT *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_asn_struct_ctx_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLINIT_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLINIT_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'");
-      } else {
-        arg2 = *((asn_struct_ctx_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->_asn_ctx = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLINIT_t__asn_ctx_get) {
-  {
-    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    asn_struct_ctx_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLINIT_t__asn_ctx_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLINIT_t__asn_ctx_get" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
-    }
-    arg1 = (struct SUPLINIT *)(argp1);
-    result =  ((arg1)->_asn_ctx);
-    ST(argvi) = SWIG_NewPointerObj((asn_struct_ctx_t *)memcpy((asn_struct_ctx_t *)malloc(sizeof(asn_struct_ctx_t)),&result,sizeof(asn_struct_ctx_t)), SWIGTYPE_p_asn_struct_ctx_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_new_SUPLINIT_t) {
-  {
-    int argvi = 0;
-    struct SUPLINIT *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 0) || (items > 0)) {
-      SWIG_croak("Usage: new_SUPLINIT_t();");
-    }
-    result = (struct SUPLINIT *)calloc(1, sizeof(struct SUPLINIT));
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SUPLINIT, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
-    XSRETURN(argvi);
-  fail:
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_delete_SUPLINIT_t) {
-  {
-    struct SUPLINIT *arg1 = (struct SUPLINIT *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: delete_SUPLINIT_t(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLINIT, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_SUPLINIT_t" "', argument " "1"" of type '" "struct SUPLINIT *""'"); 
-    }
-    arg1 = (struct SUPLINIT *)(argp1);
-    free((char *) arg1);
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLSTART_t_sETCapabilities_set) {
-  {
-    struct SUPLSTART *arg1 = (struct SUPLSTART *) 0 ;
-    SETCapabilities_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLSTART_t_sETCapabilities_set(self,sETCapabilities);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLSTART, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLSTART_t_sETCapabilities_set" "', argument " "1"" of type '" "struct SUPLSTART *""'"); 
-    }
-    arg1 = (struct SUPLSTART *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_SETCapabilities_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLSTART_t_sETCapabilities_set" "', argument " "2"" of type '" "SETCapabilities_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLSTART_t_sETCapabilities_set" "', argument " "2"" of type '" "SETCapabilities_t""'");
-      } else {
-        arg2 = *((SETCapabilities_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->sETCapabilities = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLSTART_t_sETCapabilities_get) {
-  {
-    struct SUPLSTART *arg1 = (struct SUPLSTART *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    SETCapabilities_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLSTART_t_sETCapabilities_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLSTART, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLSTART_t_sETCapabilities_get" "', argument " "1"" of type '" "struct SUPLSTART *""'"); 
-    }
-    arg1 = (struct SUPLSTART *)(argp1);
-    result =  ((arg1)->sETCapabilities);
-    ST(argvi) = SWIG_NewPointerObj((SETCapabilities_t *)memcpy((SETCapabilities_t *)malloc(sizeof(SETCapabilities_t)),&result,sizeof(SETCapabilities_t)), SWIGTYPE_p_SETCapabilities_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLSTART_t_locationId_set) {
-  {
-    struct SUPLSTART *arg1 = (struct SUPLSTART *) 0 ;
-    LocationId_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLSTART_t_locationId_set(self,locationId);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLSTART, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLSTART_t_locationId_set" "', argument " "1"" of type '" "struct SUPLSTART *""'"); 
-    }
-    arg1 = (struct SUPLSTART *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_LocationId_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLSTART_t_locationId_set" "', argument " "2"" of type '" "LocationId_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLSTART_t_locationId_set" "', argument " "2"" of type '" "LocationId_t""'");
-      } else {
-        arg2 = *((LocationId_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->locationId = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLSTART_t_locationId_get) {
-  {
-    struct SUPLSTART *arg1 = (struct SUPLSTART *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    LocationId_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLSTART_t_locationId_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLSTART, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLSTART_t_locationId_get" "', argument " "1"" of type '" "struct SUPLSTART *""'"); 
-    }
-    arg1 = (struct SUPLSTART *)(argp1);
-    result =  ((arg1)->locationId);
-    ST(argvi) = SWIG_NewPointerObj((LocationId_t *)memcpy((LocationId_t *)malloc(sizeof(LocationId_t)),&result,sizeof(LocationId_t)), SWIGTYPE_p_LocationId_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLSTART_t_qoP_set) {
-  {
-    struct SUPLSTART *arg1 = (struct SUPLSTART *) 0 ;
-    struct QoP *arg2 = (struct QoP *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLSTART_t_qoP_set(self,qoP);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLSTART, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLSTART_t_qoP_set" "', argument " "1"" of type '" "struct SUPLSTART *""'"); 
-    }
-    arg1 = (struct SUPLSTART *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_QoP, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLSTART_t_qoP_set" "', argument " "2"" of type '" "struct QoP *""'"); 
-    }
-    arg2 = (struct QoP *)(argp2);
-    if (arg1) (arg1)->qoP = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLSTART_t_qoP_get) {
-  {
-    struct SUPLSTART *arg1 = (struct SUPLSTART *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    struct QoP *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLSTART_t_qoP_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLSTART, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLSTART_t_qoP_get" "', argument " "1"" of type '" "struct SUPLSTART *""'"); 
-    }
-    arg1 = (struct SUPLSTART *)(argp1);
-    result = (struct QoP *) ((arg1)->qoP);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_QoP, 0 | SWIG_SHADOW); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLSTART_t__asn_ctx_set) {
-  {
-    struct SUPLSTART *arg1 = (struct SUPLSTART *) 0 ;
-    asn_struct_ctx_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLSTART_t__asn_ctx_set(self,_asn_ctx);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLSTART, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLSTART_t__asn_ctx_set" "', argument " "1"" of type '" "struct SUPLSTART *""'"); 
-    }
-    arg1 = (struct SUPLSTART *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_asn_struct_ctx_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLSTART_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLSTART_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'");
-      } else {
-        arg2 = *((asn_struct_ctx_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->_asn_ctx = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLSTART_t__asn_ctx_get) {
-  {
-    struct SUPLSTART *arg1 = (struct SUPLSTART *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    asn_struct_ctx_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLSTART_t__asn_ctx_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLSTART, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLSTART_t__asn_ctx_get" "', argument " "1"" of type '" "struct SUPLSTART *""'"); 
-    }
-    arg1 = (struct SUPLSTART *)(argp1);
-    result =  ((arg1)->_asn_ctx);
-    ST(argvi) = SWIG_NewPointerObj((asn_struct_ctx_t *)memcpy((asn_struct_ctx_t *)malloc(sizeof(asn_struct_ctx_t)),&result,sizeof(asn_struct_ctx_t)), SWIGTYPE_p_asn_struct_ctx_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_new_SUPLSTART_t) {
-  {
-    int argvi = 0;
-    struct SUPLSTART *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 0) || (items > 0)) {
-      SWIG_croak("Usage: new_SUPLSTART_t();");
-    }
-    result = (struct SUPLSTART *)calloc(1, sizeof(struct SUPLSTART));
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SUPLSTART, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
-    XSRETURN(argvi);
-  fail:
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_delete_SUPLSTART_t) {
-  {
-    struct SUPLSTART *arg1 = (struct SUPLSTART *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: delete_SUPLSTART_t(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLSTART, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_SUPLSTART_t" "', argument " "1"" of type '" "struct SUPLSTART *""'"); 
-    }
-    arg1 = (struct SUPLSTART *)(argp1);
-    free((char *) arg1);
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLRESPONSE_t_posMethod_set) {
-  {
-    struct SUPLRESPONSE *arg1 = (struct SUPLRESPONSE *) 0 ;
-    PosMethod_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    long val2 ;
-    int ecode2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLRESPONSE_t_posMethod_set(self,posMethod);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLRESPONSE, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLRESPONSE_t_posMethod_set" "', argument " "1"" of type '" "struct SUPLRESPONSE *""'"); 
-    }
-    arg1 = (struct SUPLRESPONSE *)(argp1);
-    ecode2 = SWIG_AsVal_long SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
-    if (!SWIG_IsOK(ecode2)) {
-      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SUPLRESPONSE_t_posMethod_set" "', argument " "2"" of type '" "PosMethod_t""'");
-    } 
-    arg2 = (PosMethod_t)(val2);
-    if (arg1) (arg1)->posMethod = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLRESPONSE_t_posMethod_get) {
-  {
-    struct SUPLRESPONSE *arg1 = (struct SUPLRESPONSE *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    PosMethod_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLRESPONSE_t_posMethod_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLRESPONSE, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLRESPONSE_t_posMethod_get" "', argument " "1"" of type '" "struct SUPLRESPONSE *""'"); 
-    }
-    arg1 = (struct SUPLRESPONSE *)(argp1);
-    result = (PosMethod_t) ((arg1)->posMethod);
-    ST(argvi) = SWIG_From_long  SWIG_PERL_CALL_ARGS_1((long)(result)); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLRESPONSE_t_sLPAddress_set) {
-  {
-    struct SUPLRESPONSE *arg1 = (struct SUPLRESPONSE *) 0 ;
-    struct SLPAddress *arg2 = (struct SLPAddress *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLRESPONSE_t_sLPAddress_set(self,sLPAddress);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLRESPONSE, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLRESPONSE_t_sLPAddress_set" "', argument " "1"" of type '" "struct SUPLRESPONSE *""'"); 
-    }
-    arg1 = (struct SUPLRESPONSE *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_SLPAddress, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLRESPONSE_t_sLPAddress_set" "', argument " "2"" of type '" "struct SLPAddress *""'"); 
-    }
-    arg2 = (struct SLPAddress *)(argp2);
-    if (arg1) (arg1)->sLPAddress = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLRESPONSE_t_sLPAddress_get) {
-  {
-    struct SUPLRESPONSE *arg1 = (struct SUPLRESPONSE *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    struct SLPAddress *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLRESPONSE_t_sLPAddress_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLRESPONSE, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLRESPONSE_t_sLPAddress_get" "', argument " "1"" of type '" "struct SUPLRESPONSE *""'"); 
-    }
-    arg1 = (struct SUPLRESPONSE *)(argp1);
-    result = (struct SLPAddress *) ((arg1)->sLPAddress);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SLPAddress, 0 | SWIG_SHADOW); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLRESPONSE_t_sETAuthKey_set) {
-  {
-    struct SUPLRESPONSE *arg1 = (struct SUPLRESPONSE *) 0 ;
-    struct SETAuthKey *arg2 = (struct SETAuthKey *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLRESPONSE_t_sETAuthKey_set(self,sETAuthKey);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLRESPONSE, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLRESPONSE_t_sETAuthKey_set" "', argument " "1"" of type '" "struct SUPLRESPONSE *""'"); 
-    }
-    arg1 = (struct SUPLRESPONSE *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_SETAuthKey, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLRESPONSE_t_sETAuthKey_set" "', argument " "2"" of type '" "struct SETAuthKey *""'"); 
-    }
-    arg2 = (struct SETAuthKey *)(argp2);
-    if (arg1) (arg1)->sETAuthKey = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLRESPONSE_t_sETAuthKey_get) {
-  {
-    struct SUPLRESPONSE *arg1 = (struct SUPLRESPONSE *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    struct SETAuthKey *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLRESPONSE_t_sETAuthKey_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLRESPONSE, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLRESPONSE_t_sETAuthKey_get" "', argument " "1"" of type '" "struct SUPLRESPONSE *""'"); 
-    }
-    arg1 = (struct SUPLRESPONSE *)(argp1);
-    result = (struct SETAuthKey *) ((arg1)->sETAuthKey);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SETAuthKey, 0 | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLRESPONSE_t_keyIdentity4_set) {
-  {
-    struct SUPLRESPONSE *arg1 = (struct SUPLRESPONSE *) 0 ;
-    KeyIdentity4_t *arg2 = (KeyIdentity4_t *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLRESPONSE_t_keyIdentity4_set(self,keyIdentity4);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLRESPONSE, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLRESPONSE_t_keyIdentity4_set" "', argument " "1"" of type '" "struct SUPLRESPONSE *""'"); 
-    }
-    arg1 = (struct SUPLRESPONSE *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_KeyIdentity4_t, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLRESPONSE_t_keyIdentity4_set" "', argument " "2"" of type '" "KeyIdentity4_t *""'"); 
-    }
-    arg2 = (KeyIdentity4_t *)(argp2);
-    if (arg1) (arg1)->keyIdentity4 = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLRESPONSE_t_keyIdentity4_get) {
-  {
-    struct SUPLRESPONSE *arg1 = (struct SUPLRESPONSE *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    KeyIdentity4_t *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLRESPONSE_t_keyIdentity4_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLRESPONSE, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLRESPONSE_t_keyIdentity4_get" "', argument " "1"" of type '" "struct SUPLRESPONSE *""'"); 
-    }
-    arg1 = (struct SUPLRESPONSE *)(argp1);
-    result = (KeyIdentity4_t *) ((arg1)->keyIdentity4);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_KeyIdentity4_t, 0 | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLRESPONSE_t__asn_ctx_set) {
-  {
-    struct SUPLRESPONSE *arg1 = (struct SUPLRESPONSE *) 0 ;
-    asn_struct_ctx_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLRESPONSE_t__asn_ctx_set(self,_asn_ctx);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLRESPONSE, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLRESPONSE_t__asn_ctx_set" "', argument " "1"" of type '" "struct SUPLRESPONSE *""'"); 
-    }
-    arg1 = (struct SUPLRESPONSE *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_asn_struct_ctx_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLRESPONSE_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLRESPONSE_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'");
-      } else {
-        arg2 = *((asn_struct_ctx_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->_asn_ctx = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLRESPONSE_t__asn_ctx_get) {
-  {
-    struct SUPLRESPONSE *arg1 = (struct SUPLRESPONSE *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    asn_struct_ctx_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLRESPONSE_t__asn_ctx_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLRESPONSE, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLRESPONSE_t__asn_ctx_get" "', argument " "1"" of type '" "struct SUPLRESPONSE *""'"); 
-    }
-    arg1 = (struct SUPLRESPONSE *)(argp1);
-    result =  ((arg1)->_asn_ctx);
-    ST(argvi) = SWIG_NewPointerObj((asn_struct_ctx_t *)memcpy((asn_struct_ctx_t *)malloc(sizeof(asn_struct_ctx_t)),&result,sizeof(asn_struct_ctx_t)), SWIGTYPE_p_asn_struct_ctx_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_new_SUPLRESPONSE_t) {
-  {
-    int argvi = 0;
-    struct SUPLRESPONSE *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 0) || (items > 0)) {
-      SWIG_croak("Usage: new_SUPLRESPONSE_t();");
-    }
-    result = (struct SUPLRESPONSE *)calloc(1, sizeof(struct SUPLRESPONSE));
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SUPLRESPONSE, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
-    XSRETURN(argvi);
-  fail:
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_delete_SUPLRESPONSE_t) {
-  {
-    struct SUPLRESPONSE *arg1 = (struct SUPLRESPONSE *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: delete_SUPLRESPONSE_t(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLRESPONSE, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_SUPLRESPONSE_t" "', argument " "1"" of type '" "struct SUPLRESPONSE *""'"); 
-    }
-    arg1 = (struct SUPLRESPONSE *)(argp1);
-    free((char *) arg1);
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLPOSINIT_t_sETCapabilities_set) {
-  {
-    struct SUPLPOSINIT *arg1 = (struct SUPLPOSINIT *) 0 ;
-    SETCapabilities_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLPOSINIT_t_sETCapabilities_set(self,sETCapabilities);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOSINIT, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOSINIT_t_sETCapabilities_set" "', argument " "1"" of type '" "struct SUPLPOSINIT *""'"); 
-    }
-    arg1 = (struct SUPLPOSINIT *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_SETCapabilities_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLPOSINIT_t_sETCapabilities_set" "', argument " "2"" of type '" "SETCapabilities_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLPOSINIT_t_sETCapabilities_set" "', argument " "2"" of type '" "SETCapabilities_t""'");
-      } else {
-        arg2 = *((SETCapabilities_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->sETCapabilities = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLPOSINIT_t_sETCapabilities_get) {
-  {
-    struct SUPLPOSINIT *arg1 = (struct SUPLPOSINIT *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    SETCapabilities_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLPOSINIT_t_sETCapabilities_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOSINIT, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOSINIT_t_sETCapabilities_get" "', argument " "1"" of type '" "struct SUPLPOSINIT *""'"); 
-    }
-    arg1 = (struct SUPLPOSINIT *)(argp1);
-    result =  ((arg1)->sETCapabilities);
-    ST(argvi) = SWIG_NewPointerObj((SETCapabilities_t *)memcpy((SETCapabilities_t *)malloc(sizeof(SETCapabilities_t)),&result,sizeof(SETCapabilities_t)), SWIGTYPE_p_SETCapabilities_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLPOSINIT_t_requestedAssistData_set) {
-  {
-    struct SUPLPOSINIT *arg1 = (struct SUPLPOSINIT *) 0 ;
-    struct RequestedAssistData *arg2 = (struct RequestedAssistData *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLPOSINIT_t_requestedAssistData_set(self,requestedAssistData);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOSINIT, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOSINIT_t_requestedAssistData_set" "', argument " "1"" of type '" "struct SUPLPOSINIT *""'"); 
-    }
-    arg1 = (struct SUPLPOSINIT *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_RequestedAssistData, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLPOSINIT_t_requestedAssistData_set" "', argument " "2"" of type '" "struct RequestedAssistData *""'"); 
-    }
-    arg2 = (struct RequestedAssistData *)(argp2);
-    if (arg1) (arg1)->requestedAssistData = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLPOSINIT_t_requestedAssistData_get) {
-  {
-    struct SUPLPOSINIT *arg1 = (struct SUPLPOSINIT *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    struct RequestedAssistData *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLPOSINIT_t_requestedAssistData_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOSINIT, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOSINIT_t_requestedAssistData_get" "', argument " "1"" of type '" "struct SUPLPOSINIT *""'"); 
-    }
-    arg1 = (struct SUPLPOSINIT *)(argp1);
-    result = (struct RequestedAssistData *) ((arg1)->requestedAssistData);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_RequestedAssistData, 0 | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLPOSINIT_t_locationId_set) {
-  {
-    struct SUPLPOSINIT *arg1 = (struct SUPLPOSINIT *) 0 ;
-    LocationId_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLPOSINIT_t_locationId_set(self,locationId);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOSINIT, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOSINIT_t_locationId_set" "', argument " "1"" of type '" "struct SUPLPOSINIT *""'"); 
-    }
-    arg1 = (struct SUPLPOSINIT *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_LocationId_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLPOSINIT_t_locationId_set" "', argument " "2"" of type '" "LocationId_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLPOSINIT_t_locationId_set" "', argument " "2"" of type '" "LocationId_t""'");
-      } else {
-        arg2 = *((LocationId_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->locationId = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLPOSINIT_t_locationId_get) {
-  {
-    struct SUPLPOSINIT *arg1 = (struct SUPLPOSINIT *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    LocationId_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLPOSINIT_t_locationId_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOSINIT, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOSINIT_t_locationId_get" "', argument " "1"" of type '" "struct SUPLPOSINIT *""'"); 
-    }
-    arg1 = (struct SUPLPOSINIT *)(argp1);
-    result =  ((arg1)->locationId);
-    ST(argvi) = SWIG_NewPointerObj((LocationId_t *)memcpy((LocationId_t *)malloc(sizeof(LocationId_t)),&result,sizeof(LocationId_t)), SWIGTYPE_p_LocationId_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLPOSINIT_t_position_set) {
-  {
-    struct SUPLPOSINIT *arg1 = (struct SUPLPOSINIT *) 0 ;
-    struct Position *arg2 = (struct Position *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLPOSINIT_t_position_set(self,position);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOSINIT, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOSINIT_t_position_set" "', argument " "1"" of type '" "struct SUPLPOSINIT *""'"); 
-    }
-    arg1 = (struct SUPLPOSINIT *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_Position, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLPOSINIT_t_position_set" "', argument " "2"" of type '" "struct Position *""'"); 
-    }
-    arg2 = (struct Position *)(argp2);
-    if (arg1) (arg1)->position = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLPOSINIT_t_position_get) {
-  {
-    struct SUPLPOSINIT *arg1 = (struct SUPLPOSINIT *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    struct Position *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLPOSINIT_t_position_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOSINIT, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOSINIT_t_position_get" "', argument " "1"" of type '" "struct SUPLPOSINIT *""'"); 
-    }
-    arg1 = (struct SUPLPOSINIT *)(argp1);
-    result = (struct Position *) ((arg1)->position);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_Position, 0 | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLPOSINIT_t_sUPLPOS_set) {
-  {
-    struct SUPLPOSINIT *arg1 = (struct SUPLPOSINIT *) 0 ;
-    struct SUPLPOS *arg2 = (struct SUPLPOS *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLPOSINIT_t_sUPLPOS_set(self,sUPLPOS);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOSINIT, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOSINIT_t_sUPLPOS_set" "', argument " "1"" of type '" "struct SUPLPOSINIT *""'"); 
-    }
-    arg1 = (struct SUPLPOSINIT *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_SUPLPOS, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLPOSINIT_t_sUPLPOS_set" "', argument " "2"" of type '" "struct SUPLPOS *""'"); 
-    }
-    arg2 = (struct SUPLPOS *)(argp2);
-    if (arg1) (arg1)->sUPLPOS = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLPOSINIT_t_sUPLPOS_get) {
-  {
-    struct SUPLPOSINIT *arg1 = (struct SUPLPOSINIT *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    struct SUPLPOS *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLPOSINIT_t_sUPLPOS_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOSINIT, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOSINIT_t_sUPLPOS_get" "', argument " "1"" of type '" "struct SUPLPOSINIT *""'"); 
-    }
-    arg1 = (struct SUPLPOSINIT *)(argp1);
-    result = (struct SUPLPOS *) ((arg1)->sUPLPOS);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SUPLPOS, 0 | SWIG_SHADOW); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLPOSINIT_t_ver_set) {
-  {
-    struct SUPLPOSINIT *arg1 = (struct SUPLPOSINIT *) 0 ;
-    Ver_t *arg2 = (Ver_t *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLPOSINIT_t_ver_set(self,ver);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOSINIT, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOSINIT_t_ver_set" "', argument " "1"" of type '" "struct SUPLPOSINIT *""'"); 
-    }
-    arg1 = (struct SUPLPOSINIT *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_Ver_t, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLPOSINIT_t_ver_set" "', argument " "2"" of type '" "Ver_t *""'"); 
-    }
-    arg2 = (Ver_t *)(argp2);
-    if (arg1) (arg1)->ver = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLPOSINIT_t_ver_get) {
-  {
-    struct SUPLPOSINIT *arg1 = (struct SUPLPOSINIT *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    Ver_t *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLPOSINIT_t_ver_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOSINIT, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOSINIT_t_ver_get" "', argument " "1"" of type '" "struct SUPLPOSINIT *""'"); 
-    }
-    arg1 = (struct SUPLPOSINIT *)(argp1);
-    result = (Ver_t *) ((arg1)->ver);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_Ver_t, 0 | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLPOSINIT_t__asn_ctx_set) {
-  {
-    struct SUPLPOSINIT *arg1 = (struct SUPLPOSINIT *) 0 ;
-    asn_struct_ctx_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLPOSINIT_t__asn_ctx_set(self,_asn_ctx);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOSINIT, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOSINIT_t__asn_ctx_set" "', argument " "1"" of type '" "struct SUPLPOSINIT *""'"); 
-    }
-    arg1 = (struct SUPLPOSINIT *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_asn_struct_ctx_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLPOSINIT_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLPOSINIT_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'");
-      } else {
-        arg2 = *((asn_struct_ctx_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->_asn_ctx = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLPOSINIT_t__asn_ctx_get) {
-  {
-    struct SUPLPOSINIT *arg1 = (struct SUPLPOSINIT *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    asn_struct_ctx_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLPOSINIT_t__asn_ctx_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOSINIT, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOSINIT_t__asn_ctx_get" "', argument " "1"" of type '" "struct SUPLPOSINIT *""'"); 
-    }
-    arg1 = (struct SUPLPOSINIT *)(argp1);
-    result =  ((arg1)->_asn_ctx);
-    ST(argvi) = SWIG_NewPointerObj((asn_struct_ctx_t *)memcpy((asn_struct_ctx_t *)malloc(sizeof(asn_struct_ctx_t)),&result,sizeof(asn_struct_ctx_t)), SWIGTYPE_p_asn_struct_ctx_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_new_SUPLPOSINIT_t) {
-  {
-    int argvi = 0;
-    struct SUPLPOSINIT *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 0) || (items > 0)) {
-      SWIG_croak("Usage: new_SUPLPOSINIT_t();");
-    }
-    result = (struct SUPLPOSINIT *)calloc(1, sizeof(struct SUPLPOSINIT));
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SUPLPOSINIT, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
-    XSRETURN(argvi);
-  fail:
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_delete_SUPLPOSINIT_t) {
-  {
-    struct SUPLPOSINIT *arg1 = (struct SUPLPOSINIT *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: delete_SUPLPOSINIT_t(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOSINIT, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_SUPLPOSINIT_t" "', argument " "1"" of type '" "struct SUPLPOSINIT *""'"); 
-    }
-    arg1 = (struct SUPLPOSINIT *)(argp1);
-    free((char *) arg1);
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLPOS_t_posPayLoad_set) {
-  {
-    struct SUPLPOS *arg1 = (struct SUPLPOS *) 0 ;
-    PosPayLoad_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLPOS_t_posPayLoad_set(self,posPayLoad);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOS, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOS_t_posPayLoad_set" "', argument " "1"" of type '" "struct SUPLPOS *""'"); 
-    }
-    arg1 = (struct SUPLPOS *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_PosPayLoad_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLPOS_t_posPayLoad_set" "', argument " "2"" of type '" "PosPayLoad_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLPOS_t_posPayLoad_set" "', argument " "2"" of type '" "PosPayLoad_t""'");
-      } else {
-        arg2 = *((PosPayLoad_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->posPayLoad = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLPOS_t_posPayLoad_get) {
-  {
-    struct SUPLPOS *arg1 = (struct SUPLPOS *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    PosPayLoad_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLPOS_t_posPayLoad_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOS, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOS_t_posPayLoad_get" "', argument " "1"" of type '" "struct SUPLPOS *""'"); 
-    }
-    arg1 = (struct SUPLPOS *)(argp1);
-    result =  ((arg1)->posPayLoad);
-    ST(argvi) = SWIG_NewPointerObj((PosPayLoad_t *)memcpy((PosPayLoad_t *)malloc(sizeof(PosPayLoad_t)),&result,sizeof(PosPayLoad_t)), SWIGTYPE_p_PosPayLoad_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLPOS_t_velocity_set) {
-  {
-    struct SUPLPOS *arg1 = (struct SUPLPOS *) 0 ;
-    struct Velocity *arg2 = (struct Velocity *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLPOS_t_velocity_set(self,velocity);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOS, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOS_t_velocity_set" "', argument " "1"" of type '" "struct SUPLPOS *""'"); 
-    }
-    arg1 = (struct SUPLPOS *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_Velocity, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLPOS_t_velocity_set" "', argument " "2"" of type '" "struct Velocity *""'"); 
-    }
-    arg2 = (struct Velocity *)(argp2);
-    if (arg1) (arg1)->velocity = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLPOS_t_velocity_get) {
-  {
-    struct SUPLPOS *arg1 = (struct SUPLPOS *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    struct Velocity *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLPOS_t_velocity_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOS, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOS_t_velocity_get" "', argument " "1"" of type '" "struct SUPLPOS *""'"); 
-    }
-    arg1 = (struct SUPLPOS *)(argp1);
-    result = (struct Velocity *) ((arg1)->velocity);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_Velocity, 0 | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLPOS_t__asn_ctx_set) {
-  {
-    struct SUPLPOS *arg1 = (struct SUPLPOS *) 0 ;
-    asn_struct_ctx_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLPOS_t__asn_ctx_set(self,_asn_ctx);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOS, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOS_t__asn_ctx_set" "', argument " "1"" of type '" "struct SUPLPOS *""'"); 
-    }
-    arg1 = (struct SUPLPOS *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_asn_struct_ctx_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLPOS_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLPOS_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'");
-      } else {
-        arg2 = *((asn_struct_ctx_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->_asn_ctx = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLPOS_t__asn_ctx_get) {
-  {
-    struct SUPLPOS *arg1 = (struct SUPLPOS *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    asn_struct_ctx_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLPOS_t__asn_ctx_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOS, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLPOS_t__asn_ctx_get" "', argument " "1"" of type '" "struct SUPLPOS *""'"); 
-    }
-    arg1 = (struct SUPLPOS *)(argp1);
-    result =  ((arg1)->_asn_ctx);
-    ST(argvi) = SWIG_NewPointerObj((asn_struct_ctx_t *)memcpy((asn_struct_ctx_t *)malloc(sizeof(asn_struct_ctx_t)),&result,sizeof(asn_struct_ctx_t)), SWIGTYPE_p_asn_struct_ctx_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_new_SUPLPOS_t) {
-  {
-    int argvi = 0;
-    struct SUPLPOS *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 0) || (items > 0)) {
-      SWIG_croak("Usage: new_SUPLPOS_t();");
-    }
-    result = (struct SUPLPOS *)calloc(1, sizeof(struct SUPLPOS));
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SUPLPOS, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
-    XSRETURN(argvi);
-  fail:
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_delete_SUPLPOS_t) {
-  {
-    struct SUPLPOS *arg1 = (struct SUPLPOS *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: delete_SUPLPOS_t(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLPOS, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_SUPLPOS_t" "', argument " "1"" of type '" "struct SUPLPOS *""'"); 
-    }
-    arg1 = (struct SUPLPOS *)(argp1);
-    free((char *) arg1);
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLEND_t_position_set) {
-  {
-    struct SUPLEND *arg1 = (struct SUPLEND *) 0 ;
-    struct Position *arg2 = (struct Position *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLEND_t_position_set(self,position);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLEND, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLEND_t_position_set" "', argument " "1"" of type '" "struct SUPLEND *""'"); 
-    }
-    arg1 = (struct SUPLEND *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_Position, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLEND_t_position_set" "', argument " "2"" of type '" "struct Position *""'"); 
-    }
-    arg2 = (struct Position *)(argp2);
-    if (arg1) (arg1)->position = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLEND_t_position_get) {
-  {
-    struct SUPLEND *arg1 = (struct SUPLEND *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    struct Position *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLEND_t_position_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLEND, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLEND_t_position_get" "', argument " "1"" of type '" "struct SUPLEND *""'"); 
-    }
-    arg1 = (struct SUPLEND *)(argp1);
-    result = (struct Position *) ((arg1)->position);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_Position, 0 | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLEND_t_statusCode_set) {
-  {
-    struct SUPLEND *arg1 = (struct SUPLEND *) 0 ;
-    StatusCode_t *arg2 = (StatusCode_t *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLEND_t_statusCode_set(self,statusCode);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLEND, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLEND_t_statusCode_set" "', argument " "1"" of type '" "struct SUPLEND *""'"); 
-    }
-    arg1 = (struct SUPLEND *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_StatusCode_t, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLEND_t_statusCode_set" "', argument " "2"" of type '" "StatusCode_t *""'"); 
-    }
-    arg2 = (StatusCode_t *)(argp2);
-    if (arg1) (arg1)->statusCode = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLEND_t_statusCode_get) {
-  {
-    struct SUPLEND *arg1 = (struct SUPLEND *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    StatusCode_t *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLEND_t_statusCode_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLEND, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLEND_t_statusCode_get" "', argument " "1"" of type '" "struct SUPLEND *""'"); 
-    }
-    arg1 = (struct SUPLEND *)(argp1);
-    result = (StatusCode_t *) ((arg1)->statusCode);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_StatusCode_t, 0 | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLEND_t_ver_set) {
-  {
-    struct SUPLEND *arg1 = (struct SUPLEND *) 0 ;
-    Ver_t *arg2 = (Ver_t *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLEND_t_ver_set(self,ver);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLEND, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLEND_t_ver_set" "', argument " "1"" of type '" "struct SUPLEND *""'"); 
-    }
-    arg1 = (struct SUPLEND *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_Ver_t, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLEND_t_ver_set" "', argument " "2"" of type '" "Ver_t *""'"); 
-    }
-    arg2 = (Ver_t *)(argp2);
-    if (arg1) (arg1)->ver = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLEND_t_ver_get) {
-  {
-    struct SUPLEND *arg1 = (struct SUPLEND *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    Ver_t *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLEND_t_ver_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLEND, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLEND_t_ver_get" "', argument " "1"" of type '" "struct SUPLEND *""'"); 
-    }
-    arg1 = (struct SUPLEND *)(argp1);
-    result = (Ver_t *) ((arg1)->ver);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_Ver_t, 0 | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLEND_t__asn_ctx_set) {
-  {
-    struct SUPLEND *arg1 = (struct SUPLEND *) 0 ;
-    asn_struct_ctx_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLEND_t__asn_ctx_set(self,_asn_ctx);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLEND, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLEND_t__asn_ctx_set" "', argument " "1"" of type '" "struct SUPLEND *""'"); 
-    }
-    arg1 = (struct SUPLEND *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_asn_struct_ctx_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLEND_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLEND_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'");
-      } else {
-        arg2 = *((asn_struct_ctx_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->_asn_ctx = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLEND_t__asn_ctx_get) {
-  {
-    struct SUPLEND *arg1 = (struct SUPLEND *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    asn_struct_ctx_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLEND_t__asn_ctx_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLEND, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLEND_t__asn_ctx_get" "', argument " "1"" of type '" "struct SUPLEND *""'"); 
-    }
-    arg1 = (struct SUPLEND *)(argp1);
-    result =  ((arg1)->_asn_ctx);
-    ST(argvi) = SWIG_NewPointerObj((asn_struct_ctx_t *)memcpy((asn_struct_ctx_t *)malloc(sizeof(asn_struct_ctx_t)),&result,sizeof(asn_struct_ctx_t)), SWIGTYPE_p_asn_struct_ctx_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_new_SUPLEND_t) {
-  {
-    int argvi = 0;
-    struct SUPLEND *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 0) || (items > 0)) {
-      SWIG_croak("Usage: new_SUPLEND_t();");
-    }
-    result = (struct SUPLEND *)calloc(1, sizeof(struct SUPLEND));
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SUPLEND, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
-    XSRETURN(argvi);
-  fail:
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_delete_SUPLEND_t) {
-  {
-    struct SUPLEND *arg1 = (struct SUPLEND *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: delete_SUPLEND_t(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLEND, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_SUPLEND_t" "', argument " "1"" of type '" "struct SUPLEND *""'"); 
-    }
-    arg1 = (struct SUPLEND *)(argp1);
-    free((char *) arg1);
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLAUTHREQ_t_sETNonce_set) {
-  {
-    struct SUPLAUTHREQ *arg1 = (struct SUPLAUTHREQ *) 0 ;
-    SETNonce_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLAUTHREQ_t_sETNonce_set(self,sETNonce);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLAUTHREQ, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLAUTHREQ_t_sETNonce_set" "', argument " "1"" of type '" "struct SUPLAUTHREQ *""'"); 
-    }
-    arg1 = (struct SUPLAUTHREQ *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_SETNonce_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLAUTHREQ_t_sETNonce_set" "', argument " "2"" of type '" "SETNonce_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLAUTHREQ_t_sETNonce_set" "', argument " "2"" of type '" "SETNonce_t""'");
-      } else {
-        arg2 = *((SETNonce_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->sETNonce = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLAUTHREQ_t_sETNonce_get) {
-  {
-    struct SUPLAUTHREQ *arg1 = (struct SUPLAUTHREQ *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    SETNonce_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLAUTHREQ_t_sETNonce_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLAUTHREQ, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLAUTHREQ_t_sETNonce_get" "', argument " "1"" of type '" "struct SUPLAUTHREQ *""'"); 
-    }
-    arg1 = (struct SUPLAUTHREQ *)(argp1);
-    result =  ((arg1)->sETNonce);
-    ST(argvi) = SWIG_NewPointerObj((SETNonce_t *)memcpy((SETNonce_t *)malloc(sizeof(SETNonce_t)),&result,sizeof(SETNonce_t)), SWIGTYPE_p_SETNonce_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLAUTHREQ_t_keyIdentity2_set) {
-  {
-    struct SUPLAUTHREQ *arg1 = (struct SUPLAUTHREQ *) 0 ;
-    KeyIdentity2_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLAUTHREQ_t_keyIdentity2_set(self,keyIdentity2);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLAUTHREQ, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLAUTHREQ_t_keyIdentity2_set" "', argument " "1"" of type '" "struct SUPLAUTHREQ *""'"); 
-    }
-    arg1 = (struct SUPLAUTHREQ *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_KeyIdentity2_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLAUTHREQ_t_keyIdentity2_set" "', argument " "2"" of type '" "KeyIdentity2_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLAUTHREQ_t_keyIdentity2_set" "', argument " "2"" of type '" "KeyIdentity2_t""'");
-      } else {
-        arg2 = *((KeyIdentity2_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->keyIdentity2 = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLAUTHREQ_t_keyIdentity2_get) {
-  {
-    struct SUPLAUTHREQ *arg1 = (struct SUPLAUTHREQ *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    KeyIdentity2_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLAUTHREQ_t_keyIdentity2_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLAUTHREQ, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLAUTHREQ_t_keyIdentity2_get" "', argument " "1"" of type '" "struct SUPLAUTHREQ *""'"); 
-    }
-    arg1 = (struct SUPLAUTHREQ *)(argp1);
-    result =  ((arg1)->keyIdentity2);
-    ST(argvi) = SWIG_NewPointerObj((KeyIdentity2_t *)memcpy((KeyIdentity2_t *)malloc(sizeof(KeyIdentity2_t)),&result,sizeof(KeyIdentity2_t)), SWIGTYPE_p_KeyIdentity2_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLAUTHREQ_t__asn_ctx_set) {
-  {
-    struct SUPLAUTHREQ *arg1 = (struct SUPLAUTHREQ *) 0 ;
-    asn_struct_ctx_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLAUTHREQ_t__asn_ctx_set(self,_asn_ctx);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLAUTHREQ, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLAUTHREQ_t__asn_ctx_set" "', argument " "1"" of type '" "struct SUPLAUTHREQ *""'"); 
-    }
-    arg1 = (struct SUPLAUTHREQ *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_asn_struct_ctx_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLAUTHREQ_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLAUTHREQ_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'");
-      } else {
-        arg2 = *((asn_struct_ctx_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->_asn_ctx = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLAUTHREQ_t__asn_ctx_get) {
-  {
-    struct SUPLAUTHREQ *arg1 = (struct SUPLAUTHREQ *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    asn_struct_ctx_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLAUTHREQ_t__asn_ctx_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLAUTHREQ, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLAUTHREQ_t__asn_ctx_get" "', argument " "1"" of type '" "struct SUPLAUTHREQ *""'"); 
-    }
-    arg1 = (struct SUPLAUTHREQ *)(argp1);
-    result =  ((arg1)->_asn_ctx);
-    ST(argvi) = SWIG_NewPointerObj((asn_struct_ctx_t *)memcpy((asn_struct_ctx_t *)malloc(sizeof(asn_struct_ctx_t)),&result,sizeof(asn_struct_ctx_t)), SWIGTYPE_p_asn_struct_ctx_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_new_SUPLAUTHREQ_t) {
-  {
-    int argvi = 0;
-    struct SUPLAUTHREQ *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 0) || (items > 0)) {
-      SWIG_croak("Usage: new_SUPLAUTHREQ_t();");
-    }
-    result = (struct SUPLAUTHREQ *)calloc(1, sizeof(struct SUPLAUTHREQ));
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SUPLAUTHREQ, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
-    XSRETURN(argvi);
-  fail:
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_delete_SUPLAUTHREQ_t) {
-  {
-    struct SUPLAUTHREQ *arg1 = (struct SUPLAUTHREQ *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: delete_SUPLAUTHREQ_t(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLAUTHREQ, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_SUPLAUTHREQ_t" "', argument " "1"" of type '" "struct SUPLAUTHREQ *""'"); 
-    }
-    arg1 = (struct SUPLAUTHREQ *)(argp1);
-    free((char *) arg1);
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLAUTHRESP_t_sPCAuthKey_set) {
-  {
-    struct SUPLAUTHRESP *arg1 = (struct SUPLAUTHRESP *) 0 ;
-    struct SPCAuthKey *arg2 = (struct SPCAuthKey *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLAUTHRESP_t_sPCAuthKey_set(self,sPCAuthKey);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLAUTHRESP, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLAUTHRESP_t_sPCAuthKey_set" "', argument " "1"" of type '" "struct SUPLAUTHRESP *""'"); 
-    }
-    arg1 = (struct SUPLAUTHRESP *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_SPCAuthKey, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLAUTHRESP_t_sPCAuthKey_set" "', argument " "2"" of type '" "struct SPCAuthKey *""'"); 
-    }
-    arg2 = (struct SPCAuthKey *)(argp2);
-    if (arg1) (arg1)->sPCAuthKey = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLAUTHRESP_t_sPCAuthKey_get) {
-  {
-    struct SUPLAUTHRESP *arg1 = (struct SUPLAUTHRESP *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    struct SPCAuthKey *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLAUTHRESP_t_sPCAuthKey_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLAUTHRESP, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLAUTHRESP_t_sPCAuthKey_get" "', argument " "1"" of type '" "struct SUPLAUTHRESP *""'"); 
-    }
-    arg1 = (struct SUPLAUTHRESP *)(argp1);
-    result = (struct SPCAuthKey *) ((arg1)->sPCAuthKey);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SPCAuthKey, 0 | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLAUTHRESP_t_keyIdentity3_set) {
-  {
-    struct SUPLAUTHRESP *arg1 = (struct SUPLAUTHRESP *) 0 ;
-    KeyIdentity3_t *arg2 = (KeyIdentity3_t *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLAUTHRESP_t_keyIdentity3_set(self,keyIdentity3);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLAUTHRESP, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLAUTHRESP_t_keyIdentity3_set" "', argument " "1"" of type '" "struct SUPLAUTHRESP *""'"); 
-    }
-    arg1 = (struct SUPLAUTHRESP *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_KeyIdentity3_t, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLAUTHRESP_t_keyIdentity3_set" "', argument " "2"" of type '" "KeyIdentity3_t *""'"); 
-    }
-    arg2 = (KeyIdentity3_t *)(argp2);
-    if (arg1) (arg1)->keyIdentity3 = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLAUTHRESP_t_keyIdentity3_get) {
-  {
-    struct SUPLAUTHRESP *arg1 = (struct SUPLAUTHRESP *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    KeyIdentity3_t *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLAUTHRESP_t_keyIdentity3_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLAUTHRESP, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLAUTHRESP_t_keyIdentity3_get" "', argument " "1"" of type '" "struct SUPLAUTHRESP *""'"); 
-    }
-    arg1 = (struct SUPLAUTHRESP *)(argp1);
-    result = (KeyIdentity3_t *) ((arg1)->keyIdentity3);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_KeyIdentity3_t, 0 | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLAUTHRESP_t_statusCode_set) {
-  {
-    struct SUPLAUTHRESP *arg1 = (struct SUPLAUTHRESP *) 0 ;
-    StatusCode_t *arg2 = (StatusCode_t *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLAUTHRESP_t_statusCode_set(self,statusCode);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLAUTHRESP, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLAUTHRESP_t_statusCode_set" "', argument " "1"" of type '" "struct SUPLAUTHRESP *""'"); 
-    }
-    arg1 = (struct SUPLAUTHRESP *)(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_StatusCode_t, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLAUTHRESP_t_statusCode_set" "', argument " "2"" of type '" "StatusCode_t *""'"); 
-    }
-    arg2 = (StatusCode_t *)(argp2);
-    if (arg1) (arg1)->statusCode = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLAUTHRESP_t_statusCode_get) {
-  {
-    struct SUPLAUTHRESP *arg1 = (struct SUPLAUTHRESP *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    StatusCode_t *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLAUTHRESP_t_statusCode_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLAUTHRESP, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLAUTHRESP_t_statusCode_get" "', argument " "1"" of type '" "struct SUPLAUTHRESP *""'"); 
-    }
-    arg1 = (struct SUPLAUTHRESP *)(argp1);
-    result = (StatusCode_t *) ((arg1)->statusCode);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_StatusCode_t, 0 | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLAUTHRESP_t__asn_ctx_set) {
-  {
-    struct SUPLAUTHRESP *arg1 = (struct SUPLAUTHRESP *) 0 ;
-    asn_struct_ctx_t arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SUPLAUTHRESP_t__asn_ctx_set(self,_asn_ctx);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLAUTHRESP, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLAUTHRESP_t__asn_ctx_set" "', argument " "1"" of type '" "struct SUPLAUTHRESP *""'"); 
-    }
-    arg1 = (struct SUPLAUTHRESP *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_asn_struct_ctx_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SUPLAUTHRESP_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SUPLAUTHRESP_t__asn_ctx_set" "', argument " "2"" of type '" "asn_struct_ctx_t""'");
-      } else {
-        arg2 = *((asn_struct_ctx_t *)(argp2));
-      }
-    }
-    if (arg1) (arg1)->_asn_ctx = arg2;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SUPLAUTHRESP_t__asn_ctx_get) {
-  {
-    struct SUPLAUTHRESP *arg1 = (struct SUPLAUTHRESP *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    asn_struct_ctx_t result;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SUPLAUTHRESP_t__asn_ctx_get(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLAUTHRESP, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SUPLAUTHRESP_t__asn_ctx_get" "', argument " "1"" of type '" "struct SUPLAUTHRESP *""'"); 
-    }
-    arg1 = (struct SUPLAUTHRESP *)(argp1);
-    result =  ((arg1)->_asn_ctx);
-    ST(argvi) = SWIG_NewPointerObj((asn_struct_ctx_t *)memcpy((asn_struct_ctx_t *)malloc(sizeof(asn_struct_ctx_t)),&result,sizeof(asn_struct_ctx_t)), SWIGTYPE_p_asn_struct_ctx_t, SWIG_POINTER_OWN | 0); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_new_SUPLAUTHRESP_t) {
-  {
-    int argvi = 0;
-    struct SUPLAUTHRESP *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 0) || (items > 0)) {
-      SWIG_croak("Usage: new_SUPLAUTHRESP_t();");
-    }
-    result = (struct SUPLAUTHRESP *)calloc(1, sizeof(struct SUPLAUTHRESP));
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SUPLAUTHRESP, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
-    XSRETURN(argvi);
-  fail:
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_delete_SUPLAUTHRESP_t) {
-  {
-    struct SUPLAUTHRESP *arg1 = (struct SUPLAUTHRESP *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: delete_SUPLAUTHRESP_t(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_SUPLAUTHRESP, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_SUPLAUTHRESP_t" "', argument " "1"" of type '" "struct SUPLAUTHRESP *""'"); 
-    }
-    arg1 = (struct SUPLAUTHRESP *)(argp1);
-    free((char *) arg1);
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
 XS(_wrap_encode_ulp_pdu) {
   {
     struct ULP_PDU *arg1 = (struct ULP_PDU *) 0 ;
@@ -9483,37 +6709,24 @@ XS(_wrap_ulp_pdu_to_xml) {
 
 /* -------- TYPE CONVERSION AND EQUIVALENCE RULES (BEGIN) -------- */
 
-static swig_type_info _swigt__p_BIT_STRING_t = {"_p_BIT_STRING_t", "BIT_STRING_t *|MAC_t *|KeyIdentity_t *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_EncodingType_t = {"_p_EncodingType_t", "EncodingType_t *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_FQDN_t = {"_p_FQDN_t", "FQDN_t *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_FormatIndicator_t = {"_p_FormatIndicator_t", "FormatIndicator_t *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_IA5String_t = {"_p_IA5String_t", "IA5String_t *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_IPAddress = {"_p_IPAddress", "IPAddress_t *|struct IPAddress *|IPAddress *", 0, 0, (void*)"ULP_PDU::IPAddress_t", 0};
-static swig_type_info _swigt__p_IPAddress_PR = {"_p_IPAddress_PR", "enum IPAddress_PR *|IPAddress_PR *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_IPAddress_t_choice = {"_p_IPAddress_t_choice", "IPAddress_t_choice *", 0, 0, (void*)"ULP_PDU::IPAddress_t_choice", 0};
 static swig_type_info _swigt__p_KeyIdentity2_t = {"_p_KeyIdentity2_t", "KeyIdentity2_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_KeyIdentity3_t = {"_p_KeyIdentity3_t", "KeyIdentity3_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_KeyIdentity4_t = {"_p_KeyIdentity4_t", "KeyIdentity4_t *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_KeyIdentity_t = {"_p_KeyIdentity_t", "KeyIdentity_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_LocationId_t = {"_p_LocationId_t", "LocationId_t *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_MAC_t = {"_p_MAC_t", "MAC_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_MsgBuffer = {"_p_MsgBuffer", "MsgBuffer *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_Notification = {"_p_Notification", "Notification_t *|struct Notification *|Notification *", 0, 0, (void*)"ULP_PDU::Notification_t", 0};
-static swig_type_info _swigt__p_NotificationType_t = {"_p_NotificationType_t", "NotificationType_t *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_OCTET_STRING_t = {"_p_OCTET_STRING_t", "OCTET_STRING_t *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_PosMethod = {"_p_PosMethod", "enum PosMethod *|e_PosMethod *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_Notification = {"_p_Notification", "struct Notification *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_PosMethod_t = {"_p_PosMethod_t", "PosMethod_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_PosPayLoad_t = {"_p_PosPayLoad_t", "PosPayLoad_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Position = {"_p_Position", "struct Position *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_QoP = {"_p_QoP", "QoP_t *|QoP *|struct QoP *", 0, 0, (void*)"ULP_PDU::QoP_t", 0};
+static swig_type_info _swigt__p_QoP = {"_p_QoP", "struct QoP *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_RequestedAssistData = {"_p_RequestedAssistData", "struct RequestedAssistData *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_SETAuthKey = {"_p_SETAuthKey", "struct SETAuthKey *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_SETCapabilities_t = {"_p_SETCapabilities_t", "SETCapabilities_t *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_SETId = {"_p_SETId", "SETId_t *|struct SETId *|SETId *", 0, 0, (void*)"ULP_PDU::SETId_t", 0};
-static swig_type_info _swigt__p_SETId_PR = {"_p_SETId_PR", "enum SETId_PR *|SETId_PR *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_SETId_t_choice = {"_p_SETId_t_choice", "SETId_t_choice *", 0, 0, (void*)"ULP_PDU::SETId_t_choice", 0};
 static swig_type_info _swigt__p_SETNonce_t = {"_p_SETNonce_t", "SETNonce_t *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_SLPAddress = {"_p_SLPAddress", "SLPAddress_t *|struct SLPAddress *|SLPAddress *", 0, 0, (void*)"ULP_PDU::SLPAddress_t", 0};
-static swig_type_info _swigt__p_SLPAddress_PR = {"_p_SLPAddress_PR", "enum SLPAddress_PR *|SLPAddress_PR *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_SLPAddress_t_choice = {"_p_SLPAddress_t_choice", "SLPAddress_t_choice *", 0, 0, (void*)"ULP_PDU::SLPAddress_t_choice", 0};
-static swig_type_info _swigt__p_SLPMode = {"_p_SLPMode", "enum SLPMode *|e_SLPMode *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_SLPAddress = {"_p_SLPAddress", "struct SLPAddress *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_SLPMode_t = {"_p_SLPMode_t", "SLPMode_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_SPCAuthKey = {"_p_SPCAuthKey", "struct SPCAuthKey *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_SUPLAUTHREQ = {"_p_SUPLAUTHREQ", "struct SUPLAUTHREQ *|SUPLAUTHREQ *|SUPLAUTHREQ_t *", 0, 0, (void*)"ULP_PDU::SUPLAUTHREQ_t", 0};
 static swig_type_info _swigt__p_SUPLAUTHRESP = {"_p_SUPLAUTHRESP", "SUPLAUTHRESP_t *|struct SUPLAUTHRESP *|SUPLAUTHRESP *", 0, 0, (void*)"ULP_PDU::SUPLAUTHRESP_t", 0};
@@ -9523,9 +6736,7 @@ static swig_type_info _swigt__p_SUPLPOS = {"_p_SUPLPOS", "struct SUPLPOS *|SUPLP
 static swig_type_info _swigt__p_SUPLPOSINIT = {"_p_SUPLPOSINIT", "struct SUPLPOSINIT *|SUPLPOSINIT *|SUPLPOSINIT_t *", 0, 0, (void*)"ULP_PDU::SUPLPOSINIT_t", 0};
 static swig_type_info _swigt__p_SUPLRESPONSE = {"_p_SUPLRESPONSE", "struct SUPLRESPONSE *|SUPLRESPONSE *|SUPLRESPONSE_t *", 0, 0, (void*)"ULP_PDU::SUPLRESPONSE_t", 0};
 static swig_type_info _swigt__p_SUPLSTART = {"_p_SUPLSTART", "struct SUPLSTART *|SUPLSTART *|SUPLSTART_t *", 0, 0, (void*)"ULP_PDU::SUPLSTART_t", 0};
-static swig_type_info _swigt__p_SessionID = {"_p_SessionID", "struct SessionID *|SessionID *|SessionID_t *", 0, 0, (void*)"ULP_PDU::SessionID_t", 0};
-static swig_type_info _swigt__p_SetSessionID = {"_p_SetSessionID", "struct SetSessionID *|SetSessionID *|SetSessionID_t *", 0, 0, (void*)"ULP_PDU::SetSessionID_t", 0};
-static swig_type_info _swigt__p_SlpSessionID = {"_p_SlpSessionID", "struct SlpSessionID *|SlpSessionID *|SlpSessionID_t *", 0, 0, (void*)"ULP_PDU::SlpSessionID_t", 0};
+static swig_type_info _swigt__p_SessionID_t = {"_p_SessionID_t", "SessionID_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_StatusCode_t = {"_p_StatusCode_t", "StatusCode_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ULP_PDU = {"_p_ULP_PDU", "ULP_PDU_t *|struct ULP_PDU *|ULP_PDU *", 0, 0, (void*)"ULP_PDU::ULP_PDU_t", 0};
 static swig_type_info _swigt__p_UlpMessage = {"_p_UlpMessage", "struct UlpMessage *|UlpMessage_t *|UlpMessage *", 0, 0, (void*)"ULP_PDU::UlpMessage_t", 0};
@@ -9533,43 +6744,30 @@ static swig_type_info _swigt__p_UlpMessage_PR = {"_p_UlpMessage_PR", "enum UlpMe
 static swig_type_info _swigt__p_UlpMessage_t_choice = {"_p_UlpMessage_t_choice", "UlpMessage_t_choice *", 0, 0, (void*)"ULP_PDU::UlpMessage_t_choice", 0};
 static swig_type_info _swigt__p_Velocity = {"_p_Velocity", "struct Velocity *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Ver_t = {"_p_Ver_t", "Ver_t *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_Version = {"_p_Version", "struct Version *|Version *|Version_t *", 0, 0, (void*)"ULP_PDU::Version_t", 0};
+static swig_type_info _swigt__p_Version_t = {"_p_Version_t", "Version_t *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_asn_TYPE_descriptor_t = {"_p_asn_TYPE_descriptor_t", "asn_TYPE_descriptor_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_asn_struct_ctx_t = {"_p_asn_struct_ctx_t", "asn_struct_ctx_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_char = {"_p_char", "char *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_long = {"_p_long", "long *|PosMethod_t *|SLPMode_t *", 0, 0, (void*)0, 0};
 
 static swig_type_info *swig_type_initial[] = {
-  &_swigt__p_BIT_STRING_t,
-  &_swigt__p_EncodingType_t,
-  &_swigt__p_FQDN_t,
-  &_swigt__p_FormatIndicator_t,
-  &_swigt__p_IA5String_t,
-  &_swigt__p_IPAddress,
-  &_swigt__p_IPAddress_PR,
-  &_swigt__p_IPAddress_t_choice,
   &_swigt__p_KeyIdentity2_t,
   &_swigt__p_KeyIdentity3_t,
   &_swigt__p_KeyIdentity4_t,
+  &_swigt__p_KeyIdentity_t,
   &_swigt__p_LocationId_t,
+  &_swigt__p_MAC_t,
   &_swigt__p_MsgBuffer,
   &_swigt__p_Notification,
-  &_swigt__p_NotificationType_t,
-  &_swigt__p_OCTET_STRING_t,
-  &_swigt__p_PosMethod,
+  &_swigt__p_PosMethod_t,
   &_swigt__p_PosPayLoad_t,
   &_swigt__p_Position,
   &_swigt__p_QoP,
   &_swigt__p_RequestedAssistData,
   &_swigt__p_SETAuthKey,
   &_swigt__p_SETCapabilities_t,
-  &_swigt__p_SETId,
-  &_swigt__p_SETId_PR,
-  &_swigt__p_SETId_t_choice,
   &_swigt__p_SETNonce_t,
   &_swigt__p_SLPAddress,
-  &_swigt__p_SLPAddress_PR,
-  &_swigt__p_SLPAddress_t_choice,
-  &_swigt__p_SLPMode,
+  &_swigt__p_SLPMode_t,
   &_swigt__p_SPCAuthKey,
   &_swigt__p_SUPLAUTHREQ,
   &_swigt__p_SUPLAUTHRESP,
@@ -9579,9 +6777,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_SUPLPOSINIT,
   &_swigt__p_SUPLRESPONSE,
   &_swigt__p_SUPLSTART,
-  &_swigt__p_SessionID,
-  &_swigt__p_SetSessionID,
-  &_swigt__p_SlpSessionID,
+  &_swigt__p_SessionID_t,
   &_swigt__p_StatusCode_t,
   &_swigt__p_ULP_PDU,
   &_swigt__p_UlpMessage,
@@ -9589,43 +6785,30 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_UlpMessage_t_choice,
   &_swigt__p_Velocity,
   &_swigt__p_Ver_t,
-  &_swigt__p_Version,
+  &_swigt__p_Version_t,
+  &_swigt__p_asn_TYPE_descriptor_t,
   &_swigt__p_asn_struct_ctx_t,
   &_swigt__p_char,
-  &_swigt__p_long,
 };
 
-static swig_cast_info _swigc__p_BIT_STRING_t[] = {  {&_swigt__p_BIT_STRING_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_EncodingType_t[] = {  {&_swigt__p_EncodingType_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_FQDN_t[] = {  {&_swigt__p_FQDN_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_FormatIndicator_t[] = {  {&_swigt__p_FormatIndicator_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_IA5String_t[] = {  {&_swigt__p_IA5String_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_IPAddress[] = {  {&_swigt__p_IPAddress, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_IPAddress_PR[] = {  {&_swigt__p_IPAddress_PR, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_IPAddress_t_choice[] = {  {&_swigt__p_IPAddress_t_choice, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_KeyIdentity2_t[] = {  {&_swigt__p_KeyIdentity2_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_KeyIdentity3_t[] = {  {&_swigt__p_KeyIdentity3_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_KeyIdentity4_t[] = {  {&_swigt__p_KeyIdentity4_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_KeyIdentity_t[] = {  {&_swigt__p_KeyIdentity_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_LocationId_t[] = {  {&_swigt__p_LocationId_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_MAC_t[] = {  {&_swigt__p_MAC_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_MsgBuffer[] = {  {&_swigt__p_MsgBuffer, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Notification[] = {  {&_swigt__p_Notification, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_NotificationType_t[] = {  {&_swigt__p_NotificationType_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_OCTET_STRING_t[] = {  {&_swigt__p_OCTET_STRING_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_PosMethod[] = {  {&_swigt__p_PosMethod, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_PosMethod_t[] = {  {&_swigt__p_PosMethod_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_PosPayLoad_t[] = {  {&_swigt__p_PosPayLoad_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Position[] = {  {&_swigt__p_Position, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_QoP[] = {  {&_swigt__p_QoP, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_RequestedAssistData[] = {  {&_swigt__p_RequestedAssistData, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_SETAuthKey[] = {  {&_swigt__p_SETAuthKey, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_SETCapabilities_t[] = {  {&_swigt__p_SETCapabilities_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_SETId[] = {  {&_swigt__p_SETId, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_SETId_PR[] = {  {&_swigt__p_SETId_PR, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_SETId_t_choice[] = {  {&_swigt__p_SETId_t_choice, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_SETNonce_t[] = {  {&_swigt__p_SETNonce_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_SLPAddress[] = {  {&_swigt__p_SLPAddress, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_SLPAddress_PR[] = {  {&_swigt__p_SLPAddress_PR, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_SLPAddress_t_choice[] = {  {&_swigt__p_SLPAddress_t_choice, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_SLPMode[] = {  {&_swigt__p_SLPMode, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_SLPMode_t[] = {  {&_swigt__p_SLPMode_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_SPCAuthKey[] = {  {&_swigt__p_SPCAuthKey, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_SUPLAUTHREQ[] = {  {&_swigt__p_SUPLAUTHREQ, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_SUPLAUTHRESP[] = {  {&_swigt__p_SUPLAUTHRESP, 0, 0, 0},{0, 0, 0, 0}};
@@ -9635,9 +6818,7 @@ static swig_cast_info _swigc__p_SUPLPOS[] = {  {&_swigt__p_SUPLPOS, 0, 0, 0},{0,
 static swig_cast_info _swigc__p_SUPLPOSINIT[] = {  {&_swigt__p_SUPLPOSINIT, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_SUPLRESPONSE[] = {  {&_swigt__p_SUPLRESPONSE, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_SUPLSTART[] = {  {&_swigt__p_SUPLSTART, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_SessionID[] = {  {&_swigt__p_SessionID, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_SetSessionID[] = {  {&_swigt__p_SetSessionID, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_SlpSessionID[] = {  {&_swigt__p_SlpSessionID, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_SessionID_t[] = {  {&_swigt__p_SessionID_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_StatusCode_t[] = {  {&_swigt__p_StatusCode_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ULP_PDU[] = {  {&_swigt__p_ULP_PDU, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_UlpMessage[] = {  {&_swigt__p_UlpMessage, 0, 0, 0},{0, 0, 0, 0}};
@@ -9645,43 +6826,30 @@ static swig_cast_info _swigc__p_UlpMessage_PR[] = {  {&_swigt__p_UlpMessage_PR, 
 static swig_cast_info _swigc__p_UlpMessage_t_choice[] = {  {&_swigt__p_UlpMessage_t_choice, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Velocity[] = {  {&_swigt__p_Velocity, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Ver_t[] = {  {&_swigt__p_Ver_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_Version[] = {  {&_swigt__p_Version, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Version_t[] = {  {&_swigt__p_Version_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_asn_TYPE_descriptor_t[] = {  {&_swigt__p_asn_TYPE_descriptor_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_asn_struct_ctx_t[] = {  {&_swigt__p_asn_struct_ctx_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_char[] = {  {&_swigt__p_char, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_long[] = {  {&_swigt__p_long, 0, 0, 0},{0, 0, 0, 0}};
 
 static swig_cast_info *swig_cast_initial[] = {
-  _swigc__p_BIT_STRING_t,
-  _swigc__p_EncodingType_t,
-  _swigc__p_FQDN_t,
-  _swigc__p_FormatIndicator_t,
-  _swigc__p_IA5String_t,
-  _swigc__p_IPAddress,
-  _swigc__p_IPAddress_PR,
-  _swigc__p_IPAddress_t_choice,
   _swigc__p_KeyIdentity2_t,
   _swigc__p_KeyIdentity3_t,
   _swigc__p_KeyIdentity4_t,
+  _swigc__p_KeyIdentity_t,
   _swigc__p_LocationId_t,
+  _swigc__p_MAC_t,
   _swigc__p_MsgBuffer,
   _swigc__p_Notification,
-  _swigc__p_NotificationType_t,
-  _swigc__p_OCTET_STRING_t,
-  _swigc__p_PosMethod,
+  _swigc__p_PosMethod_t,
   _swigc__p_PosPayLoad_t,
   _swigc__p_Position,
   _swigc__p_QoP,
   _swigc__p_RequestedAssistData,
   _swigc__p_SETAuthKey,
   _swigc__p_SETCapabilities_t,
-  _swigc__p_SETId,
-  _swigc__p_SETId_PR,
-  _swigc__p_SETId_t_choice,
   _swigc__p_SETNonce_t,
   _swigc__p_SLPAddress,
-  _swigc__p_SLPAddress_PR,
-  _swigc__p_SLPAddress_t_choice,
-  _swigc__p_SLPMode,
+  _swigc__p_SLPMode_t,
   _swigc__p_SPCAuthKey,
   _swigc__p_SUPLAUTHREQ,
   _swigc__p_SUPLAUTHRESP,
@@ -9691,9 +6859,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_SUPLPOSINIT,
   _swigc__p_SUPLRESPONSE,
   _swigc__p_SUPLSTART,
-  _swigc__p_SessionID,
-  _swigc__p_SetSessionID,
-  _swigc__p_SlpSessionID,
+  _swigc__p_SessionID_t,
   _swigc__p_StatusCode_t,
   _swigc__p_ULP_PDU,
   _swigc__p_UlpMessage,
@@ -9701,10 +6867,10 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_UlpMessage_t_choice,
   _swigc__p_Velocity,
   _swigc__p_Ver_t,
-  _swigc__p_Version,
+  _swigc__p_Version_t,
+  _swigc__p_asn_TYPE_descriptor_t,
   _swigc__p_asn_struct_ctx_t,
   _swigc__p_char,
-  _swigc__p_long,
 };
 
 
@@ -9717,9 +6883,111 @@ static swig_constant_info swig_constants[] = {
 }
 #endif
 static swig_variable_info swig_variables[] = {
+    { "ULP_PDUc::asn_DEF_SUPLAUTHREQ", MAGIC_CLASS _wrap_asn_DEF_SUPLAUTHREQ_set, MAGIC_CLASS _wrap_asn_DEF_SUPLAUTHREQ_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
+    { "ULP_PDUc::asn_DEF_SUPLAUTHRESP", MAGIC_CLASS _wrap_asn_DEF_SUPLAUTHRESP_set, MAGIC_CLASS _wrap_asn_DEF_SUPLAUTHRESP_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
+    { "ULP_PDUc::asn_DEF_SUPLEND", MAGIC_CLASS _wrap_asn_DEF_SUPLEND_set, MAGIC_CLASS _wrap_asn_DEF_SUPLEND_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
+    { "ULP_PDUc::asn_DEF_SUPLINIT", MAGIC_CLASS _wrap_asn_DEF_SUPLINIT_set, MAGIC_CLASS _wrap_asn_DEF_SUPLINIT_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
+    { "ULP_PDUc::asn_DEF_SUPLPOS", MAGIC_CLASS _wrap_asn_DEF_SUPLPOS_set, MAGIC_CLASS _wrap_asn_DEF_SUPLPOS_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
+    { "ULP_PDUc::asn_DEF_SUPLPOSINIT", MAGIC_CLASS _wrap_asn_DEF_SUPLPOSINIT_set, MAGIC_CLASS _wrap_asn_DEF_SUPLPOSINIT_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
+    { "ULP_PDUc::asn_DEF_SUPLRESPONSE", MAGIC_CLASS _wrap_asn_DEF_SUPLRESPONSE_set, MAGIC_CLASS _wrap_asn_DEF_SUPLRESPONSE_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
+    { "ULP_PDUc::asn_DEF_SUPLSTART", MAGIC_CLASS _wrap_asn_DEF_SUPLSTART_set, MAGIC_CLASS _wrap_asn_DEF_SUPLSTART_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
+    { "ULP_PDUc::asn_DEF_ULP_PDU", MAGIC_CLASS _wrap_asn_DEF_ULP_PDU_set, MAGIC_CLASS _wrap_asn_DEF_ULP_PDU_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
+    { "ULP_PDUc::asn_DEF_UlpMessage", MAGIC_CLASS _wrap_asn_DEF_UlpMessage_set, MAGIC_CLASS _wrap_asn_DEF_UlpMessage_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
 {0,0,0,0}
 };
 static swig_command_info swig_commands[] = {
+{"ULP_PDUc::SUPLAUTHREQ_t_sETNonce_set", _wrap_SUPLAUTHREQ_t_sETNonce_set},
+{"ULP_PDUc::SUPLAUTHREQ_t_sETNonce_get", _wrap_SUPLAUTHREQ_t_sETNonce_get},
+{"ULP_PDUc::SUPLAUTHREQ_t_keyIdentity2_set", _wrap_SUPLAUTHREQ_t_keyIdentity2_set},
+{"ULP_PDUc::SUPLAUTHREQ_t_keyIdentity2_get", _wrap_SUPLAUTHREQ_t_keyIdentity2_get},
+{"ULP_PDUc::SUPLAUTHREQ_t__asn_ctx_set", _wrap_SUPLAUTHREQ_t__asn_ctx_set},
+{"ULP_PDUc::SUPLAUTHREQ_t__asn_ctx_get", _wrap_SUPLAUTHREQ_t__asn_ctx_get},
+{"ULP_PDUc::new_SUPLAUTHREQ_t", _wrap_new_SUPLAUTHREQ_t},
+{"ULP_PDUc::delete_SUPLAUTHREQ_t", _wrap_delete_SUPLAUTHREQ_t},
+{"ULP_PDUc::SUPLAUTHRESP_t_sPCAuthKey_set", _wrap_SUPLAUTHRESP_t_sPCAuthKey_set},
+{"ULP_PDUc::SUPLAUTHRESP_t_sPCAuthKey_get", _wrap_SUPLAUTHRESP_t_sPCAuthKey_get},
+{"ULP_PDUc::SUPLAUTHRESP_t_keyIdentity3_set", _wrap_SUPLAUTHRESP_t_keyIdentity3_set},
+{"ULP_PDUc::SUPLAUTHRESP_t_keyIdentity3_get", _wrap_SUPLAUTHRESP_t_keyIdentity3_get},
+{"ULP_PDUc::SUPLAUTHRESP_t_statusCode_set", _wrap_SUPLAUTHRESP_t_statusCode_set},
+{"ULP_PDUc::SUPLAUTHRESP_t_statusCode_get", _wrap_SUPLAUTHRESP_t_statusCode_get},
+{"ULP_PDUc::SUPLAUTHRESP_t__asn_ctx_set", _wrap_SUPLAUTHRESP_t__asn_ctx_set},
+{"ULP_PDUc::SUPLAUTHRESP_t__asn_ctx_get", _wrap_SUPLAUTHRESP_t__asn_ctx_get},
+{"ULP_PDUc::new_SUPLAUTHRESP_t", _wrap_new_SUPLAUTHRESP_t},
+{"ULP_PDUc::delete_SUPLAUTHRESP_t", _wrap_delete_SUPLAUTHRESP_t},
+{"ULP_PDUc::SUPLEND_t_position_set", _wrap_SUPLEND_t_position_set},
+{"ULP_PDUc::SUPLEND_t_position_get", _wrap_SUPLEND_t_position_get},
+{"ULP_PDUc::SUPLEND_t_statusCode_set", _wrap_SUPLEND_t_statusCode_set},
+{"ULP_PDUc::SUPLEND_t_statusCode_get", _wrap_SUPLEND_t_statusCode_get},
+{"ULP_PDUc::SUPLEND_t_ver_set", _wrap_SUPLEND_t_ver_set},
+{"ULP_PDUc::SUPLEND_t_ver_get", _wrap_SUPLEND_t_ver_get},
+{"ULP_PDUc::SUPLEND_t__asn_ctx_set", _wrap_SUPLEND_t__asn_ctx_set},
+{"ULP_PDUc::SUPLEND_t__asn_ctx_get", _wrap_SUPLEND_t__asn_ctx_get},
+{"ULP_PDUc::new_SUPLEND_t", _wrap_new_SUPLEND_t},
+{"ULP_PDUc::delete_SUPLEND_t", _wrap_delete_SUPLEND_t},
+{"ULP_PDUc::SUPLINIT_t_posMethod_set", _wrap_SUPLINIT_t_posMethod_set},
+{"ULP_PDUc::SUPLINIT_t_posMethod_get", _wrap_SUPLINIT_t_posMethod_get},
+{"ULP_PDUc::SUPLINIT_t_notification_set", _wrap_SUPLINIT_t_notification_set},
+{"ULP_PDUc::SUPLINIT_t_notification_get", _wrap_SUPLINIT_t_notification_get},
+{"ULP_PDUc::SUPLINIT_t_sLPAddress_set", _wrap_SUPLINIT_t_sLPAddress_set},
+{"ULP_PDUc::SUPLINIT_t_sLPAddress_get", _wrap_SUPLINIT_t_sLPAddress_get},
+{"ULP_PDUc::SUPLINIT_t_qoP_set", _wrap_SUPLINIT_t_qoP_set},
+{"ULP_PDUc::SUPLINIT_t_qoP_get", _wrap_SUPLINIT_t_qoP_get},
+{"ULP_PDUc::SUPLINIT_t_sLPMode_set", _wrap_SUPLINIT_t_sLPMode_set},
+{"ULP_PDUc::SUPLINIT_t_sLPMode_get", _wrap_SUPLINIT_t_sLPMode_get},
+{"ULP_PDUc::SUPLINIT_t_mAC_set", _wrap_SUPLINIT_t_mAC_set},
+{"ULP_PDUc::SUPLINIT_t_mAC_get", _wrap_SUPLINIT_t_mAC_get},
+{"ULP_PDUc::SUPLINIT_t_keyIdentity_set", _wrap_SUPLINIT_t_keyIdentity_set},
+{"ULP_PDUc::SUPLINIT_t_keyIdentity_get", _wrap_SUPLINIT_t_keyIdentity_get},
+{"ULP_PDUc::SUPLINIT_t__asn_ctx_set", _wrap_SUPLINIT_t__asn_ctx_set},
+{"ULP_PDUc::SUPLINIT_t__asn_ctx_get", _wrap_SUPLINIT_t__asn_ctx_get},
+{"ULP_PDUc::new_SUPLINIT_t", _wrap_new_SUPLINIT_t},
+{"ULP_PDUc::delete_SUPLINIT_t", _wrap_delete_SUPLINIT_t},
+{"ULP_PDUc::SUPLPOS_t_posPayLoad_set", _wrap_SUPLPOS_t_posPayLoad_set},
+{"ULP_PDUc::SUPLPOS_t_posPayLoad_get", _wrap_SUPLPOS_t_posPayLoad_get},
+{"ULP_PDUc::SUPLPOS_t_velocity_set", _wrap_SUPLPOS_t_velocity_set},
+{"ULP_PDUc::SUPLPOS_t_velocity_get", _wrap_SUPLPOS_t_velocity_get},
+{"ULP_PDUc::SUPLPOS_t__asn_ctx_set", _wrap_SUPLPOS_t__asn_ctx_set},
+{"ULP_PDUc::SUPLPOS_t__asn_ctx_get", _wrap_SUPLPOS_t__asn_ctx_get},
+{"ULP_PDUc::new_SUPLPOS_t", _wrap_new_SUPLPOS_t},
+{"ULP_PDUc::delete_SUPLPOS_t", _wrap_delete_SUPLPOS_t},
+{"ULP_PDUc::SUPLPOSINIT_t_sETCapabilities_set", _wrap_SUPLPOSINIT_t_sETCapabilities_set},
+{"ULP_PDUc::SUPLPOSINIT_t_sETCapabilities_get", _wrap_SUPLPOSINIT_t_sETCapabilities_get},
+{"ULP_PDUc::SUPLPOSINIT_t_requestedAssistData_set", _wrap_SUPLPOSINIT_t_requestedAssistData_set},
+{"ULP_PDUc::SUPLPOSINIT_t_requestedAssistData_get", _wrap_SUPLPOSINIT_t_requestedAssistData_get},
+{"ULP_PDUc::SUPLPOSINIT_t_locationId_set", _wrap_SUPLPOSINIT_t_locationId_set},
+{"ULP_PDUc::SUPLPOSINIT_t_locationId_get", _wrap_SUPLPOSINIT_t_locationId_get},
+{"ULP_PDUc::SUPLPOSINIT_t_position_set", _wrap_SUPLPOSINIT_t_position_set},
+{"ULP_PDUc::SUPLPOSINIT_t_position_get", _wrap_SUPLPOSINIT_t_position_get},
+{"ULP_PDUc::SUPLPOSINIT_t_sUPLPOS_set", _wrap_SUPLPOSINIT_t_sUPLPOS_set},
+{"ULP_PDUc::SUPLPOSINIT_t_sUPLPOS_get", _wrap_SUPLPOSINIT_t_sUPLPOS_get},
+{"ULP_PDUc::SUPLPOSINIT_t_ver_set", _wrap_SUPLPOSINIT_t_ver_set},
+{"ULP_PDUc::SUPLPOSINIT_t_ver_get", _wrap_SUPLPOSINIT_t_ver_get},
+{"ULP_PDUc::SUPLPOSINIT_t__asn_ctx_set", _wrap_SUPLPOSINIT_t__asn_ctx_set},
+{"ULP_PDUc::SUPLPOSINIT_t__asn_ctx_get", _wrap_SUPLPOSINIT_t__asn_ctx_get},
+{"ULP_PDUc::new_SUPLPOSINIT_t", _wrap_new_SUPLPOSINIT_t},
+{"ULP_PDUc::delete_SUPLPOSINIT_t", _wrap_delete_SUPLPOSINIT_t},
+{"ULP_PDUc::SUPLRESPONSE_t_posMethod_set", _wrap_SUPLRESPONSE_t_posMethod_set},
+{"ULP_PDUc::SUPLRESPONSE_t_posMethod_get", _wrap_SUPLRESPONSE_t_posMethod_get},
+{"ULP_PDUc::SUPLRESPONSE_t_sLPAddress_set", _wrap_SUPLRESPONSE_t_sLPAddress_set},
+{"ULP_PDUc::SUPLRESPONSE_t_sLPAddress_get", _wrap_SUPLRESPONSE_t_sLPAddress_get},
+{"ULP_PDUc::SUPLRESPONSE_t_sETAuthKey_set", _wrap_SUPLRESPONSE_t_sETAuthKey_set},
+{"ULP_PDUc::SUPLRESPONSE_t_sETAuthKey_get", _wrap_SUPLRESPONSE_t_sETAuthKey_get},
+{"ULP_PDUc::SUPLRESPONSE_t_keyIdentity4_set", _wrap_SUPLRESPONSE_t_keyIdentity4_set},
+{"ULP_PDUc::SUPLRESPONSE_t_keyIdentity4_get", _wrap_SUPLRESPONSE_t_keyIdentity4_get},
+{"ULP_PDUc::SUPLRESPONSE_t__asn_ctx_set", _wrap_SUPLRESPONSE_t__asn_ctx_set},
+{"ULP_PDUc::SUPLRESPONSE_t__asn_ctx_get", _wrap_SUPLRESPONSE_t__asn_ctx_get},
+{"ULP_PDUc::new_SUPLRESPONSE_t", _wrap_new_SUPLRESPONSE_t},
+{"ULP_PDUc::delete_SUPLRESPONSE_t", _wrap_delete_SUPLRESPONSE_t},
+{"ULP_PDUc::SUPLSTART_t_sETCapabilities_set", _wrap_SUPLSTART_t_sETCapabilities_set},
+{"ULP_PDUc::SUPLSTART_t_sETCapabilities_get", _wrap_SUPLSTART_t_sETCapabilities_get},
+{"ULP_PDUc::SUPLSTART_t_locationId_set", _wrap_SUPLSTART_t_locationId_set},
+{"ULP_PDUc::SUPLSTART_t_locationId_get", _wrap_SUPLSTART_t_locationId_get},
+{"ULP_PDUc::SUPLSTART_t_qoP_set", _wrap_SUPLSTART_t_qoP_set},
+{"ULP_PDUc::SUPLSTART_t_qoP_get", _wrap_SUPLSTART_t_qoP_get},
+{"ULP_PDUc::SUPLSTART_t__asn_ctx_set", _wrap_SUPLSTART_t__asn_ctx_set},
+{"ULP_PDUc::SUPLSTART_t__asn_ctx_get", _wrap_SUPLSTART_t__asn_ctx_get},
+{"ULP_PDUc::new_SUPLSTART_t", _wrap_new_SUPLSTART_t},
+{"ULP_PDUc::delete_SUPLSTART_t", _wrap_delete_SUPLSTART_t},
 {"ULP_PDUc::ULP_PDU_t_length_set", _wrap_ULP_PDU_t_length_set},
 {"ULP_PDUc::ULP_PDU_t_length_get", _wrap_ULP_PDU_t_length_get},
 {"ULP_PDUc::ULP_PDU_t_version_set", _wrap_ULP_PDU_t_version_set},
@@ -9732,87 +7000,10 @@ static swig_command_info swig_commands[] = {
 {"ULP_PDUc::ULP_PDU_t__asn_ctx_get", _wrap_ULP_PDU_t__asn_ctx_get},
 {"ULP_PDUc::new_ULP_PDU_t", _wrap_new_ULP_PDU_t},
 {"ULP_PDUc::delete_ULP_PDU_t", _wrap_delete_ULP_PDU_t},
-{"ULP_PDUc::Version_t_maj_set", _wrap_Version_t_maj_set},
-{"ULP_PDUc::Version_t_maj_get", _wrap_Version_t_maj_get},
-{"ULP_PDUc::Version_t_min_set", _wrap_Version_t_min_set},
-{"ULP_PDUc::Version_t_min_get", _wrap_Version_t_min_get},
-{"ULP_PDUc::Version_t_servind_set", _wrap_Version_t_servind_set},
-{"ULP_PDUc::Version_t_servind_get", _wrap_Version_t_servind_get},
-{"ULP_PDUc::Version_t__asn_ctx_set", _wrap_Version_t__asn_ctx_set},
-{"ULP_PDUc::Version_t__asn_ctx_get", _wrap_Version_t__asn_ctx_get},
-{"ULP_PDUc::new_Version_t", _wrap_new_Version_t},
-{"ULP_PDUc::delete_Version_t", _wrap_delete_Version_t},
-{"ULP_PDUc::IPAddress_t_present_set", _wrap_IPAddress_t_present_set},
-{"ULP_PDUc::IPAddress_t_present_get", _wrap_IPAddress_t_present_get},
-{"ULP_PDUc::IPAddress_t__asn_ctx_set", _wrap_IPAddress_t__asn_ctx_set},
-{"ULP_PDUc::IPAddress_t__asn_ctx_get", _wrap_IPAddress_t__asn_ctx_get},
-{"ULP_PDUc::IPAddress_t_choice_get", _wrap_IPAddress_t_choice_get},
-{"ULP_PDUc::new_IPAddress_t", _wrap_new_IPAddress_t},
-{"ULP_PDUc::delete_IPAddress_t", _wrap_delete_IPAddress_t},
-{"ULP_PDUc::IPAddress_t_choice_ipv4Address_set", _wrap_IPAddress_t_choice_ipv4Address_set},
-{"ULP_PDUc::IPAddress_t_choice_ipv4Address_get", _wrap_IPAddress_t_choice_ipv4Address_get},
-{"ULP_PDUc::IPAddress_t_choice_ipv6Address_set", _wrap_IPAddress_t_choice_ipv6Address_set},
-{"ULP_PDUc::IPAddress_t_choice_ipv6Address_get", _wrap_IPAddress_t_choice_ipv6Address_get},
-{"ULP_PDUc::new_IPAddress_t_choice", _wrap_new_IPAddress_t_choice},
-{"ULP_PDUc::delete_IPAddress_t_choice", _wrap_delete_IPAddress_t_choice},
-{"ULP_PDUc::SETId_t_present_set", _wrap_SETId_t_present_set},
-{"ULP_PDUc::SETId_t_present_get", _wrap_SETId_t_present_get},
-{"ULP_PDUc::SETId_t__asn_ctx_set", _wrap_SETId_t__asn_ctx_set},
-{"ULP_PDUc::SETId_t__asn_ctx_get", _wrap_SETId_t__asn_ctx_get},
-{"ULP_PDUc::SETId_t_choice_get", _wrap_SETId_t_choice_get},
-{"ULP_PDUc::new_SETId_t", _wrap_new_SETId_t},
-{"ULP_PDUc::delete_SETId_t", _wrap_delete_SETId_t},
-{"ULP_PDUc::SETId_t_choice_msisdn_set", _wrap_SETId_t_choice_msisdn_set},
-{"ULP_PDUc::SETId_t_choice_msisdn_get", _wrap_SETId_t_choice_msisdn_get},
-{"ULP_PDUc::SETId_t_choice_mdn_set", _wrap_SETId_t_choice_mdn_set},
-{"ULP_PDUc::SETId_t_choice_mdn_get", _wrap_SETId_t_choice_mdn_get},
-{"ULP_PDUc::SETId_t_choice_min_set", _wrap_SETId_t_choice_min_set},
-{"ULP_PDUc::SETId_t_choice_min_get", _wrap_SETId_t_choice_min_get},
-{"ULP_PDUc::SETId_t_choice_imsi_set", _wrap_SETId_t_choice_imsi_set},
-{"ULP_PDUc::SETId_t_choice_imsi_get", _wrap_SETId_t_choice_imsi_get},
-{"ULP_PDUc::SETId_t_choice_nai_set", _wrap_SETId_t_choice_nai_set},
-{"ULP_PDUc::SETId_t_choice_nai_get", _wrap_SETId_t_choice_nai_get},
-{"ULP_PDUc::SETId_t_choice_iPAddress_set", _wrap_SETId_t_choice_iPAddress_set},
-{"ULP_PDUc::SETId_t_choice_iPAddress_get", _wrap_SETId_t_choice_iPAddress_get},
-{"ULP_PDUc::new_SETId_t_choice", _wrap_new_SETId_t_choice},
-{"ULP_PDUc::delete_SETId_t_choice", _wrap_delete_SETId_t_choice},
-{"ULP_PDUc::SetSessionID_t_sessionId_set", _wrap_SetSessionID_t_sessionId_set},
-{"ULP_PDUc::SetSessionID_t_sessionId_get", _wrap_SetSessionID_t_sessionId_get},
-{"ULP_PDUc::SetSessionID_t_setId_set", _wrap_SetSessionID_t_setId_set},
-{"ULP_PDUc::SetSessionID_t_setId_get", _wrap_SetSessionID_t_setId_get},
-{"ULP_PDUc::SetSessionID_t__asn_ctx_set", _wrap_SetSessionID_t__asn_ctx_set},
-{"ULP_PDUc::SetSessionID_t__asn_ctx_get", _wrap_SetSessionID_t__asn_ctx_get},
-{"ULP_PDUc::new_SetSessionID_t", _wrap_new_SetSessionID_t},
-{"ULP_PDUc::delete_SetSessionID_t", _wrap_delete_SetSessionID_t},
-{"ULP_PDUc::SLPAddress_t_present_set", _wrap_SLPAddress_t_present_set},
-{"ULP_PDUc::SLPAddress_t_present_get", _wrap_SLPAddress_t_present_get},
-{"ULP_PDUc::SLPAddress_t__asn_ctx_set", _wrap_SLPAddress_t__asn_ctx_set},
-{"ULP_PDUc::SLPAddress_t__asn_ctx_get", _wrap_SLPAddress_t__asn_ctx_get},
-{"ULP_PDUc::SLPAddress_t_choice_get", _wrap_SLPAddress_t_choice_get},
-{"ULP_PDUc::new_SLPAddress_t", _wrap_new_SLPAddress_t},
-{"ULP_PDUc::delete_SLPAddress_t", _wrap_delete_SLPAddress_t},
-{"ULP_PDUc::SLPAddress_t_choice_iPAddress_set", _wrap_SLPAddress_t_choice_iPAddress_set},
-{"ULP_PDUc::SLPAddress_t_choice_iPAddress_get", _wrap_SLPAddress_t_choice_iPAddress_get},
-{"ULP_PDUc::SLPAddress_t_choice_fQDN_set", _wrap_SLPAddress_t_choice_fQDN_set},
-{"ULP_PDUc::SLPAddress_t_choice_fQDN_get", _wrap_SLPAddress_t_choice_fQDN_get},
-{"ULP_PDUc::new_SLPAddress_t_choice", _wrap_new_SLPAddress_t_choice},
-{"ULP_PDUc::delete_SLPAddress_t_choice", _wrap_delete_SLPAddress_t_choice},
-{"ULP_PDUc::SlpSessionID_t_sessionID_set", _wrap_SlpSessionID_t_sessionID_set},
-{"ULP_PDUc::SlpSessionID_t_sessionID_get", _wrap_SlpSessionID_t_sessionID_get},
-{"ULP_PDUc::SlpSessionID_t_slpId_set", _wrap_SlpSessionID_t_slpId_set},
-{"ULP_PDUc::SlpSessionID_t_slpId_get", _wrap_SlpSessionID_t_slpId_get},
-{"ULP_PDUc::SlpSessionID_t__asn_ctx_set", _wrap_SlpSessionID_t__asn_ctx_set},
-{"ULP_PDUc::SlpSessionID_t__asn_ctx_get", _wrap_SlpSessionID_t__asn_ctx_get},
-{"ULP_PDUc::new_SlpSessionID_t", _wrap_new_SlpSessionID_t},
-{"ULP_PDUc::delete_SlpSessionID_t", _wrap_delete_SlpSessionID_t},
-{"ULP_PDUc::SessionID_t_setSessionID_set", _wrap_SessionID_t_setSessionID_set},
-{"ULP_PDUc::SessionID_t_setSessionID_get", _wrap_SessionID_t_setSessionID_get},
-{"ULP_PDUc::SessionID_t_slpSessionID_set", _wrap_SessionID_t_slpSessionID_set},
-{"ULP_PDUc::SessionID_t_slpSessionID_get", _wrap_SessionID_t_slpSessionID_get},
-{"ULP_PDUc::SessionID_t__asn_ctx_set", _wrap_SessionID_t__asn_ctx_set},
-{"ULP_PDUc::SessionID_t__asn_ctx_get", _wrap_SessionID_t__asn_ctx_get},
-{"ULP_PDUc::new_SessionID_t", _wrap_new_SessionID_t},
-{"ULP_PDUc::delete_SessionID_t", _wrap_delete_SessionID_t},
+{"ULP_PDUc::ULP_PDU_t_set_version", _wrap_ULP_PDU_t_set_version},
+{"ULP_PDUc::ULP_PDU_t_setSetSessionId_to_imsi", _wrap_ULP_PDU_t_setSetSessionId_to_imsi},
+{"ULP_PDUc::ULP_PDU_t_setSetSessionId_to_msisdn", _wrap_ULP_PDU_t_setSetSessionId_to_msisdn},
+{"ULP_PDUc::ULP_PDU_t_copy_SlpSessionId", _wrap_ULP_PDU_t_copy_SlpSessionId},
 {"ULP_PDUc::UlpMessage_t_present_set", _wrap_UlpMessage_t_present_set},
 {"ULP_PDUc::UlpMessage_t_present_get", _wrap_UlpMessage_t_present_get},
 {"ULP_PDUc::UlpMessage_t__asn_ctx_set", _wrap_UlpMessage_t__asn_ctx_set},
@@ -9838,126 +7029,6 @@ static swig_command_info swig_commands[] = {
 {"ULP_PDUc::UlpMessage_t_choice_msSUPLAUTHRESP_get", _wrap_UlpMessage_t_choice_msSUPLAUTHRESP_get},
 {"ULP_PDUc::new_UlpMessage_t_choice", _wrap_new_UlpMessage_t_choice},
 {"ULP_PDUc::delete_UlpMessage_t_choice", _wrap_delete_UlpMessage_t_choice},
-{"ULP_PDUc::Notification_t_notificationType_set", _wrap_Notification_t_notificationType_set},
-{"ULP_PDUc::Notification_t_notificationType_get", _wrap_Notification_t_notificationType_get},
-{"ULP_PDUc::Notification_t_encodingType_set", _wrap_Notification_t_encodingType_set},
-{"ULP_PDUc::Notification_t_encodingType_get", _wrap_Notification_t_encodingType_get},
-{"ULP_PDUc::Notification_t_requestorId_set", _wrap_Notification_t_requestorId_set},
-{"ULP_PDUc::Notification_t_requestorId_get", _wrap_Notification_t_requestorId_get},
-{"ULP_PDUc::Notification_t_requestorIdType_set", _wrap_Notification_t_requestorIdType_set},
-{"ULP_PDUc::Notification_t_requestorIdType_get", _wrap_Notification_t_requestorIdType_get},
-{"ULP_PDUc::Notification_t_clientName_set", _wrap_Notification_t_clientName_set},
-{"ULP_PDUc::Notification_t_clientName_get", _wrap_Notification_t_clientName_get},
-{"ULP_PDUc::Notification_t_clientNameType_set", _wrap_Notification_t_clientNameType_set},
-{"ULP_PDUc::Notification_t_clientNameType_get", _wrap_Notification_t_clientNameType_get},
-{"ULP_PDUc::Notification_t__asn_ctx_set", _wrap_Notification_t__asn_ctx_set},
-{"ULP_PDUc::Notification_t__asn_ctx_get", _wrap_Notification_t__asn_ctx_get},
-{"ULP_PDUc::new_Notification_t", _wrap_new_Notification_t},
-{"ULP_PDUc::delete_Notification_t", _wrap_delete_Notification_t},
-{"ULP_PDUc::QoP_t_horacc_set", _wrap_QoP_t_horacc_set},
-{"ULP_PDUc::QoP_t_horacc_get", _wrap_QoP_t_horacc_get},
-{"ULP_PDUc::QoP_t_veracc_set", _wrap_QoP_t_veracc_set},
-{"ULP_PDUc::QoP_t_veracc_get", _wrap_QoP_t_veracc_get},
-{"ULP_PDUc::QoP_t_maxLocAge_set", _wrap_QoP_t_maxLocAge_set},
-{"ULP_PDUc::QoP_t_maxLocAge_get", _wrap_QoP_t_maxLocAge_get},
-{"ULP_PDUc::QoP_t_delay_set", _wrap_QoP_t_delay_set},
-{"ULP_PDUc::QoP_t_delay_get", _wrap_QoP_t_delay_get},
-{"ULP_PDUc::QoP_t__asn_ctx_set", _wrap_QoP_t__asn_ctx_set},
-{"ULP_PDUc::QoP_t__asn_ctx_get", _wrap_QoP_t__asn_ctx_get},
-{"ULP_PDUc::new_QoP_t", _wrap_new_QoP_t},
-{"ULP_PDUc::delete_QoP_t", _wrap_delete_QoP_t},
-{"ULP_PDUc::SUPLINIT_t_posMethod_set", _wrap_SUPLINIT_t_posMethod_set},
-{"ULP_PDUc::SUPLINIT_t_posMethod_get", _wrap_SUPLINIT_t_posMethod_get},
-{"ULP_PDUc::SUPLINIT_t_notification_set", _wrap_SUPLINIT_t_notification_set},
-{"ULP_PDUc::SUPLINIT_t_notification_get", _wrap_SUPLINIT_t_notification_get},
-{"ULP_PDUc::SUPLINIT_t_sLPAddress_set", _wrap_SUPLINIT_t_sLPAddress_set},
-{"ULP_PDUc::SUPLINIT_t_sLPAddress_get", _wrap_SUPLINIT_t_sLPAddress_get},
-{"ULP_PDUc::SUPLINIT_t_qoP_set", _wrap_SUPLINIT_t_qoP_set},
-{"ULP_PDUc::SUPLINIT_t_qoP_get", _wrap_SUPLINIT_t_qoP_get},
-{"ULP_PDUc::SUPLINIT_t_sLPMode_set", _wrap_SUPLINIT_t_sLPMode_set},
-{"ULP_PDUc::SUPLINIT_t_sLPMode_get", _wrap_SUPLINIT_t_sLPMode_get},
-{"ULP_PDUc::SUPLINIT_t_mAC_set", _wrap_SUPLINIT_t_mAC_set},
-{"ULP_PDUc::SUPLINIT_t_mAC_get", _wrap_SUPLINIT_t_mAC_get},
-{"ULP_PDUc::SUPLINIT_t_keyIdentity_set", _wrap_SUPLINIT_t_keyIdentity_set},
-{"ULP_PDUc::SUPLINIT_t_keyIdentity_get", _wrap_SUPLINIT_t_keyIdentity_get},
-{"ULP_PDUc::SUPLINIT_t__asn_ctx_set", _wrap_SUPLINIT_t__asn_ctx_set},
-{"ULP_PDUc::SUPLINIT_t__asn_ctx_get", _wrap_SUPLINIT_t__asn_ctx_get},
-{"ULP_PDUc::new_SUPLINIT_t", _wrap_new_SUPLINIT_t},
-{"ULP_PDUc::delete_SUPLINIT_t", _wrap_delete_SUPLINIT_t},
-{"ULP_PDUc::SUPLSTART_t_sETCapabilities_set", _wrap_SUPLSTART_t_sETCapabilities_set},
-{"ULP_PDUc::SUPLSTART_t_sETCapabilities_get", _wrap_SUPLSTART_t_sETCapabilities_get},
-{"ULP_PDUc::SUPLSTART_t_locationId_set", _wrap_SUPLSTART_t_locationId_set},
-{"ULP_PDUc::SUPLSTART_t_locationId_get", _wrap_SUPLSTART_t_locationId_get},
-{"ULP_PDUc::SUPLSTART_t_qoP_set", _wrap_SUPLSTART_t_qoP_set},
-{"ULP_PDUc::SUPLSTART_t_qoP_get", _wrap_SUPLSTART_t_qoP_get},
-{"ULP_PDUc::SUPLSTART_t__asn_ctx_set", _wrap_SUPLSTART_t__asn_ctx_set},
-{"ULP_PDUc::SUPLSTART_t__asn_ctx_get", _wrap_SUPLSTART_t__asn_ctx_get},
-{"ULP_PDUc::new_SUPLSTART_t", _wrap_new_SUPLSTART_t},
-{"ULP_PDUc::delete_SUPLSTART_t", _wrap_delete_SUPLSTART_t},
-{"ULP_PDUc::SUPLRESPONSE_t_posMethod_set", _wrap_SUPLRESPONSE_t_posMethod_set},
-{"ULP_PDUc::SUPLRESPONSE_t_posMethod_get", _wrap_SUPLRESPONSE_t_posMethod_get},
-{"ULP_PDUc::SUPLRESPONSE_t_sLPAddress_set", _wrap_SUPLRESPONSE_t_sLPAddress_set},
-{"ULP_PDUc::SUPLRESPONSE_t_sLPAddress_get", _wrap_SUPLRESPONSE_t_sLPAddress_get},
-{"ULP_PDUc::SUPLRESPONSE_t_sETAuthKey_set", _wrap_SUPLRESPONSE_t_sETAuthKey_set},
-{"ULP_PDUc::SUPLRESPONSE_t_sETAuthKey_get", _wrap_SUPLRESPONSE_t_sETAuthKey_get},
-{"ULP_PDUc::SUPLRESPONSE_t_keyIdentity4_set", _wrap_SUPLRESPONSE_t_keyIdentity4_set},
-{"ULP_PDUc::SUPLRESPONSE_t_keyIdentity4_get", _wrap_SUPLRESPONSE_t_keyIdentity4_get},
-{"ULP_PDUc::SUPLRESPONSE_t__asn_ctx_set", _wrap_SUPLRESPONSE_t__asn_ctx_set},
-{"ULP_PDUc::SUPLRESPONSE_t__asn_ctx_get", _wrap_SUPLRESPONSE_t__asn_ctx_get},
-{"ULP_PDUc::new_SUPLRESPONSE_t", _wrap_new_SUPLRESPONSE_t},
-{"ULP_PDUc::delete_SUPLRESPONSE_t", _wrap_delete_SUPLRESPONSE_t},
-{"ULP_PDUc::SUPLPOSINIT_t_sETCapabilities_set", _wrap_SUPLPOSINIT_t_sETCapabilities_set},
-{"ULP_PDUc::SUPLPOSINIT_t_sETCapabilities_get", _wrap_SUPLPOSINIT_t_sETCapabilities_get},
-{"ULP_PDUc::SUPLPOSINIT_t_requestedAssistData_set", _wrap_SUPLPOSINIT_t_requestedAssistData_set},
-{"ULP_PDUc::SUPLPOSINIT_t_requestedAssistData_get", _wrap_SUPLPOSINIT_t_requestedAssistData_get},
-{"ULP_PDUc::SUPLPOSINIT_t_locationId_set", _wrap_SUPLPOSINIT_t_locationId_set},
-{"ULP_PDUc::SUPLPOSINIT_t_locationId_get", _wrap_SUPLPOSINIT_t_locationId_get},
-{"ULP_PDUc::SUPLPOSINIT_t_position_set", _wrap_SUPLPOSINIT_t_position_set},
-{"ULP_PDUc::SUPLPOSINIT_t_position_get", _wrap_SUPLPOSINIT_t_position_get},
-{"ULP_PDUc::SUPLPOSINIT_t_sUPLPOS_set", _wrap_SUPLPOSINIT_t_sUPLPOS_set},
-{"ULP_PDUc::SUPLPOSINIT_t_sUPLPOS_get", _wrap_SUPLPOSINIT_t_sUPLPOS_get},
-{"ULP_PDUc::SUPLPOSINIT_t_ver_set", _wrap_SUPLPOSINIT_t_ver_set},
-{"ULP_PDUc::SUPLPOSINIT_t_ver_get", _wrap_SUPLPOSINIT_t_ver_get},
-{"ULP_PDUc::SUPLPOSINIT_t__asn_ctx_set", _wrap_SUPLPOSINIT_t__asn_ctx_set},
-{"ULP_PDUc::SUPLPOSINIT_t__asn_ctx_get", _wrap_SUPLPOSINIT_t__asn_ctx_get},
-{"ULP_PDUc::new_SUPLPOSINIT_t", _wrap_new_SUPLPOSINIT_t},
-{"ULP_PDUc::delete_SUPLPOSINIT_t", _wrap_delete_SUPLPOSINIT_t},
-{"ULP_PDUc::SUPLPOS_t_posPayLoad_set", _wrap_SUPLPOS_t_posPayLoad_set},
-{"ULP_PDUc::SUPLPOS_t_posPayLoad_get", _wrap_SUPLPOS_t_posPayLoad_get},
-{"ULP_PDUc::SUPLPOS_t_velocity_set", _wrap_SUPLPOS_t_velocity_set},
-{"ULP_PDUc::SUPLPOS_t_velocity_get", _wrap_SUPLPOS_t_velocity_get},
-{"ULP_PDUc::SUPLPOS_t__asn_ctx_set", _wrap_SUPLPOS_t__asn_ctx_set},
-{"ULP_PDUc::SUPLPOS_t__asn_ctx_get", _wrap_SUPLPOS_t__asn_ctx_get},
-{"ULP_PDUc::new_SUPLPOS_t", _wrap_new_SUPLPOS_t},
-{"ULP_PDUc::delete_SUPLPOS_t", _wrap_delete_SUPLPOS_t},
-{"ULP_PDUc::SUPLEND_t_position_set", _wrap_SUPLEND_t_position_set},
-{"ULP_PDUc::SUPLEND_t_position_get", _wrap_SUPLEND_t_position_get},
-{"ULP_PDUc::SUPLEND_t_statusCode_set", _wrap_SUPLEND_t_statusCode_set},
-{"ULP_PDUc::SUPLEND_t_statusCode_get", _wrap_SUPLEND_t_statusCode_get},
-{"ULP_PDUc::SUPLEND_t_ver_set", _wrap_SUPLEND_t_ver_set},
-{"ULP_PDUc::SUPLEND_t_ver_get", _wrap_SUPLEND_t_ver_get},
-{"ULP_PDUc::SUPLEND_t__asn_ctx_set", _wrap_SUPLEND_t__asn_ctx_set},
-{"ULP_PDUc::SUPLEND_t__asn_ctx_get", _wrap_SUPLEND_t__asn_ctx_get},
-{"ULP_PDUc::new_SUPLEND_t", _wrap_new_SUPLEND_t},
-{"ULP_PDUc::delete_SUPLEND_t", _wrap_delete_SUPLEND_t},
-{"ULP_PDUc::SUPLAUTHREQ_t_sETNonce_set", _wrap_SUPLAUTHREQ_t_sETNonce_set},
-{"ULP_PDUc::SUPLAUTHREQ_t_sETNonce_get", _wrap_SUPLAUTHREQ_t_sETNonce_get},
-{"ULP_PDUc::SUPLAUTHREQ_t_keyIdentity2_set", _wrap_SUPLAUTHREQ_t_keyIdentity2_set},
-{"ULP_PDUc::SUPLAUTHREQ_t_keyIdentity2_get", _wrap_SUPLAUTHREQ_t_keyIdentity2_get},
-{"ULP_PDUc::SUPLAUTHREQ_t__asn_ctx_set", _wrap_SUPLAUTHREQ_t__asn_ctx_set},
-{"ULP_PDUc::SUPLAUTHREQ_t__asn_ctx_get", _wrap_SUPLAUTHREQ_t__asn_ctx_get},
-{"ULP_PDUc::new_SUPLAUTHREQ_t", _wrap_new_SUPLAUTHREQ_t},
-{"ULP_PDUc::delete_SUPLAUTHREQ_t", _wrap_delete_SUPLAUTHREQ_t},
-{"ULP_PDUc::SUPLAUTHRESP_t_sPCAuthKey_set", _wrap_SUPLAUTHRESP_t_sPCAuthKey_set},
-{"ULP_PDUc::SUPLAUTHRESP_t_sPCAuthKey_get", _wrap_SUPLAUTHRESP_t_sPCAuthKey_get},
-{"ULP_PDUc::SUPLAUTHRESP_t_keyIdentity3_set", _wrap_SUPLAUTHRESP_t_keyIdentity3_set},
-{"ULP_PDUc::SUPLAUTHRESP_t_keyIdentity3_get", _wrap_SUPLAUTHRESP_t_keyIdentity3_get},
-{"ULP_PDUc::SUPLAUTHRESP_t_statusCode_set", _wrap_SUPLAUTHRESP_t_statusCode_set},
-{"ULP_PDUc::SUPLAUTHRESP_t_statusCode_get", _wrap_SUPLAUTHRESP_t_statusCode_get},
-{"ULP_PDUc::SUPLAUTHRESP_t__asn_ctx_set", _wrap_SUPLAUTHRESP_t__asn_ctx_set},
-{"ULP_PDUc::SUPLAUTHRESP_t__asn_ctx_get", _wrap_SUPLAUTHRESP_t__asn_ctx_get},
-{"ULP_PDUc::new_SUPLAUTHRESP_t", _wrap_new_SUPLAUTHRESP_t},
-{"ULP_PDUc::delete_SUPLAUTHRESP_t", _wrap_delete_SUPLAUTHRESP_t},
 {"ULP_PDUc::encode_ulp_pdu", _wrap_encode_ulp_pdu},
 {"ULP_PDUc::decode_ulp_pdu", _wrap_decode_ulp_pdu},
 {"ULP_PDUc::ulp_pdu_to_xml", _wrap_ulp_pdu_to_xml},
@@ -10260,82 +7331,15 @@ XS(SWIG_init) {
     SvREADONLY_on(sv);
   }
   
+  SWIG_TypeClientData(SWIGTYPE_p_SUPLAUTHREQ, (void*) "ULP_PDU::SUPLAUTHREQ_t");
+  SWIG_TypeClientData(SWIGTYPE_p_SUPLAUTHRESP, (void*) "ULP_PDU::SUPLAUTHRESP_t");
+  SWIG_TypeClientData(SWIGTYPE_p_SUPLEND, (void*) "ULP_PDU::SUPLEND_t");
+  SWIG_TypeClientData(SWIGTYPE_p_SUPLINIT, (void*) "ULP_PDU::SUPLINIT_t");
+  SWIG_TypeClientData(SWIGTYPE_p_SUPLPOS, (void*) "ULP_PDU::SUPLPOS_t");
+  SWIG_TypeClientData(SWIGTYPE_p_SUPLPOSINIT, (void*) "ULP_PDU::SUPLPOSINIT_t");
+  SWIG_TypeClientData(SWIGTYPE_p_SUPLRESPONSE, (void*) "ULP_PDU::SUPLRESPONSE_t");
+  SWIG_TypeClientData(SWIGTYPE_p_SUPLSTART, (void*) "ULP_PDU::SUPLSTART_t");
   SWIG_TypeClientData(SWIGTYPE_p_ULP_PDU, (void*) "ULP_PDU::ULP_PDU_t");
-  SWIG_TypeClientData(SWIGTYPE_p_Version, (void*) "ULP_PDU::Version_t");
-  /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
-    SV *sv = get_sv((char*) SWIG_prefix "IPAddress_PR_NOTHING", TRUE | 0x2 | GV_ADDMULTI);
-    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(IPAddress_PR_NOTHING)));
-    SvREADONLY_on(sv);
-  } while(0) /*@SWIG@*/;
-  /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
-    SV *sv = get_sv((char*) SWIG_prefix "IPAddress_PR_ipv4Address", TRUE | 0x2 | GV_ADDMULTI);
-    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(IPAddress_PR_ipv4Address)));
-    SvREADONLY_on(sv);
-  } while(0) /*@SWIG@*/;
-  /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
-    SV *sv = get_sv((char*) SWIG_prefix "IPAddress_PR_ipv6Address", TRUE | 0x2 | GV_ADDMULTI);
-    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(IPAddress_PR_ipv6Address)));
-    SvREADONLY_on(sv);
-  } while(0) /*@SWIG@*/;
-  SWIG_TypeClientData(SWIGTYPE_p_IPAddress, (void*) "ULP_PDU::IPAddress_t");
-  SWIG_TypeClientData(SWIGTYPE_p_IPAddress_t_choice, (void*) "ULP_PDU::IPAddress_t_choice");
-  /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
-    SV *sv = get_sv((char*) SWIG_prefix "SETId_PR_NOTHING", TRUE | 0x2 | GV_ADDMULTI);
-    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(SETId_PR_NOTHING)));
-    SvREADONLY_on(sv);
-  } while(0) /*@SWIG@*/;
-  /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
-    SV *sv = get_sv((char*) SWIG_prefix "SETId_PR_msisdn", TRUE | 0x2 | GV_ADDMULTI);
-    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(SETId_PR_msisdn)));
-    SvREADONLY_on(sv);
-  } while(0) /*@SWIG@*/;
-  /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
-    SV *sv = get_sv((char*) SWIG_prefix "SETId_PR_mdn", TRUE | 0x2 | GV_ADDMULTI);
-    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(SETId_PR_mdn)));
-    SvREADONLY_on(sv);
-  } while(0) /*@SWIG@*/;
-  /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
-    SV *sv = get_sv((char*) SWIG_prefix "SETId_PR_min", TRUE | 0x2 | GV_ADDMULTI);
-    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(SETId_PR_min)));
-    SvREADONLY_on(sv);
-  } while(0) /*@SWIG@*/;
-  /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
-    SV *sv = get_sv((char*) SWIG_prefix "SETId_PR_imsi", TRUE | 0x2 | GV_ADDMULTI);
-    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(SETId_PR_imsi)));
-    SvREADONLY_on(sv);
-  } while(0) /*@SWIG@*/;
-  /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
-    SV *sv = get_sv((char*) SWIG_prefix "SETId_PR_nai", TRUE | 0x2 | GV_ADDMULTI);
-    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(SETId_PR_nai)));
-    SvREADONLY_on(sv);
-  } while(0) /*@SWIG@*/;
-  /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
-    SV *sv = get_sv((char*) SWIG_prefix "SETId_PR_iPAddress", TRUE | 0x2 | GV_ADDMULTI);
-    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(SETId_PR_iPAddress)));
-    SvREADONLY_on(sv);
-  } while(0) /*@SWIG@*/;
-  SWIG_TypeClientData(SWIGTYPE_p_SETId, (void*) "ULP_PDU::SETId_t");
-  SWIG_TypeClientData(SWIGTYPE_p_SETId_t_choice, (void*) "ULP_PDU::SETId_t_choice");
-  SWIG_TypeClientData(SWIGTYPE_p_SetSessionID, (void*) "ULP_PDU::SetSessionID_t");
-  /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
-    SV *sv = get_sv((char*) SWIG_prefix "SLPAddress_PR_NOTHING", TRUE | 0x2 | GV_ADDMULTI);
-    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(SLPAddress_PR_NOTHING)));
-    SvREADONLY_on(sv);
-  } while(0) /*@SWIG@*/;
-  /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
-    SV *sv = get_sv((char*) SWIG_prefix "SLPAddress_PR_iPAddress", TRUE | 0x2 | GV_ADDMULTI);
-    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(SLPAddress_PR_iPAddress)));
-    SvREADONLY_on(sv);
-  } while(0) /*@SWIG@*/;
-  /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
-    SV *sv = get_sv((char*) SWIG_prefix "SLPAddress_PR_fQDN", TRUE | 0x2 | GV_ADDMULTI);
-    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(SLPAddress_PR_fQDN)));
-    SvREADONLY_on(sv);
-  } while(0) /*@SWIG@*/;
-  SWIG_TypeClientData(SWIGTYPE_p_SLPAddress, (void*) "ULP_PDU::SLPAddress_t");
-  SWIG_TypeClientData(SWIGTYPE_p_SLPAddress_t_choice, (void*) "ULP_PDU::SLPAddress_t_choice");
-  SWIG_TypeClientData(SWIGTYPE_p_SlpSessionID, (void*) "ULP_PDU::SlpSessionID_t");
-  SWIG_TypeClientData(SWIGTYPE_p_SessionID, (void*) "ULP_PDU::SessionID_t");
   /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
     SV *sv = get_sv((char*) SWIG_prefix "UlpMessage_PR_NOTHING", TRUE | 0x2 | GV_ADDMULTI);
     sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(UlpMessage_PR_NOTHING)));
@@ -10383,76 +7387,6 @@ XS(SWIG_init) {
   } while(0) /*@SWIG@*/;
   SWIG_TypeClientData(SWIGTYPE_p_UlpMessage, (void*) "ULP_PDU::UlpMessage_t");
   SWIG_TypeClientData(SWIGTYPE_p_UlpMessage_t_choice, (void*) "ULP_PDU::UlpMessage_t_choice");
-  /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
-    SV *sv = get_sv((char*) SWIG_prefix "PosMethod_agpsSETassisted", TRUE | 0x2 | GV_ADDMULTI);
-    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(PosMethod_agpsSETassisted)));
-    SvREADONLY_on(sv);
-  } while(0) /*@SWIG@*/;
-  /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
-    SV *sv = get_sv((char*) SWIG_prefix "PosMethod_agpsSETbased", TRUE | 0x2 | GV_ADDMULTI);
-    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(PosMethod_agpsSETbased)));
-    SvREADONLY_on(sv);
-  } while(0) /*@SWIG@*/;
-  /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
-    SV *sv = get_sv((char*) SWIG_prefix "PosMethod_agpsSETassistedpref", TRUE | 0x2 | GV_ADDMULTI);
-    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(PosMethod_agpsSETassistedpref)));
-    SvREADONLY_on(sv);
-  } while(0) /*@SWIG@*/;
-  /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
-    SV *sv = get_sv((char*) SWIG_prefix "PosMethod_agpsSETbasedpref", TRUE | 0x2 | GV_ADDMULTI);
-    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(PosMethod_agpsSETbasedpref)));
-    SvREADONLY_on(sv);
-  } while(0) /*@SWIG@*/;
-  /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
-    SV *sv = get_sv((char*) SWIG_prefix "PosMethod_autonomousGPS", TRUE | 0x2 | GV_ADDMULTI);
-    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(PosMethod_autonomousGPS)));
-    SvREADONLY_on(sv);
-  } while(0) /*@SWIG@*/;
-  /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
-    SV *sv = get_sv((char*) SWIG_prefix "PosMethod_aFLT", TRUE | 0x2 | GV_ADDMULTI);
-    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(PosMethod_aFLT)));
-    SvREADONLY_on(sv);
-  } while(0) /*@SWIG@*/;
-  /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
-    SV *sv = get_sv((char*) SWIG_prefix "PosMethod_eCID", TRUE | 0x2 | GV_ADDMULTI);
-    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(PosMethod_eCID)));
-    SvREADONLY_on(sv);
-  } while(0) /*@SWIG@*/;
-  /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
-    SV *sv = get_sv((char*) SWIG_prefix "PosMethod_eOTD", TRUE | 0x2 | GV_ADDMULTI);
-    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(PosMethod_eOTD)));
-    SvREADONLY_on(sv);
-  } while(0) /*@SWIG@*/;
-  /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
-    SV *sv = get_sv((char*) SWIG_prefix "PosMethod_oTDOA", TRUE | 0x2 | GV_ADDMULTI);
-    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(PosMethod_oTDOA)));
-    SvREADONLY_on(sv);
-  } while(0) /*@SWIG@*/;
-  /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
-    SV *sv = get_sv((char*) SWIG_prefix "PosMethod_noPosition", TRUE | 0x2 | GV_ADDMULTI);
-    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(PosMethod_noPosition)));
-    SvREADONLY_on(sv);
-  } while(0) /*@SWIG@*/;
-  SWIG_TypeClientData(SWIGTYPE_p_Notification, (void*) "ULP_PDU::Notification_t");
-  SWIG_TypeClientData(SWIGTYPE_p_QoP, (void*) "ULP_PDU::QoP_t");
-  /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
-    SV *sv = get_sv((char*) SWIG_prefix "SLPMode_proxy", TRUE | 0x2 | GV_ADDMULTI);
-    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(SLPMode_proxy)));
-    SvREADONLY_on(sv);
-  } while(0) /*@SWIG@*/;
-  /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
-    SV *sv = get_sv((char*) SWIG_prefix "SLPMode_nonProxy", TRUE | 0x2 | GV_ADDMULTI);
-    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(SLPMode_nonProxy)));
-    SvREADONLY_on(sv);
-  } while(0) /*@SWIG@*/;
-  SWIG_TypeClientData(SWIGTYPE_p_SUPLINIT, (void*) "ULP_PDU::SUPLINIT_t");
-  SWIG_TypeClientData(SWIGTYPE_p_SUPLSTART, (void*) "ULP_PDU::SUPLSTART_t");
-  SWIG_TypeClientData(SWIGTYPE_p_SUPLRESPONSE, (void*) "ULP_PDU::SUPLRESPONSE_t");
-  SWIG_TypeClientData(SWIGTYPE_p_SUPLPOSINIT, (void*) "ULP_PDU::SUPLPOSINIT_t");
-  SWIG_TypeClientData(SWIGTYPE_p_SUPLPOS, (void*) "ULP_PDU::SUPLPOS_t");
-  SWIG_TypeClientData(SWIGTYPE_p_SUPLEND, (void*) "ULP_PDU::SUPLEND_t");
-  SWIG_TypeClientData(SWIGTYPE_p_SUPLAUTHREQ, (void*) "ULP_PDU::SUPLAUTHREQ_t");
-  SWIG_TypeClientData(SWIGTYPE_p_SUPLAUTHRESP, (void*) "ULP_PDU::SUPLAUTHRESP_t");
   ST(0) = &PL_sv_yes;
   XSRETURN(1);
 }

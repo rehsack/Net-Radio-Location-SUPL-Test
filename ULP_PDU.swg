@@ -7,323 +7,16 @@
 #include "asn1/ULP-PDU.h"
 %}
 
-typedef struct ULP_PDU {
-	long	 length;
-	Version_t	 version;
-	SessionID_t	 sessionID;
-	UlpMessage_t	 message;
-	
-	/* Context for parsing across buffer boundaries */
-	asn_struct_ctx_t _asn_ctx;
-} ULP_PDU_t;
-
-typedef struct Version {
-	long	 maj;
-	long	 min;
-	long	 servind;
-	
-	/* Context for parsing across buffer boundaries */
-	asn_struct_ctx_t _asn_ctx;
-} Version_t;
-
-typedef enum IPAddress_PR {
-	IPAddress_PR_NOTHING,	/* No components present */
-	IPAddress_PR_ipv4Address,
-	IPAddress_PR_ipv6Address
-} IPAddress_PR;
-
-typedef struct IPAddress {
-	IPAddress_PR present;
-	union IPAddress_u {
-		OCTET_STRING_t	 ipv4Address;
-		OCTET_STRING_t	 ipv6Address;
-	} choice;
-	
-	/* Context for parsing across buffer boundaries */
-	asn_struct_ctx_t _asn_ctx;
-} IPAddress_t;
-
-typedef enum SETId_PR {
-	SETId_PR_NOTHING,	/* No components present */
-	SETId_PR_msisdn,
-	SETId_PR_mdn,
-	SETId_PR_min,
-	SETId_PR_imsi,
-	SETId_PR_nai,
-	SETId_PR_iPAddress,
-	/* Extensions may appear below */
-	
-} SETId_PR;
-
-typedef struct SETId {
-	SETId_PR present;
-	union SETId_u {
-		OCTET_STRING_t	 msisdn;
-		OCTET_STRING_t	 mdn;
-		BIT_STRING_t	 min;
-		OCTET_STRING_t	 imsi;
-		IA5String_t	 nai;
-		IPAddress_t	 iPAddress;
-		/*
-		 * This type is extensible,
-		 * possible extensions are below.
-		 */
-	} choice;
-	
-	/* Context for parsing across buffer boundaries */
-	asn_struct_ctx_t _asn_ctx;
-} SETId_t;
-
-typedef struct SetSessionID {
-	long	 sessionId;
-	SETId_t	 setId;
-	
-	/* Context for parsing across buffer boundaries */
-	asn_struct_ctx_t _asn_ctx;
-} SetSessionID_t;
-
-typedef enum SLPAddress_PR {
-	SLPAddress_PR_NOTHING,	/* No components present */
-	SLPAddress_PR_iPAddress,
-	SLPAddress_PR_fQDN,
-	/* Extensions may appear below */
-	
-} SLPAddress_PR;
-
-typedef struct SLPAddress {
-	SLPAddress_PR present;
-	union SLPAddress_u {
-		IPAddress_t	 iPAddress;
-		FQDN_t	 fQDN;
-		/*
-		 * This type is extensible,
-		 * possible extensions are below.
-		 */
-	} choice;
-	
-	/* Context for parsing across buffer boundaries */
-	asn_struct_ctx_t _asn_ctx;
-} SLPAddress_t;
-
-typedef struct SlpSessionID {
-	OCTET_STRING_t	 sessionID;
-	SLPAddress_t	 slpId;
-	
-	/* Context for parsing across buffer boundaries */
-	asn_struct_ctx_t _asn_ctx;
-} SlpSessionID_t;
-
-typedef struct SessionID {
-	struct SetSessionID	*setSessionID	/* OPTIONAL */;
-	struct SlpSessionID	*slpSessionID	/* OPTIONAL */;
-	
-	/* Context for parsing across buffer boundaries */
-	asn_struct_ctx_t _asn_ctx;
-} SessionID_t;
-
-typedef enum UlpMessage_PR {
-	UlpMessage_PR_NOTHING,	/* No components present */
-	UlpMessage_PR_msSUPLINIT,
-	UlpMessage_PR_msSUPLSTART,
-	UlpMessage_PR_msSUPLRESPONSE,
-	UlpMessage_PR_msSUPLPOSINIT,
-	UlpMessage_PR_msSUPLPOS,
-	UlpMessage_PR_msSUPLEND,
-	UlpMessage_PR_msSUPLAUTHREQ,
-	UlpMessage_PR_msSUPLAUTHRESP,
-	/* Extensions may appear below */
-	
-} UlpMessage_PR;
-
-typedef struct UlpMessage {
-	UlpMessage_PR present;
-	union UlpMessage_u {
-		SUPLINIT_t	 msSUPLINIT;
-		SUPLSTART_t	 msSUPLSTART;
-		SUPLRESPONSE_t	 msSUPLRESPONSE;
-		SUPLPOSINIT_t	 msSUPLPOSINIT;
-		SUPLPOS_t	 msSUPLPOS;
-		SUPLEND_t	 msSUPLEND;
-		SUPLAUTHREQ_t	 msSUPLAUTHREQ;
-		SUPLAUTHRESP_t	 msSUPLAUTHRESP;
-		/*
-		 * This type is extensible,
-		 * possible extensions are below.
-		 */
-	} choice;
-	
-	/* Context for parsing across buffer boundaries */
-	asn_struct_ctx_t _asn_ctx;
-} UlpMessage_t;
-
-typedef enum PosMethod {
-	PosMethod_agpsSETassisted	= 0,
-	PosMethod_agpsSETbased	= 1,
-	PosMethod_agpsSETassistedpref	= 2,
-	PosMethod_agpsSETbasedpref	= 3,
-	PosMethod_autonomousGPS	= 4,
-	PosMethod_aFLT	= 5,
-	PosMethod_eCID	= 6,
-	PosMethod_eOTD	= 7,
-	PosMethod_oTDOA	= 8,
-	PosMethod_noPosition	= 9
-	/*
-	 * Enumeration is extensible
-	 */
-} e_PosMethod;
-
-typedef long	 PosMethod_t;
-
-typedef struct Notification {
-	NotificationType_t	 notificationType;
-	EncodingType_t	*encodingType	/* OPTIONAL */;
-	OCTET_STRING_t	*requestorId	/* OPTIONAL */;
-	FormatIndicator_t	*requestorIdType	/* OPTIONAL */;
-	OCTET_STRING_t	*clientName	/* OPTIONAL */;
-	FormatIndicator_t	*clientNameType	/* OPTIONAL */;
-	/*
-	 * This type is extensible,
-	 * possible extensions are below.
-	 */
-	
-	/* Context for parsing across buffer boundaries */
-	asn_struct_ctx_t _asn_ctx;
-} Notification_t;
-
-typedef struct QoP {
-	long	 horacc;
-	long	*veracc	/* OPTIONAL */;
-	long	*maxLocAge	/* OPTIONAL */;
-	long	*delay	/* OPTIONAL */;
-	/*
-	 * This type is extensible,
-	 * possible extensions are below.
-	 */
-	
-	/* Context for parsing across buffer boundaries */
-	asn_struct_ctx_t _asn_ctx;
-} QoP_t;
-
-typedef enum SLPMode {
-	SLPMode_proxy	= 0,
-	SLPMode_nonProxy	= 1
-} e_SLPMode;
-
-typedef long	 SLPMode_t;
-
-typedef BIT_STRING_t	 MAC_t;
-
-typedef BIT_STRING_t	 KeyIdentity_t;
-
-typedef struct SUPLINIT {
-	PosMethod_t	 posMethod;
-	struct Notification	*notification	/* OPTIONAL */;
-	struct SLPAddress	*sLPAddress	/* OPTIONAL */;
-	struct QoP	*qoP	/* OPTIONAL */;
-	SLPMode_t	 sLPMode;
-	MAC_t	*mAC	/* OPTIONAL */;
-	KeyIdentity_t	*keyIdentity	/* OPTIONAL */;
-	/*
-	 * This type is extensible,
-	 * possible extensions are below.
-	 */
-	
-	/* Context for parsing across buffer boundaries */
-	asn_struct_ctx_t _asn_ctx;
-} SUPLINIT_t;
-
-typedef struct SUPLSTART {
-	SETCapabilities_t	 sETCapabilities;
-	LocationId_t	 locationId;
-	struct QoP	*qoP	/* OPTIONAL */;
-	/*
-	 * This type is extensible,
-	 * possible extensions are below.
-	 */
-	
-	/* Context for parsing across buffer boundaries */
-	asn_struct_ctx_t _asn_ctx;
-} SUPLSTART_t;
-
-typedef struct SUPLRESPONSE {
-	PosMethod_t	 posMethod;
-	struct SLPAddress	*sLPAddress	/* OPTIONAL */;
-	struct SETAuthKey	*sETAuthKey	/* OPTIONAL */;
-	KeyIdentity4_t	*keyIdentity4	/* OPTIONAL */;
-	/*
-	 * This type is extensible,
-	 * possible extensions are below.
-	 */
-	
-	/* Context for parsing across buffer boundaries */
-	asn_struct_ctx_t _asn_ctx;
-} SUPLRESPONSE_t;
-
-typedef struct SUPLPOSINIT {
-	SETCapabilities_t	 sETCapabilities;
-	struct RequestedAssistData	*requestedAssistData	/* OPTIONAL */;
-	LocationId_t	 locationId;
-	struct Position	*position	/* OPTIONAL */;
-	struct SUPLPOS	*sUPLPOS	/* OPTIONAL */;
-	Ver_t	*ver	/* OPTIONAL */;
-	/*
-	 * This type is extensible,
-	 * possible extensions are below.
-	 */
-	
-	/* Context for parsing across buffer boundaries */
-	asn_struct_ctx_t _asn_ctx;
-} SUPLPOSINIT_t;
-
-typedef struct SUPLPOS {
-	PosPayLoad_t	 posPayLoad;
-	struct Velocity	*velocity	/* OPTIONAL */;
-	/*
-	 * This type is extensible,
-	 * possible extensions are below.
-	 */
-	
-	/* Context for parsing across buffer boundaries */
-	asn_struct_ctx_t _asn_ctx;
-} SUPLPOS_t;
-
-typedef struct SUPLEND {
-	struct Position	*position	/* OPTIONAL */;
-	StatusCode_t	*statusCode	/* OPTIONAL */;
-	Ver_t	*ver	/* OPTIONAL */;
-	/*
-	 * This type is extensible,
-	 * possible extensions are below.
-	 */
-	
-	/* Context for parsing across buffer boundaries */
-	asn_struct_ctx_t _asn_ctx;
-} SUPLEND_t;
-
-typedef struct SUPLAUTHREQ {
-	SETNonce_t	 sETNonce;
-	KeyIdentity2_t	 keyIdentity2;
-	/*
-	 * This type is extensible,
-	 * possible extensions are below.
-	 */
-	
-	/* Context for parsing across buffer boundaries */
-	asn_struct_ctx_t _asn_ctx;
-} SUPLAUTHREQ_t;
-
-typedef struct SUPLAUTHRESP {
-	struct SPCAuthKey	*sPCAuthKey	/* OPTIONAL */;
-	KeyIdentity3_t	*keyIdentity3	/* OPTIONAL */;
-	StatusCode_t	*statusCode	/* OPTIONAL */;
-	/*
-	 * This type is extensible,
-	 * possible extensions are below.
-	 */
-	
-	/* Context for parsing across buffer boundaries */
-	asn_struct_ctx_t _asn_ctx;
-} SUPLAUTHRESP_t;
+%include "asn1/SUPLAUTHREQ.h"
+%include "asn1/SUPLAUTHRESP.h"
+%include "asn1/SUPLEND.h"
+%include "asn1/SUPLINIT.h"
+%include "asn1/SUPLPOS.h"
+%include "asn1/SUPLPOSINIT.h"
+%include "asn1/SUPLRESPONSE.h"
+%include "asn1/SUPLSTART.h"
+%include "asn1/ULP-PDU.h"
+%include "asn1/UlpMessage.h"
 
 %{
 typedef struct _MsgBuffer
@@ -492,6 +185,119 @@ ulp_pdu_to_xml(MsgBuffer buf)
 	return retbuf;
 }
 %}
+
+%extend ULP_PDU {
+    ULP_PDU()
+    {
+	ULP_PDU_t *newobj;
+	newobj = calloc( 1, sizeof(*newobj) );
+	/* XXX croak on NULL */
+	newobj->version.maj = 1;
+	newobj->version.min = 0;
+	newobj->version.servind = 0;
+	return newobj;
+    }
+
+    ~ULP_PDU() {
+	asn_DEF_ULP_PDU.free_struct(&asn_DEF_ULP_PDU, $self, 0);
+    }
+
+    void set_version(int maj, int min, int servind) {
+	if( maj == 1 && min == 0 && servind == 0 ) {
+	    self->version.maj = maj;
+	    self->version.min = min;
+	    self->version.servind = servind;
+	}
+	else {
+	    croak( "Unsupported SUPL version" );
+	}
+    }
+
+    void setSetSessionId_to_imsi(int sessionId, char *imsi) {
+	if( NULL != $self->sessionID.setSessionID ) {
+	    asn_DEF_ULP_PDU.free_struct(&asn_DEF_SetSessionID, $self->sessionID.setSessionID, 0);
+	    $self->sessionID.setSessionID = NULL;
+	}
+	$self->sessionID.setSessionID = calloc(1, sizeof(*($self->sessionID.setSessionID)));
+	$self->sessionID.setSessionID->setId.present = SETId_PR_imsi;
+	BCD_OCTET_STRING_fromString(&$self->sessionID.setSessionID->setId.choice.imsi, imsi);
+    }
+
+    void setSetSessionId_to_msisdn(int sessionId, char *msisdn) {
+	if( NULL != $self->sessionID.setSessionID ) {
+	    asn_DEF_ULP_PDU.free_struct(&asn_DEF_SetSessionID, $self->sessionID.setSessionID, 0);
+	    $self->sessionID.setSessionID = NULL;
+	}
+	$self->sessionID.setSessionID = calloc(1, sizeof(*($self->sessionID.setSessionID)));
+	$self->sessionID.setSessionID->setId.present = SETId_PR_msisdn;
+	BCD_OCTET_STRING_fromString(&$self->sessionID.setSessionID->setId.choice.msisdn, msisdn);
+    }
+
+    void copy_SlpSessionId(ULP_PDU_t *src_pdu) {
+	struct SlpSessionID *src, *dst;
+	OCTET_STRING_t *srcaddr;
+	OCTET_STRING_t *dstaddr;
+
+	src = src_pdu->sessionID.slpSessionID;
+
+	if( NULL == src )
+	    return; /* nothing to do */
+
+	if( NULL != $self->sessionID.slpSessionID ) {
+	    asn_DEF_ULP_PDU.free_struct(&asn_DEF_SlpSessionID, $self->sessionID.slpSessionID, 0);
+	    $self->sessionID.slpSessionID = NULL;
+	}
+
+	$self->sessionID.slpSessionID = calloc(1, sizeof(*($self->sessionID.slpSessionID)));
+	dst = $self->sessionID.slpSessionID;
+
+	OCTET_STRING_fromBuf(&dst->sessionID, src->sessionID.buf, src->sessionID.size);
+	switch (src->slpId.present)
+	{
+	case SLPAddress_PR_iPAddress:
+	    dst->slpId.present = SLPAddress_PR_iPAddress;
+	    switch (src->slpId.choice.iPAddress.present)
+	    {
+	    case IPAddress_PR_ipv4Address:
+		dst->slpId.choice.iPAddress.present = IPAddress_PR_ipv4Address;
+		srcaddr = &src->slpId.choice.iPAddress.choice.ipv4Address;
+		dstaddr = &dst->slpId.choice.iPAddress.choice.ipv4Address;
+
+		break;
+
+	    case IPAddress_PR_ipv6Address:
+		dst->slpId.choice.iPAddress.present = IPAddress_PR_ipv6Address;
+		srcaddr = &src->slpId.choice.iPAddress.choice.ipv6Address;
+		dstaddr = &dst->slpId.choice.iPAddress.choice.ipv6Address;
+
+		break;
+
+	    default:
+		dst->slpId.choice.iPAddress.present = IPAddress_PR_NOTHING;
+		croak("Invalid: source has slpSessionId but neither IP-Address nor FQDN content");
+
+		break;
+	    }
+
+	    break;
+
+	case SLPAddress_PR_fQDN:
+	    dst->slpId.present = SLPAddress_PR_fQDN;
+	    srcaddr = &src->slpId.choice.fQDN;
+	    dstaddr = &dst->slpId.choice.fQDN;
+
+	    break;
+
+	default:
+	    /* error */
+	    dst->slpId.present = SLPAddress_PR_NOTHING;
+	    croak("Invalid: source has slpSessionId but neither IP-Address nor FQDN content");
+
+	    break;
+	}
+	OCTET_STRING_fromBuf(dstaddr, srcaddr->buf, srcaddr->size);
+    }
+};
 
 %typemap(in) MsgBuffer {
     // $1 = AV2MsgBuf($input);
