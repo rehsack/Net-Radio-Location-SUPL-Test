@@ -39,9 +39,77 @@
       }
    },
    "provides" : {
+      "SUPL::DBusObject" : {
+         "file" : "lib/SUPL/DBusObject.pm",
+         "version" : "0.001"
+      },
+      "SUPL::DBusObject::RecvPushMsg" : {
+         "file" : "lib/SUPL/DBusObject/RecvPushMsg.pm",
+         "version" : "0.001"
+      },
+      "SUPL::DBusObject::Translator" : {
+         "file" : "lib/SUPL/DBusObject/Translator.pm",
+         "version" : "0.001"
+      },
+      "SUPL::MainLoop" : {
+         "file" : "lib/SUPL/MainLoop.pm",
+         "version" : "0.001"
+      },
       "SUPL::Test" : {
          "file" : "lib/SUPL/Test.pm",
          "version" : "0.001"
+      },
+      "SUPL::XS" : {
+         "file" : "lib/SUPL/XS.pm",
+         "version" : 0
+      },
+      "SUPL::XS::SUPLAUTHREQ_t" : {
+         "file" : "lib/SUPL/XS.pm",
+         "version" : 0
+      },
+      "SUPL::XS::SUPLAUTHRESP_t" : {
+         "file" : "lib/SUPL/XS.pm",
+         "version" : 0
+      },
+      "SUPL::XS::SUPLEND_t" : {
+         "file" : "lib/SUPL/XS.pm",
+         "version" : 0
+      },
+      "SUPL::XS::SUPLINIT_t" : {
+         "file" : "lib/SUPL/XS.pm",
+         "version" : 0
+      },
+      "SUPL::XS::SUPLPOSINIT_t" : {
+         "file" : "lib/SUPL/XS.pm",
+         "version" : 0
+      },
+      "SUPL::XS::SUPLPOS_t" : {
+         "file" : "lib/SUPL/XS.pm",
+         "version" : 0
+      },
+      "SUPL::XS::SUPLRESPONSE_t" : {
+         "file" : "lib/SUPL/XS.pm",
+         "version" : 0
+      },
+      "SUPL::XS::SUPLSTART_t" : {
+         "file" : "lib/SUPL/XS.pm",
+         "version" : 0
+      },
+      "SUPL::XS::ULP_PDU_t" : {
+         "file" : "lib/SUPL/XS.pm",
+         "version" : 0
+      },
+      "SUPL::XS::UlpMessage_t" : {
+         "file" : "lib/SUPL/XS.pm",
+         "version" : 0
+      },
+      "SUPL::XS::UlpMessage_t_choice" : {
+         "file" : "lib/SUPL/XS.pm",
+         "version" : 0
+      },
+      "SUPL::XSc" : {
+         "file" : "lib/SUPL/XS.pm",
+         "version" : 0
       }
    },
    "release_status" : "stable",
