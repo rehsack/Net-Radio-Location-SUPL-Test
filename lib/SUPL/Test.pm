@@ -7,7 +7,7 @@ use 5.010;
 
 use Carp qw/croak/;
 
-use ULP_PDU;
+use SUPL::XS;
 
 use Digest::SHA;
 use SUPL::MainLoop;
@@ -56,12 +56,12 @@ sub handle_supl_pdu
 
     _STRING($enc_pdu) or croak "Invalid argument for \$enc_pdu";
 
-    my $supl_pdu = ULP_PDU::decode_ulp_pdu($enc_pdu);
+    my $supl_pdu = SUPL::XS::decode_ulp_pdu($enc_pdu);
 
     # decode_ulp_pdu croaks on error ...
     given($supl_pdu->{message}->{present})
     {
-	when($ULP_PDU::UlpMessage_PR_msSUPLINIT)
+	when(SUPL::XS::UlpMessage_PR_msSUPLINIT)
 	{
 	    # ...
 	}

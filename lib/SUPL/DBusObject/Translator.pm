@@ -7,7 +7,7 @@ use 5.014;
 
 our $VERSION = 0.001;
 
-use ULP_PDU;
+use SUPL::XS;
 
 use base qw(SUPL::DBusObject);
 use Net::DBus::Exporter qw(org.ofono.supl.Translator);
@@ -28,7 +28,7 @@ dbus_method("SuplPduStringToXmlString", ["string"], ["string"]);
 sub SuplPduStringToXmlString
 {
     my ($self, $enc_pdu) = @_;
-    my $supl_xml = ULP_PDU::ulp_pdu_to_xml($enc_pdu);
+    my $supl_xml = SUPL::XS::ulp_pdu_to_xml($enc_pdu);
     return $supl_xml;
 }
 

@@ -1095,6 +1095,7 @@ use ExtUtils::Mkbootstrap;
 sub ACTION_code {
     my $self = shift;
 
+    # $self->dispatch("compile_asn1src");
     $self->dispatch("create_objects");
     # $self->dispatch("compile_swig");
     $self->dispatch("compile_xscode");
@@ -1106,20 +1107,21 @@ sub ACTION_compile_swig {
     #my $self = shift;
 
     #my $swig_exe = IPC::Cmd->can_run( "swig" );
-    #$self->execute_command( $swig_exe, "-Iasn1", "-perl", "ULP_PDU.swg" );
+    #$self->execute_command( $swig_exe, "-Iasn1", "-perl", "SUPL_X.swg" );
     #...
+    # rename XS.pm => lib/SUPL/XS.pm
 }
 
 sub ACTION_compile_xscode {
     my $self = shift;
     my $cbuilder = $self->cbuilder;
 
-    my $archdir = catdir( $self->blib, 'arch', 'auto', 'ULP_PDU');
+    my $archdir = catdir( $self->blib, 'arch', 'auto', 'SUPL', 'XS');
     mkpath( $archdir, 0, 0777 ) unless -d $archdir;
 
     print STDERR "\n** Preparing XS code\n";
-    my $cfile = catfile("ULP_PDU_wrap.c");
-    my $ofile = catfile("ULP_PDU_wrap.o");
+    my $cfile = catfile("SUPL_XS_wrap.c");
+    my $ofile = catfile("SUPL_XS_wrap.o");
 
     $self->add_to_cleanup($ofile); ## FIXME
 
@@ -1134,7 +1136,7 @@ sub ACTION_compile_xscode {
     }
 
     # Create .bs bootstrap file, needed by Dynaloader.
-    my $bs_file = catfile( $archdir, "ULP_UDP.bs" );
+    my $bs_file = catfile( $archdir, "XS.bs" );
     if ( !$self->up_to_date( $ofile, $bs_file ) ) {
         ExtUtils::Mkbootstrap::Mkbootstrap($bs_file);
         if ( !-f $bs_file ) {
@@ -1148,10 +1150,10 @@ sub ACTION_compile_xscode {
 
     my $objects = [ $ofile, @$o_files ];
     # .o => .(a|bundle)
-    my $lib_file = catfile( $archdir, "ULP_PDU.$Config{dlext}" );
+    my $lib_file = catfile( $archdir, "XS.$Config{dlext}" );
     if ( !$self->up_to_date( [ @$objects ], $lib_file ) ) {
         $cbuilder->link(
-                        module_name => 'ULP_PDU',
+                        module_name => 'XS',
                         # extra_linker_flags => $extra_linker_flags,
                         objects     => $objects,
 			lib_file    => $lib_file,
