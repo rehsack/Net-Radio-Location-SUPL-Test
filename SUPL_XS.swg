@@ -2,6 +2,66 @@
 
 %include "carrays.i"
 
+// mapping has to be done before 1st struct/class defined which uses it ...
+
+%typemap(in) SatelliteInfo_t * {
+    AV *tempav;
+    I32 len;
+    int i;
+    SV  **tv;
+
+    /* verify input type */
+    if(!SvROK($input))
+	croak("Argument $argnum is not a reference.");
+    if(SvTYPE(SvRV($input)) != SVt_PVAV)
+	croak("Argument $argnum is not an array.");
+
+    $1 = calloc(1, sizeof(*$1));
+
+    tempav = (AV *)SvRV($input);
+    $1->list.count = $1->list.size = av_len(tempav);
+    /* $1->list.free = asn_DEF_SatelliteInfoElement. ??? */
+    $1->list.array = calloc($1->list.size, sizeof(*$1->list.array));
+
+    for (i = 0; i <= $1->list.size; ++i) {
+	AV *inner_av;
+	SV **inner_iv;
+
+	tv = av_fetch(tempav, i, 0);	
+	if(NULL == tv) {
+	    asn_DEF_SatelliteInfo.free_struct(&asn_DEF_SatelliteInfo, $1, 0);
+	    croak( "Couldn't fetch element at position %d", i );
+	}
+
+	if(SvTYPE(SvRV(*tv)) != SVt_PVAV) {
+	    asn_DEF_SatelliteInfo.free_struct(&asn_DEF_SatelliteInfo, $1, 0);
+	    croak("Element at position %d is not an array", i);
+	}
+
+	$1->list.array[i] = calloc(1, sizeof(*$1->list.array[i]));
+	if(NULL == $1->list.array[i]) {
+	    asn_DEF_SatelliteInfo.free_struct(&asn_DEF_SatelliteInfo, $1, 0);
+	    croak("Couldn't allocate memory to transform element at %d position into SatelliteInfoElement", i);
+	}
+
+	inner_av = (AV *)SvRV(*tv);
+
+	inner_iv = av_fetch(inner_av, 0, 0);
+	if(NULL == inner_iv) {
+	    asn_DEF_SatelliteInfo.free_struct(&asn_DEF_SatelliteInfo, $1, 0);
+	    croak( "Couldn't fetch satId from element at position %d", i );
+	}
+	$1->list.array[i]->satId = SvIV(*inner_iv);
+
+	inner_iv = av_fetch(inner_av, 1, 0);
+	if(NULL == inner_iv) {
+	    asn_DEF_SatelliteInfo.free_struct(&asn_DEF_SatelliteInfo, $1, 0);
+	    croak( "Couldn't fetch iODE from element at position %d", i );
+	}
+	$1->list.array[i]->iODE = SvIV(*inner_iv);
+    }
+}
+
 %{
 /* SUPL PDU */
 #include "asn1/ULP-PDU.h"
@@ -17,6 +77,12 @@
 %include "asn1/SUPLSTART.h"
 %include "asn1/ULP-PDU.h"
 %include "asn1/UlpMessage.h"
+
+enum PrefMethod {
+	PrefMethod_agpsSETassistedPreferred = 0,
+	PrefMethod_agpsSETBasedPreferred = 1,
+	PrefMethod_noPreference = 2
+};
 
 %{
 typedef struct _MsgBuffer
@@ -186,12 +252,40 @@ ulp_pdu_to_xml(MsgBuffer buf)
 }
 %}
 
+%typemap(in) MsgBuffer {
+    // $1 = AV2MsgBuf($input);
+    // MsgBuffer retval = { NULL, -1 };
+    if($input == NULL) {
+	SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "$symname" "', argument " "$1_name" " of type '" "MsgBuffer""'");
+    }
+    if( SvFLAGS($input) & (SVf_OK & ~SVf_ROK) ) {
+	$1.buf = SvPV($input, $1.size);
+    }
+    else {
+	SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "$symname" "', argument " "$1_name" " of type '" "MsgBuffer""'");
+    }
+}
+
+%typemap(newfree) MsgBuffer "do { if( $1.buf ) free($1.buf); } while(0);"
+%typemap(newfree) MsgBuffer * "do { if( $1 ) { if( $1->buf ) { free( $1->buf ); } free( $1 ); } } while(0);"
+
+%typemap(newfree) ULP_PDU_t * "asn_DEF_ULP_PDU.free_struct(&asn_DEF_ULP_PDU, $1, 0);"
+
+%typemap(out) MsgBuffer {
+    if (argvi >= items) {            
+	EXTEND(sp,1); /* Extend the stack by 1 object */
+    }
+    $result = sv_2mortal(newSVpv($1.buf, $1.size));
+    ++argvi; /* intentional - not portable between languages */
+}
+
 %extend ULP_PDU {
-    ULP_PDU()
-    {
+    ULP_PDU() {
 	ULP_PDU_t *newobj;
 	newobj = calloc( 1, sizeof(*newobj) );
-	/* XXX croak on NULL */
+	if( NULL == newobj )
+	    croak( "Can't allocate memory for new ULP_PDU object" );
+
 	newobj->version.maj = 1;
 	newobj->version.min = 0;
 	newobj->version.servind = 0;
@@ -215,7 +309,7 @@ ulp_pdu_to_xml(MsgBuffer buf)
 
     void setSetSessionId_to_imsi(int sessionId, char *imsi) {
 	if( NULL != $self->sessionID.setSessionID ) {
-	    asn_DEF_ULP_PDU.free_struct(&asn_DEF_SetSessionID, $self->sessionID.setSessionID, 0);
+	    asn_DEF_SetSessionID.free_struct(&asn_DEF_SetSessionID, $self->sessionID.setSessionID, 0);
 	    $self->sessionID.setSessionID = NULL;
 	}
 	$self->sessionID.setSessionID = calloc(1, sizeof(*($self->sessionID.setSessionID)));
@@ -225,7 +319,7 @@ ulp_pdu_to_xml(MsgBuffer buf)
 
     void setSetSessionId_to_msisdn(int sessionId, char *msisdn) {
 	if( NULL != $self->sessionID.setSessionID ) {
-	    asn_DEF_ULP_PDU.free_struct(&asn_DEF_SetSessionID, $self->sessionID.setSessionID, 0);
+	    asn_DEF_SetSessionID.free_struct(&asn_DEF_SetSessionID, $self->sessionID.setSessionID, 0);
 	    $self->sessionID.setSessionID = NULL;
 	}
 	$self->sessionID.setSessionID = calloc(1, sizeof(*($self->sessionID.setSessionID)));
@@ -244,7 +338,7 @@ ulp_pdu_to_xml(MsgBuffer buf)
 	    return; /* nothing to do */
 
 	if( NULL != $self->sessionID.slpSessionID ) {
-	    asn_DEF_ULP_PDU.free_struct(&asn_DEF_SlpSessionID, $self->sessionID.slpSessionID, 0);
+	    asn_DEF_SlpSessionID.free_struct(&asn_DEF_SlpSessionID, $self->sessionID.slpSessionID, 0);
 	    $self->sessionID.slpSessionID = NULL;
 	}
 
@@ -297,34 +391,202 @@ ulp_pdu_to_xml(MsgBuffer buf)
 	}
 	OCTET_STRING_fromBuf(dstaddr, srcaddr->buf, srcaddr->size);
     }
+
+    void set_message_type(UlpMessage_PR kinda) {
+	if($self->message.present != UlpMessage_PR_NOTHING) {
+	    asn_DEF_UlpMessage.free_struct(&asn_DEF_UlpMessage, &$self->message, 1);
+	    memset(&$self->message, 0, sizeof($self->message));
+	}
+
+	switch(kinda) {
+	case UlpMessage_PR_msSUPLINIT:
+	    break;
+
+	case UlpMessage_PR_msSUPLSTART:
+	    break;
+
+	case UlpMessage_PR_msSUPLRESPONSE:
+	    break;
+
+	case UlpMessage_PR_msSUPLPOSINIT:
+	    break;
+
+	case UlpMessage_PR_msSUPLPOS:
+	    break;
+
+	case UlpMessage_PR_msSUPLEND:
+	    break;
+
+	case UlpMessage_PR_msSUPLAUTHREQ:
+	    break;
+
+	case UlpMessage_PR_msSUPLAUTHRESP:
+	    break;
+
+	default:
+	    croak("Invalid value for message type %d, expecting between %d .. %d",
+		    (int)kinda,
+		    (int)UlpMessage_PR_msSUPLINIT,
+		    (int)UlpMessage_PR_msSUPLAUTHRESP);
+
+	    break;
+	}
+
+	$self->message.present = kinda;
+    }
 };
 
-%typemap(in) MsgBuffer {
-    // $1 = AV2MsgBuf($input);
-    // MsgBuffer retval = { NULL, -1 };
-    if($input == NULL) {
-	SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "$symname" "', argument " "$1_name" " of type '" "MsgBuffer""'");
+%nodefaultctor SUPLINIT;
+%extend SUPLINIT {
+    ~SUPLINIT() {
+	asn_DEF_SUPLINIT.free_struct(&asn_DEF_SUPLINIT, $self, 1);
     }
-    if( SvFLAGS($input) & (SVf_OK & ~SVf_ROK) ) {
-	$1.buf = SvPV($input, $1.size);
-    }
-    else {
-	SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "$symname" "', argument " "$1_name" " of type '" "MsgBuffer""'");
-    }
-}
+};
 
-%typemap(newfree) MsgBuffer "do { if( $1.buf ) free($1.buf); } while(0);"
-%typemap(newfree) MsgBuffer * "do { if( $1 ) { if( $1->buf ) { free( $1->buf ); } free( $1 ); } } while(0);"
-
-%typemap(newfree) ULP_PDU_t * "asn_DEF_ULP_PDU.free_struct(&asn_DEF_ULP_PDU, $1, 0);"
-
-%typemap(out) MsgBuffer {
-    if (argvi >= items) {            
-	EXTEND(sp,1); /* Extend the stack by 1 object */
+%nodefaultctor SUPLSTART;
+%extend SUPLSTART {
+    ~SUPLSTART() {
+	asn_DEF_SUPLSTART.free_struct(&asn_DEF_SUPLSTART, $self, 1);
     }
-    $result = sv_2mortal(newSVpv($1.buf, $1.size));
-    ++argvi; /* intentional - not portable between languages */
-}
+};
+
+%nodefaultctor SUPLRESPONSE;
+%extend SUPLRESPONSE {
+    ~SUPLRESPONSE() {
+	asn_DEF_SUPLRESPONSE.free_struct(&asn_DEF_SUPLRESPONSE, $self, 1);
+    }
+};
+
+%nodefaultctor SUPLPOSINIT;
+%extend SUPLPOSINIT {
+
+#define setcap_pos_tech_agpsSETassisted (1 << 0)
+#define setcap_pos_tech_agpsSETBased (2 << 0)
+#define setcap_pos_tech_autonomousGPS (3 << 0)
+#define setcap_pos_tech_aFLT (4 << 0)
+#define setcap_pos_tech_eCID (5 << 0)
+#define setcap_pos_tech_eOTD (6 << 0)
+#define setcap_pos_tech_oTDOA (7 << 0)
+
+#define setcap_pos_proto_tia801 (1 << 0)
+#define setcap_pos_proto_rrlp (1 << 1)
+#define setcap_pos_proto_rrc (1 << 2)
+
+#define reqassistdata_almanacRequested (1 << 0)
+#define reqassistdata_utcModelRequested (1 << 1)
+#define reqassistdata_ionosphericModelRequested (1 << 2)
+#define reqassistdata_dgpsCorrectionsRequested (1 << 3)
+#define reqassistdata_referenceLocationRequested (1 << 4)
+#define reqassistdata_referenceTimeRequested (1 << 5)
+#define reqassistdata_acquisitionAssistanceRequested (1 << 6)
+#define reqassistdata_realTimeIntegrityRequested (1 << 7)
+//#define reqassistdata_navigationModelRequested (1 << 8)
+
+    ~SUPLPOSINIT() {
+	asn_DEF_SUPLPOSINIT.free_struct(&asn_DEF_SUPLPOSINIT, $self, 1);
+    }
+
+    void set_capabilities(unsigned int pos_tech, enum PrefMethod pref_method, unsigned int pos_proto) {
+	$self->sETCapabilities.posTechnology.agpsSETassisted = pos_tech & setcap_pos_tech_agpsSETassisted ? 1 : 0;
+	$self->sETCapabilities.posTechnology.agpsSETBased = pos_tech & setcap_pos_tech_agpsSETBased ? 1 : 0;
+	$self->sETCapabilities.posTechnology.autonomousGPS = pos_tech & setcap_pos_tech_autonomousGPS ? 1 : 0;
+	$self->sETCapabilities.posTechnology.aFLT = pos_tech & setcap_pos_tech_aFLT ? 1 : 0;
+	$self->sETCapabilities.posTechnology.eCID = pos_tech & setcap_pos_tech_eCID ? 1 : 0;
+	$self->sETCapabilities.posTechnology.eOTD = pos_tech & setcap_pos_tech_eOTD ? 1 : 0;
+	$self->sETCapabilities.posTechnology.oTDOA = pos_tech & setcap_pos_tech_oTDOA ? 1 : 0;
+
+	$self->sETCapabilities.prefMethod = pref_method;
+
+	$self->sETCapabilities.posProtocol.tia801 = pos_proto & setcap_pos_proto_tia801 ? 1 : 0;
+	$self->sETCapabilities.posProtocol.rrlp = pos_proto & setcap_pos_proto_rrlp ? 1 : 0;
+	$self->sETCapabilities.posProtocol.rrc = pos_proto & setcap_pos_proto_rrc ? 1 : 0;
+    }
+
+    void set_requested_assist_data(unsigned int requested_assist_data) {
+	if($self->requestedAssistData != NULL) {
+	    asn_DEF_RequestedAssistData.free_struct(&asn_DEF_RequestedAssistData, &$self->requestedAssistData, 0);
+	    $self->requestedAssistData = NULL;
+	}
+
+	$self->requestedAssistData = calloc(1, sizeof(*($self->requestedAssistData)));
+	if( NULL == $self->requestedAssistData )
+	    croak( "Can't allocate memory for new RequestedAssistData object" );
+
+	$self->requestedAssistData->almanacRequested = requested_assist_data & setcap_pos_tech_agpsSETassisted ? 1 : 0;
+	$self->requestedAssistData->utcModelRequested = requested_assist_data & setcap_pos_tech_agpsSETBased ? 1 : 0;
+	$self->requestedAssistData->ionosphericModelRequested = requested_assist_data & setcap_pos_tech_autonomousGPS ? 1 : 0;
+	$self->requestedAssistData->dgpsCorrectionsRequested = requested_assist_data & setcap_pos_tech_aFLT ? 1 : 0;
+	$self->requestedAssistData->referenceLocationRequested = requested_assist_data & setcap_pos_tech_eCID ? 1 : 0;
+	$self->requestedAssistData->referenceTimeRequested = requested_assist_data & setcap_pos_tech_eOTD ? 1 : 0;
+	$self->requestedAssistData->acquisitionAssistanceRequested = requested_assist_data & setcap_pos_tech_oTDOA ? 1 : 0;
+	$self->requestedAssistData->realTimeIntegrityRequested = requested_assist_data & setcap_pos_tech_oTDOA ? 1 : 0;
+	$self->requestedAssistData->navigationModelRequested = 0;
+    }
+
+    void update_requested_assist_data(unsigned int requested_assist_data) {
+	if( NULL == $self->requestedAssistData )
+	    SUPLPOSINIT_set_requested_assist_data($self, requested_assist_data);
+	else {
+	    $self->requestedAssistData->almanacRequested = requested_assist_data & setcap_pos_tech_agpsSETassisted ? 1 : 0;
+	    $self->requestedAssistData->utcModelRequested = requested_assist_data & setcap_pos_tech_agpsSETBased ? 1 : 0;
+	    $self->requestedAssistData->ionosphericModelRequested = requested_assist_data & setcap_pos_tech_autonomousGPS ? 1 : 0;
+	    $self->requestedAssistData->dgpsCorrectionsRequested = requested_assist_data & setcap_pos_tech_aFLT ? 1 : 0;
+	    $self->requestedAssistData->referenceLocationRequested = requested_assist_data & setcap_pos_tech_eCID ? 1 : 0;
+	    $self->requestedAssistData->referenceTimeRequested = requested_assist_data & setcap_pos_tech_eOTD ? 1 : 0;
+	    $self->requestedAssistData->acquisitionAssistanceRequested = requested_assist_data & setcap_pos_tech_oTDOA ? 1 : 0;
+	    $self->requestedAssistData->realTimeIntegrityRequested = requested_assist_data & setcap_pos_tech_oTDOA ? 1 : 0;
+	}
+    }
+
+    void SUPLPOSINIT_set_requested_assist_navigation_modell(long gpsWeek, long gpsToe, long nSAT, long toeLimit, SatelliteInfo_t * sat_info) {
+	if( NULL == $self->requestedAssistData )
+	    SUPLPOSINIT_set_requested_assist_data($self, 0);
+
+	$self->requestedAssistData->navigationModelRequested = 1;
+	if($self->requestedAssistData->navigationModelData != NULL) {
+	    asn_DEF_NavigationModel.free_struct(&asn_DEF_NavigationModel, &$self->requestedAssistData->navigationModelData, 0);
+	    $self->requestedAssistData->navigationModelData = NULL;
+	}
+
+	$self->requestedAssistData->navigationModelData = calloc(1, sizeof(*($self->requestedAssistData->navigationModelData)));
+	if( NULL == $self->requestedAssistData->navigationModelData )
+	    croak( "Can't allocate memory for new NavigationModel object" );
+
+	$self->requestedAssistData->navigationModelData->gpsWeek = gpsWeek;
+	$self->requestedAssistData->navigationModelData->gpsToe = gpsToe;
+	$self->requestedAssistData->navigationModelData->nSAT = nSAT;
+	$self->requestedAssistData->navigationModelData->toeLimit = toeLimit;
+	$self->requestedAssistData->navigationModelData->satInfo = sat_info;
+    }
+};
+
+%nodefaultctor SUPLPOS;
+%extend SUPLPOS {
+    ~SUPLPOS() {
+	asn_DEF_SUPLPOS.free_struct(&asn_DEF_SUPLPOS, $self, 1);
+    }
+};
+
+%nodefaultctor SUPLEND;
+%extend SUPLEND {
+    ~SUPLEND() {
+	asn_DEF_SUPLEND.free_struct(&asn_DEF_SUPLEND, $self, 1);
+    }
+};
+
+%nodefaultctor SUPLAUTHREQ;
+%extend SUPLAUTHREQ {
+    ~SUPLAUTHREQ() {
+	asn_DEF_SUPLAUTHREQ.free_struct(&asn_DEF_SUPLAUTHREQ, $self, 1);
+    }
+};
+
+%nodefaultctor SUPLAUTHREQ;
+%extend SUPLAUTHRESP {
+    ~SUPLAUTHRESP() {
+	asn_DEF_SUPLAUTHRESP.free_struct(&asn_DEF_SUPLAUTHRESP, $self, 1);
+    }
+};
 
 %newobject encode_ulp_pdu;
 %newobject ulp_pdu_to_xml;

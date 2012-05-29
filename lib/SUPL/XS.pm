@@ -66,12 +66,6 @@ use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
 *swig_keyIdentity2_set = *SUPL::XSc::SUPLAUTHREQ_t_keyIdentity2_set;
 *swig__asn_ctx_get = *SUPL::XSc::SUPLAUTHREQ_t__asn_ctx_get;
 *swig__asn_ctx_set = *SUPL::XSc::SUPLAUTHREQ_t__asn_ctx_set;
-sub new {
-    my $pkg = shift;
-    my $self = SUPL::XSc::new_SUPLAUTHREQ_t(@_);
-    bless $self, $pkg if defined($self);
-}
-
 sub DESTROY {
     return unless $_[0]->isa('HASH');
     my $self = tied(%{$_[0]});
@@ -81,6 +75,12 @@ sub DESTROY {
         SUPL::XSc::delete_SUPLAUTHREQ_t($self);
         delete $OWNER{$self};
     }
+}
+
+sub new {
+    my $pkg = shift;
+    my $self = SUPL::XSc::new_SUPLAUTHREQ_t(@_);
+    bless $self, $pkg if defined($self);
 }
 
 sub DISOWN {
@@ -111,12 +111,6 @@ use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
 *swig_statusCode_set = *SUPL::XSc::SUPLAUTHRESP_t_statusCode_set;
 *swig__asn_ctx_get = *SUPL::XSc::SUPLAUTHRESP_t__asn_ctx_get;
 *swig__asn_ctx_set = *SUPL::XSc::SUPLAUTHRESP_t__asn_ctx_set;
-sub new {
-    my $pkg = shift;
-    my $self = SUPL::XSc::new_SUPLAUTHRESP_t(@_);
-    bless $self, $pkg if defined($self);
-}
-
 sub DESTROY {
     return unless $_[0]->isa('HASH');
     my $self = tied(%{$_[0]});
@@ -126,6 +120,12 @@ sub DESTROY {
         SUPL::XSc::delete_SUPLAUTHRESP_t($self);
         delete $OWNER{$self};
     }
+}
+
+sub new {
+    my $pkg = shift;
+    my $self = SUPL::XSc::new_SUPLAUTHRESP_t(@_);
+    bless $self, $pkg if defined($self);
 }
 
 sub DISOWN {
@@ -156,12 +156,6 @@ use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
 *swig_ver_set = *SUPL::XSc::SUPLEND_t_ver_set;
 *swig__asn_ctx_get = *SUPL::XSc::SUPLEND_t__asn_ctx_get;
 *swig__asn_ctx_set = *SUPL::XSc::SUPLEND_t__asn_ctx_set;
-sub new {
-    my $pkg = shift;
-    my $self = SUPL::XSc::new_SUPLEND_t(@_);
-    bless $self, $pkg if defined($self);
-}
-
 sub DESTROY {
     return unless $_[0]->isa('HASH');
     my $self = tied(%{$_[0]});
@@ -171,6 +165,12 @@ sub DESTROY {
         SUPL::XSc::delete_SUPLEND_t($self);
         delete $OWNER{$self};
     }
+}
+
+sub new {
+    my $pkg = shift;
+    my $self = SUPL::XSc::new_SUPLEND_t(@_);
+    bless $self, $pkg if defined($self);
 }
 
 sub DISOWN {
@@ -209,12 +209,6 @@ use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
 *swig_keyIdentity_set = *SUPL::XSc::SUPLINIT_t_keyIdentity_set;
 *swig__asn_ctx_get = *SUPL::XSc::SUPLINIT_t__asn_ctx_get;
 *swig__asn_ctx_set = *SUPL::XSc::SUPLINIT_t__asn_ctx_set;
-sub new {
-    my $pkg = shift;
-    my $self = SUPL::XSc::new_SUPLINIT_t(@_);
-    bless $self, $pkg if defined($self);
-}
-
 sub DESTROY {
     return unless $_[0]->isa('HASH');
     my $self = tied(%{$_[0]});
@@ -224,6 +218,12 @@ sub DESTROY {
         SUPL::XSc::delete_SUPLINIT_t($self);
         delete $OWNER{$self};
     }
+}
+
+sub new {
+    my $pkg = shift;
+    my $self = SUPL::XSc::new_SUPLINIT_t(@_);
+    bless $self, $pkg if defined($self);
 }
 
 sub DISOWN {
@@ -252,12 +252,6 @@ use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
 *swig_velocity_set = *SUPL::XSc::SUPLPOS_t_velocity_set;
 *swig__asn_ctx_get = *SUPL::XSc::SUPLPOS_t__asn_ctx_get;
 *swig__asn_ctx_set = *SUPL::XSc::SUPLPOS_t__asn_ctx_set;
-sub new {
-    my $pkg = shift;
-    my $self = SUPL::XSc::new_SUPLPOS_t(@_);
-    bless $self, $pkg if defined($self);
-}
-
 sub DESTROY {
     return unless $_[0]->isa('HASH');
     my $self = tied(%{$_[0]});
@@ -267,6 +261,12 @@ sub DESTROY {
         SUPL::XSc::delete_SUPLPOS_t($self);
         delete $OWNER{$self};
     }
+}
+
+sub new {
+    my $pkg = shift;
+    my $self = SUPL::XSc::new_SUPLPOS_t(@_);
+    bless $self, $pkg if defined($self);
 }
 
 sub DISOWN {
@@ -303,12 +303,6 @@ use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
 *swig_ver_set = *SUPL::XSc::SUPLPOSINIT_t_ver_set;
 *swig__asn_ctx_get = *SUPL::XSc::SUPLPOSINIT_t__asn_ctx_get;
 *swig__asn_ctx_set = *SUPL::XSc::SUPLPOSINIT_t__asn_ctx_set;
-sub new {
-    my $pkg = shift;
-    my $self = SUPL::XSc::new_SUPLPOSINIT_t(@_);
-    bless $self, $pkg if defined($self);
-}
-
 sub DESTROY {
     return unless $_[0]->isa('HASH');
     my $self = tied(%{$_[0]});
@@ -318,6 +312,16 @@ sub DESTROY {
         SUPL::XSc::delete_SUPLPOSINIT_t($self);
         delete $OWNER{$self};
     }
+}
+
+*set_capabilities = *SUPL::XSc::SUPLPOSINIT_t_set_capabilities;
+*set_requested_assist_data = *SUPL::XSc::SUPLPOSINIT_t_set_requested_assist_data;
+*update_requested_assist_data = *SUPL::XSc::SUPLPOSINIT_t_update_requested_assist_data;
+*SUPLPOSINIT_set_requested_assist_navigation_modell = *SUPL::XSc::SUPLPOSINIT_t_SUPLPOSINIT_set_requested_assist_navigation_modell;
+sub new {
+    my $pkg = shift;
+    my $self = SUPL::XSc::new_SUPLPOSINIT_t(@_);
+    bless $self, $pkg if defined($self);
 }
 
 sub DISOWN {
@@ -350,12 +354,6 @@ use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
 *swig_keyIdentity4_set = *SUPL::XSc::SUPLRESPONSE_t_keyIdentity4_set;
 *swig__asn_ctx_get = *SUPL::XSc::SUPLRESPONSE_t__asn_ctx_get;
 *swig__asn_ctx_set = *SUPL::XSc::SUPLRESPONSE_t__asn_ctx_set;
-sub new {
-    my $pkg = shift;
-    my $self = SUPL::XSc::new_SUPLRESPONSE_t(@_);
-    bless $self, $pkg if defined($self);
-}
-
 sub DESTROY {
     return unless $_[0]->isa('HASH');
     my $self = tied(%{$_[0]});
@@ -365,6 +363,12 @@ sub DESTROY {
         SUPL::XSc::delete_SUPLRESPONSE_t($self);
         delete $OWNER{$self};
     }
+}
+
+sub new {
+    my $pkg = shift;
+    my $self = SUPL::XSc::new_SUPLRESPONSE_t(@_);
+    bless $self, $pkg if defined($self);
 }
 
 sub DISOWN {
@@ -395,12 +399,6 @@ use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
 *swig_qoP_set = *SUPL::XSc::SUPLSTART_t_qoP_set;
 *swig__asn_ctx_get = *SUPL::XSc::SUPLSTART_t__asn_ctx_get;
 *swig__asn_ctx_set = *SUPL::XSc::SUPLSTART_t__asn_ctx_set;
-sub new {
-    my $pkg = shift;
-    my $self = SUPL::XSc::new_SUPLSTART_t(@_);
-    bless $self, $pkg if defined($self);
-}
-
 sub DESTROY {
     return unless $_[0]->isa('HASH');
     my $self = tied(%{$_[0]});
@@ -410,6 +408,12 @@ sub DESTROY {
         SUPL::XSc::delete_SUPLSTART_t($self);
         delete $OWNER{$self};
     }
+}
+
+sub new {
+    my $pkg = shift;
+    my $self = SUPL::XSc::new_SUPLSTART_t(@_);
+    bless $self, $pkg if defined($self);
 }
 
 sub DISOWN {
@@ -463,6 +467,7 @@ sub DESTROY {
 *setSetSessionId_to_imsi = *SUPL::XSc::ULP_PDU_t_setSetSessionId_to_imsi;
 *setSetSessionId_to_msisdn = *SUPL::XSc::ULP_PDU_t_setSetSessionId_to_msisdn;
 *copy_SlpSessionId = *SUPL::XSc::ULP_PDU_t_copy_SlpSessionId;
+*set_message_type = *SUPL::XSc::ULP_PDU_t_set_message_type;
 sub DISOWN {
     my $self = shift;
     my $ptr = tied(%$self);
@@ -576,6 +581,24 @@ sub ACQUIRE {
 
 package SUPL::XS;
 
+sub setcap_pos_tech_agpsSETassisted () { $SUPL::XSc::setcap_pos_tech_agpsSETassisted }
+sub setcap_pos_tech_agpsSETBased () { $SUPL::XSc::setcap_pos_tech_agpsSETBased }
+sub setcap_pos_tech_autonomousGPS () { $SUPL::XSc::setcap_pos_tech_autonomousGPS }
+sub setcap_pos_tech_aFLT () { $SUPL::XSc::setcap_pos_tech_aFLT }
+sub setcap_pos_tech_eCID () { $SUPL::XSc::setcap_pos_tech_eCID }
+sub setcap_pos_tech_eOTD () { $SUPL::XSc::setcap_pos_tech_eOTD }
+sub setcap_pos_tech_oTDOA () { $SUPL::XSc::setcap_pos_tech_oTDOA }
+sub setcap_pos_proto_tia801 () { $SUPL::XSc::setcap_pos_proto_tia801 }
+sub setcap_pos_proto_rrlp () { $SUPL::XSc::setcap_pos_proto_rrlp }
+sub setcap_pos_proto_rrc () { $SUPL::XSc::setcap_pos_proto_rrc }
+sub reqassistdata_almanacRequested () { $SUPL::XSc::reqassistdata_almanacRequested }
+sub reqassistdata_utcModelRequested () { $SUPL::XSc::reqassistdata_utcModelRequested }
+sub reqassistdata_ionosphericModelRequested () { $SUPL::XSc::reqassistdata_ionosphericModelRequested }
+sub reqassistdata_dgpsCorrectionsRequested () { $SUPL::XSc::reqassistdata_dgpsCorrectionsRequested }
+sub reqassistdata_referenceLocationRequested () { $SUPL::XSc::reqassistdata_referenceLocationRequested }
+sub reqassistdata_referenceTimeRequested () { $SUPL::XSc::reqassistdata_referenceTimeRequested }
+sub reqassistdata_acquisitionAssistanceRequested () { $SUPL::XSc::reqassistdata_acquisitionAssistanceRequested }
+sub reqassistdata_realTimeIntegrityRequested () { $SUPL::XSc::reqassistdata_realTimeIntegrityRequested }
 sub UlpMessage_PR_NOTHING () { $SUPL::XSc::UlpMessage_PR_NOTHING }
 sub UlpMessage_PR_msSUPLINIT () { $SUPL::XSc::UlpMessage_PR_msSUPLINIT }
 sub UlpMessage_PR_msSUPLSTART () { $SUPL::XSc::UlpMessage_PR_msSUPLSTART }
@@ -585,6 +608,9 @@ sub UlpMessage_PR_msSUPLPOS () { $SUPL::XSc::UlpMessage_PR_msSUPLPOS }
 sub UlpMessage_PR_msSUPLEND () { $SUPL::XSc::UlpMessage_PR_msSUPLEND }
 sub UlpMessage_PR_msSUPLAUTHREQ () { $SUPL::XSc::UlpMessage_PR_msSUPLAUTHREQ }
 sub UlpMessage_PR_msSUPLAUTHRESP () { $SUPL::XSc::UlpMessage_PR_msSUPLAUTHRESP }
+sub PrefMethod_agpsSETassistedPreferred () { $SUPL::XSc::PrefMethod_agpsSETassistedPreferred }
+sub PrefMethod_agpsSETBasedPreferred () { $SUPL::XSc::PrefMethod_agpsSETBasedPreferred }
+sub PrefMethod_noPreference () { $SUPL::XSc::PrefMethod_noPreference }
 
 # ------- VARIABLE STUBS --------
 
