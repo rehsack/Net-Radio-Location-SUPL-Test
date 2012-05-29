@@ -9,7 +9,28 @@ use Carp qw(croak);
 
 use Net::DBus::Reactor;
 
+=head1 NAME
+
+SUPL::MainLoop - Net::DBus::Reactor wrapper for SUPL Tests
+
+=head1 DESCRIPTION
+
+This package wraps L<Net::DBus::Reactor> for controlled D-Bus objects and
+test instances. I/O handles of controlled objects are added to the watch
+list of Net::DBus::Reactor on adding and remove on removing of objects.
+
+=head1 METHODS
+
+=cut
+
 my $instance;
+
+=head2 new
+
+Instantiates new SUPL::MainLoop. Thus it's a singleton, always the same
+instance is returned. The behavior in multi-threaded programs is undefined.
+
+=cut
 
 sub new
 {
@@ -20,6 +41,18 @@ sub new
 
     return $instance;
 }
+
+=head2 add
+
+  SUPL::MainLoop->add($obj);
+
+Adds a new object to be controlled.
+
+If the added object wants to be triggered when a handle is ready for read
+(C<< $obj->can("trigger_read") >>), the appropriate handle is passed to
+L<Net::DBus::Reactor/METHODS|add_read> method of net::DBus::Reactor.
+
+=cut
 
 sub add
 {
@@ -40,7 +73,23 @@ sub add
     }
 
     push( @{$instance->{objects}}, $obj );
+
+    return;
 }
+
+=head2 remove
+
+  SUPL::MainLoop->remove($obj);
+
+Removes an object from the list of controlled objects. 
+
+If the added object wants to be triggered when a handle is ready for read
+(C<< $obj->can("trigger_read") >>), the appropriate handle is passed to
+L<Net::DBus::Reactor/METHODS|remove_read> method of net::DBus::Reactor.
+
+When the last object is removed, the reactor is shut down.
+
+=cut
 
 sub remove
 {
@@ -67,6 +116,15 @@ sub remove
     return;
 }
 
+=head2 run
+
+Start's the main loop via Net::DBus::Reactor.
+
+When SUPL::MainLoop hasn't been instantiated or no objects are controlled,
+it dies with exception.
+
+=cut
+
 sub run
 {
     $instance or croak "Uninitialized";
@@ -80,5 +138,60 @@ sub run
 
     return;
 }
+
+=head1 AUTHOR
+
+Jens Rehsack, C<< <rehsack at cpan.org> >>
+
+=head1 BUGS
+
+Please report any bugs or feature requests to
+C<bug-supl-test at rt.cpan.org>, or through the web interface at
+L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=SUPL-Test>.
+I will be notified, and then you'll automatically be notified of progress
+on your bug as I make changes.
+
+=head1 SUPPORT
+
+You can find documentation for this module with the perldoc command.
+
+    perldoc SUPL::Test
+
+You can also look for information at:
+
+=over 4
+
+=item * RT: CPAN's request tracker
+
+L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=SUPL-Test>
+
+=item * AnnoCPAN: Annotated CPAN documentation
+
+L<http://annocpan.org/dist/SUPL-Test>
+
+=item * CPAN Ratings
+
+L<http://cpanratings.perl.org/d/SUPL-Test>
+
+=item * Search CPAN
+
+L<http://search.cpan.org/dist/SUPL-Test/>
+
+=back
+
+=head1 ACKNOWLEDGEMENTS
+
+
+=head1 LICENSE AND COPYRIGHT
+
+Copyright 2012 Jens Rehsack.
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of either: the GNU General Public License as published
+by the Free Software Foundation; or the Artistic License.
+
+See http://dev.perl.org/licenses/ for more information.
+
+=cut
 
 1;
