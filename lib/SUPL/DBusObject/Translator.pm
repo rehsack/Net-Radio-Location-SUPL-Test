@@ -35,7 +35,7 @@ L<SUPL::DBusObject/new|SUPL::DBusObject::new>.
 
 sub new
 {
-    my ($class, %cfg) = @_;
+    my ( $class, %cfg ) = @_;
     my $self = $class->SUPER::new(%cfg);
 
     bless( $self, $class );
@@ -52,10 +52,11 @@ decoded XML representation of the PDU.
 
 =cut
 
-dbus_method("SuplPduStringToXmlString", ["string"], ["string"]);
+dbus_method( "SuplPduStringToXmlString", ["string"], ["string"] );
+
 sub SuplPduStringToXmlString
 {
-    my ($self, $enc_pdu) = @_;
+    my ( $self, $enc_pdu ) = @_;
     my $supl_xml = SUPL::XS::ulp_pdu_to_xml($enc_pdu);
     return $supl_xml;
 }
@@ -67,10 +68,11 @@ the decoded XML representation of the PDU.
 
 =cut
 
-dbus_method("SuplPduArrayToXmlString", [["array", "byte"]], ["string"]);
+dbus_method( "SuplPduArrayToXmlString", [ [ "array", "byte" ] ], ["string"] );
+
 sub SuplPduArrayToXmlString
 {
-    my ($self, $pdu) = @_;
+    my ( $self, $pdu ) = @_;
     my $pdu_str = join( "", map { chr($_) } @$pdu );
     return $self->SuplPduStringToXmlString($pdu_str);
 }
@@ -82,10 +84,11 @@ the decoded XML representation of the PDU.
 
 =cut
 
-dbus_method("SuplPduHexStringToXmlString", ["string"], ["string"]);
+dbus_method( "SuplPduHexStringToXmlString", ["string"], ["string"] );
+
 sub SuplPduHexStringToXmlString
 {
-    my ($self, $pdu) = @_;
+    my ( $self, $pdu ) = @_;
     my $pdu_str = pack( "H*", $pdu );
     return $self->SuplPduStringToXmlString($pdu_str);
 }

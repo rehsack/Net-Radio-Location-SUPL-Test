@@ -62,21 +62,21 @@ sub add
 {
     $instance or __PACKAGE__->new();
 
-    $_[0]->isa(__PACKAGE__) and shift; # discard OO style 1st self argument
+    $_[0]->isa(__PACKAGE__) and shift;    # discard OO style 1st self argument
     scalar(@_) == 1 or croak "Insufficient arguments";
 
     my $obj = $_[0];
 
-    if( $obj->can("trigger_read") )
+    if ( $obj->can("trigger_read") )
     {
-	my $fh = $obj->get_read_trigger();
-	my $cb = sub {
-	    $obj->trigger_read();
-	};
-	Net::DBus::Reactor->add_read( $fh, $cb, 1 ); # add callback on $fh is readable and enable
+        my $fh = $obj->get_read_trigger();
+        my $cb = sub {
+            $obj->trigger_read();
+        };
+        Net::DBus::Reactor->add_read( $fh, $cb, 1 );    # add callback on $fh is readable and enable
     }
 
-    push( @{$instance->{objects}}, $obj );
+    push( @{ $instance->{objects} }, $obj );
 
     return;
 }
@@ -99,23 +99,23 @@ sub remove
 {
     $instance or croak "Uninitialized";
 
-    $_[0]->isa(__PACKAGE__) and shift; # discard OO style 1st self argument
+    $_[0]->isa(__PACKAGE__) and shift;    # discard OO style 1st self argument
     scalar(@_) == 1 or croak "Insufficient arguments";
 
     my $obj = $_[0];
-    my @managed = grep { $obj == $_ } @{$instance->{objects}};
+    my @managed = grep { $obj == $_ } @{ $instance->{objects} };
 
     @managed or croak "Not managed";
 
-    if( $obj->can("trigger_read") )
+    if ( $obj->can("trigger_read") )
     {
-	my $fh = $obj->get_read_trigger();
-	Net::DBus::Reactor->remove_read( $fh ); # remove callback on $fh is readable
+        my $fh = $obj->get_read_trigger();
+        Net::DBus::Reactor->remove_read($fh);    # remove callback on $fh is readable
     }
 
-    @{$instance->{objects}} = map { $_ == $obj ? () : ($_) } @{$instance->{objects}};
+    @{ $instance->{objects} } = map { $_ == $obj ? () : ($_) } @{ $instance->{objects} };
 
-    scalar(@{$instance->{objects}}) == 0 and Net::DBus::Reactor->main()->shutdown();
+    scalar( @{ $instance->{objects} } ) == 0 and Net::DBus::Reactor->main()->shutdown();
 
     return;
 }
@@ -133,8 +133,8 @@ sub run
 {
     $instance or croak "Uninitialized";
 
-    $_[0]->isa(__PACKAGE__) and shift; # discard OO style 1st self argument
-    scalar(@{$instance->{objects}}) or croak "Nothing managed";
+    $_[0]->isa(__PACKAGE__) and shift;    # discard OO style 1st self argument
+    scalar( @{ $instance->{objects} } ) or croak "Nothing managed";
 
     Net::DBus::Reactor->main()->run();
 

@@ -61,7 +61,7 @@ L</"DESCRIPTION"> in the way documented at L<SUPL::DBusObject/new|SUPL::DBusObje
 
 sub new
 {
-    my ($class, %cfg) = @_;
+    my ( $class, %cfg ) = @_;
     my $self = $class->SUPER::new(%cfg);
 
     bless( $self, $class );
@@ -80,10 +80,11 @@ header and body (SUPLINIT payload).
 
 =cut
 
-dbus_method("Notify", [["array", "byte"], ["array", "byte"]], ["int32"]);
+dbus_method( "Notify", [ [ "array", "byte" ], [ "array", "byte" ] ], ["int32"] );
+
 sub Notify
 {
-    my ($self, $header, $body) = @_;
+    my ( $self, $header, $body ) = @_;
 
     my $body_str = join( "", map { chr($_) } @$body );
 
@@ -100,7 +101,8 @@ is ignored and might be result in a configurable exit in future.
 
 =cut
 
-dbus_method("Release", [], []);
+dbus_method( "Release", [], [] );
+
 sub Release
 {
     my $self = $_[0];

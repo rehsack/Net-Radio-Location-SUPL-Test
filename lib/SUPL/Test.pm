@@ -59,23 +59,23 @@ Starts a new flow of network initiated SUPL.
 
 sub handle_supl_pdu
 {
-    my ($self, $enc_pdu) = @_;
+    my ( $self, $enc_pdu ) = @_;
 
     _STRING($enc_pdu) or croak "Invalid argument for \$enc_pdu";
 
     my $supl_pdu = SUPL::XS::decode_ulp_pdu($enc_pdu);
 
     # decode_ulp_pdu croaks on error ...
-    given($supl_pdu->{message}->{present})
+    given ( $supl_pdu->{message}->{present} )
     {
-	when(SUPL::XS::UlpMessage_PR_msSUPLINIT)
-	{
-	    # ...
-	}
-	default
-	{
-	    # ... 
-	}
+        when (SUPL::XS::UlpMessage_PR_msSUPLINIT)
+        {
+            # ...
+        }
+        default
+        {
+            # ...
+        }
     }
 }
 
