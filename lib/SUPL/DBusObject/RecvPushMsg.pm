@@ -3,7 +3,7 @@ package SUPL::DBusObject::RecvPushMsg;
 use strict;
 use warnings;
 
-use 5.014;
+use 5.010;
 
 =head1 NAME
 
@@ -46,6 +46,7 @@ our $VERSION = 0.001;
 use base qw(SUPL::DBusObject);
 use Net::DBus::Exporter qw(org.ofono.mms.PushConsumer);
 
+use Log::Any qw($log);
 use Digest::SHA qw(hmac_sha1);
 
 use SUPL::Test;

@@ -3,7 +3,7 @@ package SUPL::DBusObject;
 use strict;
 use warnings;
 
-use 5.014;
+use 5.010;
 
 our $VERSION = 0.001;
 

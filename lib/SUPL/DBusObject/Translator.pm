@@ -3,7 +3,7 @@ package SUPL::DBusObject::Translator;
 use strict;
 use warnings;
 
-use 5.014;
+use 5.010;
 
 =head1 NAME
 
@@ -21,6 +21,8 @@ use SUPL::XS;
 
 use base qw(SUPL::DBusObject);
 use Net::DBus::Exporter qw(org.ofono.supl.Translator);
+
+use Log::Any qw($log);
 
 =head2 new
 

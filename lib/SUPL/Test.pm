@@ -9,6 +9,7 @@ use Carp qw/croak/;
 
 use SUPL::XS;
 
+use Log::Any qw($log);
 use Digest::SHA;
 use SUPL::MainLoop;
 

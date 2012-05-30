@@ -3,11 +3,15 @@ package SUPL::MainLoop;
 use strict;
 use warnings;
 
+use 5.010;
+
 our $VERSION = 0.001;
 
 use Carp qw(croak);
 
 use Net::DBus::Reactor;
+
+use Log::Any qw($log);
 
 =head1 NAME
 
