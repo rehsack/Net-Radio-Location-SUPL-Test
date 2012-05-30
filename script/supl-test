@@ -12,9 +12,8 @@ use File::Find::Rule;
 require SUPL::MainLoop;
 require SUPL::DBusObject;
 
-sub setup
+sub get_config
 {
-
     # find config file
     my @cfg_dirs    = config_dirs();
     my @cfg_pattern = map { "supl-test." . $_ } Config::Any->extensions();
@@ -57,6 +56,20 @@ sub setup
         }
     }
 
+    return %cfg;
+}
+
+sub setup_logging
+{
+    my %cfg = @_;
+
+    return;
+}
+
+sub setup_dbus
+{
+    my %cfg = @_;
+
     defined( $cfg{"dbus-objects"}->{"default"} )
       and SUPL::DBusObject::set_default_config( %{ $cfg{"dbus-objects"}->{"default"} } );
 
@@ -69,6 +82,16 @@ sub setup
         my $dbusIf = $module->new( %{ $cfg{"dbus-objects"}->{$dbusObj} } );
         $dbusIf or die "Can't initialize $module";
     }
+
+    return;
+}
+
+sub setup
+{
+    my %cfg = get_config();
+
+    setup_logging(%cfg);
+    setup_dbus(%cfg);
 }
 
 setup();
