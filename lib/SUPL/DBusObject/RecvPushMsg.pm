@@ -68,6 +68,8 @@ sub new
 
     SUPL::MainLoop->add($self);
 
+    $log->debugf( "%s initialized and added to MainLoop control", __PACKAGE__ );
+
     return $self;
 }
 
@@ -85,6 +87,11 @@ dbus_method( "Notify", [ [ "array", "byte" ], [ "array", "byte" ] ], ["int32"] )
 sub Notify
 {
     my ( $self, $header, $body ) = @_;
+
+    $log->is_debug()
+      and $log->debugf( "Received PushMsg(header => [%s], body => [%s])",
+                        join( ", ", @$header ),
+                        join( ", ", @$body ) );
 
     my $body_str = join( "", map { chr($_) } @$body );
 

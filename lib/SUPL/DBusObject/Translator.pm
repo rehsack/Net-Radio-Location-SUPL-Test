@@ -42,6 +42,8 @@ sub new
 
     SUPL::MainLoop->add($self);
 
+    $log->debugf( "%s initialized and added to MainLoop control", __PACKAGE__ );
+
     return $self;
 }
 

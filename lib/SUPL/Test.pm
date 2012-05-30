@@ -65,6 +65,11 @@ sub handle_supl_pdu
 
     my $supl_pdu = SUPL::XS::decode_ulp_pdu($enc_pdu);
 
+    $log->is_debug()
+      and
+      $log->debugf( "received pdu containing message type %d", $supl_pdu->{message}->{present} );
+    $log->is_trace() and $log->tracef( "pdu: %s", $supl_pdu->dump() );
+
     # decode_ulp_pdu croaks on error ...
     given ( $supl_pdu->{message}->{present} )
     {

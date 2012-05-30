@@ -67,6 +67,8 @@ sub add
 
     my $obj = $_[0];
 
+    $log->debugf( "adding object of type '%s'", ref($obj) );
+
     if ( $obj->can("trigger_read") )
     {
         my $fh = $obj->get_read_trigger();
@@ -74,9 +76,13 @@ sub add
             $obj->trigger_read();
         };
         Net::DBus::Reactor->add_read( $fh, $cb, 1 );    # add callback on $fh is readable and enable
+
+        $log->debugf( "read trigger for object of type '%s' added", ref($obj) );
     }
 
     push( @{ $instance->{objects} }, $obj );
+
+    $log->debugf( "object of type '%s' added", ref($obj) );
 
     return;
 }
@@ -107,13 +113,20 @@ sub remove
 
     @managed or croak "Not managed";
 
+    $log->debugf( "removing object of type '%s'", ref($obj) );
+
     if ( $obj->can("trigger_read") )
     {
         my $fh = $obj->get_read_trigger();
         Net::DBus::Reactor->remove_read($fh);    # remove callback on $fh is readable
+
+        $log->debugf( "read trigger for object of type '%s' removed", ref($obj) );
     }
 
     @{ $instance->{objects} } = map { $_ == $obj ? () : ($_) } @{ $instance->{objects} };
+
+    $log->debugf( "object of type '%s' removed, %d objects remain",
+                  ref($obj), scalar( @{ $instance->{objects} } ) );
 
     scalar( @{ $instance->{objects} } ) == 0 and Net::DBus::Reactor->main()->shutdown();
 
