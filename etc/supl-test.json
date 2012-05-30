@@ -1,4 +1,10 @@
 {
+    "logging" : {
+	"adapter" : "Log4perl",
+	"Log4perl" : {
+	    "init" : "etc/log4perl.conf"
+	}
+    },
     "dbus-objects" : {
 	"default" : {
 	    "bus-name" : "org.vfnet.supl",

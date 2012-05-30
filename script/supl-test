@@ -5,9 +5,12 @@ use warnings;
 
 use 5.010;
 
+use Carp qw/croak/;
 use File::ConfigDir qw(:ALL);
 use Config::Any;
 use File::Find::Rule;
+use Log::Any qw($log);
+use Params::Util qw(_ARRAY);
 
 require SUPL::MainLoop;
 require SUPL::DBusObject;
@@ -22,15 +25,9 @@ sub get_config
     # default config
     my %cfg = (
                 "dbus-objects" => {
-                                    "default" => {
-                                                   "bus-name"    => "org.vfnet.supl",
-                                                 },
-                                    "RecvPushMsg" => {
-					"object-path" => "/org/vfnet/supl/PushConsumer",
-				    },
-                                    "Translator"  => {
-					"object-path" => "/org/vfnet/supl/Translator",
-				    },
+                              "default"     => { "bus-name"    => "org.vfnet.supl", },
+                              "RecvPushMsg" => { "object-path" => "/org/vfnet/supl/PushConsumer", },
+                              "Translator"  => { "object-path" => "/org/vfnet/supl/Translator", },
                                   }
               );
 
@@ -59,9 +56,50 @@ sub get_config
     return %cfg;
 }
 
+sub setup_log_Log4perl
+{
+    my %cfg = @_;
+
+    eval { require Log::Log4perl; } or croak($@);
+
+    Log::Log4perl->import();
+
+    if ( scalar( keys %cfg ) > 1 )
+    {
+        croak("Please choose exactly one initialization method");
+    }
+    elsif ( scalar( keys %cfg ) == 1 )
+    {
+        my $init_method = ( keys %cfg )[0];
+        my @init_params;
+        if ( defined( $cfg{$init_method} ) )
+        {
+            @init_params =
+              _ARRAY( $cfg{$init_method} ) ? @{ $cfg{$init_method} } : ( $cfg{$init_method} );
+        }
+        Log::Log4perl->$init_method(@init_params);
+    }
+    else
+    {
+        #avoid error message about $Log::Log4perl::WARN used only once
+        defined($Log::Log4perl::WARN)
+          and Log::Log4perl->easy_init($Log::Log4perl::WARN);
+    }
+
+    return;
+}
+
 sub setup_logging
 {
     my %cfg = @_;
+
+    if ( defined( $cfg{"adapter"} ) )
+    {
+        my $log_adapter_setup = "setup_log_" . $cfg{"adapter"};
+        __PACKAGE__->can($log_adapter_setup)
+          or croak( "Don't know how to setup " . $cfg{"adapter"} );
+        &{ \&{$log_adapter_setup} }( %{ $cfg{ $cfg{"adapter"} } } );
+    }
 
     return;
 }
@@ -70,16 +108,16 @@ sub setup_dbus
 {
     my %cfg = @_;
 
-    defined( $cfg{"dbus-objects"}->{"default"} )
-      and SUPL::DBusObject::set_default_config( %{ $cfg{"dbus-objects"}->{"default"} } );
+    defined( $cfg{"default"} )
+      and SUPL::DBusObject::set_default_config( %{ $cfg{"default"} } );
 
-    my @dbusObjects = grep { $_ ne "default" } keys %{ $cfg{"dbus-objects"} };
+    my @dbusObjects = grep { $_ ne "default" } keys %cfg;
     foreach my $dbusObj (@dbusObjects)
     {
         my $module = "SUPL::DBusObject::$dbusObj";
         eval "require $module;";
-	$@ and die $@;
-        my $dbusIf = $module->new( %{ $cfg{"dbus-objects"}->{$dbusObj} } );
+        $@ and die $@;
+        my $dbusIf = $module->new( %{ $cfg{$dbusObj} } );
         $dbusIf or die "Can't initialize $module";
     }
 
@@ -90,8 +128,8 @@ sub setup
 {
     my %cfg = get_config();
 
-    setup_logging(%cfg);
-    setup_dbus(%cfg);
+    setup_logging( %{ $cfg{"logging"} } );
+    setup_dbus( %{ $cfg{"dbus-objects"} } );
 }
 
 setup();
