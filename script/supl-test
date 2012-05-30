@@ -9,6 +9,7 @@ use Carp qw/croak/;
 use File::ConfigDir qw(:ALL);
 use Config::Any;
 use File::Find::Rule;
+use Log::Any::Adapter;
 use Log::Any qw($log);
 use Params::Util qw(_ARRAY);
 
@@ -99,6 +100,7 @@ sub setup_logging
         __PACKAGE__->can($log_adapter_setup)
           or croak( "Don't know how to setup " . $cfg{"adapter"} );
         &{ \&{$log_adapter_setup} }( %{ $cfg{ $cfg{"adapter"} } } );
+        Log::Any::Adapter->set( $cfg{"adapter"} );
     }
 
     return;

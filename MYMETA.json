@@ -32,6 +32,8 @@
             "Digest::SHA" : "0",
             "File::ConfigDir" : "0.003",
             "File::Find::Rule" : "0.32",
+            "Log::Any" : "0.10",
+            "Log::Any::Adapter" : "0",
             "Net::DBus" : "v1.0.0",
             "Params::Util" : "0.37",
             "perl" : "5.01"
