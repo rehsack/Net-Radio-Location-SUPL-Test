@@ -65,6 +65,21 @@
 %{
 /* SUPL PDU */
 #include "asn1/ULP-PDU.h"
+
+typedef struct _MsgBuffer
+{
+	uint8_t *buf;
+	ssize_t size;
+} MsgBuffer;
+
+struct per_target_buffer
+{
+	uint8_t *buf;
+	size_t pos;
+	size_t size;
+};
+
+static int per_output(const void *data, size_t size, void *op_key);
 %}
 
 %include "asn1/SUPLAUTHREQ.h"
@@ -85,19 +100,6 @@ enum PrefMethod {
 };
 
 %{
-typedef struct _MsgBuffer
-{
-	uint8_t *buf;
-	ssize_t size;
-} MsgBuffer;
-
-struct per_target_buffer
-{
-	uint8_t *buf;
-	size_t pos;
-	size_t size;
-};
-
 static int
 per_output(const void *data, size_t size, void *op_key)
 {
@@ -218,16 +220,15 @@ decode_ulp_pdu(MsgBuffer buf)
 	return ulp_pdu;
 }
 
-static MsgBuffer
+static char *
 ulp_pdu_to_xml(MsgBuffer buf)
 {
-	MsgBuffer retbuf = { NULL, -1 };
 	asn_enc_rval_t rval;
 	struct per_target_buffer per_buf;
 	struct ULP_PDU *tmp_pdu = decode_ulp_pdu(buf);
 
 	if (NULL == tmp_pdu)
-		return retbuf;
+		return NULL;
 
 	per_buf.buf = calloc( 4096, sizeof(uint8_t) );
 	per_buf.pos = 0;
@@ -242,14 +243,30 @@ ulp_pdu_to_xml(MsgBuffer buf)
 			rval.failed_type->name,
 			strerror(errno));
 
-		return retbuf; /* unreached */
+		return NULL; /* unreached */
 	}
 
-	retbuf.buf = per_buf.buf;
-	retbuf.size = per_buf.size;
-
-	return retbuf;
+	return (char *)per_buf.buf;
 }
+
+static char *
+dump_ulp_pdu(MsgBuffer buf)
+{
+	struct per_target_buffer per_buf;
+	struct ULP_PDU *tmp_pdu = decode_ulp_pdu(buf);
+
+	if (NULL == tmp_pdu)
+		return NULL;
+
+	per_buf.buf = calloc( 4096, sizeof(uint8_t) );
+	per_buf.pos = 0;
+	per_buf.size = 4096;
+	asn_DEF_ULP_PDU.print_struct( &asn_DEF_ULP_PDU, tmp_pdu, 4, &per_output, &per_buf);
+	asn_DEF_ULP_PDU.free_struct(&asn_DEF_ULP_PDU, tmp_pdu, 0);
+
+	return (char *)per_buf.buf;
+}
+
 %}
 
 %typemap(in) MsgBuffer {
@@ -434,6 +451,25 @@ ulp_pdu_to_xml(MsgBuffer buf)
 
 	$self->message.present = kinda;
     }
+
+    %newobject dump;
+    char * dump() {
+	struct per_target_buffer per_buf = { calloc( 4096, sizeof(*per_buf.buf) ), 0, 4096 };
+
+	asn_DEF_ULP_PDU.print_struct(&asn_DEF_ULP_PDU, $self, 4, &per_output, &per_buf);
+
+	return (char *)per_buf.buf;
+    }
+
+    %newobject xml_dump;
+    char * xml_dump() {
+	asn_enc_rval_t rval;
+	struct per_target_buffer per_buf = { calloc( 4096, sizeof(*per_buf.buf) ), 0, 4096 };
+
+	rval = xer_encode( &asn_DEF_ULP_PDU, $self, XER_F_BASIC, &per_output, &per_buf);
+
+	return (char *)per_buf.buf;
+    }
 };
 
 %nodefaultctor SUPLINIT;
@@ -590,7 +626,9 @@ ulp_pdu_to_xml(MsgBuffer buf)
 
 %newobject encode_ulp_pdu;
 %newobject ulp_pdu_to_xml;
+%newobject dump_ulp_pdu;
 
 MsgBuffer encode_ulp_pdu(struct ULP_PDU *pdu);
 struct ULP_PDU *decode_ulp_pdu(MsgBuffer buf);
-MsgBuffer ulp_pdu_to_xml(MsgBuffer buf);
+char * ulp_pdu_to_xml(MsgBuffer buf);
+char * dump_ulp_pdu(MsgBuffer buf);

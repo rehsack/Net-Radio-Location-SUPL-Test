@@ -52,6 +52,7 @@ package SUPL::XS;
 *encode_ulp_pdu = *SUPL::XSc::encode_ulp_pdu;
 *decode_ulp_pdu = *SUPL::XSc::decode_ulp_pdu;
 *ulp_pdu_to_xml = *SUPL::XSc::ulp_pdu_to_xml;
+*dump_ulp_pdu = *SUPL::XSc::dump_ulp_pdu;
 
 ############# Class : SUPL::XS::SUPLAUTHREQ_t ##############
 
@@ -468,6 +469,8 @@ sub DESTROY {
 *setSetSessionId_to_msisdn = *SUPL::XSc::ULP_PDU_t_setSetSessionId_to_msisdn;
 *copy_SlpSessionId = *SUPL::XSc::ULP_PDU_t_copy_SlpSessionId;
 *set_message_type = *SUPL::XSc::ULP_PDU_t_set_message_type;
+*dump = *SUPL::XSc::ULP_PDU_t_dump;
+*xml_dump = *SUPL::XSc::ULP_PDU_t_xml_dump;
 sub DISOWN {
     my $self = shift;
     my $ptr = tied(%$self);

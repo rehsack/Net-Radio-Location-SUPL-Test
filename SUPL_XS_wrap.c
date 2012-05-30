@@ -1562,20 +1562,35 @@ SWIGEXPORT void SWIG_init (CV *cv, CPerlObj *);
 /* SUPL PDU */
 #include "asn1/ULP-PDU.h"
 
+typedef struct _MsgBuffer
+{
+	uint8_t *buf;
+	ssize_t size;
+} MsgBuffer;
+
+struct per_target_buffer
+{
+	uint8_t *buf;
+	size_t pos;
+	size_t size;
+};
+
+static int per_output(const void *data, size_t size, void *op_key);
+
 SWIGINTERN void delete_SUPLAUTHREQ(struct SUPLAUTHREQ *self){
-	asn_DEF_SUPLAUTHREQ.free_struct(&asn_DEF_SUPLAUTHREQ, self, 0);
+	asn_DEF_SUPLAUTHREQ.free_struct(&asn_DEF_SUPLAUTHREQ, self, 1);
     }
 SWIGINTERN void delete_SUPLAUTHRESP(struct SUPLAUTHRESP *self){
-	asn_DEF_SUPLAUTHRESP.free_struct(&asn_DEF_SUPLAUTHRESP, self, 0);
+	asn_DEF_SUPLAUTHRESP.free_struct(&asn_DEF_SUPLAUTHRESP, self, 1);
     }
 SWIGINTERN void delete_SUPLEND(struct SUPLEND *self){
-	asn_DEF_SUPLEND.free_struct(&asn_DEF_SUPLEND, self, 0);
+	asn_DEF_SUPLEND.free_struct(&asn_DEF_SUPLEND, self, 1);
     }
 SWIGINTERN void delete_SUPLINIT(struct SUPLINIT *self){
 	asn_DEF_SUPLINIT.free_struct(&asn_DEF_SUPLINIT, self, 1);
     }
 SWIGINTERN void delete_SUPLPOS(struct SUPLPOS *self){
-	asn_DEF_SUPLPOS.free_struct(&asn_DEF_SUPLPOS, self, 0);
+	asn_DEF_SUPLPOS.free_struct(&asn_DEF_SUPLPOS, self, 1);
     }
 
 SWIGINTERNINLINE SV *
@@ -2083,6 +2098,41 @@ SWIGINTERN void ULP_PDU_set_message_type(struct ULP_PDU *self,UlpMessage_PR kind
 
 	self->message.present = kinda;
     }
+SWIGINTERN char *ULP_PDU_dump(struct ULP_PDU *self){
+	struct per_target_buffer per_buf = { calloc( 4096, sizeof(*per_buf.buf) ), 0, 4096 };
+
+	asn_DEF_ULP_PDU.print_struct(&asn_DEF_ULP_PDU, self, 4, &per_output, &per_buf);
+
+	return (char *)per_buf.buf;
+    }
+
+SWIGINTERNINLINE SV *
+SWIG_FromCharPtrAndSize(const char* carray, size_t size)
+{
+  SV *obj = sv_newmortal();
+  if (carray) {
+    sv_setpvn(obj, carray, size);
+  } else {
+    sv_setsv(obj, &PL_sv_undef);
+  }
+  return obj;
+}
+
+
+SWIGINTERNINLINE SV * 
+SWIG_FromCharPtr(const char *cptr)
+{ 
+  return SWIG_FromCharPtrAndSize(cptr, (cptr ? strlen(cptr) : 0));
+}
+
+SWIGINTERN char *ULP_PDU_xml_dump(struct ULP_PDU *self){
+	asn_enc_rval_t rval;
+	struct per_target_buffer per_buf = { calloc( 4096, sizeof(*per_buf.buf) ), 0, 4096 };
+
+	rval = xer_encode( &asn_DEF_ULP_PDU, self, XER_F_BASIC, &per_output, &per_buf);
+
+	return (char *)per_buf.buf;
+    }
 typedef union {
   SUPLINIT_t	 msSUPLINIT;
   SUPLSTART_t	 msSUPLSTART;
@@ -2096,19 +2146,6 @@ typedef union {
 } UlpMessage_t_choice;
 
 
-
-typedef struct _MsgBuffer
-{
-	uint8_t *buf;
-	ssize_t size;
-} MsgBuffer;
-
-struct per_target_buffer
-{
-	uint8_t *buf;
-	size_t pos;
-	size_t size;
-};
 
 static int
 per_output(const void *data, size_t size, void *op_key)
@@ -2230,16 +2267,15 @@ decode_ulp_pdu(MsgBuffer buf)
 	return ulp_pdu;
 }
 
-static MsgBuffer
+static char *
 ulp_pdu_to_xml(MsgBuffer buf)
 {
-	MsgBuffer retbuf = { NULL, -1 };
 	asn_enc_rval_t rval;
 	struct per_target_buffer per_buf;
 	struct ULP_PDU *tmp_pdu = decode_ulp_pdu(buf);
 
 	if (NULL == tmp_pdu)
-		return retbuf;
+		return NULL;
 
 	per_buf.buf = calloc( 4096, sizeof(uint8_t) );
 	per_buf.pos = 0;
@@ -2254,14 +2290,30 @@ ulp_pdu_to_xml(MsgBuffer buf)
 			rval.failed_type->name,
 			strerror(errno));
 
-		return retbuf; /* unreached */
+		return NULL; /* unreached */
 	}
 
-	retbuf.buf = per_buf.buf;
-	retbuf.size = per_buf.size;
-
-	return retbuf;
+	return (char *)per_buf.buf;
 }
+
+static char *
+dump_ulp_pdu(MsgBuffer buf)
+{
+	struct per_target_buffer per_buf;
+	struct ULP_PDU *tmp_pdu = decode_ulp_pdu(buf);
+
+	if (NULL == tmp_pdu)
+		return NULL;
+
+	per_buf.buf = calloc( 4096, sizeof(uint8_t) );
+	per_buf.pos = 0;
+	per_buf.size = 4096;
+	asn_DEF_ULP_PDU.print_struct( &asn_DEF_ULP_PDU, tmp_pdu, 4, &per_output, &per_buf);
+	asn_DEF_ULP_PDU.free_struct(&asn_DEF_ULP_PDU, tmp_pdu, 0);
+
+	return (char *)per_buf.buf;
+}
+
 
 #ifdef __cplusplus
 extern "C" {
@@ -6321,6 +6373,64 @@ XS(_wrap_ULP_PDU_t_set_message_type) {
 }
 
 
+XS(_wrap_ULP_PDU_t_dump) {
+  {
+    struct ULP_PDU *arg1 = (struct ULP_PDU *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    char *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: ULP_PDU_t_dump(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_ULP_PDU, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ULP_PDU_t_dump" "', argument " "1"" of type '" "struct ULP_PDU *""'"); 
+    }
+    arg1 = (struct ULP_PDU *)(argp1);
+    result = (char *)ULP_PDU_dump(arg1);
+    ST(argvi) = SWIG_FromCharPtr((const char *)result); argvi++ ;
+    
+    free((char*)result);
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_ULP_PDU_t_xml_dump) {
+  {
+    struct ULP_PDU *arg1 = (struct ULP_PDU *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    char *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: ULP_PDU_t_xml_dump(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_ULP_PDU, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ULP_PDU_t_xml_dump" "', argument " "1"" of type '" "struct ULP_PDU *""'"); 
+    }
+    arg1 = (struct ULP_PDU *)(argp1);
+    result = (char *)ULP_PDU_xml_dump(arg1);
+    ST(argvi) = SWIG_FromCharPtr((const char *)result); argvi++ ;
+    
+    free((char*)result);
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
 XS(_wrap_UlpMessage_t_present_set) {
   {
     struct UlpMessage *arg1 = (struct UlpMessage *) 0 ;
@@ -7166,7 +7276,7 @@ XS(_wrap_ulp_pdu_to_xml) {
   {
     MsgBuffer arg1 ;
     int argvi = 0;
-    MsgBuffer result;
+    char *result = 0 ;
     dXSARGS;
     
     if ((items < 1) || (items > 1)) {
@@ -7185,17 +7295,42 @@ XS(_wrap_ulp_pdu_to_xml) {
         SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "ulp_pdu_to_xml" "', argument " "buf" " of type '" "MsgBuffer""'");
       }
     }
-    result = ulp_pdu_to_xml(arg1);
-    {
-      if (argvi >= items) {
-        EXTEND(sp,1); /* Extend the stack by 1 object */
-      }
-      ST(argvi) = sv_2mortal(newSVpv((&result)->buf, (&result)->size));
-      ++argvi; /* intentional - not portable between languages */
+    result = (char *)ulp_pdu_to_xml(arg1);
+    ST(argvi) = SWIG_FromCharPtr((const char *)result); argvi++ ;
+    free((char*)result);
+    XSRETURN(argvi);
+  fail:
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_dump_ulp_pdu) {
+  {
+    MsgBuffer arg1 ;
+    int argvi = 0;
+    char *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: dump_ulp_pdu(buf);");
     }
-    do {
-      if( (&result)->buf ) free((&result)->buf); 
-    } while(0);
+    {
+      // arg1 = AV2MsgBuf(ST(0));
+      // MsgBuffer retval = { NULL, -1 };
+      if(ST(0) == NULL) {
+        SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "dump_ulp_pdu" "', argument " "buf" " of type '" "MsgBuffer""'");
+      }
+      if( SvFLAGS(ST(0)) & (SVf_OK & ~SVf_ROK) ) {
+        (&arg1)->buf = SvPV(ST(0), (&arg1)->size);
+      }
+      else {
+        SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "dump_ulp_pdu" "', argument " "buf" " of type '" "MsgBuffer""'");
+      }
+    }
+    result = (char *)dump_ulp_pdu(arg1);
+    ST(argvi) = SWIG_FromCharPtr((const char *)result); argvi++ ;
+    free((char*)result);
     XSRETURN(argvi);
   fail:
     SWIG_croak_null();
@@ -7510,6 +7645,8 @@ static swig_command_info swig_commands[] = {
 {"SUPL::XSc::ULP_PDU_t_setSetSessionId_to_msisdn", _wrap_ULP_PDU_t_setSetSessionId_to_msisdn},
 {"SUPL::XSc::ULP_PDU_t_copy_SlpSessionId", _wrap_ULP_PDU_t_copy_SlpSessionId},
 {"SUPL::XSc::ULP_PDU_t_set_message_type", _wrap_ULP_PDU_t_set_message_type},
+{"SUPL::XSc::ULP_PDU_t_dump", _wrap_ULP_PDU_t_dump},
+{"SUPL::XSc::ULP_PDU_t_xml_dump", _wrap_ULP_PDU_t_xml_dump},
 {"SUPL::XSc::UlpMessage_t_present_set", _wrap_UlpMessage_t_present_set},
 {"SUPL::XSc::UlpMessage_t_present_get", _wrap_UlpMessage_t_present_get},
 {"SUPL::XSc::UlpMessage_t__asn_ctx_set", _wrap_UlpMessage_t__asn_ctx_set},
@@ -7538,6 +7675,7 @@ static swig_command_info swig_commands[] = {
 {"SUPL::XSc::encode_ulp_pdu", _wrap_encode_ulp_pdu},
 {"SUPL::XSc::decode_ulp_pdu", _wrap_decode_ulp_pdu},
 {"SUPL::XSc::ulp_pdu_to_xml", _wrap_ulp_pdu_to_xml},
+{"SUPL::XSc::dump_ulp_pdu", _wrap_dump_ulp_pdu},
 {0,0}
 };
 /* -----------------------------------------------------------------------------
