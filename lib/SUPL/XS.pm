@@ -318,7 +318,9 @@ sub DESTROY {
 *set_capabilities = *SUPL::XSc::SUPLPOSINIT_t_set_capabilities;
 *set_requested_assist_data = *SUPL::XSc::SUPLPOSINIT_t_set_requested_assist_data;
 *update_requested_assist_data = *SUPL::XSc::SUPLPOSINIT_t_update_requested_assist_data;
-*SUPLPOSINIT_set_requested_assist_navigation_modell = *SUPL::XSc::SUPLPOSINIT_t_SUPLPOSINIT_set_requested_assist_navigation_modell;
+*set_requested_assist_navigation_modell = *SUPL::XSc::SUPLPOSINIT_t_set_requested_assist_navigation_modell;
+*set_gsm_location_info = *SUPL::XSc::SUPLPOSINIT_t_set_gsm_location_info;
+*set_position_estimate = *SUPL::XSc::SUPLPOSINIT_t_set_position_estimate;
 sub new {
     my $pkg = shift;
     my $self = SUPL::XSc::new_SUPLPOSINIT_t(@_);
@@ -469,6 +471,7 @@ sub DESTROY {
 *setSetSessionId_to_msisdn = *SUPL::XSc::ULP_PDU_t_setSetSessionId_to_msisdn;
 *copy_SlpSessionId = *SUPL::XSc::ULP_PDU_t_copy_SlpSessionId;
 *set_message_type = *SUPL::XSc::ULP_PDU_t_set_message_type;
+*encode = *SUPL::XSc::ULP_PDU_t_encode;
 *dump = *SUPL::XSc::ULP_PDU_t_dump;
 *xml_dump = *SUPL::XSc::ULP_PDU_t_xml_dump;
 sub DISOWN {
@@ -580,6 +583,97 @@ sub ACQUIRE {
 }
 
 
+############# Class : SUPL::XS::SLPAddress_t ##############
+
+package SUPL::XS::SLPAddress_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( SUPL::XS );
+%OWNER = ();
+%ITERATORS = ();
+*swig_present_get = *SUPL::XSc::SLPAddress_t_present_get;
+*swig_present_set = *SUPL::XSc::SLPAddress_t_present_set;
+*swig__asn_ctx_get = *SUPL::XSc::SLPAddress_t__asn_ctx_get;
+*swig__asn_ctx_set = *SUPL::XSc::SLPAddress_t__asn_ctx_set;
+*swig_choice_get = *SUPL::XSc::SLPAddress_t_choice_get;
+*swig_choice_set = *SUPL::XSc::SLPAddress_t_choice_set;
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        SUPL::XSc::delete_SLPAddress_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+*set_ipaddress = *SUPL::XSc::SLPAddress_t_set_ipaddress;
+*set_fqdn = *SUPL::XSc::SLPAddress_t_set_fqdn;
+*is_ipv4 = *SUPL::XSc::SLPAddress_t_is_ipv4;
+*is_ipv6 = *SUPL::XSc::SLPAddress_t_is_ipv6;
+*is_ip = *SUPL::XSc::SLPAddress_t_is_ip;
+*is_fqdn = *SUPL::XSc::SLPAddress_t_is_fqdn;
+*is_valid = *SUPL::XSc::SLPAddress_t_is_valid;
+sub new {
+    my $pkg = shift;
+    my $self = SUPL::XSc::new_SLPAddress_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : SUPL::XS::SLPAddress_t_choice ##############
+
+package SUPL::XS::SLPAddress_t_choice;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( SUPL::XS );
+%OWNER = ();
+%ITERATORS = ();
+*swig_iPAddress_get = *SUPL::XSc::SLPAddress_t_choice_iPAddress_get;
+*swig_iPAddress_set = *SUPL::XSc::SLPAddress_t_choice_iPAddress_set;
+*swig_fQDN_get = *SUPL::XSc::SLPAddress_t_choice_fQDN_get;
+*swig_fQDN_set = *SUPL::XSc::SLPAddress_t_choice_fQDN_set;
+sub new {
+    my $pkg = shift;
+    my $self = SUPL::XSc::new_SLPAddress_t_choice(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        SUPL::XSc::delete_SLPAddress_t_choice($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
 # ------- CONSTANT STUBS -------
 
 package SUPL::XS;
@@ -611,9 +705,17 @@ sub UlpMessage_PR_msSUPLPOS () { $SUPL::XSc::UlpMessage_PR_msSUPLPOS }
 sub UlpMessage_PR_msSUPLEND () { $SUPL::XSc::UlpMessage_PR_msSUPLEND }
 sub UlpMessage_PR_msSUPLAUTHREQ () { $SUPL::XSc::UlpMessage_PR_msSUPLAUTHREQ }
 sub UlpMessage_PR_msSUPLAUTHRESP () { $SUPL::XSc::UlpMessage_PR_msSUPLAUTHRESP }
+sub SLPAddress_PR_NOTHING () { $SUPL::XSc::SLPAddress_PR_NOTHING }
+sub SLPAddress_PR_iPAddress () { $SUPL::XSc::SLPAddress_PR_iPAddress }
+sub SLPAddress_PR_fQDN () { $SUPL::XSc::SLPAddress_PR_fQDN }
 sub PrefMethod_agpsSETassistedPreferred () { $SUPL::XSc::PrefMethod_agpsSETassistedPreferred }
 sub PrefMethod_agpsSETBasedPreferred () { $SUPL::XSc::PrefMethod_agpsSETBasedPreferred }
 sub PrefMethod_noPreference () { $SUPL::XSc::PrefMethod_noPreference }
+sub SLPMode_proxy () { $SUPL::XSc::SLPMode_proxy }
+sub SLPMode_nonProxy () { $SUPL::XSc::SLPMode_nonProxy }
+sub Status_stale () { $SUPL::XSc::Status_stale }
+sub Status_current () { $SUPL::XSc::Status_current }
+sub Status_unknown () { $SUPL::XSc::Status_unknown }
 
 # ------- VARIABLE STUBS --------
 
@@ -629,4 +731,5 @@ package SUPL::XS;
 *asn_DEF_SUPLSTART = *SUPL::XSc::asn_DEF_SUPLSTART;
 *asn_DEF_ULP_PDU = *SUPL::XSc::asn_DEF_ULP_PDU;
 *asn_DEF_UlpMessage = *SUPL::XSc::asn_DEF_UlpMessage;
+*asn_DEF_SLPAddress = *SUPL::XSc::asn_DEF_SLPAddress;
 1;

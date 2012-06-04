@@ -57,6 +57,16 @@ Instantiates new PushMessage receiver from oFono's mmsd. The parameters
 I<bus-name> and I<object-path> must be specified as described under
 L</"DESCRIPTION"> in the way documented at L<SUPL::DBusObject/new|SUPL::DBusObject::new>.
 
+Additional parameter:
+
+=over 8
+
+=item test-setup
+
+Contains hash for each SUPL message type with construction information.
+
+=back
+
 =cut
 
 sub new
@@ -95,7 +105,7 @@ sub Notify
 
     my $body_str = join( "", map { chr($_) } @$body );
 
-    my $test = SUPL::Test->new();
+    my $test = SUPL::Test->new( %{$self->{config}->{"test-setup"}} );
     $test->handle_supl_pdu($body_str);
 
     return 0;

@@ -62,6 +62,84 @@
     }
 }
 
+%typemap(in) IPAddress_t {
+    if( 0 == (SvFLAGS($input) & (SVf_OK & ~SVf_ROK)) )
+	croak("Argument $argnum is not an embedded ip address.");
+    if( SvLEN($input) == 4 ) {
+	// IPv4
+	$1.present = IPAddress_PR_ipv4Address;
+	OCTET_STRING_fromBuf(&$1.choice.ipv4Address, SvPV_nolen($input), 4);
+    }
+    else if( SvLEN($input) == 16 ) {
+	// IPv6
+	$1.present = IPAddress_PR_ipv6Address;
+	OCTET_STRING_fromBuf(&$1.choice.ipv6Address, SvPV_nolen($input), 16);
+    }
+    else
+	croak("Argument $argnum is not an embedded ip address.");
+}
+
+%typemap(out) IPAddress_t {
+    if (argvi >= items) {
+	EXTEND(sp,1); /* Extend the stack by 1 object */
+    }
+    $result = sv_newmortal();
+    if(IPAddress_PR_ipv4Address == $1.present && 4 == $1.choice.ipv4Address.size) {
+	sv_setpvn($result, (char *)($1.choice.ipv4Address.buf), 4);
+    }
+    else if(IPAddress_PR_ipv6Address == $1.present && 16 == $1.choice.ipv4Address.size) {
+	sv_setpvn($result, (char *)($1.choice.ipv6Address.buf), 16);
+    }
+    ++argvi; /* intentional - not portable between languages */
+}
+
+%typemap(out) IPAddress_t * {
+    if (argvi >= items) {
+	EXTEND(sp,1); /* Extend the stack by 1 object */
+    }
+    $result = sv_newmortal();
+    if(IPAddress_PR_ipv4Address == $1->present && 4 == $1->choice.ipv4Address.size) {
+	sv_setpvn($result, (char *)($1->choice.ipv4Address.buf), 4);
+    }
+    else if(IPAddress_PR_ipv6Address == $1->present && 16 == $1->choice.ipv4Address.size) {
+	sv_setpvn($result, (char *)($1->choice.ipv6Address.buf), 16);
+    }
+    ++argvi; /* intentional - not portable between languages */
+}
+
+%typemap(in) OCTET_STRING_t {
+    if( 0 == (SvFLAGS($input) & (SVf_OK & ~SVf_ROK)) )
+	croak("Argument $argnum is not an embedded ip address.");
+    OCTET_STRING_fromBuf(&$1, SvPV_nolen($input), SvLEN($input));
+}
+
+%typemap(out) OCTET_STRING_t {
+    if (argvi >= items) {
+	EXTEND(sp,1); /* Extend the stack by 1 object */
+    }
+    $result = sv_newmortal();
+    sv_setpvn($result, (char *)($1.buf), $1.size);
+
+    ++argvi; /* intentional - not portable between languages */
+}
+
+%typemap(out) OCTET_STRING_t * {
+    if (argvi >= items) {
+	EXTEND(sp,1); /* Extend the stack by 1 object */
+    }
+    $result = sv_newmortal();
+    sv_setpvn($result, (char *)($1->buf), $1->size);
+
+    ++argvi; /* intentional - not portable between languages */
+}
+
+// built-in
+%apply OCTET_STRING_t { BIT_STRING_t, IA5String_t, VisibleString_t };
+// supl
+%apply OCTET_STRING_t { MAC_t, FQDN_t, KeyIdentity_t, Ver_t };
+// rrlp
+%apply OCTET_STRING_t { VelocityEstimate_t };
+
 %{
 /* SUPL PDU */
 #include "asn1/ULP-PDU.h"
@@ -71,6 +149,8 @@ typedef struct _MsgBuffer
 	uint8_t *buf;
 	ssize_t size;
 } MsgBuffer;
+
+static MsgBuffer encode_ulp_pdu(struct ULP_PDU *pdu);
 
 struct per_target_buffer
 {
@@ -93,11 +173,33 @@ static int per_output(const void *data, size_t size, void *op_key);
 %include "asn1/ULP-PDU.h"
 %include "asn1/UlpMessage.h"
 
+// helper classes
+%include "asn1/SLPAddress.h"
+
 enum PrefMethod {
 	PrefMethod_agpsSETassistedPreferred = 0,
 	PrefMethod_agpsSETBasedPreferred = 1,
 	PrefMethod_noPreference = 2
 };
+typedef long PrefMethod_t;
+
+enum SLPMode {
+	SLPMode_proxy	= 0,
+	SLPMode_nonProxy	= 1
+};
+
+typedef long SLPMode_t;
+
+enum Status {
+	Status_stale	= 0,
+	Status_current	= 1,
+	Status_unknown	= 2
+	/*
+	 * Enumeration is extensible
+	 */
+};
+
+typedef long Status_t;
 
 %{
 static int
@@ -452,6 +554,11 @@ dump_ulp_pdu(MsgBuffer buf)
 	$self->message.present = kinda;
     }
 
+    %newobject encode;
+    MsgBuffer encode() {
+	return encode_ulp_pdu($self);
+    }
+
     %newobject dump;
     char * dump() {
 	struct per_target_buffer per_buf = { calloc( 4096, sizeof(*per_buf.buf) ), 0, 4096 };
@@ -477,6 +584,8 @@ dump_ulp_pdu(MsgBuffer buf)
     ~SUPLINIT() {
 	asn_DEF_SUPLINIT.free_struct(&asn_DEF_SUPLINIT, $self, 1);
     }
+
+    ;
 };
 
 %nodefaultctor SUPLSTART;
@@ -574,7 +683,7 @@ dump_ulp_pdu(MsgBuffer buf)
 	}
     }
 
-    void SUPLPOSINIT_set_requested_assist_navigation_modell(long gpsWeek, long gpsToe, long nSAT, long toeLimit, SatelliteInfo_t * sat_info) {
+    void set_requested_assist_navigation_modell(long gpsWeek, long gpsToe, long nSAT, long toeLimit, SatelliteInfo_t * sat_info) {
 	if( NULL == $self->requestedAssistData )
 	    SUPLPOSINIT_set_requested_assist_data($self, 0);
 
@@ -594,6 +703,30 @@ dump_ulp_pdu(MsgBuffer buf)
 	$self->requestedAssistData->navigationModelData->toeLimit = toeLimit;
 	$self->requestedAssistData->navigationModelData->satInfo = sat_info;
     }
+
+    void set_gsm_location_info(long mcc, long mnc, long lac, long cellid, long ta) {
+	LocationId_t *dst = &$self->locationId;
+
+	dst->cellInfo.present = CellInfo_PR_gsmCell;
+	dst->cellInfo.choice.gsmCell.refMCC = mcc;
+	dst->cellInfo.choice.gsmCell.refMNC = mnc;
+	dst->cellInfo.choice.gsmCell.refLAC = lac;
+	dst->cellInfo.choice.gsmCell.refCI = cellid;
+	dst->cellInfo.choice.gsmCell.tA = calloc(1, sizeof(*(dst->cellInfo.choice.gsmCell.tA)));
+	dst->cellInfo.choice.gsmCell.tA[0] = ta;
+    }
+
+    void set_position_estimate( time_t when, long latitudeSign, long latitude, long longitude ) {
+	struct tm *gm_when;
+
+	gm_when = gmtime(&when);
+	asn_time2UT(&$self->position->timestamp, gm_when, 1);
+	$self->position->positionEstimate.latitudeSign = latitudeSign;
+	$self->position->positionEstimate.latitude = latitude;
+	$self->position->positionEstimate.longitude = longitude;
+    }
+
+    // void set_position_velocity(...)
 };
 
 %nodefaultctor SUPLPOS;
@@ -621,6 +754,48 @@ dump_ulp_pdu(MsgBuffer buf)
 %extend SUPLAUTHRESP {
     ~SUPLAUTHRESP() {
 	asn_DEF_SUPLAUTHRESP.free_struct(&asn_DEF_SUPLAUTHRESP, $self, 1);
+    }
+};
+
+%nodefaultctor SLPAddress;
+%extend SLPAddress {
+    ~SLPAddress() {
+	asn_DEF_SLPAddress.free_struct(&asn_DEF_SLPAddress, $self, 1);
+    }
+
+    void set_ipaddress(IPAddress_t ipaddr) {
+	$self->present = SLPAddress_PR_iPAddress;
+	$self->choice.iPAddress = ipaddr;
+    }
+
+    void set_fqdn(const char *buf) {
+	$self->present = SLPAddress_PR_fQDN;
+	OCTET_STRING_fromString(&$self->choice.fQDN, buf);
+    }
+
+    int is_ipv4() {
+	return ($self->present == SLPAddress_PR_iPAddress) &&
+	       ((($self->choice.iPAddress.present == IPAddress_PR_ipv4Address) && 
+	         ($self->choice.iPAddress.choice.ipv4Address.size == 4)));
+    }
+
+    int is_ipv6() {
+	return ($self->present == SLPAddress_PR_iPAddress) &&
+	       ((($self->choice.iPAddress.present == IPAddress_PR_ipv6Address) && 
+	         ($self->choice.iPAddress.choice.ipv6Address.size == 16)));
+    }
+
+    int is_ip() {
+	return SLPAddress_is_ipv4($self) || SLPAddress_is_ipv6($self);
+    }
+
+    int is_fqdn() {
+	return ($self->present == SLPAddress_PR_iPAddress) &&
+	       ($self->choice.fQDN.size > 0 && $self->choice.fQDN.buf != NULL);
+    }
+
+    int is_valid() {
+	return SLPAddress_is_ip($self) || SLPAddress_is_fqdn($self);
     }
 };
 

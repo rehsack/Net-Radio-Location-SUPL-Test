@@ -61,6 +61,8 @@ sub new
 
     bless( $self, $class );
 
+    $self->{config} = \%cfg;
+
     return $self;
 }
 

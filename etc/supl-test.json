@@ -10,23 +10,34 @@
 	    "bus-name" : "org.vfnet.supl",
 	},
 	"RecvPushMsg" : {
-	    "object-path" : "/org/vfnet/supl/PushConsumer"
+	    "object-path" : "/org/vfnet/supl/PushConsumer",
+	    "test-setup" : {
+		"ident" : {
+		    "imsi" : "262020450000147";
+		},
+		"connect" : {
+		    "target" : {
+			"host" : "supl.vodafone.com",
+			"supl_port" : 7275,
+			"ulp_port" : 7276,
+			"domain" : "IPv4",
+		    },
+		    "ssl" : 1,
+		},
+		"SUPLINIT" : {
+		    "action" : "reply",
+		    "modes" : ["proxy"],
+		},
+		"SUPLPOSINIT" : {
+		    "request-assistant-data" : true,
+		    "estimated-location" : [ 13, 13 ],
+		},
+		"SUPLPOS" : {
+		}
+	    }
 	},
 	"Translator" : {
 	    "object-path" : "/org/vfnet/supl/Translator"
 	}
     },
-    "test-setup" : {
-	"SUPLINIT" : {
-	    "action" : "reply",
-	    "target" : "supl.vodafone.com:7275",
-	    "modes" : ["proxy"],
-	},
-	"SUPLPOSINIT" : {
-	    "request-assistant-data" : true,
-	    "estimated-location" : [ 13, 13 ],
-	},
-	"SUPLPOS" : {
-	}
-    }
 }
