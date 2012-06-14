@@ -1,4 +1,4 @@
-package SUPL::MainLoop;
+package Net::Radio::Location::SUPL::MainLoop;
 
 use strict;
 use warnings;
@@ -15,7 +15,7 @@ use Log::Any qw($log);
 
 =head1 NAME
 
-SUPL::MainLoop - Net::DBus::Reactor wrapper for SUPL Tests
+Net::Radio::Location::SUPL::MainLoop - Net::DBus::Reactor wrapper for SUPL Tests
 
 =head1 DESCRIPTION
 
@@ -31,7 +31,7 @@ my $instance;
 
 =head2 new
 
-Instantiates new SUPL::MainLoop. Thus it's a singleton, always the same
+Instantiates new Net::Radio::Location::SUPL::MainLoop. Thus it's a singleton, always the same
 instance is returned. The behavior in multi-threaded programs is undefined.
 
 =cut
@@ -48,7 +48,7 @@ sub new
 
 =head2 add
 
-  SUPL::MainLoop->add($obj);
+  Net::Radio::Location::SUPL::MainLoop->add($obj);
 
 Adds a new object to be controlled.
 
@@ -89,7 +89,7 @@ sub add
 
 =head2 remove
 
-  SUPL::MainLoop->remove($obj);
+  Net::Radio::Location::SUPL::MainLoop->remove($obj);
 
 Removes an object from the list of controlled objects. 
 
@@ -137,7 +137,7 @@ sub remove
 
 Start's the main loop via Net::DBus::Reactor.
 
-When SUPL::MainLoop hasn't been instantiated or no objects are controlled,
+When Net::Radio::Location::SUPL::MainLoop hasn't been instantiated or no objects are controlled,
 it dies with exception.
 
 =cut
@@ -172,7 +172,7 @@ on your bug as I make changes.
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc SUPL::Test
+    perldoc Net::Radio::Location::SUPL::Test
 
 You can also look for information at:
 

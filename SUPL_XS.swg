@@ -1,4 +1,4 @@
-%module "SUPL::XS"
+%module "Net::Radio::Location::SUPL::XS"
 
 %include "carrays.i"
 

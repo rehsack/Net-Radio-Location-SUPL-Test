@@ -8,13 +8,14 @@ use Config;
 use MyBuilder;
 
 my $builder = MyBuilder->new(
-    module_name       => 'SUPL::Test',
+    module_name       => 'Net::Radio::Location::SUPL::Test',
     license           => 'perl',
     dist_author       => q{Jens Rehsack <rehsack@cpan.org>},
-    dist_version_from => 'lib/SUPL/Test.pm',
+    dist_version_from => 'lib/Net/Radio/Location/SUPL/Test.pm',
     build_requires    => {
                         'ExtUtils::CBuilder' => '0.27',
                         'ExtUtils::ParseXS'  => 0,
+                        'Test::Differences'  => 0, # XXX figure out really required version
                         'Test::More'         => '0.90',
                       },
     configure_requires => { 'Module::Build' => '0.38', },

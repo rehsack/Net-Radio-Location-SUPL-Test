@@ -1,4 +1,4 @@
-package SUPL::Test;
+package Net::Radio::Location::SUPL::Test;
 
 use strict;
 use warnings;
@@ -7,7 +7,7 @@ use 5.010;
 
 use Carp qw/croak/;
 
-use SUPL::XS;
+use Net::Radio::Location::SUPL::XS;
 
 use Log::Any qw($log);
 use Digest::SHA;
@@ -22,11 +22,11 @@ use Socket (
 
 use Params::Util qw(_STRING);
 
-use SUPL::MainLoop;
+use Net::Radio::Location::SUPL::MainLoop;
 
 =head1 NAME
 
-SUPL::Test - Run Test Use-Cases for SUPL
+Net::Radio::Location::SUPL::Test - Run Test Use-Cases for SUPL
 
 =head1 DESCRIPTION
 
@@ -40,7 +40,7 @@ our $VERSION = '0.001';
 
 =head2 new
 
-instantiates new SUPL::Test state machine
+instantiates new Net::Radio::Location::SUPL::Test state machine
 
 =cut
 
@@ -172,17 +172,17 @@ sub begin_ni_supl_seesion
     # check proxy mode
     my ( $response_type, $response_addr );
     my $supl_init = $supl_pdu->{message}->{choice}->{msSUPLINIT};
-    if ( $supl_init->{sLPMode} == SUPL::XS::SLPMode_proxy )
+    if ( $supl_init->{sLPMode} == Net::Radio::Location::SUPL::XS::SLPMode_proxy )
     {
         $log->debug("NI packet wants proxy mode");
-        $response_type = SUPL::XS::UlpMessage_PR_msSUPLPOSINIT;
+        $response_type = Net::Radio::Location::SUPL::XS::UlpMessage_PR_msSUPLPOSINIT;
     }
     else
     {
         # XXX might require additional effort to send SUPLEND in nonProxy
         #     mode which might make rejection of nonProxy mode superfluous
         $log->warning("nonProxy mode not supported");
-        $response_type = SUPL::XS::UlpMessage_PR_msSUPLEND;
+        $response_type = Net::Radio::Location::SUPL::XS::UlpMessage_PR_msSUPLEND;
     }
 
     # check reply address (fqdn, ip...)
@@ -217,18 +217,18 @@ sub begin_ni_supl_seesion
     $self->_connect( host => $response_addr ) or return;
 
     # register at MainLoop (or better in handle_pdu?)
-    SUPL::MainLoop->add($self);
+    Net::Radio::Location::SUPL::MainLoop->add($self);
 
     # built SUPLPOSINIT/AUTHREQ
-    my $pdu = SUPL::XS::ULP_PDU_t->new();
+    my $pdu = Net::Radio::Location::SUPL::XS::ULP_PDU_t->new();
 
     $pdu->copy_SlpSessionId($supl_pdu);
     $pdu->setSetSessionId_to_imsi( _get_next_session_id(), $self->{config}->{ident}->{imsi} );
-    $pdu->set_message_type(SUPL::XS::UlpMessage_PR_msSUPLPOSINIT);
+    $pdu->set_message_type(Net::Radio::Location::SUPL::XS::UlpMessage_PR_msSUPLPOSINIT);
 
     my $posinit = $pdu->{message}->{choice}->{msSUPLPOSINIT};
-    $posinit->set_capabilities( SUPL::XS::setcap_pos_tech_agpsSETBased, SUPL::XS::PrefMethod_agpsSETBasedPreferred,
-                                SUPL::XS::setcap_pos_proto_rrlp );
+    $posinit->set_capabilities( Net::Radio::Location::SUPL::XS::setcap_pos_tech_agpsSETBased, Net::Radio::Location::SUPL::XS::PrefMethod_agpsSETBasedPreferred,
+                                Net::Radio::Location::SUPL::XS::setcap_pos_proto_rrlp );
     my %mobile_ident;
     @mobile_ident{"mcc", "mnc", "msin"} = _split_imsi($self->{config}->{ident}->{imsi}); # probably read from org.ofono.NetworkRegistration
     $posinit->set_gsm_location_info( # XXX from IMSI!!!
@@ -238,7 +238,7 @@ sub begin_ni_supl_seesion
                                      26993,    # cellid
                                      1         # ta -- Terminal Adaptor
                                    );
-    $posinit->{locationId}->{status} = SUPL::XS::Status_stale;
+    $posinit->{locationId}->{status} = Net::Radio::Location::SUPL::XS::Status_stale;
     $posinit->set_position( gmtime(&now), 1, 53, 28 );    # XXX
 
     # verification hash
@@ -267,7 +267,7 @@ sub handle_supl_pdu
 
     _STRING($enc_pdu) or croak "Invalid argument for \$enc_pdu";
 
-    my $supl_pdu = SUPL::XS::decode_ulp_pdu($enc_pdu);
+    my $supl_pdu = Net::Radio::Location::SUPL::XS::decode_ulp_pdu($enc_pdu);
 
     $log->is_debug()
       and
@@ -277,7 +277,7 @@ sub handle_supl_pdu
     # decode_ulp_pdu croaks on error ...
     given ( $supl_pdu->{message}->{present} )
     {
-        when (SUPL::XS::UlpMessage_PR_msSUPLINIT)
+        when (Net::Radio::Location::SUPL::XS::UlpMessage_PR_msSUPLINIT)
         {
             $self->begin_ni_supl_seesion( packet => $enc_pdu,
                                           pdu    => $supl_pdu );
@@ -302,7 +302,7 @@ sub trigger_read
 
 =head2 get_read_trigger
 
-Called by L<SUPL::MainLoop> to add the managed socket to the list of file
+Called by L<Net::Radio::Location::SUPL::MainLoop> to add the managed socket to the list of file
 handles monitored for havind data to receive.
 
 =cut
@@ -335,7 +335,7 @@ on your bug as I make changes.
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc SUPL::Test
+    perldoc Net::Radio::Location::SUPL::Test
 
 You can also look for information at:
 

@@ -1,4 +1,4 @@
-package SUPL::DBusObject::RecvPushMsg;
+package Net::Radio::Location::SUPL::DBusObject::RecvPushMsg;
 
 use strict;
 use warnings;
@@ -7,7 +7,7 @@ use 5.010;
 
 =head1 NAME
 
-SUPL::DBusObject::RecvPushMsg - DBus Server Object to receive SUPL PushMessages
+Net::Radio::Location::SUPL::DBusObject::RecvPushMsg - DBus Server Object to receive SUPL PushMessages
 
 =head1 DESCRIPTION
 
@@ -43,19 +43,19 @@ text.
 
 our $VERSION = 0.001;
 
-use base qw(SUPL::DBusObject);
+use base qw(Net::Radio::Location::SUPL::DBusObject);
 use Net::DBus::Exporter qw(org.ofono.mms.PushConsumer);
 
 use Log::Any qw($log);
 use Digest::SHA qw(hmac_sha1);
 
-use SUPL::Test;
+use Net::Radio::Location::SUPL::Test;
 
 =head2 new
 
 Instantiates new PushMessage receiver from oFono's mmsd. The parameters
 I<bus-name> and I<object-path> must be specified as described under
-L</"DESCRIPTION"> in the way documented at L<SUPL::DBusObject/new|SUPL::DBusObject::new>.
+L</"DESCRIPTION"> in the way documented at L<Net::Radio::Location::SUPL::DBusObject/new|Net::Radio::Location::SUPL::DBusObject::new>.
 
 Additional parameter:
 
@@ -76,7 +76,7 @@ sub new
 
     bless( $self, $class );
 
-    SUPL::MainLoop->add($self);
+    Net::Radio::Location::SUPL::MainLoop->add($self);
 
     $log->debugf( "%s initialized and added to MainLoop control", __PACKAGE__ );
 
@@ -105,7 +105,7 @@ sub Notify
 
     my $body_str = join( "", map { chr($_) } @$body );
 
-    my $test = SUPL::Test->new( %{$self->{config}->{"test-setup"}} );
+    my $test = Net::Radio::Location::SUPL::Test->new( %{$self->{config}->{"test-setup"}} );
     $test->handle_supl_pdu($body_str);
 
     return 0;
@@ -124,7 +124,7 @@ sub Release
 {
     my $self = $_[0];
     # XXX: if($self->{cfg}->{QuitOnRelease})
-    # SUPL::MainLoop->remove($self);
+    # Net::Radio::Location::SUPL::MainLoop->remove($self);
 }
 
 =head1 AUTHOR
@@ -143,7 +143,7 @@ on your bug as I make changes.
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc SUPL::Test
+    perldoc Net::Radio::Location::SUPL::Test
 
 You can also look for information at:
 

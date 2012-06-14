@@ -15,10 +15,10 @@ eval "use Pod::Coverage $min_pc";
 plan skip_all => "Pod::Coverage $min_pc required for testing POD coverage"
     if $@;
 
-pod_coverage_ok( "SUPL::Test" );
-pod_coverage_ok( "SUPL::MainLoop" );
-pod_coverage_ok( "SUPL::DBusObject" );
-pod_coverage_ok( "SUPL::DBusObject::RecvPushMsg" );
-pod_coverage_ok( "SUPL::DBusObject::Translator" );
+pod_coverage_ok( "Net::Radio::Location::SUPL::Test" );
+pod_coverage_ok( "Net::Radio::Location::SUPL::MainLoop" );
+pod_coverage_ok( "Net::Radio::Location::SUPL::DBusObject" );
+pod_coverage_ok( "Net::Radio::Location::SUPL::DBusObject::RecvPushMsg" );
+pod_coverage_ok( "Net::Radio::Location::SUPL::DBusObject::Translator" );
 
 done_testing();

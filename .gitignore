@@ -21,3 +21,6 @@ out*
 *.bak
 *.orig
 blib
+Build
+_build
+demo*.pkt

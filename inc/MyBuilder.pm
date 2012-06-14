@@ -1116,7 +1116,7 @@ sub ACTION_compile_xscode {
     my $self = shift;
     my $cbuilder = $self->cbuilder;
 
-    my $archdir = catdir( $self->blib, 'arch', 'auto', 'SUPL', 'XS');
+    my $archdir = catdir( $self->blib, qw(arch auto Net Radio Location SUPL XS));
     mkpath( $archdir, 0, 0777 ) unless -d $archdir;
 
     print STDERR "\n** Preparing XS code\n";

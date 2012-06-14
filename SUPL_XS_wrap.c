@@ -1537,10 +1537,10 @@ static swig_module_info swig_module = {swig_types, 45, 0, 0, 0, 0};
 
 /* -------- TYPES TABLE (END) -------- */
 
-#define SWIG_init    boot_SUPL__XS
+#define SWIG_init    boot_Net__Radio__Location__SUPL__XS
 
-#define SWIG_name   "SUPL::XSc::boot_SUPL__XS"
-#define SWIG_prefix "SUPL::XSc::"
+#define SWIG_name   "Net::Radio::Location::SUPL::XSc::boot_Net__Radio__Location__SUPL__XS"
+#define SWIG_prefix "Net::Radio::Location::SUPL::XSc::"
 
 #define SWIGVERSION 0x020006 
 #define SWIG_VERSION SWIGVERSION
@@ -2388,8 +2388,8 @@ extern "C" {
 #endif
 
 #ifdef PERL_OBJECT
-#define MAGIC_CLASS _wrap_SUPL__XS_var::
-class _wrap_SUPL__XS_var : public CPerlObj {
+#define MAGIC_CLASS _wrap_Net__Radio__Location__SUPL__XS_var::
+class _wrap_Net__Radio__Location__SUPL__XS_var : public CPerlObj {
 public:
 #else
 #define MAGIC_CLASS
@@ -8252,25 +8252,25 @@ static swig_type_info _swigt__p_RequestedAssistData = {"_p_RequestedAssistData",
 static swig_type_info _swigt__p_SETAuthKey = {"_p_SETAuthKey", "struct SETAuthKey *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_SETCapabilities_t = {"_p_SETCapabilities_t", "SETCapabilities_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_SETNonce_t = {"_p_SETNonce_t", "SETNonce_t *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_SLPAddress = {"_p_SLPAddress", "SLPAddress_t *|struct SLPAddress *|SLPAddress *", 0, 0, (void*)"SUPL::XS::SLPAddress_t", 0};
+static swig_type_info _swigt__p_SLPAddress = {"_p_SLPAddress", "SLPAddress_t *|struct SLPAddress *|SLPAddress *", 0, 0, (void*)"Net::Radio::Location::SUPL::XS::SLPAddress_t", 0};
 static swig_type_info _swigt__p_SLPAddress_PR = {"_p_SLPAddress_PR", "enum SLPAddress_PR *|SLPAddress_PR *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_SLPAddress_t_choice = {"_p_SLPAddress_t_choice", "SLPAddress_t_choice *", 0, 0, (void*)"SUPL::XS::SLPAddress_t_choice", 0};
+static swig_type_info _swigt__p_SLPAddress_t_choice = {"_p_SLPAddress_t_choice", "SLPAddress_t_choice *", 0, 0, (void*)"Net::Radio::Location::SUPL::XS::SLPAddress_t_choice", 0};
 static swig_type_info _swigt__p_SPCAuthKey = {"_p_SPCAuthKey", "struct SPCAuthKey *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_SUPLAUTHREQ = {"_p_SUPLAUTHREQ", "struct SUPLAUTHREQ *|SUPLAUTHREQ *|SUPLAUTHREQ_t *", 0, 0, (void*)"SUPL::XS::SUPLAUTHREQ_t", 0};
-static swig_type_info _swigt__p_SUPLAUTHRESP = {"_p_SUPLAUTHRESP", "SUPLAUTHRESP_t *|struct SUPLAUTHRESP *|SUPLAUTHRESP *", 0, 0, (void*)"SUPL::XS::SUPLAUTHRESP_t", 0};
-static swig_type_info _swigt__p_SUPLEND = {"_p_SUPLEND", "SUPLEND_t *|struct SUPLEND *|SUPLEND *", 0, 0, (void*)"SUPL::XS::SUPLEND_t", 0};
-static swig_type_info _swigt__p_SUPLINIT = {"_p_SUPLINIT", "SUPLINIT_t *|struct SUPLINIT *|SUPLINIT *", 0, 0, (void*)"SUPL::XS::SUPLINIT_t", 0};
-static swig_type_info _swigt__p_SUPLPOS = {"_p_SUPLPOS", "struct SUPLPOS *|SUPLPOS *|SUPLPOS_t *", 0, 0, (void*)"SUPL::XS::SUPLPOS_t", 0};
-static swig_type_info _swigt__p_SUPLPOSINIT = {"_p_SUPLPOSINIT", "struct SUPLPOSINIT *|SUPLPOSINIT *|SUPLPOSINIT_t *", 0, 0, (void*)"SUPL::XS::SUPLPOSINIT_t", 0};
-static swig_type_info _swigt__p_SUPLRESPONSE = {"_p_SUPLRESPONSE", "struct SUPLRESPONSE *|SUPLRESPONSE *|SUPLRESPONSE_t *", 0, 0, (void*)"SUPL::XS::SUPLRESPONSE_t", 0};
-static swig_type_info _swigt__p_SUPLSTART = {"_p_SUPLSTART", "struct SUPLSTART *|SUPLSTART *|SUPLSTART_t *", 0, 0, (void*)"SUPL::XS::SUPLSTART_t", 0};
+static swig_type_info _swigt__p_SUPLAUTHREQ = {"_p_SUPLAUTHREQ", "struct SUPLAUTHREQ *|SUPLAUTHREQ *|SUPLAUTHREQ_t *", 0, 0, (void*)"Net::Radio::Location::SUPL::XS::SUPLAUTHREQ_t", 0};
+static swig_type_info _swigt__p_SUPLAUTHRESP = {"_p_SUPLAUTHRESP", "SUPLAUTHRESP_t *|struct SUPLAUTHRESP *|SUPLAUTHRESP *", 0, 0, (void*)"Net::Radio::Location::SUPL::XS::SUPLAUTHRESP_t", 0};
+static swig_type_info _swigt__p_SUPLEND = {"_p_SUPLEND", "SUPLEND_t *|struct SUPLEND *|SUPLEND *", 0, 0, (void*)"Net::Radio::Location::SUPL::XS::SUPLEND_t", 0};
+static swig_type_info _swigt__p_SUPLINIT = {"_p_SUPLINIT", "SUPLINIT_t *|struct SUPLINIT *|SUPLINIT *", 0, 0, (void*)"Net::Radio::Location::SUPL::XS::SUPLINIT_t", 0};
+static swig_type_info _swigt__p_SUPLPOS = {"_p_SUPLPOS", "struct SUPLPOS *|SUPLPOS *|SUPLPOS_t *", 0, 0, (void*)"Net::Radio::Location::SUPL::XS::SUPLPOS_t", 0};
+static swig_type_info _swigt__p_SUPLPOSINIT = {"_p_SUPLPOSINIT", "struct SUPLPOSINIT *|SUPLPOSINIT *|SUPLPOSINIT_t *", 0, 0, (void*)"Net::Radio::Location::SUPL::XS::SUPLPOSINIT_t", 0};
+static swig_type_info _swigt__p_SUPLRESPONSE = {"_p_SUPLRESPONSE", "struct SUPLRESPONSE *|SUPLRESPONSE *|SUPLRESPONSE_t *", 0, 0, (void*)"Net::Radio::Location::SUPL::XS::SUPLRESPONSE_t", 0};
+static swig_type_info _swigt__p_SUPLSTART = {"_p_SUPLSTART", "struct SUPLSTART *|SUPLSTART *|SUPLSTART_t *", 0, 0, (void*)"Net::Radio::Location::SUPL::XS::SUPLSTART_t", 0};
 static swig_type_info _swigt__p_SatelliteInfo_t = {"_p_SatelliteInfo_t", "SatelliteInfo_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_SessionID_t = {"_p_SessionID_t", "SessionID_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_StatusCode_t = {"_p_StatusCode_t", "StatusCode_t *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_ULP_PDU = {"_p_ULP_PDU", "ULP_PDU_t *|struct ULP_PDU *|ULP_PDU *", 0, 0, (void*)"SUPL::XS::ULP_PDU_t", 0};
-static swig_type_info _swigt__p_UlpMessage = {"_p_UlpMessage", "struct UlpMessage *|UlpMessage_t *|UlpMessage *", 0, 0, (void*)"SUPL::XS::UlpMessage_t", 0};
+static swig_type_info _swigt__p_ULP_PDU = {"_p_ULP_PDU", "ULP_PDU_t *|struct ULP_PDU *|ULP_PDU *", 0, 0, (void*)"Net::Radio::Location::SUPL::XS::ULP_PDU_t", 0};
+static swig_type_info _swigt__p_UlpMessage = {"_p_UlpMessage", "struct UlpMessage *|UlpMessage_t *|UlpMessage *", 0, 0, (void*)"Net::Radio::Location::SUPL::XS::UlpMessage_t", 0};
 static swig_type_info _swigt__p_UlpMessage_PR = {"_p_UlpMessage_PR", "enum UlpMessage_PR *|UlpMessage_PR *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_UlpMessage_t_choice = {"_p_UlpMessage_t_choice", "UlpMessage_t_choice *", 0, 0, (void*)"SUPL::XS::UlpMessage_t_choice", 0};
+static swig_type_info _swigt__p_UlpMessage_t_choice = {"_p_UlpMessage_t_choice", "UlpMessage_t_choice *", 0, 0, (void*)"Net::Radio::Location::SUPL::XS::UlpMessage_t_choice", 0};
 static swig_type_info _swigt__p_Velocity = {"_p_Velocity", "struct Velocity *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Ver_t = {"_p_Ver_t", "Ver_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Version_t = {"_p_Version_t", "Version_t *", 0, 0, (void*)0, 0};
@@ -8432,187 +8432,187 @@ static swig_constant_info swig_constants[] = {
 }
 #endif
 static swig_variable_info swig_variables[] = {
-    { "SUPL::XSc::asn_DEF_SUPLAUTHREQ", MAGIC_CLASS _wrap_asn_DEF_SUPLAUTHREQ_set, MAGIC_CLASS _wrap_asn_DEF_SUPLAUTHREQ_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
-    { "SUPL::XSc::asn_DEF_SUPLAUTHRESP", MAGIC_CLASS _wrap_asn_DEF_SUPLAUTHRESP_set, MAGIC_CLASS _wrap_asn_DEF_SUPLAUTHRESP_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
-    { "SUPL::XSc::asn_DEF_SUPLEND", MAGIC_CLASS _wrap_asn_DEF_SUPLEND_set, MAGIC_CLASS _wrap_asn_DEF_SUPLEND_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
-    { "SUPL::XSc::asn_DEF_SUPLINIT", MAGIC_CLASS _wrap_asn_DEF_SUPLINIT_set, MAGIC_CLASS _wrap_asn_DEF_SUPLINIT_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
-    { "SUPL::XSc::asn_DEF_SUPLPOS", MAGIC_CLASS _wrap_asn_DEF_SUPLPOS_set, MAGIC_CLASS _wrap_asn_DEF_SUPLPOS_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
-    { "SUPL::XSc::asn_DEF_SUPLPOSINIT", MAGIC_CLASS _wrap_asn_DEF_SUPLPOSINIT_set, MAGIC_CLASS _wrap_asn_DEF_SUPLPOSINIT_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
-    { "SUPL::XSc::asn_DEF_SUPLRESPONSE", MAGIC_CLASS _wrap_asn_DEF_SUPLRESPONSE_set, MAGIC_CLASS _wrap_asn_DEF_SUPLRESPONSE_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
-    { "SUPL::XSc::asn_DEF_SUPLSTART", MAGIC_CLASS _wrap_asn_DEF_SUPLSTART_set, MAGIC_CLASS _wrap_asn_DEF_SUPLSTART_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
-    { "SUPL::XSc::asn_DEF_ULP_PDU", MAGIC_CLASS _wrap_asn_DEF_ULP_PDU_set, MAGIC_CLASS _wrap_asn_DEF_ULP_PDU_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
-    { "SUPL::XSc::asn_DEF_UlpMessage", MAGIC_CLASS _wrap_asn_DEF_UlpMessage_set, MAGIC_CLASS _wrap_asn_DEF_UlpMessage_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
-    { "SUPL::XSc::asn_DEF_SLPAddress", MAGIC_CLASS _wrap_asn_DEF_SLPAddress_set, MAGIC_CLASS _wrap_asn_DEF_SLPAddress_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
+    { "Net::Radio::Location::SUPL::XSc::asn_DEF_SUPLAUTHREQ", MAGIC_CLASS _wrap_asn_DEF_SUPLAUTHREQ_set, MAGIC_CLASS _wrap_asn_DEF_SUPLAUTHREQ_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
+    { "Net::Radio::Location::SUPL::XSc::asn_DEF_SUPLAUTHRESP", MAGIC_CLASS _wrap_asn_DEF_SUPLAUTHRESP_set, MAGIC_CLASS _wrap_asn_DEF_SUPLAUTHRESP_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
+    { "Net::Radio::Location::SUPL::XSc::asn_DEF_SUPLEND", MAGIC_CLASS _wrap_asn_DEF_SUPLEND_set, MAGIC_CLASS _wrap_asn_DEF_SUPLEND_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
+    { "Net::Radio::Location::SUPL::XSc::asn_DEF_SUPLINIT", MAGIC_CLASS _wrap_asn_DEF_SUPLINIT_set, MAGIC_CLASS _wrap_asn_DEF_SUPLINIT_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
+    { "Net::Radio::Location::SUPL::XSc::asn_DEF_SUPLPOS", MAGIC_CLASS _wrap_asn_DEF_SUPLPOS_set, MAGIC_CLASS _wrap_asn_DEF_SUPLPOS_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
+    { "Net::Radio::Location::SUPL::XSc::asn_DEF_SUPLPOSINIT", MAGIC_CLASS _wrap_asn_DEF_SUPLPOSINIT_set, MAGIC_CLASS _wrap_asn_DEF_SUPLPOSINIT_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
+    { "Net::Radio::Location::SUPL::XSc::asn_DEF_SUPLRESPONSE", MAGIC_CLASS _wrap_asn_DEF_SUPLRESPONSE_set, MAGIC_CLASS _wrap_asn_DEF_SUPLRESPONSE_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
+    { "Net::Radio::Location::SUPL::XSc::asn_DEF_SUPLSTART", MAGIC_CLASS _wrap_asn_DEF_SUPLSTART_set, MAGIC_CLASS _wrap_asn_DEF_SUPLSTART_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
+    { "Net::Radio::Location::SUPL::XSc::asn_DEF_ULP_PDU", MAGIC_CLASS _wrap_asn_DEF_ULP_PDU_set, MAGIC_CLASS _wrap_asn_DEF_ULP_PDU_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
+    { "Net::Radio::Location::SUPL::XSc::asn_DEF_UlpMessage", MAGIC_CLASS _wrap_asn_DEF_UlpMessage_set, MAGIC_CLASS _wrap_asn_DEF_UlpMessage_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
+    { "Net::Radio::Location::SUPL::XSc::asn_DEF_SLPAddress", MAGIC_CLASS _wrap_asn_DEF_SLPAddress_set, MAGIC_CLASS _wrap_asn_DEF_SLPAddress_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
 {0,0,0,0}
 };
 static swig_command_info swig_commands[] = {
-{"SUPL::XSc::SUPLAUTHREQ_t_sETNonce_set", _wrap_SUPLAUTHREQ_t_sETNonce_set},
-{"SUPL::XSc::SUPLAUTHREQ_t_sETNonce_get", _wrap_SUPLAUTHREQ_t_sETNonce_get},
-{"SUPL::XSc::SUPLAUTHREQ_t_keyIdentity2_set", _wrap_SUPLAUTHREQ_t_keyIdentity2_set},
-{"SUPL::XSc::SUPLAUTHREQ_t_keyIdentity2_get", _wrap_SUPLAUTHREQ_t_keyIdentity2_get},
-{"SUPL::XSc::SUPLAUTHREQ_t__asn_ctx_set", _wrap_SUPLAUTHREQ_t__asn_ctx_set},
-{"SUPL::XSc::SUPLAUTHREQ_t__asn_ctx_get", _wrap_SUPLAUTHREQ_t__asn_ctx_get},
-{"SUPL::XSc::delete_SUPLAUTHREQ_t", _wrap_delete_SUPLAUTHREQ_t},
-{"SUPL::XSc::new_SUPLAUTHREQ_t", _wrap_new_SUPLAUTHREQ_t},
-{"SUPL::XSc::SUPLAUTHRESP_t_sPCAuthKey_set", _wrap_SUPLAUTHRESP_t_sPCAuthKey_set},
-{"SUPL::XSc::SUPLAUTHRESP_t_sPCAuthKey_get", _wrap_SUPLAUTHRESP_t_sPCAuthKey_get},
-{"SUPL::XSc::SUPLAUTHRESP_t_keyIdentity3_set", _wrap_SUPLAUTHRESP_t_keyIdentity3_set},
-{"SUPL::XSc::SUPLAUTHRESP_t_keyIdentity3_get", _wrap_SUPLAUTHRESP_t_keyIdentity3_get},
-{"SUPL::XSc::SUPLAUTHRESP_t_statusCode_set", _wrap_SUPLAUTHRESP_t_statusCode_set},
-{"SUPL::XSc::SUPLAUTHRESP_t_statusCode_get", _wrap_SUPLAUTHRESP_t_statusCode_get},
-{"SUPL::XSc::SUPLAUTHRESP_t__asn_ctx_set", _wrap_SUPLAUTHRESP_t__asn_ctx_set},
-{"SUPL::XSc::SUPLAUTHRESP_t__asn_ctx_get", _wrap_SUPLAUTHRESP_t__asn_ctx_get},
-{"SUPL::XSc::delete_SUPLAUTHRESP_t", _wrap_delete_SUPLAUTHRESP_t},
-{"SUPL::XSc::new_SUPLAUTHRESP_t", _wrap_new_SUPLAUTHRESP_t},
-{"SUPL::XSc::SUPLEND_t_position_set", _wrap_SUPLEND_t_position_set},
-{"SUPL::XSc::SUPLEND_t_position_get", _wrap_SUPLEND_t_position_get},
-{"SUPL::XSc::SUPLEND_t_statusCode_set", _wrap_SUPLEND_t_statusCode_set},
-{"SUPL::XSc::SUPLEND_t_statusCode_get", _wrap_SUPLEND_t_statusCode_get},
-{"SUPL::XSc::SUPLEND_t_ver_set", _wrap_SUPLEND_t_ver_set},
-{"SUPL::XSc::SUPLEND_t_ver_get", _wrap_SUPLEND_t_ver_get},
-{"SUPL::XSc::SUPLEND_t__asn_ctx_set", _wrap_SUPLEND_t__asn_ctx_set},
-{"SUPL::XSc::SUPLEND_t__asn_ctx_get", _wrap_SUPLEND_t__asn_ctx_get},
-{"SUPL::XSc::delete_SUPLEND_t", _wrap_delete_SUPLEND_t},
-{"SUPL::XSc::new_SUPLEND_t", _wrap_new_SUPLEND_t},
-{"SUPL::XSc::SUPLINIT_t_posMethod_set", _wrap_SUPLINIT_t_posMethod_set},
-{"SUPL::XSc::SUPLINIT_t_posMethod_get", _wrap_SUPLINIT_t_posMethod_get},
-{"SUPL::XSc::SUPLINIT_t_notification_set", _wrap_SUPLINIT_t_notification_set},
-{"SUPL::XSc::SUPLINIT_t_notification_get", _wrap_SUPLINIT_t_notification_get},
-{"SUPL::XSc::SUPLINIT_t_sLPAddress_set", _wrap_SUPLINIT_t_sLPAddress_set},
-{"SUPL::XSc::SUPLINIT_t_sLPAddress_get", _wrap_SUPLINIT_t_sLPAddress_get},
-{"SUPL::XSc::SUPLINIT_t_qoP_set", _wrap_SUPLINIT_t_qoP_set},
-{"SUPL::XSc::SUPLINIT_t_qoP_get", _wrap_SUPLINIT_t_qoP_get},
-{"SUPL::XSc::SUPLINIT_t_sLPMode_set", _wrap_SUPLINIT_t_sLPMode_set},
-{"SUPL::XSc::SUPLINIT_t_sLPMode_get", _wrap_SUPLINIT_t_sLPMode_get},
-{"SUPL::XSc::SUPLINIT_t_mAC_set", _wrap_SUPLINIT_t_mAC_set},
-{"SUPL::XSc::SUPLINIT_t_mAC_get", _wrap_SUPLINIT_t_mAC_get},
-{"SUPL::XSc::SUPLINIT_t_keyIdentity_set", _wrap_SUPLINIT_t_keyIdentity_set},
-{"SUPL::XSc::SUPLINIT_t_keyIdentity_get", _wrap_SUPLINIT_t_keyIdentity_get},
-{"SUPL::XSc::SUPLINIT_t__asn_ctx_set", _wrap_SUPLINIT_t__asn_ctx_set},
-{"SUPL::XSc::SUPLINIT_t__asn_ctx_get", _wrap_SUPLINIT_t__asn_ctx_get},
-{"SUPL::XSc::delete_SUPLINIT_t", _wrap_delete_SUPLINIT_t},
-{"SUPL::XSc::new_SUPLINIT_t", _wrap_new_SUPLINIT_t},
-{"SUPL::XSc::SUPLPOS_t_posPayLoad_set", _wrap_SUPLPOS_t_posPayLoad_set},
-{"SUPL::XSc::SUPLPOS_t_posPayLoad_get", _wrap_SUPLPOS_t_posPayLoad_get},
-{"SUPL::XSc::SUPLPOS_t_velocity_set", _wrap_SUPLPOS_t_velocity_set},
-{"SUPL::XSc::SUPLPOS_t_velocity_get", _wrap_SUPLPOS_t_velocity_get},
-{"SUPL::XSc::SUPLPOS_t__asn_ctx_set", _wrap_SUPLPOS_t__asn_ctx_set},
-{"SUPL::XSc::SUPLPOS_t__asn_ctx_get", _wrap_SUPLPOS_t__asn_ctx_get},
-{"SUPL::XSc::delete_SUPLPOS_t", _wrap_delete_SUPLPOS_t},
-{"SUPL::XSc::new_SUPLPOS_t", _wrap_new_SUPLPOS_t},
-{"SUPL::XSc::SUPLPOSINIT_t_sETCapabilities_set", _wrap_SUPLPOSINIT_t_sETCapabilities_set},
-{"SUPL::XSc::SUPLPOSINIT_t_sETCapabilities_get", _wrap_SUPLPOSINIT_t_sETCapabilities_get},
-{"SUPL::XSc::SUPLPOSINIT_t_requestedAssistData_set", _wrap_SUPLPOSINIT_t_requestedAssistData_set},
-{"SUPL::XSc::SUPLPOSINIT_t_requestedAssistData_get", _wrap_SUPLPOSINIT_t_requestedAssistData_get},
-{"SUPL::XSc::SUPLPOSINIT_t_locationId_set", _wrap_SUPLPOSINIT_t_locationId_set},
-{"SUPL::XSc::SUPLPOSINIT_t_locationId_get", _wrap_SUPLPOSINIT_t_locationId_get},
-{"SUPL::XSc::SUPLPOSINIT_t_position_set", _wrap_SUPLPOSINIT_t_position_set},
-{"SUPL::XSc::SUPLPOSINIT_t_position_get", _wrap_SUPLPOSINIT_t_position_get},
-{"SUPL::XSc::SUPLPOSINIT_t_sUPLPOS_set", _wrap_SUPLPOSINIT_t_sUPLPOS_set},
-{"SUPL::XSc::SUPLPOSINIT_t_sUPLPOS_get", _wrap_SUPLPOSINIT_t_sUPLPOS_get},
-{"SUPL::XSc::SUPLPOSINIT_t_ver_set", _wrap_SUPLPOSINIT_t_ver_set},
-{"SUPL::XSc::SUPLPOSINIT_t_ver_get", _wrap_SUPLPOSINIT_t_ver_get},
-{"SUPL::XSc::SUPLPOSINIT_t__asn_ctx_set", _wrap_SUPLPOSINIT_t__asn_ctx_set},
-{"SUPL::XSc::SUPLPOSINIT_t__asn_ctx_get", _wrap_SUPLPOSINIT_t__asn_ctx_get},
-{"SUPL::XSc::delete_SUPLPOSINIT_t", _wrap_delete_SUPLPOSINIT_t},
-{"SUPL::XSc::SUPLPOSINIT_t_set_capabilities", _wrap_SUPLPOSINIT_t_set_capabilities},
-{"SUPL::XSc::SUPLPOSINIT_t_set_requested_assist_data", _wrap_SUPLPOSINIT_t_set_requested_assist_data},
-{"SUPL::XSc::SUPLPOSINIT_t_update_requested_assist_data", _wrap_SUPLPOSINIT_t_update_requested_assist_data},
-{"SUPL::XSc::SUPLPOSINIT_t_set_requested_assist_navigation_modell", _wrap_SUPLPOSINIT_t_set_requested_assist_navigation_modell},
-{"SUPL::XSc::SUPLPOSINIT_t_set_gsm_location_info", _wrap_SUPLPOSINIT_t_set_gsm_location_info},
-{"SUPL::XSc::SUPLPOSINIT_t_set_position_estimate", _wrap_SUPLPOSINIT_t_set_position_estimate},
-{"SUPL::XSc::new_SUPLPOSINIT_t", _wrap_new_SUPLPOSINIT_t},
-{"SUPL::XSc::SUPLRESPONSE_t_posMethod_set", _wrap_SUPLRESPONSE_t_posMethod_set},
-{"SUPL::XSc::SUPLRESPONSE_t_posMethod_get", _wrap_SUPLRESPONSE_t_posMethod_get},
-{"SUPL::XSc::SUPLRESPONSE_t_sLPAddress_set", _wrap_SUPLRESPONSE_t_sLPAddress_set},
-{"SUPL::XSc::SUPLRESPONSE_t_sLPAddress_get", _wrap_SUPLRESPONSE_t_sLPAddress_get},
-{"SUPL::XSc::SUPLRESPONSE_t_sETAuthKey_set", _wrap_SUPLRESPONSE_t_sETAuthKey_set},
-{"SUPL::XSc::SUPLRESPONSE_t_sETAuthKey_get", _wrap_SUPLRESPONSE_t_sETAuthKey_get},
-{"SUPL::XSc::SUPLRESPONSE_t_keyIdentity4_set", _wrap_SUPLRESPONSE_t_keyIdentity4_set},
-{"SUPL::XSc::SUPLRESPONSE_t_keyIdentity4_get", _wrap_SUPLRESPONSE_t_keyIdentity4_get},
-{"SUPL::XSc::SUPLRESPONSE_t__asn_ctx_set", _wrap_SUPLRESPONSE_t__asn_ctx_set},
-{"SUPL::XSc::SUPLRESPONSE_t__asn_ctx_get", _wrap_SUPLRESPONSE_t__asn_ctx_get},
-{"SUPL::XSc::delete_SUPLRESPONSE_t", _wrap_delete_SUPLRESPONSE_t},
-{"SUPL::XSc::new_SUPLRESPONSE_t", _wrap_new_SUPLRESPONSE_t},
-{"SUPL::XSc::SUPLSTART_t_sETCapabilities_set", _wrap_SUPLSTART_t_sETCapabilities_set},
-{"SUPL::XSc::SUPLSTART_t_sETCapabilities_get", _wrap_SUPLSTART_t_sETCapabilities_get},
-{"SUPL::XSc::SUPLSTART_t_locationId_set", _wrap_SUPLSTART_t_locationId_set},
-{"SUPL::XSc::SUPLSTART_t_locationId_get", _wrap_SUPLSTART_t_locationId_get},
-{"SUPL::XSc::SUPLSTART_t_qoP_set", _wrap_SUPLSTART_t_qoP_set},
-{"SUPL::XSc::SUPLSTART_t_qoP_get", _wrap_SUPLSTART_t_qoP_get},
-{"SUPL::XSc::SUPLSTART_t__asn_ctx_set", _wrap_SUPLSTART_t__asn_ctx_set},
-{"SUPL::XSc::SUPLSTART_t__asn_ctx_get", _wrap_SUPLSTART_t__asn_ctx_get},
-{"SUPL::XSc::delete_SUPLSTART_t", _wrap_delete_SUPLSTART_t},
-{"SUPL::XSc::new_SUPLSTART_t", _wrap_new_SUPLSTART_t},
-{"SUPL::XSc::ULP_PDU_t_length_set", _wrap_ULP_PDU_t_length_set},
-{"SUPL::XSc::ULP_PDU_t_length_get", _wrap_ULP_PDU_t_length_get},
-{"SUPL::XSc::ULP_PDU_t_version_set", _wrap_ULP_PDU_t_version_set},
-{"SUPL::XSc::ULP_PDU_t_version_get", _wrap_ULP_PDU_t_version_get},
-{"SUPL::XSc::ULP_PDU_t_sessionID_set", _wrap_ULP_PDU_t_sessionID_set},
-{"SUPL::XSc::ULP_PDU_t_sessionID_get", _wrap_ULP_PDU_t_sessionID_get},
-{"SUPL::XSc::ULP_PDU_t_message_set", _wrap_ULP_PDU_t_message_set},
-{"SUPL::XSc::ULP_PDU_t_message_get", _wrap_ULP_PDU_t_message_get},
-{"SUPL::XSc::ULP_PDU_t__asn_ctx_set", _wrap_ULP_PDU_t__asn_ctx_set},
-{"SUPL::XSc::ULP_PDU_t__asn_ctx_get", _wrap_ULP_PDU_t__asn_ctx_get},
-{"SUPL::XSc::new_ULP_PDU_t", _wrap_new_ULP_PDU_t},
-{"SUPL::XSc::delete_ULP_PDU_t", _wrap_delete_ULP_PDU_t},
-{"SUPL::XSc::ULP_PDU_t_set_version", _wrap_ULP_PDU_t_set_version},
-{"SUPL::XSc::ULP_PDU_t_setSetSessionId_to_imsi", _wrap_ULP_PDU_t_setSetSessionId_to_imsi},
-{"SUPL::XSc::ULP_PDU_t_setSetSessionId_to_msisdn", _wrap_ULP_PDU_t_setSetSessionId_to_msisdn},
-{"SUPL::XSc::ULP_PDU_t_copy_SlpSessionId", _wrap_ULP_PDU_t_copy_SlpSessionId},
-{"SUPL::XSc::ULP_PDU_t_set_message_type", _wrap_ULP_PDU_t_set_message_type},
-{"SUPL::XSc::ULP_PDU_t_encode", _wrap_ULP_PDU_t_encode},
-{"SUPL::XSc::ULP_PDU_t_dump", _wrap_ULP_PDU_t_dump},
-{"SUPL::XSc::ULP_PDU_t_xml_dump", _wrap_ULP_PDU_t_xml_dump},
-{"SUPL::XSc::UlpMessage_t_present_set", _wrap_UlpMessage_t_present_set},
-{"SUPL::XSc::UlpMessage_t_present_get", _wrap_UlpMessage_t_present_get},
-{"SUPL::XSc::UlpMessage_t__asn_ctx_set", _wrap_UlpMessage_t__asn_ctx_set},
-{"SUPL::XSc::UlpMessage_t__asn_ctx_get", _wrap_UlpMessage_t__asn_ctx_get},
-{"SUPL::XSc::UlpMessage_t_choice_get", _wrap_UlpMessage_t_choice_get},
-{"SUPL::XSc::new_UlpMessage_t", _wrap_new_UlpMessage_t},
-{"SUPL::XSc::delete_UlpMessage_t", _wrap_delete_UlpMessage_t},
-{"SUPL::XSc::UlpMessage_t_choice_msSUPLINIT_set", _wrap_UlpMessage_t_choice_msSUPLINIT_set},
-{"SUPL::XSc::UlpMessage_t_choice_msSUPLINIT_get", _wrap_UlpMessage_t_choice_msSUPLINIT_get},
-{"SUPL::XSc::UlpMessage_t_choice_msSUPLSTART_set", _wrap_UlpMessage_t_choice_msSUPLSTART_set},
-{"SUPL::XSc::UlpMessage_t_choice_msSUPLSTART_get", _wrap_UlpMessage_t_choice_msSUPLSTART_get},
-{"SUPL::XSc::UlpMessage_t_choice_msSUPLRESPONSE_set", _wrap_UlpMessage_t_choice_msSUPLRESPONSE_set},
-{"SUPL::XSc::UlpMessage_t_choice_msSUPLRESPONSE_get", _wrap_UlpMessage_t_choice_msSUPLRESPONSE_get},
-{"SUPL::XSc::UlpMessage_t_choice_msSUPLPOSINIT_set", _wrap_UlpMessage_t_choice_msSUPLPOSINIT_set},
-{"SUPL::XSc::UlpMessage_t_choice_msSUPLPOSINIT_get", _wrap_UlpMessage_t_choice_msSUPLPOSINIT_get},
-{"SUPL::XSc::UlpMessage_t_choice_msSUPLPOS_set", _wrap_UlpMessage_t_choice_msSUPLPOS_set},
-{"SUPL::XSc::UlpMessage_t_choice_msSUPLPOS_get", _wrap_UlpMessage_t_choice_msSUPLPOS_get},
-{"SUPL::XSc::UlpMessage_t_choice_msSUPLEND_set", _wrap_UlpMessage_t_choice_msSUPLEND_set},
-{"SUPL::XSc::UlpMessage_t_choice_msSUPLEND_get", _wrap_UlpMessage_t_choice_msSUPLEND_get},
-{"SUPL::XSc::UlpMessage_t_choice_msSUPLAUTHREQ_set", _wrap_UlpMessage_t_choice_msSUPLAUTHREQ_set},
-{"SUPL::XSc::UlpMessage_t_choice_msSUPLAUTHREQ_get", _wrap_UlpMessage_t_choice_msSUPLAUTHREQ_get},
-{"SUPL::XSc::UlpMessage_t_choice_msSUPLAUTHRESP_set", _wrap_UlpMessage_t_choice_msSUPLAUTHRESP_set},
-{"SUPL::XSc::UlpMessage_t_choice_msSUPLAUTHRESP_get", _wrap_UlpMessage_t_choice_msSUPLAUTHRESP_get},
-{"SUPL::XSc::new_UlpMessage_t_choice", _wrap_new_UlpMessage_t_choice},
-{"SUPL::XSc::delete_UlpMessage_t_choice", _wrap_delete_UlpMessage_t_choice},
-{"SUPL::XSc::SLPAddress_t_present_set", _wrap_SLPAddress_t_present_set},
-{"SUPL::XSc::SLPAddress_t_present_get", _wrap_SLPAddress_t_present_get},
-{"SUPL::XSc::SLPAddress_t__asn_ctx_set", _wrap_SLPAddress_t__asn_ctx_set},
-{"SUPL::XSc::SLPAddress_t__asn_ctx_get", _wrap_SLPAddress_t__asn_ctx_get},
-{"SUPL::XSc::SLPAddress_t_choice_get", _wrap_SLPAddress_t_choice_get},
-{"SUPL::XSc::delete_SLPAddress_t", _wrap_delete_SLPAddress_t},
-{"SUPL::XSc::SLPAddress_t_set_ipaddress", _wrap_SLPAddress_t_set_ipaddress},
-{"SUPL::XSc::SLPAddress_t_set_fqdn", _wrap_SLPAddress_t_set_fqdn},
-{"SUPL::XSc::SLPAddress_t_is_ipv4", _wrap_SLPAddress_t_is_ipv4},
-{"SUPL::XSc::SLPAddress_t_is_ipv6", _wrap_SLPAddress_t_is_ipv6},
-{"SUPL::XSc::SLPAddress_t_is_ip", _wrap_SLPAddress_t_is_ip},
-{"SUPL::XSc::SLPAddress_t_is_fqdn", _wrap_SLPAddress_t_is_fqdn},
-{"SUPL::XSc::SLPAddress_t_is_valid", _wrap_SLPAddress_t_is_valid},
-{"SUPL::XSc::new_SLPAddress_t", _wrap_new_SLPAddress_t},
-{"SUPL::XSc::SLPAddress_t_choice_iPAddress_set", _wrap_SLPAddress_t_choice_iPAddress_set},
-{"SUPL::XSc::SLPAddress_t_choice_iPAddress_get", _wrap_SLPAddress_t_choice_iPAddress_get},
-{"SUPL::XSc::SLPAddress_t_choice_fQDN_set", _wrap_SLPAddress_t_choice_fQDN_set},
-{"SUPL::XSc::SLPAddress_t_choice_fQDN_get", _wrap_SLPAddress_t_choice_fQDN_get},
-{"SUPL::XSc::new_SLPAddress_t_choice", _wrap_new_SLPAddress_t_choice},
-{"SUPL::XSc::delete_SLPAddress_t_choice", _wrap_delete_SLPAddress_t_choice},
-{"SUPL::XSc::encode_ulp_pdu", _wrap_encode_ulp_pdu},
-{"SUPL::XSc::decode_ulp_pdu", _wrap_decode_ulp_pdu},
-{"SUPL::XSc::ulp_pdu_to_xml", _wrap_ulp_pdu_to_xml},
-{"SUPL::XSc::dump_ulp_pdu", _wrap_dump_ulp_pdu},
+{"Net::Radio::Location::SUPL::XSc::SUPLAUTHREQ_t_sETNonce_set", _wrap_SUPLAUTHREQ_t_sETNonce_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLAUTHREQ_t_sETNonce_get", _wrap_SUPLAUTHREQ_t_sETNonce_get},
+{"Net::Radio::Location::SUPL::XSc::SUPLAUTHREQ_t_keyIdentity2_set", _wrap_SUPLAUTHREQ_t_keyIdentity2_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLAUTHREQ_t_keyIdentity2_get", _wrap_SUPLAUTHREQ_t_keyIdentity2_get},
+{"Net::Radio::Location::SUPL::XSc::SUPLAUTHREQ_t__asn_ctx_set", _wrap_SUPLAUTHREQ_t__asn_ctx_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLAUTHREQ_t__asn_ctx_get", _wrap_SUPLAUTHREQ_t__asn_ctx_get},
+{"Net::Radio::Location::SUPL::XSc::delete_SUPLAUTHREQ_t", _wrap_delete_SUPLAUTHREQ_t},
+{"Net::Radio::Location::SUPL::XSc::new_SUPLAUTHREQ_t", _wrap_new_SUPLAUTHREQ_t},
+{"Net::Radio::Location::SUPL::XSc::SUPLAUTHRESP_t_sPCAuthKey_set", _wrap_SUPLAUTHRESP_t_sPCAuthKey_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLAUTHRESP_t_sPCAuthKey_get", _wrap_SUPLAUTHRESP_t_sPCAuthKey_get},
+{"Net::Radio::Location::SUPL::XSc::SUPLAUTHRESP_t_keyIdentity3_set", _wrap_SUPLAUTHRESP_t_keyIdentity3_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLAUTHRESP_t_keyIdentity3_get", _wrap_SUPLAUTHRESP_t_keyIdentity3_get},
+{"Net::Radio::Location::SUPL::XSc::SUPLAUTHRESP_t_statusCode_set", _wrap_SUPLAUTHRESP_t_statusCode_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLAUTHRESP_t_statusCode_get", _wrap_SUPLAUTHRESP_t_statusCode_get},
+{"Net::Radio::Location::SUPL::XSc::SUPLAUTHRESP_t__asn_ctx_set", _wrap_SUPLAUTHRESP_t__asn_ctx_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLAUTHRESP_t__asn_ctx_get", _wrap_SUPLAUTHRESP_t__asn_ctx_get},
+{"Net::Radio::Location::SUPL::XSc::delete_SUPLAUTHRESP_t", _wrap_delete_SUPLAUTHRESP_t},
+{"Net::Radio::Location::SUPL::XSc::new_SUPLAUTHRESP_t", _wrap_new_SUPLAUTHRESP_t},
+{"Net::Radio::Location::SUPL::XSc::SUPLEND_t_position_set", _wrap_SUPLEND_t_position_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLEND_t_position_get", _wrap_SUPLEND_t_position_get},
+{"Net::Radio::Location::SUPL::XSc::SUPLEND_t_statusCode_set", _wrap_SUPLEND_t_statusCode_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLEND_t_statusCode_get", _wrap_SUPLEND_t_statusCode_get},
+{"Net::Radio::Location::SUPL::XSc::SUPLEND_t_ver_set", _wrap_SUPLEND_t_ver_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLEND_t_ver_get", _wrap_SUPLEND_t_ver_get},
+{"Net::Radio::Location::SUPL::XSc::SUPLEND_t__asn_ctx_set", _wrap_SUPLEND_t__asn_ctx_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLEND_t__asn_ctx_get", _wrap_SUPLEND_t__asn_ctx_get},
+{"Net::Radio::Location::SUPL::XSc::delete_SUPLEND_t", _wrap_delete_SUPLEND_t},
+{"Net::Radio::Location::SUPL::XSc::new_SUPLEND_t", _wrap_new_SUPLEND_t},
+{"Net::Radio::Location::SUPL::XSc::SUPLINIT_t_posMethod_set", _wrap_SUPLINIT_t_posMethod_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLINIT_t_posMethod_get", _wrap_SUPLINIT_t_posMethod_get},
+{"Net::Radio::Location::SUPL::XSc::SUPLINIT_t_notification_set", _wrap_SUPLINIT_t_notification_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLINIT_t_notification_get", _wrap_SUPLINIT_t_notification_get},
+{"Net::Radio::Location::SUPL::XSc::SUPLINIT_t_sLPAddress_set", _wrap_SUPLINIT_t_sLPAddress_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLINIT_t_sLPAddress_get", _wrap_SUPLINIT_t_sLPAddress_get},
+{"Net::Radio::Location::SUPL::XSc::SUPLINIT_t_qoP_set", _wrap_SUPLINIT_t_qoP_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLINIT_t_qoP_get", _wrap_SUPLINIT_t_qoP_get},
+{"Net::Radio::Location::SUPL::XSc::SUPLINIT_t_sLPMode_set", _wrap_SUPLINIT_t_sLPMode_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLINIT_t_sLPMode_get", _wrap_SUPLINIT_t_sLPMode_get},
+{"Net::Radio::Location::SUPL::XSc::SUPLINIT_t_mAC_set", _wrap_SUPLINIT_t_mAC_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLINIT_t_mAC_get", _wrap_SUPLINIT_t_mAC_get},
+{"Net::Radio::Location::SUPL::XSc::SUPLINIT_t_keyIdentity_set", _wrap_SUPLINIT_t_keyIdentity_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLINIT_t_keyIdentity_get", _wrap_SUPLINIT_t_keyIdentity_get},
+{"Net::Radio::Location::SUPL::XSc::SUPLINIT_t__asn_ctx_set", _wrap_SUPLINIT_t__asn_ctx_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLINIT_t__asn_ctx_get", _wrap_SUPLINIT_t__asn_ctx_get},
+{"Net::Radio::Location::SUPL::XSc::delete_SUPLINIT_t", _wrap_delete_SUPLINIT_t},
+{"Net::Radio::Location::SUPL::XSc::new_SUPLINIT_t", _wrap_new_SUPLINIT_t},
+{"Net::Radio::Location::SUPL::XSc::SUPLPOS_t_posPayLoad_set", _wrap_SUPLPOS_t_posPayLoad_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLPOS_t_posPayLoad_get", _wrap_SUPLPOS_t_posPayLoad_get},
+{"Net::Radio::Location::SUPL::XSc::SUPLPOS_t_velocity_set", _wrap_SUPLPOS_t_velocity_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLPOS_t_velocity_get", _wrap_SUPLPOS_t_velocity_get},
+{"Net::Radio::Location::SUPL::XSc::SUPLPOS_t__asn_ctx_set", _wrap_SUPLPOS_t__asn_ctx_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLPOS_t__asn_ctx_get", _wrap_SUPLPOS_t__asn_ctx_get},
+{"Net::Radio::Location::SUPL::XSc::delete_SUPLPOS_t", _wrap_delete_SUPLPOS_t},
+{"Net::Radio::Location::SUPL::XSc::new_SUPLPOS_t", _wrap_new_SUPLPOS_t},
+{"Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t_sETCapabilities_set", _wrap_SUPLPOSINIT_t_sETCapabilities_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t_sETCapabilities_get", _wrap_SUPLPOSINIT_t_sETCapabilities_get},
+{"Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t_requestedAssistData_set", _wrap_SUPLPOSINIT_t_requestedAssistData_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t_requestedAssistData_get", _wrap_SUPLPOSINIT_t_requestedAssistData_get},
+{"Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t_locationId_set", _wrap_SUPLPOSINIT_t_locationId_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t_locationId_get", _wrap_SUPLPOSINIT_t_locationId_get},
+{"Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t_position_set", _wrap_SUPLPOSINIT_t_position_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t_position_get", _wrap_SUPLPOSINIT_t_position_get},
+{"Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t_sUPLPOS_set", _wrap_SUPLPOSINIT_t_sUPLPOS_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t_sUPLPOS_get", _wrap_SUPLPOSINIT_t_sUPLPOS_get},
+{"Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t_ver_set", _wrap_SUPLPOSINIT_t_ver_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t_ver_get", _wrap_SUPLPOSINIT_t_ver_get},
+{"Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t__asn_ctx_set", _wrap_SUPLPOSINIT_t__asn_ctx_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t__asn_ctx_get", _wrap_SUPLPOSINIT_t__asn_ctx_get},
+{"Net::Radio::Location::SUPL::XSc::delete_SUPLPOSINIT_t", _wrap_delete_SUPLPOSINIT_t},
+{"Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t_set_capabilities", _wrap_SUPLPOSINIT_t_set_capabilities},
+{"Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t_set_requested_assist_data", _wrap_SUPLPOSINIT_t_set_requested_assist_data},
+{"Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t_update_requested_assist_data", _wrap_SUPLPOSINIT_t_update_requested_assist_data},
+{"Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t_set_requested_assist_navigation_modell", _wrap_SUPLPOSINIT_t_set_requested_assist_navigation_modell},
+{"Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t_set_gsm_location_info", _wrap_SUPLPOSINIT_t_set_gsm_location_info},
+{"Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t_set_position_estimate", _wrap_SUPLPOSINIT_t_set_position_estimate},
+{"Net::Radio::Location::SUPL::XSc::new_SUPLPOSINIT_t", _wrap_new_SUPLPOSINIT_t},
+{"Net::Radio::Location::SUPL::XSc::SUPLRESPONSE_t_posMethod_set", _wrap_SUPLRESPONSE_t_posMethod_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLRESPONSE_t_posMethod_get", _wrap_SUPLRESPONSE_t_posMethod_get},
+{"Net::Radio::Location::SUPL::XSc::SUPLRESPONSE_t_sLPAddress_set", _wrap_SUPLRESPONSE_t_sLPAddress_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLRESPONSE_t_sLPAddress_get", _wrap_SUPLRESPONSE_t_sLPAddress_get},
+{"Net::Radio::Location::SUPL::XSc::SUPLRESPONSE_t_sETAuthKey_set", _wrap_SUPLRESPONSE_t_sETAuthKey_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLRESPONSE_t_sETAuthKey_get", _wrap_SUPLRESPONSE_t_sETAuthKey_get},
+{"Net::Radio::Location::SUPL::XSc::SUPLRESPONSE_t_keyIdentity4_set", _wrap_SUPLRESPONSE_t_keyIdentity4_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLRESPONSE_t_keyIdentity4_get", _wrap_SUPLRESPONSE_t_keyIdentity4_get},
+{"Net::Radio::Location::SUPL::XSc::SUPLRESPONSE_t__asn_ctx_set", _wrap_SUPLRESPONSE_t__asn_ctx_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLRESPONSE_t__asn_ctx_get", _wrap_SUPLRESPONSE_t__asn_ctx_get},
+{"Net::Radio::Location::SUPL::XSc::delete_SUPLRESPONSE_t", _wrap_delete_SUPLRESPONSE_t},
+{"Net::Radio::Location::SUPL::XSc::new_SUPLRESPONSE_t", _wrap_new_SUPLRESPONSE_t},
+{"Net::Radio::Location::SUPL::XSc::SUPLSTART_t_sETCapabilities_set", _wrap_SUPLSTART_t_sETCapabilities_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLSTART_t_sETCapabilities_get", _wrap_SUPLSTART_t_sETCapabilities_get},
+{"Net::Radio::Location::SUPL::XSc::SUPLSTART_t_locationId_set", _wrap_SUPLSTART_t_locationId_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLSTART_t_locationId_get", _wrap_SUPLSTART_t_locationId_get},
+{"Net::Radio::Location::SUPL::XSc::SUPLSTART_t_qoP_set", _wrap_SUPLSTART_t_qoP_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLSTART_t_qoP_get", _wrap_SUPLSTART_t_qoP_get},
+{"Net::Radio::Location::SUPL::XSc::SUPLSTART_t__asn_ctx_set", _wrap_SUPLSTART_t__asn_ctx_set},
+{"Net::Radio::Location::SUPL::XSc::SUPLSTART_t__asn_ctx_get", _wrap_SUPLSTART_t__asn_ctx_get},
+{"Net::Radio::Location::SUPL::XSc::delete_SUPLSTART_t", _wrap_delete_SUPLSTART_t},
+{"Net::Radio::Location::SUPL::XSc::new_SUPLSTART_t", _wrap_new_SUPLSTART_t},
+{"Net::Radio::Location::SUPL::XSc::ULP_PDU_t_length_set", _wrap_ULP_PDU_t_length_set},
+{"Net::Radio::Location::SUPL::XSc::ULP_PDU_t_length_get", _wrap_ULP_PDU_t_length_get},
+{"Net::Radio::Location::SUPL::XSc::ULP_PDU_t_version_set", _wrap_ULP_PDU_t_version_set},
+{"Net::Radio::Location::SUPL::XSc::ULP_PDU_t_version_get", _wrap_ULP_PDU_t_version_get},
+{"Net::Radio::Location::SUPL::XSc::ULP_PDU_t_sessionID_set", _wrap_ULP_PDU_t_sessionID_set},
+{"Net::Radio::Location::SUPL::XSc::ULP_PDU_t_sessionID_get", _wrap_ULP_PDU_t_sessionID_get},
+{"Net::Radio::Location::SUPL::XSc::ULP_PDU_t_message_set", _wrap_ULP_PDU_t_message_set},
+{"Net::Radio::Location::SUPL::XSc::ULP_PDU_t_message_get", _wrap_ULP_PDU_t_message_get},
+{"Net::Radio::Location::SUPL::XSc::ULP_PDU_t__asn_ctx_set", _wrap_ULP_PDU_t__asn_ctx_set},
+{"Net::Radio::Location::SUPL::XSc::ULP_PDU_t__asn_ctx_get", _wrap_ULP_PDU_t__asn_ctx_get},
+{"Net::Radio::Location::SUPL::XSc::new_ULP_PDU_t", _wrap_new_ULP_PDU_t},
+{"Net::Radio::Location::SUPL::XSc::delete_ULP_PDU_t", _wrap_delete_ULP_PDU_t},
+{"Net::Radio::Location::SUPL::XSc::ULP_PDU_t_set_version", _wrap_ULP_PDU_t_set_version},
+{"Net::Radio::Location::SUPL::XSc::ULP_PDU_t_setSetSessionId_to_imsi", _wrap_ULP_PDU_t_setSetSessionId_to_imsi},
+{"Net::Radio::Location::SUPL::XSc::ULP_PDU_t_setSetSessionId_to_msisdn", _wrap_ULP_PDU_t_setSetSessionId_to_msisdn},
+{"Net::Radio::Location::SUPL::XSc::ULP_PDU_t_copy_SlpSessionId", _wrap_ULP_PDU_t_copy_SlpSessionId},
+{"Net::Radio::Location::SUPL::XSc::ULP_PDU_t_set_message_type", _wrap_ULP_PDU_t_set_message_type},
+{"Net::Radio::Location::SUPL::XSc::ULP_PDU_t_encode", _wrap_ULP_PDU_t_encode},
+{"Net::Radio::Location::SUPL::XSc::ULP_PDU_t_dump", _wrap_ULP_PDU_t_dump},
+{"Net::Radio::Location::SUPL::XSc::ULP_PDU_t_xml_dump", _wrap_ULP_PDU_t_xml_dump},
+{"Net::Radio::Location::SUPL::XSc::UlpMessage_t_present_set", _wrap_UlpMessage_t_present_set},
+{"Net::Radio::Location::SUPL::XSc::UlpMessage_t_present_get", _wrap_UlpMessage_t_present_get},
+{"Net::Radio::Location::SUPL::XSc::UlpMessage_t__asn_ctx_set", _wrap_UlpMessage_t__asn_ctx_set},
+{"Net::Radio::Location::SUPL::XSc::UlpMessage_t__asn_ctx_get", _wrap_UlpMessage_t__asn_ctx_get},
+{"Net::Radio::Location::SUPL::XSc::UlpMessage_t_choice_get", _wrap_UlpMessage_t_choice_get},
+{"Net::Radio::Location::SUPL::XSc::new_UlpMessage_t", _wrap_new_UlpMessage_t},
+{"Net::Radio::Location::SUPL::XSc::delete_UlpMessage_t", _wrap_delete_UlpMessage_t},
+{"Net::Radio::Location::SUPL::XSc::UlpMessage_t_choice_msSUPLINIT_set", _wrap_UlpMessage_t_choice_msSUPLINIT_set},
+{"Net::Radio::Location::SUPL::XSc::UlpMessage_t_choice_msSUPLINIT_get", _wrap_UlpMessage_t_choice_msSUPLINIT_get},
+{"Net::Radio::Location::SUPL::XSc::UlpMessage_t_choice_msSUPLSTART_set", _wrap_UlpMessage_t_choice_msSUPLSTART_set},
+{"Net::Radio::Location::SUPL::XSc::UlpMessage_t_choice_msSUPLSTART_get", _wrap_UlpMessage_t_choice_msSUPLSTART_get},
+{"Net::Radio::Location::SUPL::XSc::UlpMessage_t_choice_msSUPLRESPONSE_set", _wrap_UlpMessage_t_choice_msSUPLRESPONSE_set},
+{"Net::Radio::Location::SUPL::XSc::UlpMessage_t_choice_msSUPLRESPONSE_get", _wrap_UlpMessage_t_choice_msSUPLRESPONSE_get},
+{"Net::Radio::Location::SUPL::XSc::UlpMessage_t_choice_msSUPLPOSINIT_set", _wrap_UlpMessage_t_choice_msSUPLPOSINIT_set},
+{"Net::Radio::Location::SUPL::XSc::UlpMessage_t_choice_msSUPLPOSINIT_get", _wrap_UlpMessage_t_choice_msSUPLPOSINIT_get},
+{"Net::Radio::Location::SUPL::XSc::UlpMessage_t_choice_msSUPLPOS_set", _wrap_UlpMessage_t_choice_msSUPLPOS_set},
+{"Net::Radio::Location::SUPL::XSc::UlpMessage_t_choice_msSUPLPOS_get", _wrap_UlpMessage_t_choice_msSUPLPOS_get},
+{"Net::Radio::Location::SUPL::XSc::UlpMessage_t_choice_msSUPLEND_set", _wrap_UlpMessage_t_choice_msSUPLEND_set},
+{"Net::Radio::Location::SUPL::XSc::UlpMessage_t_choice_msSUPLEND_get", _wrap_UlpMessage_t_choice_msSUPLEND_get},
+{"Net::Radio::Location::SUPL::XSc::UlpMessage_t_choice_msSUPLAUTHREQ_set", _wrap_UlpMessage_t_choice_msSUPLAUTHREQ_set},
+{"Net::Radio::Location::SUPL::XSc::UlpMessage_t_choice_msSUPLAUTHREQ_get", _wrap_UlpMessage_t_choice_msSUPLAUTHREQ_get},
+{"Net::Radio::Location::SUPL::XSc::UlpMessage_t_choice_msSUPLAUTHRESP_set", _wrap_UlpMessage_t_choice_msSUPLAUTHRESP_set},
+{"Net::Radio::Location::SUPL::XSc::UlpMessage_t_choice_msSUPLAUTHRESP_get", _wrap_UlpMessage_t_choice_msSUPLAUTHRESP_get},
+{"Net::Radio::Location::SUPL::XSc::new_UlpMessage_t_choice", _wrap_new_UlpMessage_t_choice},
+{"Net::Radio::Location::SUPL::XSc::delete_UlpMessage_t_choice", _wrap_delete_UlpMessage_t_choice},
+{"Net::Radio::Location::SUPL::XSc::SLPAddress_t_present_set", _wrap_SLPAddress_t_present_set},
+{"Net::Radio::Location::SUPL::XSc::SLPAddress_t_present_get", _wrap_SLPAddress_t_present_get},
+{"Net::Radio::Location::SUPL::XSc::SLPAddress_t__asn_ctx_set", _wrap_SLPAddress_t__asn_ctx_set},
+{"Net::Radio::Location::SUPL::XSc::SLPAddress_t__asn_ctx_get", _wrap_SLPAddress_t__asn_ctx_get},
+{"Net::Radio::Location::SUPL::XSc::SLPAddress_t_choice_get", _wrap_SLPAddress_t_choice_get},
+{"Net::Radio::Location::SUPL::XSc::delete_SLPAddress_t", _wrap_delete_SLPAddress_t},
+{"Net::Radio::Location::SUPL::XSc::SLPAddress_t_set_ipaddress", _wrap_SLPAddress_t_set_ipaddress},
+{"Net::Radio::Location::SUPL::XSc::SLPAddress_t_set_fqdn", _wrap_SLPAddress_t_set_fqdn},
+{"Net::Radio::Location::SUPL::XSc::SLPAddress_t_is_ipv4", _wrap_SLPAddress_t_is_ipv4},
+{"Net::Radio::Location::SUPL::XSc::SLPAddress_t_is_ipv6", _wrap_SLPAddress_t_is_ipv6},
+{"Net::Radio::Location::SUPL::XSc::SLPAddress_t_is_ip", _wrap_SLPAddress_t_is_ip},
+{"Net::Radio::Location::SUPL::XSc::SLPAddress_t_is_fqdn", _wrap_SLPAddress_t_is_fqdn},
+{"Net::Radio::Location::SUPL::XSc::SLPAddress_t_is_valid", _wrap_SLPAddress_t_is_valid},
+{"Net::Radio::Location::SUPL::XSc::new_SLPAddress_t", _wrap_new_SLPAddress_t},
+{"Net::Radio::Location::SUPL::XSc::SLPAddress_t_choice_iPAddress_set", _wrap_SLPAddress_t_choice_iPAddress_set},
+{"Net::Radio::Location::SUPL::XSc::SLPAddress_t_choice_iPAddress_get", _wrap_SLPAddress_t_choice_iPAddress_get},
+{"Net::Radio::Location::SUPL::XSc::SLPAddress_t_choice_fQDN_set", _wrap_SLPAddress_t_choice_fQDN_set},
+{"Net::Radio::Location::SUPL::XSc::SLPAddress_t_choice_fQDN_get", _wrap_SLPAddress_t_choice_fQDN_get},
+{"Net::Radio::Location::SUPL::XSc::new_SLPAddress_t_choice", _wrap_new_SLPAddress_t_choice},
+{"Net::Radio::Location::SUPL::XSc::delete_SLPAddress_t_choice", _wrap_delete_SLPAddress_t_choice},
+{"Net::Radio::Location::SUPL::XSc::encode_ulp_pdu", _wrap_encode_ulp_pdu},
+{"Net::Radio::Location::SUPL::XSc::decode_ulp_pdu", _wrap_decode_ulp_pdu},
+{"Net::Radio::Location::SUPL::XSc::ulp_pdu_to_xml", _wrap_ulp_pdu_to_xml},
+{"Net::Radio::Location::SUPL::XSc::dump_ulp_pdu", _wrap_dump_ulp_pdu},
 {0,0}
 };
 /* -----------------------------------------------------------------------------
@@ -8912,11 +8912,11 @@ XS(SWIG_init) {
     SvREADONLY_on(sv);
   }
   
-  SWIG_TypeClientData(SWIGTYPE_p_SUPLAUTHREQ, (void*) "SUPL::XS::SUPLAUTHREQ_t");
-  SWIG_TypeClientData(SWIGTYPE_p_SUPLAUTHRESP, (void*) "SUPL::XS::SUPLAUTHRESP_t");
-  SWIG_TypeClientData(SWIGTYPE_p_SUPLEND, (void*) "SUPL::XS::SUPLEND_t");
-  SWIG_TypeClientData(SWIGTYPE_p_SUPLINIT, (void*) "SUPL::XS::SUPLINIT_t");
-  SWIG_TypeClientData(SWIGTYPE_p_SUPLPOS, (void*) "SUPL::XS::SUPLPOS_t");
+  SWIG_TypeClientData(SWIGTYPE_p_SUPLAUTHREQ, (void*) "Net::Radio::Location::SUPL::XS::SUPLAUTHREQ_t");
+  SWIG_TypeClientData(SWIGTYPE_p_SUPLAUTHRESP, (void*) "Net::Radio::Location::SUPL::XS::SUPLAUTHRESP_t");
+  SWIG_TypeClientData(SWIGTYPE_p_SUPLEND, (void*) "Net::Radio::Location::SUPL::XS::SUPLEND_t");
+  SWIG_TypeClientData(SWIGTYPE_p_SUPLINIT, (void*) "Net::Radio::Location::SUPL::XS::SUPLINIT_t");
+  SWIG_TypeClientData(SWIGTYPE_p_SUPLPOS, (void*) "Net::Radio::Location::SUPL::XS::SUPLPOS_t");
   /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
     SV *sv = get_sv((char*) SWIG_prefix "setcap_pos_tech_agpsSETassisted", TRUE | 0x2 | GV_ADDMULTI);
     sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)((1 << 0))));
@@ -9007,10 +9007,10 @@ XS(SWIG_init) {
     sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)((1 << 7))));
     SvREADONLY_on(sv);
   } while(0) /*@SWIG@*/;
-  SWIG_TypeClientData(SWIGTYPE_p_SUPLPOSINIT, (void*) "SUPL::XS::SUPLPOSINIT_t");
-  SWIG_TypeClientData(SWIGTYPE_p_SUPLRESPONSE, (void*) "SUPL::XS::SUPLRESPONSE_t");
-  SWIG_TypeClientData(SWIGTYPE_p_SUPLSTART, (void*) "SUPL::XS::SUPLSTART_t");
-  SWIG_TypeClientData(SWIGTYPE_p_ULP_PDU, (void*) "SUPL::XS::ULP_PDU_t");
+  SWIG_TypeClientData(SWIGTYPE_p_SUPLPOSINIT, (void*) "Net::Radio::Location::SUPL::XS::SUPLPOSINIT_t");
+  SWIG_TypeClientData(SWIGTYPE_p_SUPLRESPONSE, (void*) "Net::Radio::Location::SUPL::XS::SUPLRESPONSE_t");
+  SWIG_TypeClientData(SWIGTYPE_p_SUPLSTART, (void*) "Net::Radio::Location::SUPL::XS::SUPLSTART_t");
+  SWIG_TypeClientData(SWIGTYPE_p_ULP_PDU, (void*) "Net::Radio::Location::SUPL::XS::ULP_PDU_t");
   /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
     SV *sv = get_sv((char*) SWIG_prefix "UlpMessage_PR_NOTHING", TRUE | 0x2 | GV_ADDMULTI);
     sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(UlpMessage_PR_NOTHING)));
@@ -9056,8 +9056,8 @@ XS(SWIG_init) {
     sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(UlpMessage_PR_msSUPLAUTHRESP)));
     SvREADONLY_on(sv);
   } while(0) /*@SWIG@*/;
-  SWIG_TypeClientData(SWIGTYPE_p_UlpMessage, (void*) "SUPL::XS::UlpMessage_t");
-  SWIG_TypeClientData(SWIGTYPE_p_UlpMessage_t_choice, (void*) "SUPL::XS::UlpMessage_t_choice");
+  SWIG_TypeClientData(SWIGTYPE_p_UlpMessage, (void*) "Net::Radio::Location::SUPL::XS::UlpMessage_t");
+  SWIG_TypeClientData(SWIGTYPE_p_UlpMessage_t_choice, (void*) "Net::Radio::Location::SUPL::XS::UlpMessage_t_choice");
   /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
     SV *sv = get_sv((char*) SWIG_prefix "SLPAddress_PR_NOTHING", TRUE | 0x2 | GV_ADDMULTI);
     sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(SLPAddress_PR_NOTHING)));
@@ -9073,8 +9073,8 @@ XS(SWIG_init) {
     sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(SLPAddress_PR_fQDN)));
     SvREADONLY_on(sv);
   } while(0) /*@SWIG@*/;
-  SWIG_TypeClientData(SWIGTYPE_p_SLPAddress, (void*) "SUPL::XS::SLPAddress_t");
-  SWIG_TypeClientData(SWIGTYPE_p_SLPAddress_t_choice, (void*) "SUPL::XS::SLPAddress_t_choice");
+  SWIG_TypeClientData(SWIGTYPE_p_SLPAddress, (void*) "Net::Radio::Location::SUPL::XS::SLPAddress_t");
+  SWIG_TypeClientData(SWIGTYPE_p_SLPAddress_t_choice, (void*) "Net::Radio::Location::SUPL::XS::SLPAddress_t_choice");
   /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
     SV *sv = get_sv((char*) SWIG_prefix "PrefMethod_agpsSETassistedPreferred", TRUE | 0x2 | GV_ADDMULTI);
     sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(PrefMethod_agpsSETassistedPreferred)));

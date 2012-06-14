@@ -13,8 +13,8 @@ use Log::Any::Adapter;
 use Log::Any qw($log);
 use Params::Util qw(_ARRAY);
 
-require SUPL::MainLoop;
-require SUPL::DBusObject;
+require Net::Radio::Location::SUPL::MainLoop;
+require Net::Radio::Location::SUPL::DBusObject;
 
 sub get_config
 {
@@ -116,7 +116,7 @@ sub setup_dbus
     my @dbusObjects = grep { $_ ne "default" } keys %cfg;
     foreach my $dbusObj (@dbusObjects)
     {
-        my $module = "SUPL::DBusObject::$dbusObj";
+        my $module = "Net::Radio::Location::SUPL::DBusObject::$dbusObj";
         eval "require $module;";
         $@ and die $@;
         my $dbusIf = $module->new( %{ $cfg{$dbusObj} } );
@@ -136,4 +136,4 @@ sub setup
 
 setup();
 
-SUPL::MainLoop->run();
+Net::Radio::Location::SUPL::MainLoop->run();

@@ -1,15 +1,16 @@
 use strict;
 use warnings;
 use Test::More;
+use Test::Differences;
 
 plan tests => 5;
 
-use SUPL::XS;
+use Net::Radio::Location::SUPL::XS;
 
 my $supl_pkt = pack( "H*", "002b0100004c4d0e0e110e3ad7107bd299abd33a81a34c80c1a21c75ae20f7a53357a6750346991990000a" );
 
-my $supl_pdu = SUPL::XS::decode_ulp_pdu($supl_pkt);
-isa_ok($supl_pdu, "SUPL::XS::ULP_PDU_t");
+my $supl_pdu = Net::Radio::Location::SUPL::XS::decode_ulp_pdu($supl_pkt);
+isa_ok($supl_pdu, "Net::Radio::Location::SUPL::XS::ULP_PDU_t");
 
 my $dump_expect = <<'EOD';
 ULP-PDU ::= {
@@ -74,18 +75,11 @@ my $xml_expect = <<'EOX';
 EOX
 my $xml_dump = $supl_pdu->xml_dump();
 
-my $direct_xml_dump = SUPL::XS::ulp_pdu_to_xml($supl_pkt);
-my $direct_dump = SUPL::XS::dump_ulp_pdu($supl_pkt);
+my $direct_xml_dump = Net::Radio::Location::SUPL::XS::ulp_pdu_to_xml($supl_pkt);
+my $direct_dump = Net::Radio::Location::SUPL::XS::dump_ulp_pdu($supl_pkt);
 
-cmp_ok( $dump, "eq", $dump_expect, "dump" );
-#use Text::Diff;
-#my $diff = diff( \$direct_dump, \$dump, { STYLE => "Unified" } );
-#diag $diff;
+eq_or_diff( $dump, $dump_expect, "dump" );
+eq_or_diff( $direct_dump, $dump, "dump vs. direct_dump" );
 
-#diag( "end of \$dump: ", ord( substr( $dump, -1, 1 ) ) );
-#diag( "end of \$direct_dump: ", ord( substr( $direct_dump, -1, 1 ) ) );
-
-cmp_ok( $direct_dump, "eq", $dump, "dump vs. direct_dump" );
-
-cmp_ok( $xml_dump, "eq", $xml_expect, "xml_dump" );
-cmp_ok( $xml_dump, "eq", $direct_xml_dump, "xml_dump vs. ulp_pdu_to_xml" );
+eq_or_diff( $xml_dump, $xml_expect, "xml_dump" );
+eq_or_diff( $xml_dump, $direct_xml_dump, "xml_dump vs. ulp_pdu_to_xml" );

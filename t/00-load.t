@@ -3,12 +3,12 @@
 use Test::More tests => 6;
 
 BEGIN {
-    use_ok( 'SUPL::XS' ) || print "Bail out on SUPL::XS!\n";
-    use_ok( 'SUPL::Test' ) || print "Bail out on SUPL::Test!\n";
-    use_ok( 'SUPL::DBusObject' ) || print "Bail out on SUPL::DBusObject!\n";
-    use_ok( 'SUPL::DBusObject::RecvPushMsg' ) || print "Bail out on SUPL::DBusObject::RecvPushMsg!\n";
-    use_ok( 'SUPL::DBusObject::Translator' ) || print "Bail out on SUPL::DBusObject::Translator!\n";
-    use_ok( 'SUPL::MainLoop' ) || print "Bail out on SUPL::MainLoop!\n";
+    use_ok( 'Net::Radio::Location::SUPL::XS' ) || print "Bail out on Net::Radio::Location::SUPL::XS!\n";
+    use_ok( 'Net::Radio::Location::SUPL::Test' ) || print "Bail out on Net::Radio::Location::SUPL::Test!\n";
+    use_ok( 'Net::Radio::Location::SUPL::DBusObject' ) || print "Bail out on Net::Radio::Location::SUPL::DBusObject!\n";
+    use_ok( 'Net::Radio::Location::SUPL::DBusObject::RecvPushMsg' ) || print "Bail out on Net::Radio::Location::SUPL::DBusObject::RecvPushMsg!\n";
+    use_ok( 'Net::Radio::Location::SUPL::DBusObject::Translator' ) || print "Bail out on Net::Radio::Location::SUPL::DBusObject::Translator!\n";
+    use_ok( 'Net::Radio::Location::SUPL::MainLoop' ) || print "Bail out on Net::Radio::Location::SUPL::MainLoop!\n";
 }
 
-diag( "Testing SUPL::Test $SUPL::Test::VERSION, Perl $], $^X" );
+diag( "Testing Net::Radio::Location::SUPL::Test $Net::Radio::Location::SUPL::Test::VERSION, Perl $], $^X" );

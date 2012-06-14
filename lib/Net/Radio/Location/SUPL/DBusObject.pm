@@ -1,4 +1,4 @@
-package SUPL::DBusObject;
+package Net::Radio::Location::SUPL::DBusObject;
 
 use strict;
 use warnings;
@@ -11,7 +11,7 @@ use base qw(Net::DBus::Object);
 
 =head1 NAME
 
-SUPL::DBusObject - Base class of all SUPL DBus Objects and configuration handler
+Net::Radio::Location::SUPL::DBusObject - Base class of all SUPL DBus Objects and configuration handler
 
 =head1 DESCRIPTION
 
@@ -33,7 +33,7 @@ Instantiates new DBusObject. Typically invoked by a derived class like:
 
     bless( $self, $class );
 
-    SUPL::MainLoop->add($self);
+    Net::Radio::Location::SUPL::MainLoop->add($self);
 
     return $self;
 
@@ -118,7 +118,7 @@ on your bug as I make changes.
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc SUPL::Test
+    perldoc Net::Radio::Location::SUPL::Test
 
 You can also look for information at:
 

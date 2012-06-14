@@ -1,4 +1,4 @@
-package SUPL::DBusObject::Translator;
+package Net::Radio::Location::SUPL::DBusObject::Translator;
 
 use strict;
 use warnings;
@@ -7,7 +7,7 @@ use 5.010;
 
 =head1 NAME
 
-SUPL::DBusObject::RecvPushMsg - DBus Server Object to receive SUPL PushMessages
+Net::Radio::Location::SUPL::DBusObject::RecvPushMsg - DBus Server Object to receive SUPL PushMessages
 
 =head1 DESCRIPTION
 
@@ -17,9 +17,9 @@ SUPL::DBusObject::RecvPushMsg - DBus Server Object to receive SUPL PushMessages
 
 our $VERSION = 0.001;
 
-use SUPL::XS;
+use Net::Radio::Location::SUPL::XS;
 
-use base qw(SUPL::DBusObject);
+use base qw(Net::Radio::Location::SUPL::DBusObject);
 use Net::DBus::Exporter qw(org.ofono.supl.Translator);
 
 use Log::Any qw($log);
@@ -29,7 +29,7 @@ use Log::Any qw($log);
 Instantiates new SUPL PDU Translator Object to the D-Bus service provided.
 
 The configuration parameters for instantiating are described at
-L<SUPL::DBusObject/new|SUPL::DBusObject::new>.
+L<Net::Radio::Location::SUPL::DBusObject/new|Net::Radio::Location::SUPL::DBusObject::new>.
 
 =cut
 
@@ -40,7 +40,7 @@ sub new
 
     bless( $self, $class );
 
-    SUPL::MainLoop->add($self);
+    Net::Radio::Location::SUPL::MainLoop->add($self);
 
     $log->debugf( "%s initialized and added to MainLoop control", __PACKAGE__ );
 
@@ -59,7 +59,7 @@ dbus_method( "SuplPduStringToXmlString", ["string"], ["string"] );
 sub SuplPduStringToXmlString
 {
     my ( $self, $enc_pdu ) = @_;
-    my $supl_xml = SUPL::XS::ulp_pdu_to_xml($enc_pdu);
+    my $supl_xml = Net::Radio::Location::SUPL::XS::ulp_pdu_to_xml($enc_pdu);
     return $supl_xml;
 }
 
@@ -111,7 +111,7 @@ on your bug as I make changes.
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc SUPL::Test
+    perldoc Net::Radio::Location::SUPL::Test
 
 You can also look for information at:
 
