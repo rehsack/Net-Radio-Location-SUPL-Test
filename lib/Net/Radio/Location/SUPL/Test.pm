@@ -388,13 +388,13 @@ sub trigger_read
     my $rb = $self->{connection}->read( $buf );
     unless( defined $rb )
     {
-	$log->errorf("Errer receiving data: %s", $!);
+	$log->errorf("Error receiving data: %s", $!);
 	# XXX what to do from here?
 	Net::Radio::Location::SUPL::MainLoop->remove($self);
 	if( $self->{connection} )
 	{
 	    $self->{connection}->close();
-	    $self->{connection};
+	    delete $self->{connection};
 	}
     }
 
@@ -410,13 +410,13 @@ sub trigger_read
 	}
 	else
 	{
-	    $log->errorf("Errer decoding received data: %s", $@);
+	    $log->errorf("Error decoding received data: %s", $@);
 	    # XXX what to do from here?
 	    Net::Radio::Location::SUPL::MainLoop->remove($self);
 	    if( $self->{connection} )
 	    {
 		$self->{connection}->close();
-		$self->{connection};
+		delete $self->{connection};
 	    }
 	}
     }
