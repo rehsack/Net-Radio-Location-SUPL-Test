@@ -657,14 +657,14 @@ dump_ulp_pdu(MsgBuffer buf)
 	if( NULL == $self->requestedAssistData )
 	    croak( "Can't allocate memory for new RequestedAssistData object" );
 
-	$self->requestedAssistData->almanacRequested = requested_assist_data & setcap_pos_tech_agpsSETassisted ? 1 : 0;
-	$self->requestedAssistData->utcModelRequested = requested_assist_data & setcap_pos_tech_agpsSETBased ? 1 : 0;
-	$self->requestedAssistData->ionosphericModelRequested = requested_assist_data & setcap_pos_tech_autonomousGPS ? 1 : 0;
-	$self->requestedAssistData->dgpsCorrectionsRequested = requested_assist_data & setcap_pos_tech_aFLT ? 1 : 0;
-	$self->requestedAssistData->referenceLocationRequested = requested_assist_data & setcap_pos_tech_eCID ? 1 : 0;
-	$self->requestedAssistData->referenceTimeRequested = requested_assist_data & setcap_pos_tech_eOTD ? 1 : 0;
-	$self->requestedAssistData->acquisitionAssistanceRequested = requested_assist_data & setcap_pos_tech_oTDOA ? 1 : 0;
-	$self->requestedAssistData->realTimeIntegrityRequested = requested_assist_data & setcap_pos_tech_oTDOA ? 1 : 0;
+	$self->requestedAssistData->almanacRequested = requested_assist_data & reqassistdata_almanacRequested ? 1 : 0;
+	$self->requestedAssistData->utcModelRequested = requested_assist_data & reqassistdata_utcModelRequested ? 1 : 0;
+	$self->requestedAssistData->ionosphericModelRequested = requested_assist_data & reqassistdata_ionosphericModelRequested ? 1 : 0;
+	$self->requestedAssistData->dgpsCorrectionsRequested = requested_assist_data & reqassistdata_dgpsCorrectionsRequested ? 1 : 0;
+	$self->requestedAssistData->referenceLocationRequested = requested_assist_data & reqassistdata_referenceLocationRequested ? 1 : 0;
+	$self->requestedAssistData->referenceTimeRequested = requested_assist_data & reqassistdata_referenceTimeRequested ? 1 : 0;
+	$self->requestedAssistData->acquisitionAssistanceRequested = requested_assist_data & reqassistdata_acquisitionAssistanceRequested ? 1 : 0;
+	$self->requestedAssistData->realTimeIntegrityRequested = requested_assist_data & reqassistdata_realTimeIntegrityRequested ? 1 : 0;
 	$self->requestedAssistData->navigationModelRequested = 0;
     }
 
@@ -672,14 +672,14 @@ dump_ulp_pdu(MsgBuffer buf)
 	if( NULL == $self->requestedAssistData )
 	    SUPLPOSINIT_set_requested_assist_data($self, requested_assist_data);
 	else {
-	    $self->requestedAssistData->almanacRequested = requested_assist_data & setcap_pos_tech_agpsSETassisted ? 1 : 0;
-	    $self->requestedAssistData->utcModelRequested = requested_assist_data & setcap_pos_tech_agpsSETBased ? 1 : 0;
-	    $self->requestedAssistData->ionosphericModelRequested = requested_assist_data & setcap_pos_tech_autonomousGPS ? 1 : 0;
-	    $self->requestedAssistData->dgpsCorrectionsRequested = requested_assist_data & setcap_pos_tech_aFLT ? 1 : 0;
-	    $self->requestedAssistData->referenceLocationRequested = requested_assist_data & setcap_pos_tech_eCID ? 1 : 0;
-	    $self->requestedAssistData->referenceTimeRequested = requested_assist_data & setcap_pos_tech_eOTD ? 1 : 0;
-	    $self->requestedAssistData->acquisitionAssistanceRequested = requested_assist_data & setcap_pos_tech_oTDOA ? 1 : 0;
-	    $self->requestedAssistData->realTimeIntegrityRequested = requested_assist_data & setcap_pos_tech_oTDOA ? 1 : 0;
+	    $self->requestedAssistData->almanacRequested = requested_assist_data & reqassistdata_almanacRequested ? 1 : 0;
+	    $self->requestedAssistData->utcModelRequested = requested_assist_data & reqassistdata_utcModelRequested ? 1 : 0;
+	    $self->requestedAssistData->ionosphericModelRequested = requested_assist_data & reqassistdata_ionosphericModelRequested ? 1 : 0;
+	    $self->requestedAssistData->dgpsCorrectionsRequested = requested_assist_data & reqassistdata_dgpsCorrectionsRequested ? 1 : 0;
+	    $self->requestedAssistData->referenceLocationRequested = requested_assist_data & reqassistdata_referenceLocationRequested ? 1 : 0;
+	    $self->requestedAssistData->referenceTimeRequested = requested_assist_data & reqassistdata_referenceTimeRequested ? 1 : 0;
+	    $self->requestedAssistData->acquisitionAssistanceRequested = requested_assist_data & reqassistdata_acquisitionAssistanceRequested ? 1 : 0;
+	    $self->requestedAssistData->realTimeIntegrityRequested = requested_assist_data & reqassistdata_realTimeIntegrityRequested ? 1 : 0;
 	}
     }
 

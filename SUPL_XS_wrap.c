@@ -1852,13 +1852,13 @@ SWIGINTERN void SUPLPOSINIT_set_requested_assist_data(struct SUPLPOSINIT *self,u
 	    croak( "Can't allocate memory for new RequestedAssistData object" );
 
 	self->requestedAssistData->almanacRequested = requested_assist_data & (1 << 0) ? 1 : 0;
-	self->requestedAssistData->utcModelRequested = requested_assist_data & (2 << 0) ? 1 : 0;
-	self->requestedAssistData->ionosphericModelRequested = requested_assist_data & (3 << 0) ? 1 : 0;
-	self->requestedAssistData->dgpsCorrectionsRequested = requested_assist_data & (4 << 0) ? 1 : 0;
-	self->requestedAssistData->referenceLocationRequested = requested_assist_data & (5 << 0) ? 1 : 0;
-	self->requestedAssistData->referenceTimeRequested = requested_assist_data & (6 << 0) ? 1 : 0;
-	self->requestedAssistData->acquisitionAssistanceRequested = requested_assist_data & (7 << 0) ? 1 : 0;
-	self->requestedAssistData->realTimeIntegrityRequested = requested_assist_data & (7 << 0) ? 1 : 0;
+	self->requestedAssistData->utcModelRequested = requested_assist_data & (1 << 1) ? 1 : 0;
+	self->requestedAssistData->ionosphericModelRequested = requested_assist_data & (1 << 2) ? 1 : 0;
+	self->requestedAssistData->dgpsCorrectionsRequested = requested_assist_data & (1 << 3) ? 1 : 0;
+	self->requestedAssistData->referenceLocationRequested = requested_assist_data & (1 << 4) ? 1 : 0;
+	self->requestedAssistData->referenceTimeRequested = requested_assist_data & (1 << 5) ? 1 : 0;
+	self->requestedAssistData->acquisitionAssistanceRequested = requested_assist_data & (1 << 6) ? 1 : 0;
+	self->requestedAssistData->realTimeIntegrityRequested = requested_assist_data & (1 << 7) ? 1 : 0;
 	self->requestedAssistData->navigationModelRequested = 0;
     }
 SWIGINTERN void SUPLPOSINIT_update_requested_assist_data(struct SUPLPOSINIT *self,unsigned int requested_assist_data){
@@ -1866,13 +1866,13 @@ SWIGINTERN void SUPLPOSINIT_update_requested_assist_data(struct SUPLPOSINIT *sel
 	    SUPLPOSINIT_set_requested_assist_data(self, requested_assist_data);
 	else {
 	    self->requestedAssistData->almanacRequested = requested_assist_data & (1 << 0) ? 1 : 0;
-	    self->requestedAssistData->utcModelRequested = requested_assist_data & (2 << 0) ? 1 : 0;
-	    self->requestedAssistData->ionosphericModelRequested = requested_assist_data & (3 << 0) ? 1 : 0;
-	    self->requestedAssistData->dgpsCorrectionsRequested = requested_assist_data & (4 << 0) ? 1 : 0;
-	    self->requestedAssistData->referenceLocationRequested = requested_assist_data & (5 << 0) ? 1 : 0;
-	    self->requestedAssistData->referenceTimeRequested = requested_assist_data & (6 << 0) ? 1 : 0;
-	    self->requestedAssistData->acquisitionAssistanceRequested = requested_assist_data & (7 << 0) ? 1 : 0;
-	    self->requestedAssistData->realTimeIntegrityRequested = requested_assist_data & (7 << 0) ? 1 : 0;
+	    self->requestedAssistData->utcModelRequested = requested_assist_data & (1 << 1) ? 1 : 0;
+	    self->requestedAssistData->ionosphericModelRequested = requested_assist_data & (1 << 2) ? 1 : 0;
+	    self->requestedAssistData->dgpsCorrectionsRequested = requested_assist_data & (1 << 3) ? 1 : 0;
+	    self->requestedAssistData->referenceLocationRequested = requested_assist_data & (1 << 4) ? 1 : 0;
+	    self->requestedAssistData->referenceTimeRequested = requested_assist_data & (1 << 5) ? 1 : 0;
+	    self->requestedAssistData->acquisitionAssistanceRequested = requested_assist_data & (1 << 6) ? 1 : 0;
+	    self->requestedAssistData->realTimeIntegrityRequested = requested_assist_data & (1 << 7) ? 1 : 0;
 	}
     }
 SWIGINTERN void SUPLPOSINIT_set_requested_assist_navigation_modell(struct SUPLPOSINIT *self,long gpsWeek,long gpsToe,long nSAT,long toeLimit,SatelliteInfo_t *sat_info){
