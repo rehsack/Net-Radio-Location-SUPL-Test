@@ -7,10 +7,10 @@ use 5.010;
 
 use Carp qw/croak/;
 
-use Net::Radio::Location::SUPL::XS;
-
-use Log::Any qw($log);
 use Digest::SHA;
+use List::Util qw(first);
+use Log::Any qw($log);
+use Params::Util qw(_HASH _STRING);
 
 use Socket (
     qw(
@@ -20,8 +20,9 @@ use Socket (
       )
 );
 
-use Params::Util qw(_STRING);
+use Net::Radio::Modem ();
 
+use Net::Radio::Location::SUPL::XS;
 use Net::Radio::Location::SUPL::MainLoop;
 
 =head1 NAME
@@ -47,7 +48,13 @@ instantiates new Net::Radio::Location::SUPL::Test state machine
 sub new
 {
     my ( $class, %cfg ) = @_;
-    return bless( { config => \%cfg }, $class );
+
+    my $self = bless( { config => \%cfg }, $class );
+
+    my $modem_api_cfg = $self->{config}->{'modem-api'};
+    $modem_api_cfg->{instance} //= Net::Radio::Modem->new( @$modem_api_cfg{ 'adapter', 'params' } );
+
+    return $self;
 }
 
 {    #protect global variables
@@ -156,7 +163,64 @@ sub new
 
         return $self->{connection};
     }
+
+    sub _get_modem_info
+    {
+        my ( $self, $properties ) = @_;
+        my $modem_api = $self->{config}->{'modem_api'}->{instance};
+        my $modem;
+        if ( _HASH( $self->{config}->{'modem_api'}->{match} ) )
+        {
+            my $match        = $self->{config}->{'modem_api'}->{match};
+            my @match_keys   = keys %{$match};
+            my @match_values = values %{$match};
+            $modem = first(
+                sub {
+                    my $mob = $_;    # modem object path
+                    my @v = map { $modem_api->get_modem_property( $mob, $_ ) } @match_keys;
+                    @v ~~ @match_values;
+                },
+                $modem_api->get_modems()
+                          );
+            $log->debugf( "Found modem %s matching %s", $modem // 'n/a', $match );
+        }
+        else
+        {
+            $modem = first { defined($_) } $modem_api->get_modems();
+            $log->debugf( "Using first modem %s", $modem // 'n/a' );
+        }
+        $modem or return;
+        my %props = map { $_ => $modem_api->get_modem_property( $modem, $_ ) } @$properties;
+        $log->debugf( "Extracted %s from modem %s", \%props, $modem // 'n/a' );
+        return %props;
+    }
+
+    sub _calculate_response_addr
+    {
+        my $self = shift;
+        my %mobile_ident;
+        @mobile_ident{qw(mcc mnc)} = $self->_get_modem_info(qw(MCC MNC));
+        my $response_addr = sprintf( "h-slp.mnc%03d.mcc%03d.pub.3gppnetwork.org",
+                                     0 + $mobile_ident{mnc}, 0 + $mobile_ident{mcc} );
+        return $response_addr;
+    }
 }
+
+my %requested_assist_data = (
+     almanacRequested  => Net::Radio::Location::SUPL::XS::reqassistdata_almanacRequested,
+     utcModelRequested => Net::Radio::Location::SUPL::XS::reqassistdata_utcModelRequested,
+     ionosphericModelRequested =>
+       Net::Radio::Location::SUPL::XS::reqassistdata_ionosphericModelRequested,
+     dgpsCorrectionsRequested =>
+       Net::Radio::Location::SUPL::XS::reqassistdata_dgpsCorrectionsRequested,
+     referenceLocationRequested =>
+       Net::Radio::Location::SUPL::XS::reqassistdata_referenceLocationRequested,
+     referenceTimeRequested => Net::Radio::Location::SUPL::XS::reqassistdata_referenceTimeRequested,
+     acquisitionAssistanceRequested =>
+       Net::Radio::Location::SUPL::XS::reqassistdata_acquisitionAssistanceRequested,
+     realTimeIntegrityRequested =>
+       Net::Radio::Location::SUPL::XS::reqassistdata_realTimeIntegrityRequested,
+);
 
 =head2 begin_ni_supl_seesion
 
@@ -186,6 +250,7 @@ sub begin_ni_supl_seesion
     }
 
     # check reply address (fqdn, ip...)
+    # XXX allow config override?
     if ( $supl_init->{sLPAddress}->is_fqdn() )
     {
         $response_addr = $supl_init->{sLPAddress}->{choice}->{fQDN};
@@ -193,14 +258,10 @@ sub begin_ni_supl_seesion
     }
     else
     {
-        if ( defined( $self->{config}->{connect}->{target}->{host} ) )
-        {
-            $response_addr = $self->{config}->{connect}->{target}->{host};
-        }
-        else
-        {
-            $response_addr = $self->_calculate_response_addr();
-        }
+        $response_addr =
+          defined( $self->{config}->{connect}->{target}->{host} )
+          ? $self->{config}->{connect}->{target}->{host}
+          : $self->_calculate_response_addr();
     }
 
     # compute verification checksum
@@ -222,24 +283,42 @@ sub begin_ni_supl_seesion
     # built SUPLPOSINIT/AUTHREQ
     my $pdu = Net::Radio::Location::SUPL::XS::ULP_PDU_t->new();
 
+    my %mobile_ident;
+    @mobile_ident{qw(mcc mnc imsi msisdn lac cellid)} =
+      $self->_get_modem_info(qw(MCC MNC IMSI MSISDN LAC CELLID));
+
     $pdu->copy_SlpSessionId($supl_pdu);
-    $pdu->setSetSessionId_to_imsi( _get_next_session_id(), $self->{config}->{ident}->{imsi} );
+    $pdu->setSetSessionId_to_imsi( _get_next_session_id(), $mobile_ident{imsi} );
     $pdu->set_message_type(Net::Radio::Location::SUPL::XS::UlpMessage_PR_msSUPLPOSINIT);
 
     my $posinit = $pdu->{message}->{choice}->{msSUPLPOSINIT};
-    $posinit->set_capabilities( Net::Radio::Location::SUPL::XS::setcap_pos_tech_agpsSETBased, Net::Radio::Location::SUPL::XS::PrefMethod_agpsSETBasedPreferred,
-                                Net::Radio::Location::SUPL::XS::setcap_pos_proto_rrlp );
-    my %mobile_ident;
-    @mobile_ident{"mcc", "mnc", "msin"} = _split_imsi($self->{config}->{ident}->{imsi}); # probably read from org.ofono.NetworkRegistration
-    $posinit->set_gsm_location_info( # XXX from IMSI!!!
-                                     262,      # mcc -- Mobile Country Code
-                                     2,        # mnc -- Mobile Network Code
-                                     144,      # lac -- Location Area Code
-                                     26993,    # cellid
-                                     1         # ta -- Terminal Adaptor
+    $posinit->set_capabilities( Net::Radio::Location::SUPL::XS::setcap_pos_tech_agpsSETBased,
+                                Net::Radio::Location::SUPL::XS::PrefMethod_agpsSETBasedPreferred,
+                                Net::Radio::Location::SUPL::XS::setcap_pos_proto_rrlp
+                              );
+    $posinit->set_gsm_location_info(
+                                   @mobile_ident{qw(mcc mnc lac cellid)},
+                                   1                                        # ta -- Terminal Adaptor
                                    );
     $posinit->{locationId}->{status} = Net::Radio::Location::SUPL::XS::Status_stale;
-    $posinit->set_position( gmtime(&now), 1, 53, 28 );    # XXX
+    my $estimated_pos_cfg = $self->{config}->{'test-setup'}->{SUPLPOSINIT}->{"estimated-location"};
+    $posinit->set_position( gmtime(&now),
+                            @$estimated_pos_cfg{qw(latitudeSign latitude longitude)} )
+      ;                                          # XXX enable NMEA 0183 using?
+
+    if ( _HASH( $self->{config}->{'test-setup'}->{SUPLPOSINIT}->{"request-assistant-data"} ) )
+    {
+        my $reqAssistData = 0;
+        while ( my ( $assist, $enabled ) =
+             each( %{ $self->{config}->{'test-setup'}->{SUPLPOSINIT}->{"request-assistant-data"} } )
+          )
+        {
+            $enabled and $reqAssistData += $requested_assist_data{$assist};
+        }
+        $reqAssistData or $log->warning("requested-assist-data given but nothing enabled");
+        $posinit->set_requested_assist_data($reqAssistData);
+        # set_requested_assist_navigation_modell ...
+    }
 
     # verification hash
     $posinit->{ver} = $chksum;
@@ -282,6 +361,12 @@ sub handle_supl_pdu
             $self->begin_ni_supl_seesion( packet => $enc_pdu,
                                           pdu    => $supl_pdu );
         }
+        when (Net::Radio::Location::SUPL::XS::UlpMessage_PR_msSUPLPOS)
+	{
+	}
+        when (Net::Radio::Location::SUPL::XS::UlpMessage_PR_msSUPLEND)
+	{
+	}
         default
         {
             # ...
@@ -298,6 +383,49 @@ Is called from the main-loop when the managed socket has incoming data.
 sub trigger_read
 {
     my $self = shift;
+
+    my $buf;
+    my $rb = $self->{connection}->read( $buf );
+    unless( defined $rb )
+    {
+	$log->errorf("Errer receiving data: %s", $!);
+	# XXX what to do from here?
+	Net::Radio::Location::SUPL::MainLoop->remove($self);
+	if( $self->{connection} )
+	{
+	    $self->{connection}->close();
+	    $self->{connection};
+	}
+    }
+
+    $self->{recvbuf} and $buf = $self->{recvbuf} . $buf;
+    eval {
+	my $supl_pdu = Net::Radio::Location::SUPL::XS::decode_ulp_pdu($buf);
+    };
+    if( $@ )
+    {
+	if( $@ =~ m/RC_WMORE/ )
+	{
+	    $self->{recvbuf} = $buf;
+	}
+	else
+	{
+	    $log->errorf("Errer decoding received data: %s", $@);
+	    # XXX what to do from here?
+	    Net::Radio::Location::SUPL::MainLoop->remove($self);
+	    if( $self->{connection} )
+	    {
+		$self->{connection}->close();
+		$self->{connection};
+	    }
+	}
+    }
+    else
+    {
+	$self->handle_supl_pdu($buf);
+    }
+
+    return;
 }
 
 =head2 get_read_trigger
@@ -307,16 +435,14 @@ handles monitored for havind data to receive.
 
 =cut
 
-sub get_read_trigger
-{
-    my $self = shift;
-    $self->{connection};
-}
+sub get_read_trigger { $_[0]->{connection}; }
 
 sub DESTROY
 {
     my $self = shift;
     $self->{connection} and $self->{connection}->close();
+    delete $self->{connection};
+    return;
 }
 
 =head1 AUTHOR

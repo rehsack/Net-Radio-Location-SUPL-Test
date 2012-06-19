@@ -12,8 +12,14 @@
 	"RecvPushMsg" : {
 	    "object-path" : "/org/vfnet/supl/PushConsumer",
 	    "test-setup" : {
-		"ident" : {
-		    "imsi" : "262020450000147";
+		"modem-api" : {
+		    "adapter" : "oFono",
+		    "params" : {
+			"dbus_main_runs" : 1,
+		    },
+		    "match" : {
+			"IMSI" : "262020450000147"
+		    }
 		},
 		"connect" : {
 		    "target" : {
@@ -29,8 +35,21 @@
 		    "modes" : ["proxy"],
 		},
 		"SUPLPOSINIT" : {
-		    "request-assistant-data" : true,
-		    "estimated-location" : [ 13, 13 ],
+		#    "request-assistant-data" : {
+		#	"almanacRequested" : 1,
+		#	"utcModelRequested" : 1,
+		#	"ionosphericModelRequested" : 1,
+		#	"dgpsCorrectionsRequested" : 1,
+		#	"referenceLocationRequested" : 1,
+		#	"referenceTimeRequested" : 1,
+		#	"acquisitionAssistanceRequested" : 1,
+		#	"realTimeIntegrityRequested" : 1
+		#    },
+		    "estimated-location" : {
+			"latitudeSign" : 1,
+			"latitude" : 23,
+			"longitude" : 53
+		    }
 		},
 		"SUPLPOS" : {
 		}
