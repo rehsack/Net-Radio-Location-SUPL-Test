@@ -45,6 +45,7 @@ our $VERSION = 0.001;
 
 use base qw(Net::Radio::Location::SUPL::DBusObject);
 use Net::DBus::Exporter qw(org.ofono.mms.PushConsumer);
+use Net::Radio::Modem ();
 
 use Log::Any qw($log);
 use Digest::SHA qw(hmac_sha1);
@@ -55,7 +56,8 @@ use Net::Radio::Location::SUPL::Test;
 
 Instantiates new PushMessage receiver from oFono's mmsd. The parameters
 I<bus-name> and I<object-path> must be specified as described under
-L</"DESCRIPTION"> in the way documented at L<Net::Radio::Location::SUPL::DBusObject/new|Net::Radio::Location::SUPL::DBusObject::new>.
+L</"DESCRIPTION"> in the way documented at
+L<Net::Radio::Location::SUPL::DBusObject/new|Net::Radio::Location::SUPL::DBusObject::new>.
 
 Additional parameter:
 
@@ -77,6 +79,9 @@ sub new
     bless( $self, $class );
 
     Net::Radio::Location::SUPL::MainLoop->add($self);
+
+    my $modem_api_cfg = $self->{config}->{'test-setup'}->{'modem-api'};
+    $modem_api_cfg->{instance} = Net::Radio::Modem->new(@$modem_api_cfg{'adapter', 'params'});
 
     $log->debugf( "%s initialized and added to MainLoop control", __PACKAGE__ );
 
