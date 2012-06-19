@@ -18,6 +18,7 @@
          "requires" : {
             "ExtUtils::CBuilder" : "0.27",
             "ExtUtils::ParseXS" : "0",
+            "Test::Differences" : "0",
             "Test::More" : "0.90"
          }
       },
@@ -32,9 +33,11 @@
             "Digest::SHA" : "0",
             "File::ConfigDir" : "0.003",
             "File::Find::Rule" : "0.32",
+            "List::Util" : "1.19",
             "Log::Any" : "0.10",
             "Log::Any::Adapter" : "0",
             "Net::DBus" : "v1.0.0",
+            "Net::Radio::Modem::Adapter::oFono" : "0.001",
             "Params::Util" : "0.37",
             "perl" : "5.01"
          }
