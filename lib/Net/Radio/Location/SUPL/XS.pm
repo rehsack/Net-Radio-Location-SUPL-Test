@@ -674,6 +674,396 @@ sub ACQUIRE {
 }
 
 
+############# Class : Net::Radio::Location::SUPL::XS::RRLP_PDU_t ##############
+
+package Net::Radio::Location::SUPL::XS::RRLP_PDU_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( Net::Radio::Location::SUPL::XS );
+%OWNER = ();
+%ITERATORS = ();
+*swig_referenceNumber_get = *Net::Radio::Location::SUPL::XSc::RRLP_PDU_t_referenceNumber_get;
+*swig_referenceNumber_set = *Net::Radio::Location::SUPL::XSc::RRLP_PDU_t_referenceNumber_set;
+*swig_component_get = *Net::Radio::Location::SUPL::XSc::RRLP_PDU_t_component_get;
+*swig_component_set = *Net::Radio::Location::SUPL::XSc::RRLP_PDU_t_component_set;
+*swig__asn_ctx_get = *Net::Radio::Location::SUPL::XSc::RRLP_PDU_t__asn_ctx_get;
+*swig__asn_ctx_set = *Net::Radio::Location::SUPL::XSc::RRLP_PDU_t__asn_ctx_set;
+sub new {
+    my $pkg = shift;
+    my $self = Net::Radio::Location::SUPL::XSc::new_RRLP_PDU_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        Net::Radio::Location::SUPL::XSc::delete_RRLP_PDU_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : Net::Radio::Location::SUPL::XS::RRLP_Component_t ##############
+
+package Net::Radio::Location::SUPL::XS::RRLP_Component_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( Net::Radio::Location::SUPL::XS );
+%OWNER = ();
+%ITERATORS = ();
+*swig_present_get = *Net::Radio::Location::SUPL::XSc::RRLP_Component_t_present_get;
+*swig_present_set = *Net::Radio::Location::SUPL::XSc::RRLP_Component_t_present_set;
+*swig__asn_ctx_get = *Net::Radio::Location::SUPL::XSc::RRLP_Component_t__asn_ctx_get;
+*swig__asn_ctx_set = *Net::Radio::Location::SUPL::XSc::RRLP_Component_t__asn_ctx_set;
+*swig_choice_get = *Net::Radio::Location::SUPL::XSc::RRLP_Component_t_choice_get;
+*swig_choice_set = *Net::Radio::Location::SUPL::XSc::RRLP_Component_t_choice_set;
+sub new {
+    my $pkg = shift;
+    my $self = Net::Radio::Location::SUPL::XSc::new_RRLP_Component_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        Net::Radio::Location::SUPL::XSc::delete_RRLP_Component_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : Net::Radio::Location::SUPL::XS::RRLP_Component_t_choice ##############
+
+package Net::Radio::Location::SUPL::XS::RRLP_Component_t_choice;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( Net::Radio::Location::SUPL::XS );
+%OWNER = ();
+%ITERATORS = ();
+*swig_msrPositionReq_get = *Net::Radio::Location::SUPL::XSc::RRLP_Component_t_choice_msrPositionReq_get;
+*swig_msrPositionReq_set = *Net::Radio::Location::SUPL::XSc::RRLP_Component_t_choice_msrPositionReq_set;
+*swig_msrPositionRsp_get = *Net::Radio::Location::SUPL::XSc::RRLP_Component_t_choice_msrPositionRsp_get;
+*swig_msrPositionRsp_set = *Net::Radio::Location::SUPL::XSc::RRLP_Component_t_choice_msrPositionRsp_set;
+*swig_assistanceData_get = *Net::Radio::Location::SUPL::XSc::RRLP_Component_t_choice_assistanceData_get;
+*swig_assistanceData_set = *Net::Radio::Location::SUPL::XSc::RRLP_Component_t_choice_assistanceData_set;
+*swig_assistanceDataAck_get = *Net::Radio::Location::SUPL::XSc::RRLP_Component_t_choice_assistanceDataAck_get;
+*swig_assistanceDataAck_set = *Net::Radio::Location::SUPL::XSc::RRLP_Component_t_choice_assistanceDataAck_set;
+*swig_protocolError_get = *Net::Radio::Location::SUPL::XSc::RRLP_Component_t_choice_protocolError_get;
+*swig_protocolError_set = *Net::Radio::Location::SUPL::XSc::RRLP_Component_t_choice_protocolError_set;
+*swig_posCapabilityReq_get = *Net::Radio::Location::SUPL::XSc::RRLP_Component_t_choice_posCapabilityReq_get;
+*swig_posCapabilityReq_set = *Net::Radio::Location::SUPL::XSc::RRLP_Component_t_choice_posCapabilityReq_set;
+*swig_posCapabilityRsp_get = *Net::Radio::Location::SUPL::XSc::RRLP_Component_t_choice_posCapabilityRsp_get;
+*swig_posCapabilityRsp_set = *Net::Radio::Location::SUPL::XSc::RRLP_Component_t_choice_posCapabilityRsp_set;
+sub new {
+    my $pkg = shift;
+    my $self = Net::Radio::Location::SUPL::XSc::new_RRLP_Component_t_choice(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        Net::Radio::Location::SUPL::XSc::delete_RRLP_Component_t_choice($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : Net::Radio::Location::SUPL::XS::MsrPosition_Req_t ##############
+
+package Net::Radio::Location::SUPL::XS::MsrPosition_Req_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( Net::Radio::Location::SUPL::XS );
+%OWNER = ();
+%ITERATORS = ();
+*swig_positionInstruct_get = *Net::Radio::Location::SUPL::XSc::MsrPosition_Req_t_positionInstruct_get;
+*swig_positionInstruct_set = *Net::Radio::Location::SUPL::XSc::MsrPosition_Req_t_positionInstruct_set;
+*swig_referenceAssistData_get = *Net::Radio::Location::SUPL::XSc::MsrPosition_Req_t_referenceAssistData_get;
+*swig_referenceAssistData_set = *Net::Radio::Location::SUPL::XSc::MsrPosition_Req_t_referenceAssistData_set;
+*swig_msrAssistData_get = *Net::Radio::Location::SUPL::XSc::MsrPosition_Req_t_msrAssistData_get;
+*swig_msrAssistData_set = *Net::Radio::Location::SUPL::XSc::MsrPosition_Req_t_msrAssistData_set;
+*swig_systemInfoAssistData_get = *Net::Radio::Location::SUPL::XSc::MsrPosition_Req_t_systemInfoAssistData_get;
+*swig_systemInfoAssistData_set = *Net::Radio::Location::SUPL::XSc::MsrPosition_Req_t_systemInfoAssistData_set;
+*swig_gps_AssistData_get = *Net::Radio::Location::SUPL::XSc::MsrPosition_Req_t_gps_AssistData_get;
+*swig_gps_AssistData_set = *Net::Radio::Location::SUPL::XSc::MsrPosition_Req_t_gps_AssistData_set;
+*swig_extensionContainer_get = *Net::Radio::Location::SUPL::XSc::MsrPosition_Req_t_extensionContainer_get;
+*swig_extensionContainer_set = *Net::Radio::Location::SUPL::XSc::MsrPosition_Req_t_extensionContainer_set;
+*swig_rel98_MsrPosition_Req_extension_get = *Net::Radio::Location::SUPL::XSc::MsrPosition_Req_t_rel98_MsrPosition_Req_extension_get;
+*swig_rel98_MsrPosition_Req_extension_set = *Net::Radio::Location::SUPL::XSc::MsrPosition_Req_t_rel98_MsrPosition_Req_extension_set;
+*swig_rel5_MsrPosition_Req_extension_get = *Net::Radio::Location::SUPL::XSc::MsrPosition_Req_t_rel5_MsrPosition_Req_extension_get;
+*swig_rel5_MsrPosition_Req_extension_set = *Net::Radio::Location::SUPL::XSc::MsrPosition_Req_t_rel5_MsrPosition_Req_extension_set;
+*swig_rel7_MsrPosition_Req_extension_get = *Net::Radio::Location::SUPL::XSc::MsrPosition_Req_t_rel7_MsrPosition_Req_extension_get;
+*swig_rel7_MsrPosition_Req_extension_set = *Net::Radio::Location::SUPL::XSc::MsrPosition_Req_t_rel7_MsrPosition_Req_extension_set;
+*swig__asn_ctx_get = *Net::Radio::Location::SUPL::XSc::MsrPosition_Req_t__asn_ctx_get;
+*swig__asn_ctx_set = *Net::Radio::Location::SUPL::XSc::MsrPosition_Req_t__asn_ctx_set;
+sub new {
+    my $pkg = shift;
+    my $self = Net::Radio::Location::SUPL::XSc::new_MsrPosition_Req_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        Net::Radio::Location::SUPL::XSc::delete_MsrPosition_Req_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : Net::Radio::Location::SUPL::XS::MsrPosition_Rsp_t ##############
+
+package Net::Radio::Location::SUPL::XS::MsrPosition_Rsp_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( Net::Radio::Location::SUPL::XS );
+%OWNER = ();
+%ITERATORS = ();
+*swig_multipleSets_get = *Net::Radio::Location::SUPL::XSc::MsrPosition_Rsp_t_multipleSets_get;
+*swig_multipleSets_set = *Net::Radio::Location::SUPL::XSc::MsrPosition_Rsp_t_multipleSets_set;
+*swig_referenceIdentity_get = *Net::Radio::Location::SUPL::XSc::MsrPosition_Rsp_t_referenceIdentity_get;
+*swig_referenceIdentity_set = *Net::Radio::Location::SUPL::XSc::MsrPosition_Rsp_t_referenceIdentity_set;
+*swig_otd_MeasureInfo_get = *Net::Radio::Location::SUPL::XSc::MsrPosition_Rsp_t_otd_MeasureInfo_get;
+*swig_otd_MeasureInfo_set = *Net::Radio::Location::SUPL::XSc::MsrPosition_Rsp_t_otd_MeasureInfo_set;
+*swig_locationInfo_get = *Net::Radio::Location::SUPL::XSc::MsrPosition_Rsp_t_locationInfo_get;
+*swig_locationInfo_set = *Net::Radio::Location::SUPL::XSc::MsrPosition_Rsp_t_locationInfo_set;
+*swig_gps_MeasureInfo_get = *Net::Radio::Location::SUPL::XSc::MsrPosition_Rsp_t_gps_MeasureInfo_get;
+*swig_gps_MeasureInfo_set = *Net::Radio::Location::SUPL::XSc::MsrPosition_Rsp_t_gps_MeasureInfo_set;
+*swig_locationError_get = *Net::Radio::Location::SUPL::XSc::MsrPosition_Rsp_t_locationError_get;
+*swig_locationError_set = *Net::Radio::Location::SUPL::XSc::MsrPosition_Rsp_t_locationError_set;
+*swig_extensionContainer_get = *Net::Radio::Location::SUPL::XSc::MsrPosition_Rsp_t_extensionContainer_get;
+*swig_extensionContainer_set = *Net::Radio::Location::SUPL::XSc::MsrPosition_Rsp_t_extensionContainer_set;
+*swig_rel_98_MsrPosition_Rsp_Extension_get = *Net::Radio::Location::SUPL::XSc::MsrPosition_Rsp_t_rel_98_MsrPosition_Rsp_Extension_get;
+*swig_rel_98_MsrPosition_Rsp_Extension_set = *Net::Radio::Location::SUPL::XSc::MsrPosition_Rsp_t_rel_98_MsrPosition_Rsp_Extension_set;
+*swig_rel_5_MsrPosition_Rsp_Extension_get = *Net::Radio::Location::SUPL::XSc::MsrPosition_Rsp_t_rel_5_MsrPosition_Rsp_Extension_get;
+*swig_rel_5_MsrPosition_Rsp_Extension_set = *Net::Radio::Location::SUPL::XSc::MsrPosition_Rsp_t_rel_5_MsrPosition_Rsp_Extension_set;
+*swig_rel_7_MsrPosition_Rsp_Extension_get = *Net::Radio::Location::SUPL::XSc::MsrPosition_Rsp_t_rel_7_MsrPosition_Rsp_Extension_get;
+*swig_rel_7_MsrPosition_Rsp_Extension_set = *Net::Radio::Location::SUPL::XSc::MsrPosition_Rsp_t_rel_7_MsrPosition_Rsp_Extension_set;
+*swig__asn_ctx_get = *Net::Radio::Location::SUPL::XSc::MsrPosition_Rsp_t__asn_ctx_get;
+*swig__asn_ctx_set = *Net::Radio::Location::SUPL::XSc::MsrPosition_Rsp_t__asn_ctx_set;
+sub new {
+    my $pkg = shift;
+    my $self = Net::Radio::Location::SUPL::XSc::new_MsrPosition_Rsp_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        Net::Radio::Location::SUPL::XSc::delete_MsrPosition_Rsp_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : Net::Radio::Location::SUPL::XS::PositionInstruct_t ##############
+
+package Net::Radio::Location::SUPL::XS::PositionInstruct_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( Net::Radio::Location::SUPL::XS );
+%OWNER = ();
+%ITERATORS = ();
+*swig_methodType_get = *Net::Radio::Location::SUPL::XSc::PositionInstruct_t_methodType_get;
+*swig_methodType_set = *Net::Radio::Location::SUPL::XSc::PositionInstruct_t_methodType_set;
+*swig_positionMethod_get = *Net::Radio::Location::SUPL::XSc::PositionInstruct_t_positionMethod_get;
+*swig_positionMethod_set = *Net::Radio::Location::SUPL::XSc::PositionInstruct_t_positionMethod_set;
+*swig_measureResponseTime_get = *Net::Radio::Location::SUPL::XSc::PositionInstruct_t_measureResponseTime_get;
+*swig_measureResponseTime_set = *Net::Radio::Location::SUPL::XSc::PositionInstruct_t_measureResponseTime_set;
+*swig_useMultipleSets_get = *Net::Radio::Location::SUPL::XSc::PositionInstruct_t_useMultipleSets_get;
+*swig_useMultipleSets_set = *Net::Radio::Location::SUPL::XSc::PositionInstruct_t_useMultipleSets_set;
+*swig_environmentCharacter_get = *Net::Radio::Location::SUPL::XSc::PositionInstruct_t_environmentCharacter_get;
+*swig_environmentCharacter_set = *Net::Radio::Location::SUPL::XSc::PositionInstruct_t_environmentCharacter_set;
+*swig__asn_ctx_get = *Net::Radio::Location::SUPL::XSc::PositionInstruct_t__asn_ctx_get;
+*swig__asn_ctx_set = *Net::Radio::Location::SUPL::XSc::PositionInstruct_t__asn_ctx_set;
+sub new {
+    my $pkg = shift;
+    my $self = Net::Radio::Location::SUPL::XSc::new_PositionInstruct_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        Net::Radio::Location::SUPL::XSc::delete_PositionInstruct_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : Net::Radio::Location::SUPL::XS::MethodType_t ##############
+
+package Net::Radio::Location::SUPL::XS::MethodType_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( Net::Radio::Location::SUPL::XS );
+%OWNER = ();
+%ITERATORS = ();
+*swig_present_get = *Net::Radio::Location::SUPL::XSc::MethodType_t_present_get;
+*swig_present_set = *Net::Radio::Location::SUPL::XSc::MethodType_t_present_set;
+*swig__asn_ctx_get = *Net::Radio::Location::SUPL::XSc::MethodType_t__asn_ctx_get;
+*swig__asn_ctx_set = *Net::Radio::Location::SUPL::XSc::MethodType_t__asn_ctx_set;
+*swig_choice_get = *Net::Radio::Location::SUPL::XSc::MethodType_t_choice_get;
+*swig_choice_set = *Net::Radio::Location::SUPL::XSc::MethodType_t_choice_set;
+sub new {
+    my $pkg = shift;
+    my $self = Net::Radio::Location::SUPL::XSc::new_MethodType_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        Net::Radio::Location::SUPL::XSc::delete_MethodType_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : Net::Radio::Location::SUPL::XS::MethodType_t_choice ##############
+
+package Net::Radio::Location::SUPL::XS::MethodType_t_choice;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( Net::Radio::Location::SUPL::XS );
+%OWNER = ();
+%ITERATORS = ();
+*swig_msAssisted_get = *Net::Radio::Location::SUPL::XSc::MethodType_t_choice_msAssisted_get;
+*swig_msAssisted_set = *Net::Radio::Location::SUPL::XSc::MethodType_t_choice_msAssisted_set;
+*swig_msBased_get = *Net::Radio::Location::SUPL::XSc::MethodType_t_choice_msBased_get;
+*swig_msBased_set = *Net::Radio::Location::SUPL::XSc::MethodType_t_choice_msBased_set;
+*swig_msBasedPref_get = *Net::Radio::Location::SUPL::XSc::MethodType_t_choice_msBasedPref_get;
+*swig_msBasedPref_set = *Net::Radio::Location::SUPL::XSc::MethodType_t_choice_msBasedPref_set;
+*swig_msAssistedPref_get = *Net::Radio::Location::SUPL::XSc::MethodType_t_choice_msAssistedPref_get;
+*swig_msAssistedPref_set = *Net::Radio::Location::SUPL::XSc::MethodType_t_choice_msAssistedPref_set;
+sub new {
+    my $pkg = shift;
+    my $self = Net::Radio::Location::SUPL::XSc::new_MethodType_t_choice(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        Net::Radio::Location::SUPL::XSc::delete_MethodType_t_choice($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
 # ------- CONSTANT STUBS -------
 
 package Net::Radio::Location::SUPL::XS;
@@ -716,6 +1106,19 @@ sub SLPMode_nonProxy () { $Net::Radio::Location::SUPL::XSc::SLPMode_nonProxy }
 sub Status_stale () { $Net::Radio::Location::SUPL::XSc::Status_stale }
 sub Status_current () { $Net::Radio::Location::SUPL::XSc::Status_current }
 sub Status_unknown () { $Net::Radio::Location::SUPL::XSc::Status_unknown }
+sub RRLP_Component_PR_NOTHING () { $Net::Radio::Location::SUPL::XSc::RRLP_Component_PR_NOTHING }
+sub RRLP_Component_PR_msrPositionReq () { $Net::Radio::Location::SUPL::XSc::RRLP_Component_PR_msrPositionReq }
+sub RRLP_Component_PR_msrPositionRsp () { $Net::Radio::Location::SUPL::XSc::RRLP_Component_PR_msrPositionRsp }
+sub RRLP_Component_PR_assistanceData () { $Net::Radio::Location::SUPL::XSc::RRLP_Component_PR_assistanceData }
+sub RRLP_Component_PR_assistanceDataAck () { $Net::Radio::Location::SUPL::XSc::RRLP_Component_PR_assistanceDataAck }
+sub RRLP_Component_PR_protocolError () { $Net::Radio::Location::SUPL::XSc::RRLP_Component_PR_protocolError }
+sub RRLP_Component_PR_posCapabilityReq () { $Net::Radio::Location::SUPL::XSc::RRLP_Component_PR_posCapabilityReq }
+sub RRLP_Component_PR_posCapabilityRsp () { $Net::Radio::Location::SUPL::XSc::RRLP_Component_PR_posCapabilityRsp }
+sub MethodType_PR_NOTHING () { $Net::Radio::Location::SUPL::XSc::MethodType_PR_NOTHING }
+sub MethodType_PR_msAssisted () { $Net::Radio::Location::SUPL::XSc::MethodType_PR_msAssisted }
+sub MethodType_PR_msBased () { $Net::Radio::Location::SUPL::XSc::MethodType_PR_msBased }
+sub MethodType_PR_msBasedPref () { $Net::Radio::Location::SUPL::XSc::MethodType_PR_msBasedPref }
+sub MethodType_PR_msAssistedPref () { $Net::Radio::Location::SUPL::XSc::MethodType_PR_msAssistedPref }
 
 # ------- VARIABLE STUBS --------
 
@@ -732,4 +1135,10 @@ package Net::Radio::Location::SUPL::XS;
 *asn_DEF_ULP_PDU = *Net::Radio::Location::SUPL::XSc::asn_DEF_ULP_PDU;
 *asn_DEF_UlpMessage = *Net::Radio::Location::SUPL::XSc::asn_DEF_UlpMessage;
 *asn_DEF_SLPAddress = *Net::Radio::Location::SUPL::XSc::asn_DEF_SLPAddress;
+*asn_DEF_RRLP_PDU = *Net::Radio::Location::SUPL::XSc::asn_DEF_RRLP_PDU;
+*asn_DEF_RRLP_Component = *Net::Radio::Location::SUPL::XSc::asn_DEF_RRLP_Component;
+*asn_DEF_MsrPosition_Req = *Net::Radio::Location::SUPL::XSc::asn_DEF_MsrPosition_Req;
+*asn_DEF_MsrPosition_Rsp = *Net::Radio::Location::SUPL::XSc::asn_DEF_MsrPosition_Rsp;
+*asn_DEF_PositionInstruct = *Net::Radio::Location::SUPL::XSc::asn_DEF_PositionInstruct;
+*asn_DEF_MethodType = *Net::Radio::Location::SUPL::XSc::asn_DEF_MethodType;
 1;
