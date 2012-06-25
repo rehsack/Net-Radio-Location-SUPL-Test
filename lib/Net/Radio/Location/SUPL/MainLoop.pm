@@ -75,7 +75,7 @@ sub add
         my $cb = sub {
             $obj->trigger_read();
         };
-        Net::DBus::Reactor->add_read( $fh, $cb, 1 );    # add callback on $fh is readable and enable
+        Net::DBus::Reactor->main()->add_read( $fh, $cb, 1 );    # add callback on $fh is readable and enable
 
         $log->debugf( "read trigger for object of type '%s' added", ref($obj) );
     }
@@ -118,7 +118,7 @@ sub remove
     if ( $obj->can("trigger_read") )
     {
         my $fh = $obj->get_read_trigger();
-        Net::DBus::Reactor->remove_read($fh);    # remove callback on $fh is readable
+        Net::DBus::Reactor->main()->remove_read($fh);    # remove callback on $fh is readable
 
         $log->debugf( "read trigger for object of type '%s' removed", ref($obj) );
     }
