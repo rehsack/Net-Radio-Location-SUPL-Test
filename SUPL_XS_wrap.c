@@ -1985,12 +1985,12 @@ SWIG_AsVal_int SWIG_PERL_DECL_ARGS_2(SV * obj, int *val)
 
 SWIGINTERN void SUPLPOSINIT_set_capabilities(struct SUPLPOSINIT *self,unsigned int pos_tech,enum PrefMethod pref_method,unsigned int pos_proto){
 	self->sETCapabilities.posTechnology.agpsSETassisted = (pos_tech & (1 << 0)) ? 1 : 0;
-	self->sETCapabilities.posTechnology.agpsSETBased = (pos_tech & (2 << 0)) ? 1 : 0;
-	self->sETCapabilities.posTechnology.autonomousGPS = (pos_tech & (3 << 0)) ? 1 : 0;
-	self->sETCapabilities.posTechnology.aFLT = (pos_tech & (4 << 0)) ? 1 : 0;
-	self->sETCapabilities.posTechnology.eCID = (pos_tech & (5 << 0)) ? 1 : 0;
-	self->sETCapabilities.posTechnology.eOTD = (pos_tech & (6 << 0)) ? 1 : 0;
-	self->sETCapabilities.posTechnology.oTDOA = (pos_tech & (7 << 0)) ? 1 : 0;
+	self->sETCapabilities.posTechnology.agpsSETBased = (pos_tech & (1 << 1)) ? 1 : 0;
+	self->sETCapabilities.posTechnology.autonomousGPS = (pos_tech & (1 << 2)) ? 1 : 0;
+	self->sETCapabilities.posTechnology.aFLT = (pos_tech & (1 << 3)) ? 1 : 0;
+	self->sETCapabilities.posTechnology.eCID = (pos_tech & (1 << 4)) ? 1 : 0;
+	self->sETCapabilities.posTechnology.eOTD = (pos_tech & (1 << 5)) ? 1 : 0;
+	self->sETCapabilities.posTechnology.oTDOA = (pos_tech & (1 << 6)) ? 1 : 0;
 
 	self->sETCapabilities.prefMethod = pref_method;
 
@@ -2337,7 +2337,6 @@ SWIGINTERN void ULP_PDU_setSetSessionId_to_imsi(struct ULP_PDU *self,int session
             self->sessionID.setSessionID = calloc(1, sizeof(*(self->sessionID.setSessionID)));
         self->sessionID.setSessionID->sessionId = sessionId;
         self->sessionID.setSessionID->setId.present = SETId_PR_imsi;
-        fprintf(stderr, "setting imsi to BDC encoded '%s'\n", imsi);
 	BCD_OCTET_STRING_fromString(&self->sessionID.setSessionID->setId.choice.imsi, imsi);
     }
 SWIGINTERN void ULP_PDU_setSetSessionId_to_msisdn(struct ULP_PDU *self,int sessionId,char *msisdn){
@@ -14462,32 +14461,32 @@ XS(SWIG_init) {
   } while(0) /*@SWIG@*/;
   /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
     SV *sv = get_sv((char*) SWIG_prefix "setcap_pos_tech_agpsSETBased", TRUE | 0x2 | GV_ADDMULTI);
-    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)((2 << 0))));
+    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)((1 << 1))));
     SvREADONLY_on(sv);
   } while(0) /*@SWIG@*/;
   /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
     SV *sv = get_sv((char*) SWIG_prefix "setcap_pos_tech_autonomousGPS", TRUE | 0x2 | GV_ADDMULTI);
-    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)((3 << 0))));
+    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)((1 << 2))));
     SvREADONLY_on(sv);
   } while(0) /*@SWIG@*/;
   /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
     SV *sv = get_sv((char*) SWIG_prefix "setcap_pos_tech_aFLT", TRUE | 0x2 | GV_ADDMULTI);
-    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)((4 << 0))));
+    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)((1 << 3))));
     SvREADONLY_on(sv);
   } while(0) /*@SWIG@*/;
   /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
     SV *sv = get_sv((char*) SWIG_prefix "setcap_pos_tech_eCID", TRUE | 0x2 | GV_ADDMULTI);
-    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)((5 << 0))));
+    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)((1 << 4))));
     SvREADONLY_on(sv);
   } while(0) /*@SWIG@*/;
   /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
     SV *sv = get_sv((char*) SWIG_prefix "setcap_pos_tech_eOTD", TRUE | 0x2 | GV_ADDMULTI);
-    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)((6 << 0))));
+    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)((1 << 5))));
     SvREADONLY_on(sv);
   } while(0) /*@SWIG@*/;
   /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
     SV *sv = get_sv((char*) SWIG_prefix "setcap_pos_tech_oTDOA", TRUE | 0x2 | GV_ADDMULTI);
-    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)((7 << 0))));
+    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)((1 << 6))));
     SvREADONLY_on(sv);
   } while(0) /*@SWIG@*/;
   /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {

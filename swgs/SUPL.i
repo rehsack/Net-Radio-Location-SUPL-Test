@@ -304,7 +304,6 @@ typedef long Status_t;
             $self->sessionID.setSessionID = calloc(1, sizeof(*($self->sessionID.setSessionID)));
         $self->sessionID.setSessionID->sessionId = sessionId;
         $self->sessionID.setSessionID->setId.present = SETId_PR_imsi;
-        fprintf(stderr, "setting imsi to BDC encoded '%s'\n", imsi);
 	BCD_OCTET_STRING_fromString(&$self->sessionID.setSessionID->setId.choice.imsi, imsi);
     }
 
@@ -580,12 +579,12 @@ typedef long Status_t;
 %extend SUPLPOSINIT {
 
 #define setcap_pos_tech_agpsSETassisted (1 << 0)
-#define setcap_pos_tech_agpsSETBased (2 << 0)
-#define setcap_pos_tech_autonomousGPS (3 << 0)
-#define setcap_pos_tech_aFLT (4 << 0)
-#define setcap_pos_tech_eCID (5 << 0)
-#define setcap_pos_tech_eOTD (6 << 0)
-#define setcap_pos_tech_oTDOA (7 << 0)
+#define setcap_pos_tech_agpsSETBased (1 << 1)
+#define setcap_pos_tech_autonomousGPS (1 << 2)
+#define setcap_pos_tech_aFLT (1 << 3)
+#define setcap_pos_tech_eCID (1 << 4)
+#define setcap_pos_tech_eOTD (1 << 5)
+#define setcap_pos_tech_oTDOA (1 << 6)
 
 #define setcap_pos_proto_tia801 (1 << 0)
 #define setcap_pos_proto_rrlp (1 << 1)
