@@ -111,7 +111,7 @@ sub setup_dbus
     my %cfg = @_;
 
     defined( $cfg{"default"} )
-      and SUPL::DBusObject::set_default_config( %{ $cfg{"default"} } );
+      and Net::Radio::Location::SUPL::DBusObject::set_default_config( %{ $cfg{"default"} } );
 
     my @dbusObjects = grep { $_ ne "default" } keys %cfg;
     foreach my $dbusObj (@dbusObjects)
