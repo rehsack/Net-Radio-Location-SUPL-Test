@@ -167,11 +167,11 @@ sub new
     sub _get_modem_info
     {
         my ( $self, $properties ) = @_;
-        my $modem_api = $self->{config}->{'modem_api'}->{instance};
+        my $modem_api = $self->{config}->{'modem-api'}->{instance};
         my $modem;
-        if ( _HASH( $self->{config}->{'modem_api'}->{match} ) )
+        if ( _HASH( $self->{config}->{'modem-api'}->{match} ) )
         {
-            my $match        = $self->{config}->{'modem_api'}->{match};
+            my $match        = $self->{config}->{'modem-api'}->{match};
             my @match_keys   = keys %{$match};
             my @match_values = values %{$match};
             $modem = first(
@@ -190,20 +190,66 @@ sub new
             $log->debugf( "Using first modem %s", $modem // 'n/a' );
         }
         $modem or return;
-        my %props = map { $_ => $modem_api->get_modem_property( $modem, $_ ) } @$properties;
-        $log->debugf( "Extracted %s from modem %s", \%props, $modem // 'n/a' );
-        return %props;
+        my @props = map { $modem_api->get_modem_property( $modem, $_ ) } @$properties;
+        $log->debugf( "Extracted %s (%s) from modem %s", \@props, $properties, $modem // 'n/a' );
+        return @props;
     }
 
     sub _calculate_response_addr
     {
         my $self = shift;
         my %mobile_ident;
-        @mobile_ident{qw(mcc mnc)} = $self->_get_modem_info(qw(MCC MNC));
+        @mobile_ident{qw(mcc mnc)} = $self->_get_modem_info( [qw(MCC MNC)] );
         my $response_addr = sprintf( "h-slp.mnc%03d.mcc%03d.pub.3gppnetwork.org",
                                      0 + $mobile_ident{mnc}, 0 + $mobile_ident{mcc} );
         return $response_addr;
     }
+}
+
+=head2 respond($pdu,@typenames)
+
+Takes a given SUPL Protocol Data Unit (as instance of
+Net::Radio::Location::SUPL::XS::ULP_PDU_t) and the associated type names
+(eg. C<qw(suplposinit)> or C<qw(suplpos assistanceDataAck)>).
+
+Given PDU is encoded, sent to H-SLP via open socket and in case of an
+SUPL END PDU, the connection is terminated. Some logging and error handling
+around encoding/sending completes the respond action.
+
+=cut
+
+sub respond
+{
+    my ( $self, $pdu, @response_typenames ) = @_;
+
+    my $response_struct = $self;
+    for my $response_typename (@response_typenames)
+    {
+        $response_struct = $response_struct->{$response_typename};
+    }
+    $response_struct->{pdu} //= $pdu;
+    eval {
+        # encode packet
+        $log->debugf( "encoding response ...\n%s", $response_struct->{pdu}->dump() );
+        $response_struct->{packet} = $response_struct->{pdu}->encode();
+    };
+    if ($@)
+    {
+        $log->errorf( "Error encoding PDU: %s", $@ );
+        $self->_terminate();
+        return;
+    }
+
+    # send response
+    $self->{connection}->syswrite( $response_struct->{packet} );
+
+    if ( $response_struct->{pdu}->{message}->{present} ==
+         $Net::Radio::Location::SUPL::XSc::UlpMessage_PR_msSUPLEND )
+    {
+        $self->_terminate();
+    }
+
+    return;
 }
 
 my %requested_assist_data = (
@@ -222,6 +268,24 @@ my %requested_assist_data = (
        Net::Radio::Location::SUPL::XS::reqassistdata_realTimeIntegrityRequested,
 );
 
+=head2 prepare_supl_response($pdu)
+
+Prepares a response SUPL PDU by copying SlpSessionId into a newly created SUPL PDU.
+
+=cut
+
+sub prepare_supl_response
+{
+    my ($self, $supl_pdu) = @_;
+
+    # built SUPLPOSINIT/AUTHREQ/END
+    my $pdu = Net::Radio::Location::SUPL::XS::ULP_PDU_t->new();
+
+    $pdu->copy_SessionId($supl_pdu);
+
+    return $pdu;
+}
+
 =head2 begin_ni_supl_seesion
 
 Begins a network initiated SUPL session.
@@ -231,22 +295,40 @@ Begins a network initiated SUPL session.
 sub begin_ni_supl_seesion
 {
     my ( $self, %params ) = @_;
-    my ( $packet, $supl_pdu ) = @params{ "packet", "pdu" };
+    my ( $packet, $supl_pdu ) = @params{ "supl_packet", "supl_pdu" };
 
-    # check proxy mode
-    my ( $response_type, $response_addr );
+    $self->{suplinit}->{pdu}    = $supl_pdu;
+    $self->{suplinit}->{packet} = $packet;
+
+    my %mobile_ident;
+    @mobile_ident{qw(mcc mnc lac cellid imsi)} =
+      $self->_get_modem_info( [qw(MCC MNC LAC CI IMSI)] );
+
+    my $pdu = $self->prepare_supl_response($supl_pdu);
+    $log->debugf( "prepared response ...\n%s", $pdu->dump() );
+    $pdu->setSetSessionId_to_imsi( _get_next_session_id(), $mobile_ident{imsi} );
+    $log->debugf( "prepared response ...\n%s", $pdu->dump() );
+    
+    my ( $response_type, $response_addr, $response_typename, $response_supl );
     my $supl_init = $supl_pdu->{message}->{choice}->{msSUPLINIT};
+    # check proxy mode
     if ( $supl_init->{sLPMode} == Net::Radio::Location::SUPL::XS::SLPMode_proxy )
     {
         $log->debug("NI packet wants proxy mode");
-        $response_type = Net::Radio::Location::SUPL::XS::UlpMessage_PR_msSUPLPOSINIT;
+        $response_type     = $Net::Radio::Location::SUPL::XSc::UlpMessage_PR_msSUPLPOSINIT;
+        $response_typename = "suplposinit";
+        $pdu->set_message_type($response_type);
+        $response_supl = $pdu->{message}->{choice}->{msSUPLPOSINIT};
     }
     else
     {
         # XXX might require additional effort to send SUPLEND in nonProxy
         #     mode which might make rejection of nonProxy mode superfluous
         $log->warning("nonProxy mode not supported");
-        $response_type = Net::Radio::Location::SUPL::XS::UlpMessage_PR_msSUPLEND;
+        $response_type     = $Net::Radio::Location::SUPL::XSc::UlpMessage_PR_msSUPLEND;
+        $response_typename = "suplend";
+        $pdu->set_message_type($response_type);
+        $response_supl = $pdu->{message}->{choice}->{msSUPLEND};
     }
 
     # check reply address (fqdn, ip...)
@@ -264,74 +346,173 @@ sub begin_ni_supl_seesion
           : $self->_calculate_response_addr();
     }
 
-    # compute verification checksum
-    my $chksum = Digest::SHA1::hmac_sha1( $packet, $response_addr );
-    if ( length($chksum) != 8 )
-    {
-        $log->errorf(
-            "Something went wrong computing verification checksum - expected length is 8, computed length is %d",
-            length($chksum)
-        );
-    }
-
-    # connect (Net::SSLeay, IO::Socket::SSL?)
+    # connect ...
     $self->_connect( host => $response_addr ) or return;
 
     # register at MainLoop (or better in handle_pdu?)
     Net::Radio::Location::SUPL::MainLoop->add($self);
 
-    # built SUPLPOSINIT/AUTHREQ
-    my $pdu = Net::Radio::Location::SUPL::XS::ULP_PDU_t->new();
+    # compute verification checksum
+    my $chksum = Digest::SHA::hmac_sha1( $packet, $response_addr );
+    length($chksum) != 8 and $chksum = substr( $chksum, 0, 8 );
 
-    my %mobile_ident;
-    @mobile_ident{qw(mcc mnc imsi msisdn lac cellid)} =
-      $self->_get_modem_info(qw(MCC MNC IMSI MSISDN LAC CELLID));
-
-    $pdu->copy_SlpSessionId($supl_pdu);
-    $pdu->setSetSessionId_to_imsi( _get_next_session_id(), $mobile_ident{imsi} );
-    $pdu->set_message_type(Net::Radio::Location::SUPL::XS::UlpMessage_PR_msSUPLPOSINIT);
-
-    my $posinit = $pdu->{message}->{choice}->{msSUPLPOSINIT};
-    $posinit->set_capabilities( Net::Radio::Location::SUPL::XS::setcap_pos_tech_agpsSETBased,
-                                Net::Radio::Location::SUPL::XS::PrefMethod_agpsSETBasedPreferred,
-                                Net::Radio::Location::SUPL::XS::setcap_pos_proto_rrlp
-                              );
-    $posinit->set_gsm_location_info(
-                                   @mobile_ident{qw(mcc mnc lac cellid)},
-                                   1                                        # ta -- Terminal Adaptor
-                                   );
-    $posinit->{locationId}->{status} = Net::Radio::Location::SUPL::XS::Status_stale;
-    my $estimated_pos_cfg = $self->{config}->{'test-setup'}->{SUPLPOSINIT}->{"estimated-location"};
-    $posinit->set_position( gmtime(&now),
-                            @$estimated_pos_cfg{qw(latitudeSign latitude longitude)} )
-      ;                                          # XXX enable NMEA 0183 using?
-
-    if ( _HASH( $self->{config}->{'test-setup'}->{SUPLPOSINIT}->{"request-assistant-data"} ) )
+    if ( $response_typename eq "suplposinit" )
     {
-        my $reqAssistData = 0;
-        while ( my ( $assist, $enabled ) =
-             each( %{ $self->{config}->{'test-setup'}->{SUPLPOSINIT}->{"request-assistant-data"} } )
-          )
+        $response_supl->set_capabilities(
+                                 Net::Radio::Location::SUPL::XS::setcap_pos_tech_agpsSETBased(),
+                                 Net::Radio::Location::SUPL::XS::PrefMethod_agpsSETBasedPreferred(),
+                                 Net::Radio::Location::SUPL::XS::setcap_pos_proto_rrlp()
+        );
+        if ( $mobile_ident{cellid} > 65535 )
         {
-            $enabled and $reqAssistData += $requested_assist_data{$assist};
+            $response_supl->set_wcdma_location_info( map { 0 + $_ }
+                                                     ( @mobile_ident{qw(mcc mnc cellid)} ) );
         }
-        $reqAssistData or $log->warning("requested-assist-data given but nothing enabled");
-        $posinit->set_requested_assist_data($reqAssistData);
-        # set_requested_assist_navigation_modell ...
+        elsif ( defined( $mobile_ident{lac} ) )
+        {
+            $response_supl->set_gsm_location_info(
+                map { 0 + $_ } ( @mobile_ident{qw(mcc mnc lac cellid)} ),
+                1    # ta -- Terminal Adaptor
+                                                 );
+        }
+        else
+        {
+            $self->_terminate();
+            $log->error("16-bit cellid and no LocationAreaCode -- can't construct CellInfo");
+        }
+        $response_supl->{locationId}->{status} = Net::Radio::Location::SUPL::XS::Status_stale;
+        my $estimated_pos_cfg = $self->{config}->{SUPLPOSINIT}->{"estimated-location"};
+        $log->debugf( "estimated_pos_cfg: %s", $estimated_pos_cfg );
+        $response_supl->set_position_estimate( time,
+                                          @$estimated_pos_cfg{qw(latitudeSign latitude longitude)} )
+          ;    # XXX enable NMEA 0183 using?
+
+        if ( _HASH( $self->{config}->{SUPLPOSINIT}->{"request-assistant-data"} ) )
+        {
+            my $reqAssistData = 0;
+            while ( my ( $assist, $enabled ) =
+                    each( %{ $self->{config}->{SUPLPOSINIT}->{"request-assistant-data"} } ) )
+            {
+                $enabled and $reqAssistData += $requested_assist_data{$assist};
+            }
+            $reqAssistData or $log->warning("requested-assist-data given but nothing enabled");
+            $response_supl->set_requested_assist_data($reqAssistData);
+            # set_requested_assist_navigation_modell ...
+        }
     }
 
     # verification hash
-    $posinit->{ver} = $chksum;
+    $response_supl->{ver} = $chksum;
 
-    $self->{suplposinit}->{pdu} = $pdu;
-
-    # encode packet
-    $self->{suplposinit}->{packet} = $self->{suplposinit}->{pdu}->encode();
-
-    # send response
-    $self->{connection}->write( $self->{suplposinit}->{packet} );
+    $self->respond( $pdu, $response_typename );
 
     return;
+}
+
+=head2 send_supl_rrlp_response($supl_pdu, $rrlp_resp_pdu, $resp_typename)
+
+Sends out an RRLP PDU embedded in a SUPL POS packet.
+
+Parameters:
+
+=over 8
+
+=item C<$supl_pdu>
+
+SUPL PDU to be responded. Required to extract session id's for the answer
+PDU.
+
+=item C<$rrlp_resp_pdu>
+
+Prepared RRLP PDU to embed into created SUPL POS message.
+
+=item C<$resp_typename>
+
+Typename of the answer (eg. msrPositionResp)
+
+=back
+
+=cut
+
+sub send_supl_rrlp_response
+{
+    my ($self, $supl_pdu, $rrlp_resp_pdu, $resp_name) = @_;
+
+    my $pdu = $self->prepare_supl_response($supl_pdu);
+    $pdu->set_message_type($Net::Radio::Location::SUPL::XSc::UlpMessage_PR_msSUPLPOS);
+
+    my $supl_pos = $pdu->{message}->{choice}->{msSUPLPOS};
+
+    $log->debugf( "rrlp response\n%s", $rrlp_resp_pdu->dump() );
+
+    $supl_pos->{posPayLoad} = $rrlp_resp_pdu->encode();
+
+    $self->respond( $pdu, "suplpos", $resp_name );
+
+    return;
+}
+
+=head2 handle_supl_pos_rrlp_packet
+
+Handles the reaction of an incoming SUPL POS packet with an embedded
+RRLP PDU.
+
+=over 8
+
+=item *
+
+assistanceData will be acknowledged (assistanceDataAck)
+
+=item *
+
+msrPositionReq will be responded with configured coordinates until access to
+NMEA standard documents is available and the time is provided to implement
+GSM location extraction.
+
+=item *
+
+Everything else is responded with a protocolError.
+
+=back
+
+=cut
+
+sub handle_supl_pos_rrlp_packet
+{
+    my ( $self, %params ) = @_;
+    my ( $supl_pkt, $supl_pdu, $rrlp_pkt, $rrlp_pdu ) =
+      @params{ "supl_packet", "supl_pdu", "rrlp_packet", "rrlp_pdu" };
+
+    $log->debugf( "embedded rrlp packet:\n%s", $rrlp_pdu->dump() );
+
+    given ( $rrlp_pdu->{component}->{present} )
+    {
+        when ($Net::Radio::Location::SUPL::XSc::RRLP_Component_PR_assistanceData)
+        {
+	    $self->{suplpos}->{assistanceData}->{pdu}    = $supl_pdu;
+	    $self->{suplpos}->{assistanceData}->{packet} = $supl_pkt;
+
+	    my $rrlp_resp_pdu = Net::Radio::Location::SUPL::XS::RRLP_PDU_t->new();
+
+	    $rrlp_resp_pdu->{referenceNumber} = $rrlp_pdu->{referenceNumber};
+
+	    # XXX probably RRLP_Component_PR_protocolError?
+	    $rrlp_resp_pdu->set_component_type($Net::Radio::Location::SUPL::XSc::RRLP_Component_PR_assistanceDataAck);
+
+	    $self->send_supl_rrlp_response($rrlp_resp_pdu, "assistanceDataAck");
+        }
+        when ($Net::Radio::Location::SUPL::XSc::RRLP_Component_PR_msrPositionReq)
+        {
+	    $self->{suplpos}->{msrPositionReq}->{pdu}    = $supl_pdu;
+	    $self->{suplpos}->{msrPositionReq}->{packet} = $supl_pkt;
+
+	    $self->_terminate();
+        }
+        default
+        {
+	    $self->_terminate();
+        }
+    }
 }
 
 =head2 handle_supl_pdu
@@ -349,29 +530,77 @@ sub handle_supl_pdu
     my $supl_pdu = Net::Radio::Location::SUPL::XS::decode_ulp_pdu($enc_pdu);
 
     $log->is_debug()
-      and
-      $log->debugf( "received pdu containing message type %d", $supl_pdu->{message}->{present} );
-    $log->is_trace() and $log->tracef( "pdu: %s", $supl_pdu->dump() );
+      and $log->debugf( "received pdu containing message type %d of %d bytes length",
+                        $supl_pdu->{message}->{present},
+                        $supl_pdu->{length} );
+    $log->is_debug() and $log->debugf( "pdu: %s", $supl_pdu->dump() );
 
     # decode_ulp_pdu croaks on error ...
     given ( $supl_pdu->{message}->{present} )
     {
-        when (Net::Radio::Location::SUPL::XS::UlpMessage_PR_msSUPLINIT)
+        when ($Net::Radio::Location::SUPL::XSc::UlpMessage_PR_msSUPLINIT)
         {
-            $self->begin_ni_supl_seesion( packet => $enc_pdu,
-                                          pdu    => $supl_pdu );
+            $self->begin_ni_supl_seesion( supl_packet => $enc_pdu,
+                                          supl_pdu    => $supl_pdu );
         }
-        when (Net::Radio::Location::SUPL::XS::UlpMessage_PR_msSUPLPOS)
-	{
-	}
-        when (Net::Radio::Location::SUPL::XS::UlpMessage_PR_msSUPLEND)
-	{
-	}
+        when ($Net::Radio::Location::SUPL::XSc::UlpMessage_PR_msSUPLPOS)
+        {
+            my $supl_pos = $supl_pdu->{message}->{choice}->{msSUPLPOS};
+            given ( $supl_pos->{posPayLoad}->{present} )
+            {
+                when ($Net::Radio::Location::SUPL::XSc::PosPayLoad_PR_rrlpPayload)
+                {
+                    my $rrlp_pkt = $supl_pos->{posPayLoad}->{choice}->{rrlpPayload};
+                    $self->handle_supl_pos_rrlp_packet(
+                              supl_packet => $enc_pdu,
+                              supl_pdu    => $supl_pdu,
+                              rrlp_packet => $rrlp_pkt,
+                              rrlp_pdu => Net::Radio::Location::SUPL::XS::RRLP_PDU_t->new($rrlp_pkt)
+                    );
+                }
+                default
+                {
+                    $log->errorf(
+                                  "Unsupported protocol embedded in SUPLPOS: %d, supported: %d",
+                                  $supl_pos->{posPayLoad}->{present},
+                                  $Net::Radio::Location::SUPL::XSc::PosPayLoad_PR_rrlpPayload
+                                );
+                    $self->_terminate();
+                }
+            }
+        }
+        when ($Net::Radio::Location::SUPL::XSc::UlpMessage_PR_msSUPLEND)
+        {
+            $self->_terminate();
+        }
         default
         {
             # ...
+            $self->_terminate();
         }
     }
+
+    return;
+}
+
+sub _terminate
+{
+    my $self = shift;
+
+    Net::Radio::Location::SUPL::MainLoop->remove($self);
+    my @supls = grep { $_ =~ m/^supl/ and _HASH( $self->{$_} ) } keys( %{$self} );
+    foreach my $supl (@supls)
+    {
+        defined( $self->{$supl}->{packet} ) and delete $self->{$supl}->{packet};
+        defined( $self->{$supl}->{pdu} )    and delete $self->{$supl}->{pdu};
+    }
+    if ( $self->{connection} )
+    {
+        $self->{connection}->close();
+        delete $self->{connection};
+    }
+
+    return;
 }
 
 =head2 trigger_read
@@ -384,45 +613,41 @@ sub trigger_read
 {
     my $self = shift;
 
-    my $buf;
-    my $rb = $self->{connection}->read( $buf );
-    unless( defined $rb )
+    my $pkt = '';
+    do
     {
-	$log->errorf("Error receiving data: %s", $!);
-	# XXX what to do from here?
-	Net::Radio::Location::SUPL::MainLoop->remove($self);
-	if( $self->{connection} )
-	{
-	    $self->{connection}->close();
-	    delete $self->{connection};
-	}
-    }
+        my $buf;
+        my $rb = $self->{connection}->sysread( $buf, 4096 );
+        unless ( defined $rb )
+        {
+            $log->errorf( "Error receiving data: %s", $! );
+            # XXX what to do from here?
+            $self->_terminate();
+        }
+        $log->debugf( "Received %d bytes", $rb );
+        $pkt .= $buf;
+    } while ( $self->{connection}->pending() );
+    $log->debugf( "Entire data of %d bytes read", length $pkt );
 
-    $self->{recvbuf} and $buf = $self->{recvbuf} . $buf;
-    eval {
-	my $supl_pdu = Net::Radio::Location::SUPL::XS::decode_ulp_pdu($buf);
-    };
-    if( $@ )
+    $self->{recvbuf} and $pkt = $self->{recvbuf} . $pkt;
+    eval { my $supl_pdu = Net::Radio::Location::SUPL::XS::decode_ulp_pdu($pkt); };
+    if ($@)
     {
-	if( $@ =~ m/RC_WMORE/ )
-	{
-	    $self->{recvbuf} = $buf;
-	}
-	else
-	{
-	    $log->errorf("Error decoding received data: %s", $@);
-	    # XXX what to do from here?
-	    Net::Radio::Location::SUPL::MainLoop->remove($self);
-	    if( $self->{connection} )
-	    {
-		$self->{connection}->close();
-		delete $self->{connection};
-	    }
-	}
+        if ( $@ =~ m/RC_WMORE/ )
+        {
+            $self->{recvbuf} = $pkt;
+        }
+        else
+        {
+            $log->errorf( "Error decoding received data: %s", $@ );
+            # XXX what to do from here?
+            $self->_terminate();
+        }
     }
     else
     {
-	$self->handle_supl_pdu($buf);
+        delete $self->{recvbuf};
+        $self->handle_supl_pdu($pkt);
     }
 
     return;
@@ -435,7 +660,11 @@ handles monitored for havind data to receive.
 
 =cut
 
-sub get_read_trigger { $_[0]->{connection}; }
+sub get_read_trigger
+{
+    defined( $_[0]->{connection} ) and return $_[0]->{connection}->fileno();
+    return;
+}
 
 sub DESTROY
 {
