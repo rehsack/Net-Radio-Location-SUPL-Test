@@ -1840,7 +1840,7 @@ BCD_OCTET_STRING_fromBuf(OCTET_STRING_t *st, const char *str, int len) {
 		uint8_t c;
 
 		c = str[i] - '0';
-		if(c > '9') {
+		if(c > 9) {
 			FREEMEM(buf);
 			errno = EINVAL;
 			return -1;
@@ -1848,6 +1848,7 @@ BCD_OCTET_STRING_fromBuf(OCTET_STRING_t *st, const char *str, int len) {
 
 		if(i%2) {
 			/* lower half-byte - overwrites previously written 0xF */
+			buf[i/2] &= 0xF0;
 			buf[i/2] |= c;
 		} else {
 			/* upper half-byte - always write 0xF into lower half-byte */

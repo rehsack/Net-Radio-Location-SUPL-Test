@@ -118,7 +118,7 @@ _uper_encode_flush_outp(asn_per_outp_t *po) {
 static asn_enc_rval_t
 uper_encode_internal(asn_TYPE_descriptor_t *td, asn_per_constraints_t *constraints, void *sptr, asn_app_consume_bytes_f *cb, void *app_key) {
 	asn_per_outp_t po;
-	asn_enc_rval_t er;
+	asn_enc_rval_t er = { RC_OK };
 
 	/*
 	 * Invoke type-specific encoder.
