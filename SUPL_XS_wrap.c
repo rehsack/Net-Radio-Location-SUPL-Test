@@ -2277,8 +2277,8 @@ SWIGINTERN void ULP_PDU_copy_SlpSessionId(struct ULP_PDU *self,ULP_PDU_t *src_pd
 	    asn_DEF_SlpSessionID.free_struct(&asn_DEF_SlpSessionID, &self->sessionID.slpSessionID, 1);
 	    self->sessionID.slpSessionID = NULL;
 	}
-
-	self->sessionID.slpSessionID = dst = calloc(1, sizeof(*(self->sessionID.slpSessionID)));
+        else
+            self->sessionID.slpSessionID = dst = calloc(1, sizeof(*(self->sessionID.slpSessionID)));
         if( NULL == dst )
             croak("Out of memory allocating new SlpSessionID");
 
@@ -2333,7 +2333,8 @@ SWIGINTERN void ULP_PDU_setSetSessionId_to_imsi(struct ULP_PDU *self,int session
 	    asn_DEF_SetSessionID.free_struct(&asn_DEF_SetSessionID, &self->sessionID.setSessionID, 1);
 	    self->sessionID.setSessionID = NULL;
 	}
-	self->sessionID.setSessionID = calloc(1, sizeof(*(self->sessionID.setSessionID)));
+        else
+            self->sessionID.setSessionID = calloc(1, sizeof(*(self->sessionID.setSessionID)));
         self->sessionID.setSessionID->sessionId = sessionId;
         self->sessionID.setSessionID->setId.present = SETId_PR_imsi;
         fprintf(stderr, "setting imsi to BDC encoded '%s'\n", imsi);
@@ -2344,7 +2345,8 @@ SWIGINTERN void ULP_PDU_setSetSessionId_to_msisdn(struct ULP_PDU *self,int sessi
 	    asn_DEF_SetSessionID.free_struct(&asn_DEF_SetSessionID, &self->sessionID.setSessionID, 1);
 	    self->sessionID.setSessionID = NULL;
 	}
-	self->sessionID.setSessionID = calloc(1, sizeof(*(self->sessionID.setSessionID)));
+        else
+            self->sessionID.setSessionID = calloc(1, sizeof(*(self->sessionID.setSessionID)));
         self->sessionID.setSessionID->sessionId = sessionId;
 	self->sessionID.setSessionID->setId.present = SETId_PR_msisdn;
 	BCD_OCTET_STRING_fromString(&self->sessionID.setSessionID->setId.choice.msisdn, msisdn);
@@ -2365,8 +2367,8 @@ SWIGINTERN void ULP_PDU_copy_SetSessionId(struct ULP_PDU *self,ULP_PDU_t *src_pd
 	    asn_DEF_SetSessionID.free_struct(&asn_DEF_SetSessionID, &self->sessionID.setSessionID, 1);
 	    self->sessionID.setSessionID = NULL;
 	}
-
-        self->sessionID.setSessionID = dst = calloc(1, sizeof(*dst));
+        else
+            self->sessionID.setSessionID = dst = calloc(1, sizeof(*dst));
         if( NULL == dst )
             croak("Out of memory allocating new SetSessionID");
         dst->sessionId = src->sessionId;
