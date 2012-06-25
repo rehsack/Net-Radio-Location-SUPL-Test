@@ -65,8 +65,6 @@ use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
 *swig_sETNonce_set = *Net::Radio::Location::SUPL::XSc::SUPLAUTHREQ_t_sETNonce_set;
 *swig_keyIdentity2_get = *Net::Radio::Location::SUPL::XSc::SUPLAUTHREQ_t_keyIdentity2_get;
 *swig_keyIdentity2_set = *Net::Radio::Location::SUPL::XSc::SUPLAUTHREQ_t_keyIdentity2_set;
-*swig__asn_ctx_get = *Net::Radio::Location::SUPL::XSc::SUPLAUTHREQ_t__asn_ctx_get;
-*swig__asn_ctx_set = *Net::Radio::Location::SUPL::XSc::SUPLAUTHREQ_t__asn_ctx_set;
 sub DESTROY {
     return unless $_[0]->isa('HASH');
     my $self = tied(%{$_[0]});
@@ -78,6 +76,8 @@ sub DESTROY {
     }
 }
 
+*dump = *Net::Radio::Location::SUPL::XSc::SUPLAUTHREQ_t_dump;
+*xml_dump = *Net::Radio::Location::SUPL::XSc::SUPLAUTHREQ_t_xml_dump;
 sub new {
     my $pkg = shift;
     my $self = Net::Radio::Location::SUPL::XSc::new_SUPLAUTHREQ_t(@_);
@@ -110,8 +110,6 @@ use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
 *swig_keyIdentity3_set = *Net::Radio::Location::SUPL::XSc::SUPLAUTHRESP_t_keyIdentity3_set;
 *swig_statusCode_get = *Net::Radio::Location::SUPL::XSc::SUPLAUTHRESP_t_statusCode_get;
 *swig_statusCode_set = *Net::Radio::Location::SUPL::XSc::SUPLAUTHRESP_t_statusCode_set;
-*swig__asn_ctx_get = *Net::Radio::Location::SUPL::XSc::SUPLAUTHRESP_t__asn_ctx_get;
-*swig__asn_ctx_set = *Net::Radio::Location::SUPL::XSc::SUPLAUTHRESP_t__asn_ctx_set;
 sub DESTROY {
     return unless $_[0]->isa('HASH');
     my $self = tied(%{$_[0]});
@@ -123,6 +121,8 @@ sub DESTROY {
     }
 }
 
+*dump = *Net::Radio::Location::SUPL::XSc::SUPLAUTHRESP_t_dump;
+*xml_dump = *Net::Radio::Location::SUPL::XSc::SUPLAUTHRESP_t_xml_dump;
 sub new {
     my $pkg = shift;
     my $self = Net::Radio::Location::SUPL::XSc::new_SUPLAUTHRESP_t(@_);
@@ -155,8 +155,6 @@ use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
 *swig_statusCode_set = *Net::Radio::Location::SUPL::XSc::SUPLEND_t_statusCode_set;
 *swig_ver_get = *Net::Radio::Location::SUPL::XSc::SUPLEND_t_ver_get;
 *swig_ver_set = *Net::Radio::Location::SUPL::XSc::SUPLEND_t_ver_set;
-*swig__asn_ctx_get = *Net::Radio::Location::SUPL::XSc::SUPLEND_t__asn_ctx_get;
-*swig__asn_ctx_set = *Net::Radio::Location::SUPL::XSc::SUPLEND_t__asn_ctx_set;
 sub DESTROY {
     return unless $_[0]->isa('HASH');
     my $self = tied(%{$_[0]});
@@ -168,6 +166,8 @@ sub DESTROY {
     }
 }
 
+*dump = *Net::Radio::Location::SUPL::XSc::SUPLEND_t_dump;
+*xml_dump = *Net::Radio::Location::SUPL::XSc::SUPLEND_t_xml_dump;
 sub new {
     my $pkg = shift;
     my $self = Net::Radio::Location::SUPL::XSc::new_SUPLEND_t(@_);
@@ -208,8 +208,6 @@ use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
 *swig_mAC_set = *Net::Radio::Location::SUPL::XSc::SUPLINIT_t_mAC_set;
 *swig_keyIdentity_get = *Net::Radio::Location::SUPL::XSc::SUPLINIT_t_keyIdentity_get;
 *swig_keyIdentity_set = *Net::Radio::Location::SUPL::XSc::SUPLINIT_t_keyIdentity_set;
-*swig__asn_ctx_get = *Net::Radio::Location::SUPL::XSc::SUPLINIT_t__asn_ctx_get;
-*swig__asn_ctx_set = *Net::Radio::Location::SUPL::XSc::SUPLINIT_t__asn_ctx_set;
 sub DESTROY {
     return unless $_[0]->isa('HASH');
     my $self = tied(%{$_[0]});
@@ -221,6 +219,8 @@ sub DESTROY {
     }
 }
 
+*dump = *Net::Radio::Location::SUPL::XSc::SUPLINIT_t_dump;
+*xml_dump = *Net::Radio::Location::SUPL::XSc::SUPLINIT_t_xml_dump;
 sub new {
     my $pkg = shift;
     my $self = Net::Radio::Location::SUPL::XSc::new_SUPLINIT_t(@_);
@@ -251,8 +251,6 @@ use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
 *swig_posPayLoad_set = *Net::Radio::Location::SUPL::XSc::SUPLPOS_t_posPayLoad_set;
 *swig_velocity_get = *Net::Radio::Location::SUPL::XSc::SUPLPOS_t_velocity_get;
 *swig_velocity_set = *Net::Radio::Location::SUPL::XSc::SUPLPOS_t_velocity_set;
-*swig__asn_ctx_get = *Net::Radio::Location::SUPL::XSc::SUPLPOS_t__asn_ctx_get;
-*swig__asn_ctx_set = *Net::Radio::Location::SUPL::XSc::SUPLPOS_t__asn_ctx_set;
 sub DESTROY {
     return unless $_[0]->isa('HASH');
     my $self = tied(%{$_[0]});
@@ -264,6 +262,8 @@ sub DESTROY {
     }
 }
 
+*dump = *Net::Radio::Location::SUPL::XSc::SUPLPOS_t_dump;
+*xml_dump = *Net::Radio::Location::SUPL::XSc::SUPLPOS_t_xml_dump;
 sub new {
     my $pkg = shift;
     my $self = Net::Radio::Location::SUPL::XSc::new_SUPLPOS_t(@_);
@@ -302,8 +302,6 @@ use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
 *swig_sUPLPOS_set = *Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t_sUPLPOS_set;
 *swig_ver_get = *Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t_ver_get;
 *swig_ver_set = *Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t_ver_set;
-*swig__asn_ctx_get = *Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t__asn_ctx_get;
-*swig__asn_ctx_set = *Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t__asn_ctx_set;
 sub DESTROY {
     return unless $_[0]->isa('HASH');
     my $self = tied(%{$_[0]});
@@ -315,11 +313,14 @@ sub DESTROY {
     }
 }
 
+*dump = *Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t_dump;
+*xml_dump = *Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t_xml_dump;
 *set_capabilities = *Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t_set_capabilities;
 *set_requested_assist_data = *Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t_set_requested_assist_data;
 *update_requested_assist_data = *Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t_update_requested_assist_data;
 *set_requested_assist_navigation_modell = *Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t_set_requested_assist_navigation_modell;
 *set_gsm_location_info = *Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t_set_gsm_location_info;
+*set_wcdma_location_info = *Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t_set_wcdma_location_info;
 *set_position_estimate = *Net::Radio::Location::SUPL::XSc::SUPLPOSINIT_t_set_position_estimate;
 sub new {
     my $pkg = shift;
@@ -355,8 +356,6 @@ use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
 *swig_sETAuthKey_set = *Net::Radio::Location::SUPL::XSc::SUPLRESPONSE_t_sETAuthKey_set;
 *swig_keyIdentity4_get = *Net::Radio::Location::SUPL::XSc::SUPLRESPONSE_t_keyIdentity4_get;
 *swig_keyIdentity4_set = *Net::Radio::Location::SUPL::XSc::SUPLRESPONSE_t_keyIdentity4_set;
-*swig__asn_ctx_get = *Net::Radio::Location::SUPL::XSc::SUPLRESPONSE_t__asn_ctx_get;
-*swig__asn_ctx_set = *Net::Radio::Location::SUPL::XSc::SUPLRESPONSE_t__asn_ctx_set;
 sub DESTROY {
     return unless $_[0]->isa('HASH');
     my $self = tied(%{$_[0]});
@@ -368,6 +367,8 @@ sub DESTROY {
     }
 }
 
+*dump = *Net::Radio::Location::SUPL::XSc::SUPLRESPONSE_t_dump;
+*xml_dump = *Net::Radio::Location::SUPL::XSc::SUPLRESPONSE_t_xml_dump;
 sub new {
     my $pkg = shift;
     my $self = Net::Radio::Location::SUPL::XSc::new_SUPLRESPONSE_t(@_);
@@ -400,8 +401,6 @@ use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
 *swig_locationId_set = *Net::Radio::Location::SUPL::XSc::SUPLSTART_t_locationId_set;
 *swig_qoP_get = *Net::Radio::Location::SUPL::XSc::SUPLSTART_t_qoP_get;
 *swig_qoP_set = *Net::Radio::Location::SUPL::XSc::SUPLSTART_t_qoP_set;
-*swig__asn_ctx_get = *Net::Radio::Location::SUPL::XSc::SUPLSTART_t__asn_ctx_get;
-*swig__asn_ctx_set = *Net::Radio::Location::SUPL::XSc::SUPLSTART_t__asn_ctx_set;
 sub DESTROY {
     return unless $_[0]->isa('HASH');
     my $self = tied(%{$_[0]});
@@ -413,6 +412,8 @@ sub DESTROY {
     }
 }
 
+*dump = *Net::Radio::Location::SUPL::XSc::SUPLSTART_t_dump;
+*xml_dump = *Net::Radio::Location::SUPL::XSc::SUPLSTART_t_xml_dump;
 sub new {
     my $pkg = shift;
     my $self = Net::Radio::Location::SUPL::XSc::new_SUPLSTART_t(@_);
@@ -447,8 +448,6 @@ use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
 *swig_sessionID_set = *Net::Radio::Location::SUPL::XSc::ULP_PDU_t_sessionID_set;
 *swig_message_get = *Net::Radio::Location::SUPL::XSc::ULP_PDU_t_message_get;
 *swig_message_set = *Net::Radio::Location::SUPL::XSc::ULP_PDU_t_message_set;
-*swig__asn_ctx_get = *Net::Radio::Location::SUPL::XSc::ULP_PDU_t__asn_ctx_get;
-*swig__asn_ctx_set = *Net::Radio::Location::SUPL::XSc::ULP_PDU_t__asn_ctx_set;
 sub new {
     my $pkg = shift;
     my $self = Net::Radio::Location::SUPL::XSc::new_ULP_PDU_t(@_);
@@ -467,9 +466,11 @@ sub DESTROY {
 }
 
 *set_version = *Net::Radio::Location::SUPL::XSc::ULP_PDU_t_set_version;
+*copy_SlpSessionId = *Net::Radio::Location::SUPL::XSc::ULP_PDU_t_copy_SlpSessionId;
 *setSetSessionId_to_imsi = *Net::Radio::Location::SUPL::XSc::ULP_PDU_t_setSetSessionId_to_imsi;
 *setSetSessionId_to_msisdn = *Net::Radio::Location::SUPL::XSc::ULP_PDU_t_setSetSessionId_to_msisdn;
-*copy_SlpSessionId = *Net::Radio::Location::SUPL::XSc::ULP_PDU_t_copy_SlpSessionId;
+*copy_SetSessionId = *Net::Radio::Location::SUPL::XSc::ULP_PDU_t_copy_SetSessionId;
+*copy_SessionId = *Net::Radio::Location::SUPL::XSc::ULP_PDU_t_copy_SessionId;
 *set_message_type = *Net::Radio::Location::SUPL::XSc::ULP_PDU_t_set_message_type;
 *encode = *Net::Radio::Location::SUPL::XSc::ULP_PDU_t_encode;
 *dump = *Net::Radio::Location::SUPL::XSc::ULP_PDU_t_dump;
@@ -496,8 +497,6 @@ use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
 %ITERATORS = ();
 *swig_present_get = *Net::Radio::Location::SUPL::XSc::UlpMessage_t_present_get;
 *swig_present_set = *Net::Radio::Location::SUPL::XSc::UlpMessage_t_present_set;
-*swig__asn_ctx_get = *Net::Radio::Location::SUPL::XSc::UlpMessage_t__asn_ctx_get;
-*swig__asn_ctx_set = *Net::Radio::Location::SUPL::XSc::UlpMessage_t__asn_ctx_set;
 *swig_choice_get = *Net::Radio::Location::SUPL::XSc::UlpMessage_t_choice_get;
 *swig_choice_set = *Net::Radio::Location::SUPL::XSc::UlpMessage_t_choice_set;
 sub new {
@@ -592,8 +591,6 @@ use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
 %ITERATORS = ();
 *swig_present_get = *Net::Radio::Location::SUPL::XSc::SLPAddress_t_present_get;
 *swig_present_set = *Net::Radio::Location::SUPL::XSc::SLPAddress_t_present_set;
-*swig__asn_ctx_get = *Net::Radio::Location::SUPL::XSc::SLPAddress_t__asn_ctx_get;
-*swig__asn_ctx_set = *Net::Radio::Location::SUPL::XSc::SLPAddress_t__asn_ctx_set;
 *swig_choice_get = *Net::Radio::Location::SUPL::XSc::SLPAddress_t_choice_get;
 *swig_choice_set = *Net::Radio::Location::SUPL::XSc::SLPAddress_t_choice_set;
 sub DESTROY {
@@ -674,6 +671,344 @@ sub ACQUIRE {
 }
 
 
+############# Class : Net::Radio::Location::SUPL::XS::PosPayLoad_t ##############
+
+package Net::Radio::Location::SUPL::XS::PosPayLoad_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( Net::Radio::Location::SUPL::XS );
+%OWNER = ();
+%ITERATORS = ();
+*swig_present_get = *Net::Radio::Location::SUPL::XSc::PosPayLoad_t_present_get;
+*swig_present_set = *Net::Radio::Location::SUPL::XSc::PosPayLoad_t_present_set;
+*swig_choice_get = *Net::Radio::Location::SUPL::XSc::PosPayLoad_t_choice_get;
+*swig_choice_set = *Net::Radio::Location::SUPL::XSc::PosPayLoad_t_choice_set;
+sub new {
+    my $pkg = shift;
+    my $self = Net::Radio::Location::SUPL::XSc::new_PosPayLoad_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        Net::Radio::Location::SUPL::XSc::delete_PosPayLoad_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : Net::Radio::Location::SUPL::XS::PosPayLoad_t_choice ##############
+
+package Net::Radio::Location::SUPL::XS::PosPayLoad_t_choice;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( Net::Radio::Location::SUPL::XS );
+%OWNER = ();
+%ITERATORS = ();
+*swig_tia801payload_get = *Net::Radio::Location::SUPL::XSc::PosPayLoad_t_choice_tia801payload_get;
+*swig_tia801payload_set = *Net::Radio::Location::SUPL::XSc::PosPayLoad_t_choice_tia801payload_set;
+*swig_rrcPayload_get = *Net::Radio::Location::SUPL::XSc::PosPayLoad_t_choice_rrcPayload_get;
+*swig_rrcPayload_set = *Net::Radio::Location::SUPL::XSc::PosPayLoad_t_choice_rrcPayload_set;
+*swig_rrlpPayload_get = *Net::Radio::Location::SUPL::XSc::PosPayLoad_t_choice_rrlpPayload_get;
+*swig_rrlpPayload_set = *Net::Radio::Location::SUPL::XSc::PosPayLoad_t_choice_rrlpPayload_set;
+sub new {
+    my $pkg = shift;
+    my $self = Net::Radio::Location::SUPL::XSc::new_PosPayLoad_t_choice(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        Net::Radio::Location::SUPL::XSc::delete_PosPayLoad_t_choice($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : Net::Radio::Location::SUPL::XS::LocationId_t ##############
+
+package Net::Radio::Location::SUPL::XS::LocationId_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( Net::Radio::Location::SUPL::XS );
+%OWNER = ();
+%ITERATORS = ();
+*swig_cellInfo_get = *Net::Radio::Location::SUPL::XSc::LocationId_t_cellInfo_get;
+*swig_cellInfo_set = *Net::Radio::Location::SUPL::XSc::LocationId_t_cellInfo_set;
+*swig_status_get = *Net::Radio::Location::SUPL::XSc::LocationId_t_status_get;
+*swig_status_set = *Net::Radio::Location::SUPL::XSc::LocationId_t_status_set;
+sub new {
+    my $pkg = shift;
+    my $self = Net::Radio::Location::SUPL::XSc::new_LocationId_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        Net::Radio::Location::SUPL::XSc::delete_LocationId_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : Net::Radio::Location::SUPL::XS::SessionID_t ##############
+
+package Net::Radio::Location::SUPL::XS::SessionID_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( Net::Radio::Location::SUPL::XS );
+%OWNER = ();
+%ITERATORS = ();
+*swig_setSessionID_get = *Net::Radio::Location::SUPL::XSc::SessionID_t_setSessionID_get;
+*swig_setSessionID_set = *Net::Radio::Location::SUPL::XSc::SessionID_t_setSessionID_set;
+*swig_slpSessionID_get = *Net::Radio::Location::SUPL::XSc::SessionID_t_slpSessionID_get;
+*swig_slpSessionID_set = *Net::Radio::Location::SUPL::XSc::SessionID_t_slpSessionID_set;
+sub new {
+    my $pkg = shift;
+    my $self = Net::Radio::Location::SUPL::XSc::new_SessionID_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        Net::Radio::Location::SUPL::XSc::delete_SessionID_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : Net::Radio::Location::SUPL::XS::SetSessionID_t ##############
+
+package Net::Radio::Location::SUPL::XS::SetSessionID_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( Net::Radio::Location::SUPL::XS );
+%OWNER = ();
+%ITERATORS = ();
+*swig_sessionId_get = *Net::Radio::Location::SUPL::XSc::SetSessionID_t_sessionId_get;
+*swig_sessionId_set = *Net::Radio::Location::SUPL::XSc::SetSessionID_t_sessionId_set;
+*swig_setId_get = *Net::Radio::Location::SUPL::XSc::SetSessionID_t_setId_get;
+*swig_setId_set = *Net::Radio::Location::SUPL::XSc::SetSessionID_t_setId_set;
+sub new {
+    my $pkg = shift;
+    my $self = Net::Radio::Location::SUPL::XSc::new_SetSessionID_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        Net::Radio::Location::SUPL::XSc::delete_SetSessionID_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : Net::Radio::Location::SUPL::XS::SETId_t ##############
+
+package Net::Radio::Location::SUPL::XS::SETId_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( Net::Radio::Location::SUPL::XS );
+%OWNER = ();
+%ITERATORS = ();
+*swig_present_get = *Net::Radio::Location::SUPL::XSc::SETId_t_present_get;
+*swig_present_set = *Net::Radio::Location::SUPL::XSc::SETId_t_present_set;
+*swig_choice_get = *Net::Radio::Location::SUPL::XSc::SETId_t_choice_get;
+*swig_choice_set = *Net::Radio::Location::SUPL::XSc::SETId_t_choice_set;
+sub new {
+    my $pkg = shift;
+    my $self = Net::Radio::Location::SUPL::XSc::new_SETId_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        Net::Radio::Location::SUPL::XSc::delete_SETId_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : Net::Radio::Location::SUPL::XS::SETId_t_choice ##############
+
+package Net::Radio::Location::SUPL::XS::SETId_t_choice;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( Net::Radio::Location::SUPL::XS );
+%OWNER = ();
+%ITERATORS = ();
+*swig_msisdn_get = *Net::Radio::Location::SUPL::XSc::SETId_t_choice_msisdn_get;
+*swig_msisdn_set = *Net::Radio::Location::SUPL::XSc::SETId_t_choice_msisdn_set;
+*swig_mdn_get = *Net::Radio::Location::SUPL::XSc::SETId_t_choice_mdn_get;
+*swig_mdn_set = *Net::Radio::Location::SUPL::XSc::SETId_t_choice_mdn_set;
+*swig_min_get = *Net::Radio::Location::SUPL::XSc::SETId_t_choice_min_get;
+*swig_min_set = *Net::Radio::Location::SUPL::XSc::SETId_t_choice_min_set;
+*swig_imsi_get = *Net::Radio::Location::SUPL::XSc::SETId_t_choice_imsi_get;
+*swig_imsi_set = *Net::Radio::Location::SUPL::XSc::SETId_t_choice_imsi_set;
+*swig_nai_get = *Net::Radio::Location::SUPL::XSc::SETId_t_choice_nai_get;
+*swig_nai_set = *Net::Radio::Location::SUPL::XSc::SETId_t_choice_nai_set;
+*swig_iPAddress_get = *Net::Radio::Location::SUPL::XSc::SETId_t_choice_iPAddress_get;
+*swig_iPAddress_set = *Net::Radio::Location::SUPL::XSc::SETId_t_choice_iPAddress_set;
+sub new {
+    my $pkg = shift;
+    my $self = Net::Radio::Location::SUPL::XSc::new_SETId_t_choice(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        Net::Radio::Location::SUPL::XSc::delete_SETId_t_choice($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : Net::Radio::Location::SUPL::XS::SlpSessionID_t ##############
+
+package Net::Radio::Location::SUPL::XS::SlpSessionID_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( Net::Radio::Location::SUPL::XS );
+%OWNER = ();
+%ITERATORS = ();
+*swig_sessionID_get = *Net::Radio::Location::SUPL::XSc::SlpSessionID_t_sessionID_get;
+*swig_sessionID_set = *Net::Radio::Location::SUPL::XSc::SlpSessionID_t_sessionID_set;
+*swig_slpId_get = *Net::Radio::Location::SUPL::XSc::SlpSessionID_t_slpId_get;
+*swig_slpId_set = *Net::Radio::Location::SUPL::XSc::SlpSessionID_t_slpId_set;
+sub new {
+    my $pkg = shift;
+    my $self = Net::Radio::Location::SUPL::XSc::new_SlpSessionID_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        Net::Radio::Location::SUPL::XSc::delete_SlpSessionID_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
 ############# Class : Net::Radio::Location::SUPL::XS::RRLP_PDU_t ##############
 
 package Net::Radio::Location::SUPL::XS::RRLP_PDU_t;
@@ -685,8 +1020,6 @@ use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
 *swig_referenceNumber_set = *Net::Radio::Location::SUPL::XSc::RRLP_PDU_t_referenceNumber_set;
 *swig_component_get = *Net::Radio::Location::SUPL::XSc::RRLP_PDU_t_component_get;
 *swig_component_set = *Net::Radio::Location::SUPL::XSc::RRLP_PDU_t_component_set;
-*swig__asn_ctx_get = *Net::Radio::Location::SUPL::XSc::RRLP_PDU_t__asn_ctx_get;
-*swig__asn_ctx_set = *Net::Radio::Location::SUPL::XSc::RRLP_PDU_t__asn_ctx_set;
 sub new {
     my $pkg = shift;
     my $self = Net::Radio::Location::SUPL::XSc::new_RRLP_PDU_t(@_);
@@ -704,6 +1037,10 @@ sub DESTROY {
     }
 }
 
+*encode = *Net::Radio::Location::SUPL::XSc::RRLP_PDU_t_encode;
+*dump = *Net::Radio::Location::SUPL::XSc::RRLP_PDU_t_dump;
+*xml_dump = *Net::Radio::Location::SUPL::XSc::RRLP_PDU_t_xml_dump;
+*set_component_type = *Net::Radio::Location::SUPL::XSc::RRLP_PDU_t_set_component_type;
 sub DISOWN {
     my $self = shift;
     my $ptr = tied(%$self);
@@ -726,8 +1063,6 @@ use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
 %ITERATORS = ();
 *swig_present_get = *Net::Radio::Location::SUPL::XSc::RRLP_Component_t_present_get;
 *swig_present_set = *Net::Radio::Location::SUPL::XSc::RRLP_Component_t_present_set;
-*swig__asn_ctx_get = *Net::Radio::Location::SUPL::XSc::RRLP_Component_t__asn_ctx_get;
-*swig__asn_ctx_set = *Net::Radio::Location::SUPL::XSc::RRLP_Component_t__asn_ctx_set;
 *swig_choice_get = *Net::Radio::Location::SUPL::XSc::RRLP_Component_t_choice_get;
 *swig_choice_set = *Net::Radio::Location::SUPL::XSc::RRLP_Component_t_choice_set;
 sub new {
@@ -836,8 +1171,6 @@ use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
 *swig_rel5_MsrPosition_Req_extension_set = *Net::Radio::Location::SUPL::XSc::MsrPosition_Req_t_rel5_MsrPosition_Req_extension_set;
 *swig_rel7_MsrPosition_Req_extension_get = *Net::Radio::Location::SUPL::XSc::MsrPosition_Req_t_rel7_MsrPosition_Req_extension_get;
 *swig_rel7_MsrPosition_Req_extension_set = *Net::Radio::Location::SUPL::XSc::MsrPosition_Req_t_rel7_MsrPosition_Req_extension_set;
-*swig__asn_ctx_get = *Net::Radio::Location::SUPL::XSc::MsrPosition_Req_t__asn_ctx_get;
-*swig__asn_ctx_set = *Net::Radio::Location::SUPL::XSc::MsrPosition_Req_t__asn_ctx_set;
 sub new {
     my $pkg = shift;
     my $self = Net::Radio::Location::SUPL::XSc::new_MsrPosition_Req_t(@_);
@@ -895,8 +1228,6 @@ use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
 *swig_rel_5_MsrPosition_Rsp_Extension_set = *Net::Radio::Location::SUPL::XSc::MsrPosition_Rsp_t_rel_5_MsrPosition_Rsp_Extension_set;
 *swig_rel_7_MsrPosition_Rsp_Extension_get = *Net::Radio::Location::SUPL::XSc::MsrPosition_Rsp_t_rel_7_MsrPosition_Rsp_Extension_get;
 *swig_rel_7_MsrPosition_Rsp_Extension_set = *Net::Radio::Location::SUPL::XSc::MsrPosition_Rsp_t_rel_7_MsrPosition_Rsp_Extension_set;
-*swig__asn_ctx_get = *Net::Radio::Location::SUPL::XSc::MsrPosition_Rsp_t__asn_ctx_get;
-*swig__asn_ctx_set = *Net::Radio::Location::SUPL::XSc::MsrPosition_Rsp_t__asn_ctx_set;
 sub new {
     my $pkg = shift;
     my $self = Net::Radio::Location::SUPL::XSc::new_MsrPosition_Rsp_t(@_);
@@ -944,8 +1275,6 @@ use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
 *swig_useMultipleSets_set = *Net::Radio::Location::SUPL::XSc::PositionInstruct_t_useMultipleSets_set;
 *swig_environmentCharacter_get = *Net::Radio::Location::SUPL::XSc::PositionInstruct_t_environmentCharacter_get;
 *swig_environmentCharacter_set = *Net::Radio::Location::SUPL::XSc::PositionInstruct_t_environmentCharacter_set;
-*swig__asn_ctx_get = *Net::Radio::Location::SUPL::XSc::PositionInstruct_t__asn_ctx_get;
-*swig__asn_ctx_set = *Net::Radio::Location::SUPL::XSc::PositionInstruct_t__asn_ctx_set;
 sub new {
     my $pkg = shift;
     my $self = Net::Radio::Location::SUPL::XSc::new_PositionInstruct_t(@_);
@@ -985,8 +1314,6 @@ use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
 %ITERATORS = ();
 *swig_present_get = *Net::Radio::Location::SUPL::XSc::MethodType_t_present_get;
 *swig_present_set = *Net::Radio::Location::SUPL::XSc::MethodType_t_present_set;
-*swig__asn_ctx_get = *Net::Radio::Location::SUPL::XSc::MethodType_t__asn_ctx_get;
-*swig__asn_ctx_set = *Net::Radio::Location::SUPL::XSc::MethodType_t__asn_ctx_set;
 *swig_choice_get = *Net::Radio::Location::SUPL::XSc::MethodType_t_choice_get;
 *swig_choice_set = *Net::Radio::Location::SUPL::XSc::MethodType_t_choice_set;
 sub new {
@@ -1098,6 +1425,17 @@ sub UlpMessage_PR_msSUPLAUTHRESP () { $Net::Radio::Location::SUPL::XSc::UlpMessa
 sub SLPAddress_PR_NOTHING () { $Net::Radio::Location::SUPL::XSc::SLPAddress_PR_NOTHING }
 sub SLPAddress_PR_iPAddress () { $Net::Radio::Location::SUPL::XSc::SLPAddress_PR_iPAddress }
 sub SLPAddress_PR_fQDN () { $Net::Radio::Location::SUPL::XSc::SLPAddress_PR_fQDN }
+sub PosPayLoad_PR_NOTHING () { $Net::Radio::Location::SUPL::XSc::PosPayLoad_PR_NOTHING }
+sub PosPayLoad_PR_tia801payload () { $Net::Radio::Location::SUPL::XSc::PosPayLoad_PR_tia801payload }
+sub PosPayLoad_PR_rrcPayload () { $Net::Radio::Location::SUPL::XSc::PosPayLoad_PR_rrcPayload }
+sub PosPayLoad_PR_rrlpPayload () { $Net::Radio::Location::SUPL::XSc::PosPayLoad_PR_rrlpPayload }
+sub SETId_PR_NOTHING () { $Net::Radio::Location::SUPL::XSc::SETId_PR_NOTHING }
+sub SETId_PR_msisdn () { $Net::Radio::Location::SUPL::XSc::SETId_PR_msisdn }
+sub SETId_PR_mdn () { $Net::Radio::Location::SUPL::XSc::SETId_PR_mdn }
+sub SETId_PR_min () { $Net::Radio::Location::SUPL::XSc::SETId_PR_min }
+sub SETId_PR_imsi () { $Net::Radio::Location::SUPL::XSc::SETId_PR_imsi }
+sub SETId_PR_nai () { $Net::Radio::Location::SUPL::XSc::SETId_PR_nai }
+sub SETId_PR_iPAddress () { $Net::Radio::Location::SUPL::XSc::SETId_PR_iPAddress }
 sub PrefMethod_agpsSETassistedPreferred () { $Net::Radio::Location::SUPL::XSc::PrefMethod_agpsSETassistedPreferred }
 sub PrefMethod_agpsSETBasedPreferred () { $Net::Radio::Location::SUPL::XSc::PrefMethod_agpsSETBasedPreferred }
 sub PrefMethod_noPreference () { $Net::Radio::Location::SUPL::XSc::PrefMethod_noPreference }
@@ -1124,21 +1462,8 @@ sub MethodType_PR_msAssistedPref () { $Net::Radio::Location::SUPL::XSc::MethodTy
 
 package Net::Radio::Location::SUPL::XS;
 
-*asn_DEF_SUPLAUTHREQ = *Net::Radio::Location::SUPL::XSc::asn_DEF_SUPLAUTHREQ;
-*asn_DEF_SUPLAUTHRESP = *Net::Radio::Location::SUPL::XSc::asn_DEF_SUPLAUTHRESP;
-*asn_DEF_SUPLEND = *Net::Radio::Location::SUPL::XSc::asn_DEF_SUPLEND;
-*asn_DEF_SUPLINIT = *Net::Radio::Location::SUPL::XSc::asn_DEF_SUPLINIT;
-*asn_DEF_SUPLPOS = *Net::Radio::Location::SUPL::XSc::asn_DEF_SUPLPOS;
-*asn_DEF_SUPLPOSINIT = *Net::Radio::Location::SUPL::XSc::asn_DEF_SUPLPOSINIT;
-*asn_DEF_SUPLRESPONSE = *Net::Radio::Location::SUPL::XSc::asn_DEF_SUPLRESPONSE;
-*asn_DEF_SUPLSTART = *Net::Radio::Location::SUPL::XSc::asn_DEF_SUPLSTART;
-*asn_DEF_ULP_PDU = *Net::Radio::Location::SUPL::XSc::asn_DEF_ULP_PDU;
-*asn_DEF_UlpMessage = *Net::Radio::Location::SUPL::XSc::asn_DEF_UlpMessage;
-*asn_DEF_SLPAddress = *Net::Radio::Location::SUPL::XSc::asn_DEF_SLPAddress;
-*asn_DEF_RRLP_PDU = *Net::Radio::Location::SUPL::XSc::asn_DEF_RRLP_PDU;
-*asn_DEF_RRLP_Component = *Net::Radio::Location::SUPL::XSc::asn_DEF_RRLP_Component;
-*asn_DEF_MsrPosition_Req = *Net::Radio::Location::SUPL::XSc::asn_DEF_MsrPosition_Req;
-*asn_DEF_MsrPosition_Rsp = *Net::Radio::Location::SUPL::XSc::asn_DEF_MsrPosition_Rsp;
-*asn_DEF_PositionInstruct = *Net::Radio::Location::SUPL::XSc::asn_DEF_PositionInstruct;
-*asn_DEF_MethodType = *Net::Radio::Location::SUPL::XSc::asn_DEF_MethodType;
+*asn_DEF_SessionID = *Net::Radio::Location::SUPL::XSc::asn_DEF_SessionID;
+*asn_DEF_SetSessionID = *Net::Radio::Location::SUPL::XSc::asn_DEF_SetSessionID;
+*asn_DEF_SETId = *Net::Radio::Location::SUPL::XSc::asn_DEF_SETId;
+*asn_DEF_SlpSessionID = *Net::Radio::Location::SUPL::XSc::asn_DEF_SlpSessionID;
 1;

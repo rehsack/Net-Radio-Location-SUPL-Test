@@ -61,12 +61,12 @@
 %typemap(in) IPAddress_t {
     if( 0 == (SvFLAGS($input) & (SVf_OK & ~SVf_ROK)) )
 	croak("Argument $argnum is not an embedded ip address.");
-    if( SvLEN($input) == 4 ) {
+    if( SvCUR($input) == 4 ) {
 	// IPv4
 	$1.present = IPAddress_PR_ipv4Address;
 	OCTET_STRING_fromBuf(&$1.choice.ipv4Address, SvPV_nolen($input), 4);
     }
-    else if( SvLEN($input) == 16 ) {
+    else if( SvCUR($input) == 16 ) {
 	// IPv6
 	$1.present = IPAddress_PR_ipv6Address;
 	OCTET_STRING_fromBuf(&$1.choice.ipv6Address, SvPV_nolen($input), 16);
@@ -106,7 +106,29 @@
 %typemap(newfree) IPAddress_t "asn_DEF_IPAddress.free_struct(&asn_DEF_IPAddress, &$1, 1);"
 %typemap(newfree) IPAddress_t * "if( $1 ) { asn_DEF_IPAddress.free_struct(&asn_DEF_IPAddress, $1, 0); }"
 
-%apply OCTET_STRING_t { MAC_t, FQDN_t, KeyIdentity_t, Ver_t };
+%apply OCTET_STRING_t { MAC_t };
+%apply OCTET_STRING_t * { MAC_t * };
+%apply OCTET_STRING_t { FQDN_t };
+%apply OCTET_STRING_t * { FQDN_t * };
+%apply OCTET_STRING_t { KeyIdentity_t };
+%apply OCTET_STRING_t * { KeyIdentity_t * };
+%apply BIT_STRING_t { Ver_t };
+%apply BIT_STRING_t * { Ver_t * };
+
+%ignore asn_DEF_SUPLAUTHREQ;
+%ignore asn_DEF_SUPLAUTHRESP;
+%ignore asn_DEF_SUPLEND;
+%ignore asn_DEF_SUPLINIT;
+%ignore asn_DEF_SUPLPOS;
+%ignore asn_DEF_SUPLPOSINIT;
+%ignore asn_DEF_SUPLRESPONSE;
+%ignore asn_DEF_SUPLSTART;
+%ignore asn_DEF_ULP_PDU;
+%ignore asn_DEF_UlpMessage;
+
+%ignore asn_DEF_SLPAddress;
+%ignore asn_DEF_PosPayLoad;
+%ignore asn_DEF_LocationId;
 
 %include "asn1/SUPLAUTHREQ.h"
 %include "asn1/SUPLAUTHRESP.h"
@@ -121,6 +143,12 @@
 
 // helper classes
 %include "asn1/SLPAddress.h"
+%include "asn1/PosPayLoad.h"
+%include "asn1/LocationId.h"
+%include "asn1/SessionID.h"
+%include "asn1/SetSessionID.h"
+%include "asn1/SETId.h"
+%include "asn1/SlpSessionID.h"
 
 enum PrefMethod {
 	PrefMethod_agpsSETassistedPreferred = 0,
@@ -160,6 +188,29 @@ typedef long Status_t;
 	return newobj;
     }
 
+    ULP_PDU(const char *data, size_t data_len) {
+	struct ULP_PDU *newobj = NULL;
+        asn_dec_rval_t rval;
+        asn_per_data_t per_data = { data, 0, data_len * 8 };
+
+        rval = asn_DEF_ULP_PDU.uper_decoder( 0, &asn_DEF_ULP_PDU,
+                                        NULL, (void **)&newobj,
+                                        &per_data);
+        if (rval.code != RC_OK) {
+                /* Free partially decoded rrlp */
+                asn_DEF_ULP_PDU.free_struct(
+                        &asn_DEF_ULP_PDU, newobj, 0);
+
+                croak("error parsing SUPL pdu on byte %u with %s",
+                        (unsigned)rval.consumed,
+                        asn_dec_rval_code_str(rval.code));
+
+                return NULL; /* unreached */
+        }
+
+        return newobj;
+    }
+
     ~ULP_PDU() {
 	asn_DEF_ULP_PDU.free_struct(&asn_DEF_ULP_PDU, $self, 0);
     }
@@ -175,30 +226,13 @@ typedef long Status_t;
 	}
     }
 
-    void setSetSessionId_to_imsi(int sessionId, char *imsi) {
-	if( NULL != $self->sessionID.setSessionID ) {
-	    asn_DEF_SetSessionID.free_struct(&asn_DEF_SetSessionID, $self->sessionID.setSessionID, 0);
-	    $self->sessionID.setSessionID = NULL;
-	}
-	$self->sessionID.setSessionID = calloc(1, sizeof(*($self->sessionID.setSessionID)));
-	$self->sessionID.setSessionID->setId.present = SETId_PR_imsi;
-	BCD_OCTET_STRING_fromString(&$self->sessionID.setSessionID->setId.choice.imsi, imsi);
-    }
-
-    void setSetSessionId_to_msisdn(int sessionId, char *msisdn) {
-	if( NULL != $self->sessionID.setSessionID ) {
-	    asn_DEF_SetSessionID.free_struct(&asn_DEF_SetSessionID, $self->sessionID.setSessionID, 0);
-	    $self->sessionID.setSessionID = NULL;
-	}
-	$self->sessionID.setSessionID = calloc(1, sizeof(*($self->sessionID.setSessionID)));
-	$self->sessionID.setSessionID->setId.present = SETId_PR_msisdn;
-	BCD_OCTET_STRING_fromString(&$self->sessionID.setSessionID->setId.choice.msisdn, msisdn);
-    }
-
     void copy_SlpSessionId(ULP_PDU_t *src_pdu) {
 	struct SlpSessionID *src, *dst;
 	OCTET_STRING_t *srcaddr;
 	OCTET_STRING_t *dstaddr;
+
+	if( NULL == src_pdu )
+	    return; /* nothing to do or croak? */
 
 	src = src_pdu->sessionID.slpSessionID;
 
@@ -206,12 +240,13 @@ typedef long Status_t;
 	    return; /* nothing to do */
 
 	if( NULL != $self->sessionID.slpSessionID ) {
-	    asn_DEF_SlpSessionID.free_struct(&asn_DEF_SlpSessionID, $self->sessionID.slpSessionID, 0);
+	    asn_DEF_SlpSessionID.free_struct(&asn_DEF_SlpSessionID, &$self->sessionID.slpSessionID, 1);
 	    $self->sessionID.slpSessionID = NULL;
 	}
 
-	$self->sessionID.slpSessionID = calloc(1, sizeof(*($self->sessionID.slpSessionID)));
-	dst = $self->sessionID.slpSessionID;
+	$self->sessionID.slpSessionID = dst = calloc(1, sizeof(*($self->sessionID.slpSessionID)));
+        if( NULL == dst )
+            croak("Out of memory allocating new SlpSessionID");
 
 	OCTET_STRING_fromBuf(&dst->sessionID, src->sessionID.buf, src->sessionID.size);
 	switch (src->slpId.present)
@@ -258,6 +293,136 @@ typedef long Status_t;
 	    break;
 	}
 	OCTET_STRING_fromBuf(dstaddr, srcaddr->buf, srcaddr->size);
+    }
+
+    void setSetSessionId_to_imsi(int sessionId, char *imsi) {
+	if( NULL != $self->sessionID.setSessionID ) {
+	    asn_DEF_SetSessionID.free_struct(&asn_DEF_SetSessionID, &$self->sessionID.setSessionID, 1);
+	    $self->sessionID.setSessionID = NULL;
+	}
+	$self->sessionID.setSessionID = calloc(1, sizeof(*($self->sessionID.setSessionID)));
+        $self->sessionID.setSessionID->sessionId = sessionId;
+        $self->sessionID.setSessionID->setId.present = SETId_PR_imsi;
+        fprintf(stderr, "setting imsi to BDC encoded '%s'\n", imsi);
+	BCD_OCTET_STRING_fromString(&$self->sessionID.setSessionID->setId.choice.imsi, imsi);
+    }
+
+    void setSetSessionId_to_msisdn(int sessionId, char *msisdn) {
+	if( NULL != $self->sessionID.setSessionID ) {
+	    asn_DEF_SetSessionID.free_struct(&asn_DEF_SetSessionID, &$self->sessionID.setSessionID, 1);
+	    $self->sessionID.setSessionID = NULL;
+	}
+	$self->sessionID.setSessionID = calloc(1, sizeof(*($self->sessionID.setSessionID)));
+        $self->sessionID.setSessionID->sessionId = sessionId;
+	$self->sessionID.setSessionID->setId.present = SETId_PR_msisdn;
+	BCD_OCTET_STRING_fromString(&$self->sessionID.setSessionID->setId.choice.msisdn, msisdn);
+    }
+
+    void copy_SetSessionId(ULP_PDU_t *src_pdu) {
+	struct SetSessionID *src, *dst;
+        OCTET_STRING_t *srcaddr;
+        OCTET_STRING_t *dstaddr;
+
+	if( NULL == src_pdu )
+            return; /* nothing to do */
+
+	src = src_pdu->sessionID.setSessionID;
+        if( NULL == src )
+	    return; /* nothing to do */
+
+	if( NULL != $self->sessionID.setSessionID ) {
+	    asn_DEF_SetSessionID.free_struct(&asn_DEF_SetSessionID, &$self->sessionID.setSessionID, 1);
+	    $self->sessionID.setSessionID = NULL;
+	}
+
+        $self->sessionID.setSessionID = dst = calloc(1, sizeof(*dst));
+        if( NULL == dst )
+            croak("Out of memory allocating new SetSessionID");
+        dst->sessionId = src->sessionId;
+        switch( src->setId.present )
+        {
+        case SETId_PR_msisdn:
+            dst->setId.present = SETId_PR_msisdn;
+            dstaddr = &dst->setId.choice.msisdn;
+            srcaddr = &src->setId.choice.msisdn;
+            break;
+
+        case SETId_PR_mdn:
+            dst->setId.present = SETId_PR_mdn;
+            dstaddr = &dst->setId.choice.mdn;
+            srcaddr = &src->setId.choice.mdn;
+            break;
+
+        case SETId_PR_min:
+            dst->setId.present = SETId_PR_min;
+            dstaddr = (OCTET_STRING_t *)&dst->setId.choice.min;
+            srcaddr = (OCTET_STRING_t *)&src->setId.choice.min;
+            dst->setId.choice.min.bits_unused = src->setId.choice.min.bits_unused;
+            break;
+
+        case SETId_PR_imsi:
+            dst->setId.present = SETId_PR_imsi;
+            dstaddr = &dst->setId.choice.imsi;
+            srcaddr = &src->setId.choice.imsi;
+            break;
+
+        case SETId_PR_nai:
+            dst->setId.present = SETId_PR_nai;
+            dstaddr = &dst->setId.choice.nai;
+            srcaddr = &src->setId.choice.nai;
+            break;
+
+        case SETId_PR_iPAddress:
+	    dst->setId.present = SETId_PR_iPAddress;
+	    switch (src->setId.choice.iPAddress.present)
+	    {
+	    case IPAddress_PR_ipv4Address:
+		dst->setId.choice.iPAddress.present = IPAddress_PR_ipv4Address;
+		srcaddr = &src->setId.choice.iPAddress.choice.ipv4Address;
+		dstaddr = &dst->setId.choice.iPAddress.choice.ipv4Address;
+
+		break;
+
+	    case IPAddress_PR_ipv6Address:
+		dst->setId.choice.iPAddress.present = IPAddress_PR_ipv6Address;
+		srcaddr = &src->setId.choice.iPAddress.choice.ipv6Address;
+		dstaddr = &dst->setId.choice.iPAddress.choice.ipv6Address;
+
+		break;
+
+	    default:
+		dst->setId.choice.iPAddress.present = IPAddress_PR_NOTHING;
+		croak("Invalid source IP-Address");
+
+		break;
+	    }
+
+	    break;
+        default:
+            srcaddr = NULL;
+            break; /* keep SETId_PR_NOTHING */
+        }
+
+        if(srcaddr)
+            OCTET_STRING_fromBuf(dstaddr, srcaddr->buf, srcaddr->size);
+
+
+        return;
+    }
+
+    void copy_SessionId(ULP_PDU_t *src_pdu) {
+        asn_DEF_SessionID.free_struct(&asn_DEF_SessionID, &$self->sessionID, 1);
+
+        if( NULL == src_pdu )
+            return;
+
+        if( src_pdu->sessionID.setSessionID )
+            ULP_PDU_copy_SetSessionId($self, src_pdu);
+
+        if( src_pdu->sessionID.slpSessionID )
+            ULP_PDU_copy_SlpSessionId($self, src_pdu);
+
+        return;
     }
 
     void set_message_type(UlpMessage_PR kinda) {
@@ -319,7 +484,7 @@ typedef long Status_t;
 
     %newobject xml_dump;
     char * xml_dump() {
-	asn_enc_rval_t rval;
+	asn_enc_rval_t rval = { 0 };
 	struct per_target_buffer per_buf = { calloc( 4096, sizeof(*per_buf.buf) ), 0, 4096 };
 
 	rval = xer_encode( &asn_DEF_ULP_PDU, $self, XER_F_BASIC, &per_output, &per_buf);
@@ -328,13 +493,33 @@ typedef long Status_t;
     }
 };
 
+%typemap(newfree) ULP_PDU_t "asn_DEF_ULP_PDU.free_struct(&asn_DEF_ULP_PDU, &$1, 1);"
+%typemap(newfree) ULP_PDU_t * "if( $1 ) { asn_DEF_ULP_PDU.free_struct(&asn_DEF_ULP_PDU, $1, 0); }"
+
 %nodefaultctor SUPLINIT;
 %extend SUPLINIT {
     ~SUPLINIT() {
 	asn_DEF_SUPLINIT.free_struct(&asn_DEF_SUPLINIT, $self, 1);
     }
 
-    ;
+    %newobject dump;
+    char * dump() {
+	struct per_target_buffer per_buf = { calloc( 4096, sizeof(*per_buf.buf) ), 0, 4096 };
+
+	asn_DEF_SUPLINIT.print_struct(&asn_DEF_SUPLINIT, $self, 4, &per_output, &per_buf);
+
+	return (char *)per_buf.buf;
+    }
+
+    %newobject xml_dump;
+    char * xml_dump() {
+	asn_enc_rval_t rval = { 0 };
+	struct per_target_buffer per_buf = { calloc( 4096, sizeof(*per_buf.buf) ), 0, 4096 };
+
+	rval = xer_encode( &asn_DEF_SUPLINIT, $self, XER_F_BASIC, &per_output, &per_buf);
+
+	return (char *)per_buf.buf;
+    }
 };
 
 %nodefaultctor SUPLSTART;
@@ -342,12 +527,50 @@ typedef long Status_t;
     ~SUPLSTART() {
 	asn_DEF_SUPLSTART.free_struct(&asn_DEF_SUPLSTART, $self, 1);
     }
+
+    %newobject dump;
+    char * dump() {
+	struct per_target_buffer per_buf = { calloc( 4096, sizeof(*per_buf.buf) ), 0, 4096 };
+
+	asn_DEF_SUPLSTART.print_struct(&asn_DEF_SUPLSTART, $self, 4, &per_output, &per_buf);
+
+	return (char *)per_buf.buf;
+    }
+
+    %newobject xml_dump;
+    char * xml_dump() {
+	asn_enc_rval_t rval = { 0 };
+	struct per_target_buffer per_buf = { calloc( 4096, sizeof(*per_buf.buf) ), 0, 4096 };
+
+	rval = xer_encode( &asn_DEF_SUPLSTART, $self, XER_F_BASIC, &per_output, &per_buf);
+
+	return (char *)per_buf.buf;
+    }
 };
 
 %nodefaultctor SUPLRESPONSE;
 %extend SUPLRESPONSE {
     ~SUPLRESPONSE() {
 	asn_DEF_SUPLRESPONSE.free_struct(&asn_DEF_SUPLRESPONSE, $self, 1);
+    }
+
+    %newobject dump;
+    char * dump() {
+	struct per_target_buffer per_buf = { calloc( 4096, sizeof(*per_buf.buf) ), 0, 4096 };
+
+	asn_DEF_SUPLRESPONSE.print_struct(&asn_DEF_SUPLRESPONSE, $self, 4, &per_output, &per_buf);
+
+	return (char *)per_buf.buf;
+    }
+
+    %newobject xml_dump;
+    char * xml_dump() {
+	asn_enc_rval_t rval = { 0 };
+	struct per_target_buffer per_buf = { calloc( 4096, sizeof(*per_buf.buf) ), 0, 4096 };
+
+	rval = xer_encode( &asn_DEF_SUPLRESPONSE, $self, XER_F_BASIC, &per_output, &per_buf);
+
+	return (char *)per_buf.buf;
     }
 };
 
@@ -380,14 +603,33 @@ typedef long Status_t;
 	asn_DEF_SUPLPOSINIT.free_struct(&asn_DEF_SUPLPOSINIT, $self, 1);
     }
 
+    %newobject dump;
+    char * dump() {
+	struct per_target_buffer per_buf = { calloc( 4096, sizeof(*per_buf.buf) ), 0, 4096 };
+
+	asn_DEF_SUPLPOSINIT.print_struct(&asn_DEF_SUPLPOSINIT, $self, 4, &per_output, &per_buf);
+
+	return (char *)per_buf.buf;
+    }
+
+    %newobject xml_dump;
+    char * xml_dump() {
+	asn_enc_rval_t rval = { 0 };
+	struct per_target_buffer per_buf = { calloc( 4096, sizeof(*per_buf.buf) ), 0, 4096 };
+
+	rval = xer_encode( &asn_DEF_SUPLPOSINIT, $self, XER_F_BASIC, &per_output, &per_buf);
+
+	return (char *)per_buf.buf;
+    }
+
     void set_capabilities(unsigned int pos_tech, enum PrefMethod pref_method, unsigned int pos_proto) {
-	$self->sETCapabilities.posTechnology.agpsSETassisted = pos_tech & setcap_pos_tech_agpsSETassisted ? 1 : 0;
-	$self->sETCapabilities.posTechnology.agpsSETBased = pos_tech & setcap_pos_tech_agpsSETBased ? 1 : 0;
-	$self->sETCapabilities.posTechnology.autonomousGPS = pos_tech & setcap_pos_tech_autonomousGPS ? 1 : 0;
-	$self->sETCapabilities.posTechnology.aFLT = pos_tech & setcap_pos_tech_aFLT ? 1 : 0;
-	$self->sETCapabilities.posTechnology.eCID = pos_tech & setcap_pos_tech_eCID ? 1 : 0;
-	$self->sETCapabilities.posTechnology.eOTD = pos_tech & setcap_pos_tech_eOTD ? 1 : 0;
-	$self->sETCapabilities.posTechnology.oTDOA = pos_tech & setcap_pos_tech_oTDOA ? 1 : 0;
+	$self->sETCapabilities.posTechnology.agpsSETassisted = (pos_tech & setcap_pos_tech_agpsSETassisted) ? 1 : 0;
+	$self->sETCapabilities.posTechnology.agpsSETBased = (pos_tech & setcap_pos_tech_agpsSETBased) ? 1 : 0;
+	$self->sETCapabilities.posTechnology.autonomousGPS = (pos_tech & setcap_pos_tech_autonomousGPS) ? 1 : 0;
+	$self->sETCapabilities.posTechnology.aFLT = (pos_tech & setcap_pos_tech_aFLT) ? 1 : 0;
+	$self->sETCapabilities.posTechnology.eCID = (pos_tech & setcap_pos_tech_eCID) ? 1 : 0;
+	$self->sETCapabilities.posTechnology.eOTD = (pos_tech & setcap_pos_tech_eOTD) ? 1 : 0;
+	$self->sETCapabilities.posTechnology.oTDOA = (pos_tech & setcap_pos_tech_oTDOA) ? 1 : 0;
 
 	$self->sETCapabilities.prefMethod = pref_method;
 
@@ -456,17 +698,58 @@ typedef long Status_t;
     void set_gsm_location_info(long mcc, long mnc, long lac, long cellid, long ta) {
 	LocationId_t *dst = &$self->locationId;
 
+        if( mcc < 0 || mcc > 999 )
+            croak("MCC exceeds range (0..999)");
+
+        if( mnc < 0 || mnc > 999 )
+            croak("MNC exceeds range (0..999)");
+
+        if( lac < 0 || lac > 65535 )
+            croak("LAC exceeds range (0..65535)");
+
+        if( cellid < 0 || cellid > 65535 )
+            croak("CellId exceeds range (0..65535)");
+
 	dst->cellInfo.present = CellInfo_PR_gsmCell;
 	dst->cellInfo.choice.gsmCell.refMCC = mcc;
 	dst->cellInfo.choice.gsmCell.refMNC = mnc;
 	dst->cellInfo.choice.gsmCell.refLAC = lac;
 	dst->cellInfo.choice.gsmCell.refCI = cellid;
-	dst->cellInfo.choice.gsmCell.tA = calloc(1, sizeof(*(dst->cellInfo.choice.gsmCell.tA)));
-	dst->cellInfo.choice.gsmCell.tA[0] = ta;
+        if( ta >= 0 && ta < 256 ) {
+            dst->cellInfo.choice.gsmCell.tA = calloc(1, sizeof(*(dst->cellInfo.choice.gsmCell.tA)));
+            dst->cellInfo.choice.gsmCell.tA[0] = ta;
+        }
+    }
+
+    void set_wcdma_location_info(long mcc, long mnc, long cellid) {
+	LocationId_t *dst = &$self->locationId;
+
+        if( mcc < 0 || mcc > 999 )
+            croak("MCC exceeds range (0..999)");
+
+        if( mnc < 0 || mnc > 999 )
+            croak("MNC exceeds range (0..999)");
+
+        if( cellid < 0 || cellid > 268435455 )
+            croak("CellId exceeds range (0..268435455)");
+
+	dst->cellInfo.present = CellInfo_PR_wcdmaCell;
+	dst->cellInfo.choice.wcdmaCell.refMCC = mcc;
+	dst->cellInfo.choice.wcdmaCell.refMNC = mnc;
+	dst->cellInfo.choice.wcdmaCell.refUC = cellid;
+	// dst->cellInfo.choice.wcdmaCell.frequencyInfo = ...;
+	// dst->cellInfo.choice.wcdmaCell.primaryScramblingCode = ...;
+	// dst->cellInfo.choice.wcdmaCell.measuredResultsList = ...;
     }
 
     void set_position_estimate( time_t when, long latitudeSign, long latitude, long longitude ) {
 	struct tm *gm_when;
+
+        if( NULL == $self->position ) {
+            $self->position = calloc(1, sizeof(*($self->position)));
+            if( NULL == $self->position )
+                croak( "Can't allocate memory for new Position object" );
+        }
 
 	gm_when = gmtime(&when);
 	asn_time2UT(&$self->position->timestamp, gm_when, 1);
@@ -483,12 +766,50 @@ typedef long Status_t;
     ~SUPLPOS() {
 	asn_DEF_SUPLPOS.free_struct(&asn_DEF_SUPLPOS, $self, 1);
     }
+
+    %newobject dump;
+    char * dump() {
+	struct per_target_buffer per_buf = { calloc( 4096, sizeof(*per_buf.buf) ), 0, 4096 };
+
+	asn_DEF_SUPLPOS.print_struct(&asn_DEF_SUPLPOS, $self, 4, &per_output, &per_buf);
+
+	return (char *)per_buf.buf;
+    }
+
+    %newobject xml_dump;
+    char * xml_dump() {
+	asn_enc_rval_t rval = { 0 };
+	struct per_target_buffer per_buf = { calloc( 4096, sizeof(*per_buf.buf) ), 0, 4096 };
+
+	rval = xer_encode( &asn_DEF_SUPLPOS, $self, XER_F_BASIC, &per_output, &per_buf);
+
+	return (char *)per_buf.buf;
+    }
 };
 
 %nodefaultctor SUPLEND;
 %extend SUPLEND {
     ~SUPLEND() {
 	asn_DEF_SUPLEND.free_struct(&asn_DEF_SUPLEND, $self, 1);
+    }
+
+    %newobject dump;
+    char * dump() {
+	struct per_target_buffer per_buf = { calloc( 4096, sizeof(*per_buf.buf) ), 0, 4096 };
+
+	asn_DEF_SUPLEND.print_struct(&asn_DEF_SUPLEND, $self, 4, &per_output, &per_buf);
+
+	return (char *)per_buf.buf;
+    }
+
+    %newobject xml_dump;
+    char * xml_dump() {
+	asn_enc_rval_t rval = { 0 };
+	struct per_target_buffer per_buf = { calloc( 4096, sizeof(*per_buf.buf) ), 0, 4096 };
+
+	rval = xer_encode( &asn_DEF_SUPLEND, $self, XER_F_BASIC, &per_output, &per_buf);
+
+	return (char *)per_buf.buf;
     }
 };
 
@@ -497,12 +818,50 @@ typedef long Status_t;
     ~SUPLAUTHREQ() {
 	asn_DEF_SUPLAUTHREQ.free_struct(&asn_DEF_SUPLAUTHREQ, $self, 1);
     }
+
+    %newobject dump;
+    char * dump() {
+	struct per_target_buffer per_buf = { calloc( 4096, sizeof(*per_buf.buf) ), 0, 4096 };
+
+	asn_DEF_SUPLAUTHREQ.print_struct(&asn_DEF_SUPLAUTHREQ, $self, 4, &per_output, &per_buf);
+
+	return (char *)per_buf.buf;
+    }
+
+    %newobject xml_dump;
+    char * xml_dump() {
+	asn_enc_rval_t rval = { 0 };
+	struct per_target_buffer per_buf = { calloc( 4096, sizeof(*per_buf.buf) ), 0, 4096 };
+
+	rval = xer_encode( &asn_DEF_SUPLAUTHREQ, $self, XER_F_BASIC, &per_output, &per_buf);
+
+	return (char *)per_buf.buf;
+    }
 };
 
 %nodefaultctor SUPLAUTHREQ;
 %extend SUPLAUTHRESP {
     ~SUPLAUTHRESP() {
 	asn_DEF_SUPLAUTHRESP.free_struct(&asn_DEF_SUPLAUTHRESP, $self, 1);
+    }
+
+    %newobject dump;
+    char * dump() {
+	struct per_target_buffer per_buf = { calloc( 4096, sizeof(*per_buf.buf) ), 0, 4096 };
+
+	asn_DEF_SUPLAUTHREQ.print_struct(&asn_DEF_SUPLAUTHREQ, $self, 4, &per_output, &per_buf);
+
+	return (char *)per_buf.buf;
+    }
+
+    %newobject xml_dump;
+    char * xml_dump() {
+	asn_enc_rval_t rval = { 0 };
+	struct per_target_buffer per_buf = { calloc( 4096, sizeof(*per_buf.buf) ), 0, 4096 };
+
+	rval = xer_encode( &asn_DEF_SUPLAUTHREQ, $self, XER_F_BASIC, &per_output, &per_buf);
+
+	return (char *)per_buf.buf;
     }
 };
 

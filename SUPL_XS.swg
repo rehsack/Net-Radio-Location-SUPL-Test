@@ -1,5 +1,47 @@
 %module "Net::Radio::Location::SUPL::XS"
 
+%include <typemaps.i>
+
+%typemap(in) (const char * data, size_t) {
+    if($input == NULL) {
+	SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "$symname" "', argument " "$1_name" " of type '" "MsgBuffer""'");
+    }
+    if( SvFLAGS($input) & (SVf_OK & ~SVf_ROK) ) {
+	$1 = SvPV($input, $2);
+    }
+    else {
+	SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "$symname" "', argument " "$1_name" " of type '" "MsgBuffer""'");
+    }
+}
+
+%typemap(in) MsgBuffer {
+    // $1 = AV2MsgBuf($input);
+    // MsgBuffer retval = { NULL, -1 };
+    if($input == NULL) {
+	SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "$symname" "', argument " "$1_name" " of type '" "MsgBuffer""'");
+    }
+    if( SvFLAGS($input) & (SVf_OK & ~SVf_ROK) ) {
+	$1.buf = SvPV($input, $1.size);
+    }
+    else {
+	SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "$symname" "', argument " "$1_name" " of type '" "MsgBuffer""'");
+    }
+}
+
+%typemap(out) MsgBuffer {
+    if (argvi >= items) {            
+	EXTEND(sp,1); /* Extend the stack by 1 object */
+    }
+    $result = sv_2mortal(newSVpv($1.buf, $1.size));
+    ++argvi; /* intentional - not portable between languages */
+}
+
+%typemap(newfree) MsgBuffer "do { if( $1.buf ) free($1.buf); } while(0);"
+%typemap(newfree) MsgBuffer * "do { if( $1 ) { if( $1->buf ) { free( $1->buf ); } free( $1 ); } } while(0);"
+
+%ignore _asn_ctx;
+%apply long { time_t, ssize_t };
+
 %{
 #include "asn1/ULP-PDU.h"
 #include "asn1/RRLP-PDU.h"
@@ -12,6 +54,7 @@ struct per_target_buffer
 };
 
 static int per_output(const void *data, size_t size, void *op_key);
+static const char * asn_dec_rval_code_str(enum asn_dec_rval_code_e code);
 
 typedef struct _MsgBuffer
 {
@@ -70,7 +113,7 @@ encode_ulp_pdu(struct ULP_PDU *pdu)
 {
 	/* asn_per_data_t per_data; */
 	struct per_target_buffer per_buf;
-	asn_enc_rval_t rval;
+	asn_enc_rval_t rval = { 0 };
 	MsgBuffer retbuf = { NULL, -1 };
 
 	if (NULL == pdu)
@@ -150,7 +193,7 @@ decode_ulp_pdu(MsgBuffer buf)
 static char *
 ulp_pdu_to_xml(MsgBuffer buf)
 {
-	asn_enc_rval_t rval;
+	asn_enc_rval_t rval = { 0 };
 	struct per_target_buffer per_buf;
 	struct ULP_PDU *tmp_pdu = decode_ulp_pdu(buf);
 
@@ -195,34 +238,6 @@ dump_ulp_pdu(MsgBuffer buf)
 }
 
 %}
-
-%typemap(in) MsgBuffer {
-    // $1 = AV2MsgBuf($input);
-    // MsgBuffer retval = { NULL, -1 };
-    if($input == NULL) {
-	SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "$symname" "', argument " "$1_name" " of type '" "MsgBuffer""'");
-    }
-    if( SvFLAGS($input) & (SVf_OK & ~SVf_ROK) ) {
-	$1.buf = SvPV($input, $1.size);
-    }
-    else {
-	SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "$symname" "', argument " "$1_name" " of type '" "MsgBuffer""'");
-    }
-}
-
-%typemap(newfree) MsgBuffer "do { if( $1.buf ) free($1.buf); } while(0);"
-%typemap(newfree) MsgBuffer * "do { if( $1 ) { if( $1->buf ) { free( $1->buf ); } free( $1 ); } } while(0);"
-
-%typemap(newfree) ULP_PDU_t "asn_DEF_ULP_PDU.free_struct(&asn_DEF_ULP_PDU, &$1, 1);"
-%typemap(newfree) ULP_PDU_t * "if( $1 ) { asn_DEF_ULP_PDU.free_struct(&asn_DEF_ULP_PDU, $1, 0); }"
-
-%typemap(out) MsgBuffer {
-    if (argvi >= items) {            
-	EXTEND(sp,1); /* Extend the stack by 1 object */
-    }
-    $result = sv_2mortal(newSVpv($1.buf, $1.size));
-    ++argvi; /* intentional - not portable between languages */
-}
 
 %newobject encode_ulp_pdu;
 %newobject ulp_pdu_to_xml;
