@@ -1,3 +1,7 @@
+%typemap(arginit) AccuracyOpt_t {
+    memset(&$1, 0, sizeof($1));
+}
+
 %typemap(in) AccuracyOpt_t {
     if( 0 != SvOK($input) ) {
 	$1.accuracy = calloc(1, sizeof(*($1.accuracy)));
@@ -77,7 +81,9 @@
 %include "asn1/MsrPosition-Rsp.h"
 %include "asn1/PositionInstruct.h"
 %include "asn1/MethodType.h"
+%include "asn1/ProtocolError.h"
 typedef long Accuracy_t;
+typedef long ErrorCodes_t;
 
 %extend RRLP_PDU {
     RRLP_PDU() {
@@ -126,7 +132,7 @@ typedef long Accuracy_t;
 	per_buf.buf = calloc( 4096, sizeof(uint8_t) );
 	per_buf.pos = 0;
 	per_buf.size = 4096;
-	rval = uper_encode( &asn_DEF_RRLP_PDU, $self, &per_output, &per_buf);
+	rval = uper_encode(&asn_DEF_RRLP_PDU, $self, &per_output, &per_buf);
 
 	if (rval.encoded == -1) {
 		free(per_buf.buf);
@@ -138,7 +144,7 @@ typedef long Accuracy_t;
 	}
 
 	retbuf.buf = per_buf.buf;
-	retbuf.size = per_buf.size;
+	retbuf.size = per_buf.pos;
 
 	return retbuf;
     }

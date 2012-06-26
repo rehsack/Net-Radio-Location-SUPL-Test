@@ -1526,7 +1526,7 @@ SWIG_Perl_SetModule(swig_module_info *module) {
 #define SWIGTYPE_p_Position swig_types[38]
 #define SWIGTYPE_p_PositionInstruct swig_types[39]
 #define SWIGTYPE_p_PositionMethod_t swig_types[40]
-#define SWIGTYPE_p_ProtocolError_t swig_types[41]
+#define SWIGTYPE_p_ProtocolError swig_types[41]
 #define SWIGTYPE_p_QoP swig_types[42]
 #define SWIGTYPE_p_RRLP_Component swig_types[43]
 #define SWIGTYPE_p_RRLP_Component_PR swig_types[44]
@@ -1538,46 +1538,47 @@ SWIG_Perl_SetModule(swig_module_info *module) {
 #define SWIGTYPE_p_Rel7_MsrPosition_Req_Extension swig_types[50]
 #define SWIGTYPE_p_Rel98_MsrPosition_Req_Extension swig_types[51]
 #define SWIGTYPE_p_Rel_5_MsrPosition_Rsp_Extension swig_types[52]
-#define SWIGTYPE_p_Rel_7_MsrPosition_Rsp_Extension swig_types[53]
-#define SWIGTYPE_p_Rel_98_MsrPosition_Rsp_Extension swig_types[54]
-#define SWIGTYPE_p_RequestedAssistData swig_types[55]
-#define SWIGTYPE_p_SETAuthKey swig_types[56]
-#define SWIGTYPE_p_SETCapabilities_t swig_types[57]
-#define SWIGTYPE_p_SETId swig_types[58]
-#define SWIGTYPE_p_SETId_PR swig_types[59]
-#define SWIGTYPE_p_SETId_t_choice swig_types[60]
-#define SWIGTYPE_p_SETNonce_t swig_types[61]
-#define SWIGTYPE_p_SLPAddress swig_types[62]
-#define SWIGTYPE_p_SLPAddress_PR swig_types[63]
-#define SWIGTYPE_p_SLPAddress_t_choice swig_types[64]
-#define SWIGTYPE_p_SPCAuthKey swig_types[65]
-#define SWIGTYPE_p_SUPLAUTHREQ swig_types[66]
-#define SWIGTYPE_p_SUPLAUTHRESP swig_types[67]
-#define SWIGTYPE_p_SUPLEND swig_types[68]
-#define SWIGTYPE_p_SUPLINIT swig_types[69]
-#define SWIGTYPE_p_SUPLPOS swig_types[70]
-#define SWIGTYPE_p_SUPLPOSINIT swig_types[71]
-#define SWIGTYPE_p_SUPLRESPONSE swig_types[72]
-#define SWIGTYPE_p_SUPLSTART swig_types[73]
-#define SWIGTYPE_p_SatelliteInfo_t swig_types[74]
-#define SWIGTYPE_p_SessionID swig_types[75]
-#define SWIGTYPE_p_SetSessionID swig_types[76]
-#define SWIGTYPE_p_SlpSessionID swig_types[77]
-#define SWIGTYPE_p_StatusCode_t swig_types[78]
-#define SWIGTYPE_p_SystemInfoAssistData swig_types[79]
-#define SWIGTYPE_p_ULP_PDU swig_types[80]
-#define SWIGTYPE_p_UlpMessage swig_types[81]
-#define SWIGTYPE_p_UlpMessage_PR swig_types[82]
-#define SWIGTYPE_p_UlpMessage_t_choice swig_types[83]
-#define SWIGTYPE_p_UseMultipleSets_t swig_types[84]
-#define SWIGTYPE_p_Velocity swig_types[85]
-#define SWIGTYPE_p_Ver_t swig_types[86]
-#define SWIGTYPE_p_Version_t swig_types[87]
-#define SWIGTYPE_p_asn_TYPE_descriptor_t swig_types[88]
-#define SWIGTYPE_p_char swig_types[89]
-#define SWIGTYPE_p_long swig_types[90]
-static swig_type_info *swig_types[92];
-static swig_module_info swig_module = {swig_types, 91, 0, 0, 0, 0};
+#define SWIGTYPE_p_Rel_5_ProtocolError_Extension swig_types[53]
+#define SWIGTYPE_p_Rel_7_MsrPosition_Rsp_Extension swig_types[54]
+#define SWIGTYPE_p_Rel_98_MsrPosition_Rsp_Extension swig_types[55]
+#define SWIGTYPE_p_RequestedAssistData swig_types[56]
+#define SWIGTYPE_p_SETAuthKey swig_types[57]
+#define SWIGTYPE_p_SETCapabilities_t swig_types[58]
+#define SWIGTYPE_p_SETId swig_types[59]
+#define SWIGTYPE_p_SETId_PR swig_types[60]
+#define SWIGTYPE_p_SETId_t_choice swig_types[61]
+#define SWIGTYPE_p_SETNonce_t swig_types[62]
+#define SWIGTYPE_p_SLPAddress swig_types[63]
+#define SWIGTYPE_p_SLPAddress_PR swig_types[64]
+#define SWIGTYPE_p_SLPAddress_t_choice swig_types[65]
+#define SWIGTYPE_p_SPCAuthKey swig_types[66]
+#define SWIGTYPE_p_SUPLAUTHREQ swig_types[67]
+#define SWIGTYPE_p_SUPLAUTHRESP swig_types[68]
+#define SWIGTYPE_p_SUPLEND swig_types[69]
+#define SWIGTYPE_p_SUPLINIT swig_types[70]
+#define SWIGTYPE_p_SUPLPOS swig_types[71]
+#define SWIGTYPE_p_SUPLPOSINIT swig_types[72]
+#define SWIGTYPE_p_SUPLRESPONSE swig_types[73]
+#define SWIGTYPE_p_SUPLSTART swig_types[74]
+#define SWIGTYPE_p_SatelliteInfo_t swig_types[75]
+#define SWIGTYPE_p_SessionID swig_types[76]
+#define SWIGTYPE_p_SetSessionID swig_types[77]
+#define SWIGTYPE_p_SlpSessionID swig_types[78]
+#define SWIGTYPE_p_StatusCode_t swig_types[79]
+#define SWIGTYPE_p_SystemInfoAssistData swig_types[80]
+#define SWIGTYPE_p_ULP_PDU swig_types[81]
+#define SWIGTYPE_p_UlpMessage swig_types[82]
+#define SWIGTYPE_p_UlpMessage_PR swig_types[83]
+#define SWIGTYPE_p_UlpMessage_t_choice swig_types[84]
+#define SWIGTYPE_p_UseMultipleSets_t swig_types[85]
+#define SWIGTYPE_p_Velocity swig_types[86]
+#define SWIGTYPE_p_Ver_t swig_types[87]
+#define SWIGTYPE_p_Version_t swig_types[88]
+#define SWIGTYPE_p_asn_TYPE_descriptor_t swig_types[89]
+#define SWIGTYPE_p_char swig_types[90]
+#define SWIGTYPE_p_long swig_types[91]
+static swig_type_info *swig_types[93];
+static swig_module_info swig_module = {swig_types, 92, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -2149,7 +2150,7 @@ SWIGINTERN char *SUPLSTART_xml_dump(struct SUPLSTART *self){
 	return (char *)per_buf.buf;
     }
 SWIGINTERN struct ULP_PDU *new_ULP_PDU__SWIG_0(){
-	ULP_PDU_t *newobj;
+	struct ULP_PDU *newobj;
 	newobj = calloc( 1, sizeof(*newobj) );
 	if( NULL == newobj )
 	    croak( "Can't allocate memory for new ULP_PDU object" );
@@ -2260,7 +2261,7 @@ SWIGINTERN void ULP_PDU_set_version(struct ULP_PDU *self,int maj,int min,int ser
 	    croak( "Unsupported SUPL version" );
 	}
     }
-SWIGINTERN void ULP_PDU_copy_SlpSessionId(struct ULP_PDU *self,ULP_PDU_t *src_pdu){
+SWIGINTERN void ULP_PDU_copy_SlpSessionId(struct ULP_PDU *self,struct ULP_PDU *src_pdu){
 	struct SlpSessionID *src, *dst;
 	OCTET_STRING_t *srcaddr;
 	OCTET_STRING_t *dstaddr;
@@ -2350,7 +2351,7 @@ SWIGINTERN void ULP_PDU_setSetSessionId_to_msisdn(struct ULP_PDU *self,int sessi
 	self->sessionID.setSessionID->setId.present = SETId_PR_msisdn;
 	BCD_OCTET_STRING_fromString(&self->sessionID.setSessionID->setId.choice.msisdn, msisdn);
     }
-SWIGINTERN void ULP_PDU_copy_SetSessionId(struct ULP_PDU *self,ULP_PDU_t *src_pdu){
+SWIGINTERN void ULP_PDU_copy_SetSessionId(struct ULP_PDU *self,struct ULP_PDU *src_pdu){
 	struct SetSessionID *src, *dst;
         OCTET_STRING_t *srcaddr;
         OCTET_STRING_t *dstaddr;
@@ -2441,7 +2442,7 @@ SWIGINTERN void ULP_PDU_copy_SetSessionId(struct ULP_PDU *self,ULP_PDU_t *src_pd
 
         return;
     }
-SWIGINTERN void ULP_PDU_copy_SessionId(struct ULP_PDU *self,ULP_PDU_t *src_pdu){
+SWIGINTERN void ULP_PDU_copy_SessionId(struct ULP_PDU *self,struct ULP_PDU *src_pdu){
         asn_DEF_SessionID.free_struct(&asn_DEF_SessionID, &self->sessionID, 1);
 
         if( NULL == src_pdu )
@@ -2627,7 +2628,7 @@ SWIGINTERN MsgBuffer RRLP_PDU_encode(struct RRLP_PDU *self){
 	per_buf.buf = calloc( 4096, sizeof(uint8_t) );
 	per_buf.pos = 0;
 	per_buf.size = 4096;
-	rval = uper_encode( &asn_DEF_RRLP_PDU, self, &per_output, &per_buf);
+	rval = uper_encode(&asn_DEF_RRLP_PDU, self, &per_output, &per_buf);
 
 	if (rval.encoded == -1) {
 		free(per_buf.buf);
@@ -2639,7 +2640,7 @@ SWIGINTERN MsgBuffer RRLP_PDU_encode(struct RRLP_PDU *self){
 	}
 
 	retbuf.buf = per_buf.buf;
-	retbuf.size = per_buf.size;
+	retbuf.size = per_buf.pos;
 
 	return retbuf;
     }
@@ -2766,7 +2767,7 @@ encode_ulp_pdu(struct ULP_PDU *pdu)
 	per_buf.buf = calloc( 4096, sizeof(uint8_t) );
 	per_buf.pos = 0;
 	per_buf.size = 4096;
-	rval = uper_encode( &asn_DEF_ULP_PDU, pdu, &per_output, &per_buf);
+	rval = uper_encode(&asn_DEF_ULP_PDU, pdu, &per_output, &per_buf);
 
 	if (rval.encoded == -1) {
 		free(per_buf.buf);
@@ -2800,7 +2801,7 @@ encode_ulp_pdu(struct ULP_PDU *pdu)
 	}
 
 	retbuf.buf = per_buf.buf;
-	retbuf.size = per_buf.size;
+	retbuf.size = per_buf.pos;
 
 	return retbuf;
 }
@@ -2998,6 +2999,32 @@ fail:
 SWIGCLASS_STATIC int _wrap_asn_DEF_SlpSessionID_get(pTHX_ SV *sv, MAGIC *SWIGUNUSEDPARM(mg)) {
   MAGIC_PPERL
   sv_setiv(SvRV(sv), PTR2IV(&asn_DEF_SlpSessionID));
+  return 1;
+}
+
+
+SWIGCLASS_STATIC int _wrap_asn_DEF_ProtocolError_set(pTHX_ SV* sv, MAGIC * SWIGUNUSEDPARM(mg)) {
+  MAGIC_PPERL
+  {
+    void *argp = 0;
+    int res = SWIG_ConvertPtr(sv, &argp, SWIGTYPE_p_asn_TYPE_descriptor_t,  0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in variable '""asn_DEF_ProtocolError""' of type '""asn_TYPE_descriptor_t""'");
+    }
+    if (!argp) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in variable '""asn_DEF_ProtocolError""' of type '""asn_TYPE_descriptor_t""'");
+    } else {
+      asn_DEF_ProtocolError = *((asn_TYPE_descriptor_t *)(argp));
+    }
+  }
+fail:
+  return 1;
+}
+
+
+SWIGCLASS_STATIC int _wrap_asn_DEF_ProtocolError_get(pTHX_ SV *sv, MAGIC *SWIGUNUSEDPARM(mg)) {
+  MAGIC_PPERL
+  sv_setiv(SvRV(sv), PTR2IV(&asn_DEF_ProtocolError));
   return 1;
 }
 
@@ -6772,7 +6799,7 @@ XS(_wrap_ULP_PDU_t_set_version) {
 XS(_wrap_ULP_PDU_t_copy_SlpSessionId) {
   {
     struct ULP_PDU *arg1 = (struct ULP_PDU *) 0 ;
-    ULP_PDU_t *arg2 = (ULP_PDU_t *) 0 ;
+    struct ULP_PDU *arg2 = (struct ULP_PDU *) 0 ;
     void *argp1 = 0 ;
     int res1 = 0 ;
     void *argp2 = 0 ;
@@ -6790,9 +6817,9 @@ XS(_wrap_ULP_PDU_t_copy_SlpSessionId) {
     arg1 = (struct ULP_PDU *)(argp1);
     res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_ULP_PDU, 0 |  0 );
     if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ULP_PDU_t_copy_SlpSessionId" "', argument " "2"" of type '" "ULP_PDU_t *""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ULP_PDU_t_copy_SlpSessionId" "', argument " "2"" of type '" "struct ULP_PDU *""'"); 
     }
-    arg2 = (ULP_PDU_t *)(argp2);
+    arg2 = (struct ULP_PDU *)(argp2);
     ULP_PDU_copy_SlpSessionId(arg1,arg2);
     ST(argvi) = sv_newmortal();
     
@@ -6905,7 +6932,7 @@ XS(_wrap_ULP_PDU_t_setSetSessionId_to_msisdn) {
 XS(_wrap_ULP_PDU_t_copy_SetSessionId) {
   {
     struct ULP_PDU *arg1 = (struct ULP_PDU *) 0 ;
-    ULP_PDU_t *arg2 = (ULP_PDU_t *) 0 ;
+    struct ULP_PDU *arg2 = (struct ULP_PDU *) 0 ;
     void *argp1 = 0 ;
     int res1 = 0 ;
     void *argp2 = 0 ;
@@ -6923,9 +6950,9 @@ XS(_wrap_ULP_PDU_t_copy_SetSessionId) {
     arg1 = (struct ULP_PDU *)(argp1);
     res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_ULP_PDU, 0 |  0 );
     if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ULP_PDU_t_copy_SetSessionId" "', argument " "2"" of type '" "ULP_PDU_t *""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ULP_PDU_t_copy_SetSessionId" "', argument " "2"" of type '" "struct ULP_PDU *""'"); 
     }
-    arg2 = (ULP_PDU_t *)(argp2);
+    arg2 = (struct ULP_PDU *)(argp2);
     ULP_PDU_copy_SetSessionId(arg1,arg2);
     ST(argvi) = sv_newmortal();
     
@@ -6942,7 +6969,7 @@ XS(_wrap_ULP_PDU_t_copy_SetSessionId) {
 XS(_wrap_ULP_PDU_t_copy_SessionId) {
   {
     struct ULP_PDU *arg1 = (struct ULP_PDU *) 0 ;
-    ULP_PDU_t *arg2 = (ULP_PDU_t *) 0 ;
+    struct ULP_PDU *arg2 = (struct ULP_PDU *) 0 ;
     void *argp1 = 0 ;
     int res1 = 0 ;
     void *argp2 = 0 ;
@@ -6960,9 +6987,9 @@ XS(_wrap_ULP_PDU_t_copy_SessionId) {
     arg1 = (struct ULP_PDU *)(argp1);
     res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_ULP_PDU, 0 |  0 );
     if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ULP_PDU_t_copy_SessionId" "', argument " "2"" of type '" "ULP_PDU_t *""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ULP_PDU_t_copy_SessionId" "', argument " "2"" of type '" "struct ULP_PDU *""'"); 
     }
-    arg2 = (ULP_PDU_t *)(argp2);
+    arg2 = (struct ULP_PDU *)(argp2);
     ULP_PDU_copy_SessionId(arg1,arg2);
     ST(argvi) = sv_newmortal();
     
@@ -7940,6 +7967,9 @@ XS(_wrap_SLPAddress_t_set_ipaddress) {
     int argvi = 0;
     dXSARGS;
     
+    {
+      memset(&arg2, 0, sizeof(arg2));
+    }
     if ((items < 2) || (items > 2)) {
       SWIG_croak("Usage: SLPAddress_t_set_ipaddress(self,ipaddr);");
     }
@@ -8180,6 +8210,9 @@ XS(_wrap_SLPAddress_t_choice_iPAddress_set) {
     int argvi = 0;
     dXSARGS;
     
+    {
+      memset(&arg2, 0, sizeof(arg2));
+    }
     if ((items < 2) || (items > 2)) {
       SWIG_croak("Usage: SLPAddress_t_choice_iPAddress_set(self,iPAddress);");
     }
@@ -8264,6 +8297,9 @@ XS(_wrap_SLPAddress_t_choice_fQDN_set) {
     int argvi = 0;
     dXSARGS;
     
+    {
+      memset(&arg2, 0, sizeof(arg2));
+    }
     if ((items < 2) || (items > 2)) {
       SWIG_croak("Usage: SLPAddress_t_choice_fQDN_set(self,fQDN);");
     }
@@ -8516,6 +8552,9 @@ XS(_wrap_PosPayLoad_t_choice_tia801payload_set) {
     int argvi = 0;
     dXSARGS;
     
+    {
+      memset(&arg2, 0, sizeof(arg2));
+    }
     if ((items < 2) || (items > 2)) {
       SWIG_croak("Usage: PosPayLoad_t_choice_tia801payload_set(self,tia801payload);");
     }
@@ -8585,6 +8624,9 @@ XS(_wrap_PosPayLoad_t_choice_rrcPayload_set) {
     int argvi = 0;
     dXSARGS;
     
+    {
+      memset(&arg2, 0, sizeof(arg2));
+    }
     if ((items < 2) || (items > 2)) {
       SWIG_croak("Usage: PosPayLoad_t_choice_rrcPayload_set(self,rrcPayload);");
     }
@@ -8654,6 +8696,9 @@ XS(_wrap_PosPayLoad_t_choice_rrlpPayload_set) {
     int argvi = 0;
     dXSARGS;
     
+    {
+      memset(&arg2, 0, sizeof(arg2));
+    }
     if ((items < 2) || (items > 2)) {
       SWIG_croak("Usage: PosPayLoad_t_choice_rrlpPayload_set(self,rrlpPayload);");
     }
@@ -9435,6 +9480,9 @@ XS(_wrap_SETId_t_choice_msisdn_set) {
     int argvi = 0;
     dXSARGS;
     
+    {
+      memset(&arg2, 0, sizeof(arg2));
+    }
     if ((items < 2) || (items > 2)) {
       SWIG_croak("Usage: SETId_t_choice_msisdn_set(self,msisdn);");
     }
@@ -9504,6 +9552,9 @@ XS(_wrap_SETId_t_choice_mdn_set) {
     int argvi = 0;
     dXSARGS;
     
+    {
+      memset(&arg2, 0, sizeof(arg2));
+    }
     if ((items < 2) || (items > 2)) {
       SWIG_croak("Usage: SETId_t_choice_mdn_set(self,mdn);");
     }
@@ -9573,6 +9624,9 @@ XS(_wrap_SETId_t_choice_min_set) {
     int argvi = 0;
     dXSARGS;
     
+    {
+      memset(&arg2, 0, sizeof(arg2));
+    }
     if ((items < 2) || (items > 2)) {
       SWIG_croak("Usage: SETId_t_choice_min_set(self,min);");
     }
@@ -9643,6 +9697,9 @@ XS(_wrap_SETId_t_choice_imsi_set) {
     int argvi = 0;
     dXSARGS;
     
+    {
+      memset(&arg2, 0, sizeof(arg2));
+    }
     if ((items < 2) || (items > 2)) {
       SWIG_croak("Usage: SETId_t_choice_imsi_set(self,imsi);");
     }
@@ -9712,6 +9769,9 @@ XS(_wrap_SETId_t_choice_nai_set) {
     int argvi = 0;
     dXSARGS;
     
+    {
+      memset(&arg2, 0, sizeof(arg2));
+    }
     if ((items < 2) || (items > 2)) {
       SWIG_croak("Usage: SETId_t_choice_nai_set(self,nai);");
     }
@@ -9781,6 +9841,9 @@ XS(_wrap_SETId_t_choice_iPAddress_set) {
     int argvi = 0;
     dXSARGS;
     
+    {
+      memset(&arg2, 0, sizeof(arg2));
+    }
     if ((items < 2) || (items > 2)) {
       SWIG_croak("Usage: SETId_t_choice_iPAddress_set(self,iPAddress);");
     }
@@ -9910,6 +9973,9 @@ XS(_wrap_SlpSessionID_t_sessionID_set) {
     int argvi = 0;
     dXSARGS;
     
+    {
+      memset(&arg2, 0, sizeof(arg2));
+    }
     if ((items < 2) || (items > 2)) {
       SWIG_croak("Usage: SlpSessionID_t_sessionID_set(self,sessionID);");
     }
@@ -10889,10 +10955,10 @@ XS(_wrap_RRLP_Component_t_choice_assistanceDataAck_get) {
 XS(_wrap_RRLP_Component_t_choice_protocolError_set) {
   {
     RRLP_Component_t_choice *arg1 = (RRLP_Component_t_choice *) 0 ;
-    ProtocolError_t arg2 ;
+    ProtocolError_t *arg2 = (ProtocolError_t *) 0 ;
     void *argp1 = 0 ;
     int res1 = 0 ;
-    void *argp2 ;
+    void *argp2 = 0 ;
     int res2 = 0 ;
     int argvi = 0;
     dXSARGS;
@@ -10905,22 +10971,18 @@ XS(_wrap_RRLP_Component_t_choice_protocolError_set) {
       SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "RRLP_Component_t_choice_protocolError_set" "', argument " "1"" of type '" "RRLP_Component_t_choice *""'"); 
     }
     arg1 = (RRLP_Component_t_choice *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_ProtocolError_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "RRLP_Component_t_choice_protocolError_set" "', argument " "2"" of type '" "ProtocolError_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "RRLP_Component_t_choice_protocolError_set" "', argument " "2"" of type '" "ProtocolError_t""'");
-      } else {
-        arg2 = *((ProtocolError_t *)(argp2));
-      }
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_ProtocolError, 0 |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "RRLP_Component_t_choice_protocolError_set" "', argument " "2"" of type '" "ProtocolError_t *""'"); 
     }
-    if (arg1) (arg1)->protocolError = arg2;
+    arg2 = (ProtocolError_t *)(argp2);
+    if (arg1) (arg1)->protocolError = *arg2;
     ST(argvi) = sv_newmortal();
+    
     
     XSRETURN(argvi);
   fail:
+    
     
     SWIG_croak_null();
   }
@@ -10933,7 +10995,7 @@ XS(_wrap_RRLP_Component_t_choice_protocolError_get) {
     void *argp1 = 0 ;
     int res1 = 0 ;
     int argvi = 0;
-    ProtocolError_t result;
+    ProtocolError_t *result = 0 ;
     dXSARGS;
     
     if ((items < 1) || (items > 1)) {
@@ -10944,8 +11006,8 @@ XS(_wrap_RRLP_Component_t_choice_protocolError_get) {
       SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "RRLP_Component_t_choice_protocolError_get" "', argument " "1"" of type '" "RRLP_Component_t_choice *""'"); 
     }
     arg1 = (RRLP_Component_t_choice *)(argp1);
-    result =  ((arg1)->protocolError);
-    ST(argvi) = SWIG_NewPointerObj((ProtocolError_t *)memcpy((ProtocolError_t *)malloc(sizeof(ProtocolError_t)),&result,sizeof(ProtocolError_t)), SWIGTYPE_p_ProtocolError_t, SWIG_POINTER_OWN | 0); argvi++ ;
+    result = (ProtocolError_t *)& ((arg1)->protocolError);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_ProtocolError, 0 | SWIG_SHADOW); argvi++ ;
     
     XSRETURN(argvi);
   fail:
@@ -12992,6 +13054,9 @@ XS(_wrap_MethodType_t_choice_msAssisted_set) {
     int argvi = 0;
     dXSARGS;
     
+    {
+      memset(&arg2, 0, sizeof(arg2));
+    }
     if ((items < 2) || (items > 2)) {
       SWIG_croak("Usage: MethodType_t_choice_msAssisted_set(self,msAssisted);");
     }
@@ -13303,6 +13368,246 @@ XS(_wrap_delete_MethodType_t_choice) {
 }
 
 
+XS(_wrap_ProtocolError_t_errorCause_set) {
+  {
+    struct ProtocolError *arg1 = (struct ProtocolError *) 0 ;
+    ErrorCodes_t arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    long val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: ProtocolError_t_errorCause_set(self,errorCause);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_ProtocolError, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ProtocolError_t_errorCause_set" "', argument " "1"" of type '" "struct ProtocolError *""'"); 
+    }
+    arg1 = (struct ProtocolError *)(argp1);
+    ecode2 = SWIG_AsVal_long SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "ProtocolError_t_errorCause_set" "', argument " "2"" of type '" "ErrorCodes_t""'");
+    } 
+    arg2 = (ErrorCodes_t)(val2);
+    if (arg1) (arg1)->errorCause = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_ProtocolError_t_errorCause_get) {
+  {
+    struct ProtocolError *arg1 = (struct ProtocolError *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    ErrorCodes_t result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: ProtocolError_t_errorCause_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_ProtocolError, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ProtocolError_t_errorCause_get" "', argument " "1"" of type '" "struct ProtocolError *""'"); 
+    }
+    arg1 = (struct ProtocolError *)(argp1);
+    result = (ErrorCodes_t) ((arg1)->errorCause);
+    ST(argvi) = SWIG_From_long  SWIG_PERL_CALL_ARGS_1((long)(result)); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_ProtocolError_t_extensionContainer_set) {
+  {
+    struct ProtocolError *arg1 = (struct ProtocolError *) 0 ;
+    struct ExtensionContainer *arg2 = (struct ExtensionContainer *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: ProtocolError_t_extensionContainer_set(self,extensionContainer);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_ProtocolError, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ProtocolError_t_extensionContainer_set" "', argument " "1"" of type '" "struct ProtocolError *""'"); 
+    }
+    arg1 = (struct ProtocolError *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_ExtensionContainer, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ProtocolError_t_extensionContainer_set" "', argument " "2"" of type '" "struct ExtensionContainer *""'"); 
+    }
+    arg2 = (struct ExtensionContainer *)(argp2);
+    if (arg1) (arg1)->extensionContainer = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_ProtocolError_t_extensionContainer_get) {
+  {
+    struct ProtocolError *arg1 = (struct ProtocolError *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    struct ExtensionContainer *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: ProtocolError_t_extensionContainer_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_ProtocolError, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ProtocolError_t_extensionContainer_get" "', argument " "1"" of type '" "struct ProtocolError *""'"); 
+    }
+    arg1 = (struct ProtocolError *)(argp1);
+    result = (struct ExtensionContainer *) ((arg1)->extensionContainer);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_ExtensionContainer, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_ProtocolError_t_rel_5_ProtocolError_Extension_set) {
+  {
+    struct ProtocolError *arg1 = (struct ProtocolError *) 0 ;
+    struct Rel_5_ProtocolError_Extension *arg2 = (struct Rel_5_ProtocolError_Extension *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: ProtocolError_t_rel_5_ProtocolError_Extension_set(self,rel_5_ProtocolError_Extension);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_ProtocolError, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ProtocolError_t_rel_5_ProtocolError_Extension_set" "', argument " "1"" of type '" "struct ProtocolError *""'"); 
+    }
+    arg1 = (struct ProtocolError *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_Rel_5_ProtocolError_Extension, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ProtocolError_t_rel_5_ProtocolError_Extension_set" "', argument " "2"" of type '" "struct Rel_5_ProtocolError_Extension *""'"); 
+    }
+    arg2 = (struct Rel_5_ProtocolError_Extension *)(argp2);
+    if (arg1) (arg1)->rel_5_ProtocolError_Extension = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_ProtocolError_t_rel_5_ProtocolError_Extension_get) {
+  {
+    struct ProtocolError *arg1 = (struct ProtocolError *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    struct Rel_5_ProtocolError_Extension *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: ProtocolError_t_rel_5_ProtocolError_Extension_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_ProtocolError, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ProtocolError_t_rel_5_ProtocolError_Extension_get" "', argument " "1"" of type '" "struct ProtocolError *""'"); 
+    }
+    arg1 = (struct ProtocolError *)(argp1);
+    result = (struct Rel_5_ProtocolError_Extension *) ((arg1)->rel_5_ProtocolError_Extension);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_Rel_5_ProtocolError_Extension, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_ProtocolError_t) {
+  {
+    int argvi = 0;
+    struct ProtocolError *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 0) || (items > 0)) {
+      SWIG_croak("Usage: new_ProtocolError_t();");
+    }
+    result = (struct ProtocolError *)calloc(1, sizeof(struct ProtocolError));
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_ProtocolError, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    XSRETURN(argvi);
+  fail:
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_delete_ProtocolError_t) {
+  {
+    struct ProtocolError *arg1 = (struct ProtocolError *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: delete_ProtocolError_t(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_ProtocolError, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_ProtocolError_t" "', argument " "1"" of type '" "struct ProtocolError *""'"); 
+    }
+    arg1 = (struct ProtocolError *)(argp1);
+    free((char *) arg1);
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
 XS(_wrap_encode_ulp_pdu) {
   {
     struct ULP_PDU *arg1 = (struct ULP_PDU *) 0 ;
@@ -13482,7 +13787,7 @@ static swig_type_info _swigt__p_PosPayLoad_t_choice = {"_p_PosPayLoad_t_choice",
 static swig_type_info _swigt__p_Position = {"_p_Position", "struct Position *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_PositionInstruct = {"_p_PositionInstruct", "PositionInstruct_t *|struct PositionInstruct *|PositionInstruct *", 0, 0, (void*)"Net::Radio::Location::SUPL::XS::PositionInstruct_t", 0};
 static swig_type_info _swigt__p_PositionMethod_t = {"_p_PositionMethod_t", "PositionMethod_t *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_ProtocolError_t = {"_p_ProtocolError_t", "ProtocolError_t *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_ProtocolError = {"_p_ProtocolError", "struct ProtocolError *|ProtocolError *|ProtocolError_t *", 0, 0, (void*)"Net::Radio::Location::SUPL::XS::ProtocolError_t", 0};
 static swig_type_info _swigt__p_QoP = {"_p_QoP", "struct QoP *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_RRLP_Component = {"_p_RRLP_Component", "RRLP_Component_t *|struct RRLP_Component *|RRLP_Component *", 0, 0, (void*)"Net::Radio::Location::SUPL::XS::RRLP_Component_t", 0};
 static swig_type_info _swigt__p_RRLP_Component_PR = {"_p_RRLP_Component_PR", "enum RRLP_Component_PR *|RRLP_Component_PR *", 0, 0, (void*)0, 0};
@@ -13494,6 +13799,7 @@ static swig_type_info _swigt__p_Rel5_MsrPosition_Req_Extension = {"_p_Rel5_MsrPo
 static swig_type_info _swigt__p_Rel7_MsrPosition_Req_Extension = {"_p_Rel7_MsrPosition_Req_Extension", "struct Rel7_MsrPosition_Req_Extension *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Rel98_MsrPosition_Req_Extension = {"_p_Rel98_MsrPosition_Req_Extension", "struct Rel98_MsrPosition_Req_Extension *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Rel_5_MsrPosition_Rsp_Extension = {"_p_Rel_5_MsrPosition_Rsp_Extension", "struct Rel_5_MsrPosition_Rsp_Extension *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_Rel_5_ProtocolError_Extension = {"_p_Rel_5_ProtocolError_Extension", "struct Rel_5_ProtocolError_Extension *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Rel_7_MsrPosition_Rsp_Extension = {"_p_Rel_7_MsrPosition_Rsp_Extension", "struct Rel_7_MsrPosition_Rsp_Extension *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Rel_98_MsrPosition_Rsp_Extension = {"_p_Rel_98_MsrPosition_Rsp_Extension", "struct Rel_98_MsrPosition_Rsp_Extension *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_RequestedAssistData = {"_p_RequestedAssistData", "struct RequestedAssistData *", 0, 0, (void*)0, 0};
@@ -13531,7 +13837,7 @@ static swig_type_info _swigt__p_Ver_t = {"_p_Ver_t", "Ver_t *", 0, 0, (void*)0, 
 static swig_type_info _swigt__p_Version_t = {"_p_Version_t", "Version_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_asn_TYPE_descriptor_t = {"_p_asn_TYPE_descriptor_t", "asn_TYPE_descriptor_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_char = {"_p_char", "char *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_long = {"_p_long", "Accuracy_t *|long *|PrefMethod_t *|SLPMode_t *|Status_t *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_long = {"_p_long", "Accuracy_t *|ErrorCodes_t *|long *|PrefMethod_t *|SLPMode_t *|Status_t *", 0, 0, (void*)0, 0};
 
 static swig_type_info *swig_type_initial[] = {
   &_swigt__p_AccuracyOpt_t,
@@ -13575,7 +13881,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_Position,
   &_swigt__p_PositionInstruct,
   &_swigt__p_PositionMethod_t,
-  &_swigt__p_ProtocolError_t,
+  &_swigt__p_ProtocolError,
   &_swigt__p_QoP,
   &_swigt__p_RRLP_Component,
   &_swigt__p_RRLP_Component_PR,
@@ -13587,6 +13893,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_Rel7_MsrPosition_Req_Extension,
   &_swigt__p_Rel98_MsrPosition_Req_Extension,
   &_swigt__p_Rel_5_MsrPosition_Rsp_Extension,
+  &_swigt__p_Rel_5_ProtocolError_Extension,
   &_swigt__p_Rel_7_MsrPosition_Rsp_Extension,
   &_swigt__p_Rel_98_MsrPosition_Rsp_Extension,
   &_swigt__p_RequestedAssistData,
@@ -13668,7 +13975,7 @@ static swig_cast_info _swigc__p_PosPayLoad_t_choice[] = {  {&_swigt__p_PosPayLoa
 static swig_cast_info _swigc__p_Position[] = {  {&_swigt__p_Position, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_PositionInstruct[] = {  {&_swigt__p_PositionInstruct, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_PositionMethod_t[] = {  {&_swigt__p_PositionMethod_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_ProtocolError_t[] = {  {&_swigt__p_ProtocolError_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ProtocolError[] = {  {&_swigt__p_ProtocolError, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_QoP[] = {  {&_swigt__p_QoP, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_RRLP_Component[] = {  {&_swigt__p_RRLP_Component, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_RRLP_Component_PR[] = {  {&_swigt__p_RRLP_Component_PR, 0, 0, 0},{0, 0, 0, 0}};
@@ -13680,6 +13987,7 @@ static swig_cast_info _swigc__p_Rel5_MsrPosition_Req_Extension[] = {  {&_swigt__
 static swig_cast_info _swigc__p_Rel7_MsrPosition_Req_Extension[] = {  {&_swigt__p_Rel7_MsrPosition_Req_Extension, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Rel98_MsrPosition_Req_Extension[] = {  {&_swigt__p_Rel98_MsrPosition_Req_Extension, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Rel_5_MsrPosition_Rsp_Extension[] = {  {&_swigt__p_Rel_5_MsrPosition_Rsp_Extension, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Rel_5_ProtocolError_Extension[] = {  {&_swigt__p_Rel_5_ProtocolError_Extension, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Rel_7_MsrPosition_Rsp_Extension[] = {  {&_swigt__p_Rel_7_MsrPosition_Rsp_Extension, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Rel_98_MsrPosition_Rsp_Extension[] = {  {&_swigt__p_Rel_98_MsrPosition_Rsp_Extension, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_RequestedAssistData[] = {  {&_swigt__p_RequestedAssistData, 0, 0, 0},{0, 0, 0, 0}};
@@ -13761,7 +14069,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_Position,
   _swigc__p_PositionInstruct,
   _swigc__p_PositionMethod_t,
-  _swigc__p_ProtocolError_t,
+  _swigc__p_ProtocolError,
   _swigc__p_QoP,
   _swigc__p_RRLP_Component,
   _swigc__p_RRLP_Component_PR,
@@ -13773,6 +14081,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_Rel7_MsrPosition_Req_Extension,
   _swigc__p_Rel98_MsrPosition_Req_Extension,
   _swigc__p_Rel_5_MsrPosition_Rsp_Extension,
+  _swigc__p_Rel_5_ProtocolError_Extension,
   _swigc__p_Rel_7_MsrPosition_Rsp_Extension,
   _swigc__p_Rel_98_MsrPosition_Rsp_Extension,
   _swigc__p_RequestedAssistData,
@@ -13827,6 +14136,7 @@ static swig_variable_info swig_variables[] = {
     { "Net::Radio::Location::SUPL::XSc::asn_DEF_SetSessionID", MAGIC_CLASS _wrap_asn_DEF_SetSessionID_set, MAGIC_CLASS _wrap_asn_DEF_SetSessionID_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
     { "Net::Radio::Location::SUPL::XSc::asn_DEF_SETId", MAGIC_CLASS _wrap_asn_DEF_SETId_set, MAGIC_CLASS _wrap_asn_DEF_SETId_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
     { "Net::Radio::Location::SUPL::XSc::asn_DEF_SlpSessionID", MAGIC_CLASS _wrap_asn_DEF_SlpSessionID_set, MAGIC_CLASS _wrap_asn_DEF_SlpSessionID_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
+    { "Net::Radio::Location::SUPL::XSc::asn_DEF_ProtocolError", MAGIC_CLASS _wrap_asn_DEF_ProtocolError_set, MAGIC_CLASS _wrap_asn_DEF_ProtocolError_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
 {0,0,0,0}
 };
 static swig_command_info swig_commands[] = {
@@ -14146,6 +14456,14 @@ static swig_command_info swig_commands[] = {
 {"Net::Radio::Location::SUPL::XSc::MethodType_t_choice_msAssistedPref_get", _wrap_MethodType_t_choice_msAssistedPref_get},
 {"Net::Radio::Location::SUPL::XSc::new_MethodType_t_choice", _wrap_new_MethodType_t_choice},
 {"Net::Radio::Location::SUPL::XSc::delete_MethodType_t_choice", _wrap_delete_MethodType_t_choice},
+{"Net::Radio::Location::SUPL::XSc::ProtocolError_t_errorCause_set", _wrap_ProtocolError_t_errorCause_set},
+{"Net::Radio::Location::SUPL::XSc::ProtocolError_t_errorCause_get", _wrap_ProtocolError_t_errorCause_get},
+{"Net::Radio::Location::SUPL::XSc::ProtocolError_t_extensionContainer_set", _wrap_ProtocolError_t_extensionContainer_set},
+{"Net::Radio::Location::SUPL::XSc::ProtocolError_t_extensionContainer_get", _wrap_ProtocolError_t_extensionContainer_get},
+{"Net::Radio::Location::SUPL::XSc::ProtocolError_t_rel_5_ProtocolError_Extension_set", _wrap_ProtocolError_t_rel_5_ProtocolError_Extension_set},
+{"Net::Radio::Location::SUPL::XSc::ProtocolError_t_rel_5_ProtocolError_Extension_get", _wrap_ProtocolError_t_rel_5_ProtocolError_Extension_get},
+{"Net::Radio::Location::SUPL::XSc::new_ProtocolError_t", _wrap_new_ProtocolError_t},
+{"Net::Radio::Location::SUPL::XSc::delete_ProtocolError_t", _wrap_delete_ProtocolError_t},
 {"Net::Radio::Location::SUPL::XSc::encode_ulp_pdu", _wrap_encode_ulp_pdu},
 {"Net::Radio::Location::SUPL::XSc::decode_ulp_pdu", _wrap_decode_ulp_pdu},
 {"Net::Radio::Location::SUPL::XSc::ulp_pdu_to_xml", _wrap_ulp_pdu_to_xml},
@@ -14788,6 +15106,7 @@ XS(SWIG_init) {
   } while(0) /*@SWIG@*/;
   SWIG_TypeClientData(SWIGTYPE_p_MethodType, (void*) "Net::Radio::Location::SUPL::XS::MethodType_t");
   SWIG_TypeClientData(SWIGTYPE_p_MethodType_t_choice, (void*) "Net::Radio::Location::SUPL::XS::MethodType_t_choice");
+  SWIG_TypeClientData(SWIGTYPE_p_ProtocolError, (void*) "Net::Radio::Location::SUPL::XS::ProtocolError_t");
   ST(0) = &PL_sv_yes;
   XSRETURN(1);
 }

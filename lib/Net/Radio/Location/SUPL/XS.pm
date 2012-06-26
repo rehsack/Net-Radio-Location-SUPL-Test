@@ -1391,6 +1391,49 @@ sub ACQUIRE {
 }
 
 
+############# Class : Net::Radio::Location::SUPL::XS::ProtocolError_t ##############
+
+package Net::Radio::Location::SUPL::XS::ProtocolError_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( Net::Radio::Location::SUPL::XS );
+%OWNER = ();
+%ITERATORS = ();
+*swig_errorCause_get = *Net::Radio::Location::SUPL::XSc::ProtocolError_t_errorCause_get;
+*swig_errorCause_set = *Net::Radio::Location::SUPL::XSc::ProtocolError_t_errorCause_set;
+*swig_extensionContainer_get = *Net::Radio::Location::SUPL::XSc::ProtocolError_t_extensionContainer_get;
+*swig_extensionContainer_set = *Net::Radio::Location::SUPL::XSc::ProtocolError_t_extensionContainer_set;
+*swig_rel_5_ProtocolError_Extension_get = *Net::Radio::Location::SUPL::XSc::ProtocolError_t_rel_5_ProtocolError_Extension_get;
+*swig_rel_5_ProtocolError_Extension_set = *Net::Radio::Location::SUPL::XSc::ProtocolError_t_rel_5_ProtocolError_Extension_set;
+sub new {
+    my $pkg = shift;
+    my $self = Net::Radio::Location::SUPL::XSc::new_ProtocolError_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        Net::Radio::Location::SUPL::XSc::delete_ProtocolError_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
 # ------- CONSTANT STUBS -------
 
 package Net::Radio::Location::SUPL::XS;
@@ -1466,4 +1509,5 @@ package Net::Radio::Location::SUPL::XS;
 *asn_DEF_SetSessionID = *Net::Radio::Location::SUPL::XSc::asn_DEF_SetSessionID;
 *asn_DEF_SETId = *Net::Radio::Location::SUPL::XSc::asn_DEF_SETId;
 *asn_DEF_SlpSessionID = *Net::Radio::Location::SUPL::XSc::asn_DEF_SlpSessionID;
+*asn_DEF_ProtocolError = *Net::Radio::Location::SUPL::XSc::asn_DEF_ProtocolError;
 1;

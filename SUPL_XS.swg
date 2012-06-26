@@ -122,7 +122,7 @@ encode_ulp_pdu(struct ULP_PDU *pdu)
 	per_buf.buf = calloc( 4096, sizeof(uint8_t) );
 	per_buf.pos = 0;
 	per_buf.size = 4096;
-	rval = uper_encode( &asn_DEF_ULP_PDU, pdu, &per_output, &per_buf);
+	rval = uper_encode(&asn_DEF_ULP_PDU, pdu, &per_output, &per_buf);
 
 	if (rval.encoded == -1) {
 		free(per_buf.buf);
@@ -156,7 +156,7 @@ encode_ulp_pdu(struct ULP_PDU *pdu)
 	}
 
 	retbuf.buf = per_buf.buf;
-	retbuf.size = per_buf.size;
+	retbuf.size = per_buf.pos;
 
 	return retbuf;
 }

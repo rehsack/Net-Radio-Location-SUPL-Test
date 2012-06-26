@@ -1,5 +1,9 @@
 %ignore asn_TYPE_descriptor_t;
 
+%typemap(arginit) OCTET_STRING_t {
+    memset(&$1, 0, sizeof($1));
+}
+
 %typemap(in) OCTET_STRING_t {
     if( 0 == (SvFLAGS($input) & (SVf_OK & ~SVf_ROK)) )
 	croak("Argument $argnum is not a string.");
@@ -33,6 +37,10 @@
     sv_setpvn($result, (char *)($1->buf), $1->size);
 
     ++argvi; /* intentional - not portable between languages */
+}
+
+%typemap(arginit) BIT_STRING_t {
+    memset(&$1, 0, sizeof($1));
 }
 
 %typemap(in) BIT_STRING_t {

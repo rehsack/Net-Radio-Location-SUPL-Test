@@ -58,6 +58,10 @@
     }
 }
 
+%typemap(arginit) IPAddress_t {
+    memset(&$1, 0, sizeof($1));
+}
+
 %typemap(in) IPAddress_t {
     if( 0 == (SvFLAGS($input) & (SVf_OK & ~SVf_ROK)) )
 	croak("Argument $argnum is not an embedded ip address.");
@@ -177,7 +181,7 @@ typedef long Status_t;
 
 %extend ULP_PDU {
     ULP_PDU() {
-	ULP_PDU_t *newobj;
+	struct ULP_PDU *newobj;
 	newobj = calloc( 1, sizeof(*newobj) );
 	if( NULL == newobj )
 	    croak( "Can't allocate memory for new ULP_PDU object" );
@@ -226,7 +230,7 @@ typedef long Status_t;
 	}
     }
 
-    void copy_SlpSessionId(ULP_PDU_t *src_pdu) {
+    void copy_SlpSessionId(struct ULP_PDU *src_pdu) {
 	struct SlpSessionID *src, *dst;
 	OCTET_STRING_t *srcaddr;
 	OCTET_STRING_t *dstaddr;
@@ -319,7 +323,7 @@ typedef long Status_t;
 	BCD_OCTET_STRING_fromString(&$self->sessionID.setSessionID->setId.choice.msisdn, msisdn);
     }
 
-    void copy_SetSessionId(ULP_PDU_t *src_pdu) {
+    void copy_SetSessionId(struct ULP_PDU *src_pdu) {
 	struct SetSessionID *src, *dst;
         OCTET_STRING_t *srcaddr;
         OCTET_STRING_t *dstaddr;
@@ -411,7 +415,7 @@ typedef long Status_t;
         return;
     }
 
-    void copy_SessionId(ULP_PDU_t *src_pdu) {
+    void copy_SessionId(struct ULP_PDU *src_pdu) {
         asn_DEF_SessionID.free_struct(&asn_DEF_SessionID, &$self->sessionID, 1);
 
         if( NULL == src_pdu )
