@@ -1,4 +1,13 @@
 %ignore asn_TYPE_descriptor_t;
+%ignore asn_struct_free_f;
+%ignore asn_struct_print_f;
+%ignore asn_constr_check_f;
+%ignore ber_type_decoder_f;
+%ignore der_type_encoder_f;
+%ignore xer_type_decoder_f;
+%ignore xer_type_encoder_f;
+%ignore per_type_decoder_f;
+%ignore per_type_encoder_f;
 
 %typemap(arginit) OCTET_STRING_t {
     memset(&$1, 0, sizeof($1));
