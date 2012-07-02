@@ -1138,6 +1138,8 @@ multiplier.
 
 =back
 
+=back
+
 =head2 Net::Radio::Location::SUPL::XS::AssistanceData_t
 
 ASN.1 Structure: AssistanceData_t
