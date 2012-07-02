@@ -1207,8 +1207,6 @@ asn1/MultipleSets.c
 asn1/MultipleSets.h
 asn1/MW-Status.c
 asn1/MW-Status.h
-asn1/MYMETA.json
-asn1/MYMETA.yml
 asn1/NAEA-CIC.c
 asn1/NAEA-CIC.h
 asn1/NAEA-PreferredCI.c
@@ -2186,6 +2184,7 @@ lib/Net/Radio/Location/SUPL/DBusObject/Translator.pm
 lib/Net/Radio/Location/SUPL/MainLoop.pm
 lib/Net/Radio/Location/SUPL/Test.pm
 lib/Net/Radio/Location/SUPL/XS.pm
+lib/Net/Radio/Location/SUPL/XS.pod
 MANIFEST
 META.json
 META.yml

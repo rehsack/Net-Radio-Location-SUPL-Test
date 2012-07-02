@@ -72,6 +72,7 @@
 ^blib/
 ^sandbox/
 ^_build/.*
+^asn1/Makefile.am.sample
 
 # Avoid archives of this distribution
 \bSUPL-Test-[\d\.\_]+
