@@ -31,14 +31,15 @@
 		    "ssl" : 1,
 		},
 		"mocked-location" : {
-		    "longitude" : "51.221195",
-		    "latitude" : "6.768034",
+		    "latitude" : "51.221195",
+		    "longitude" : "6.768034",
 		    "altitude" : 3,
 		    "uncertainty altitude" : 1,
 		    "uncertainty semi-major" : 1,
 		    "uncertainty semi-minor" : 1,
 		    "orientation of major axis" : 0,
 		    "confidence" : 99
+		    #"uncertainty" : "3"
 		},
 		"SUPLINIT" : {
 		    "action" : "reply",
