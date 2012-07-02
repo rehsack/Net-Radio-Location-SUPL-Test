@@ -54,7 +54,7 @@ per_get_few_bits(asn_per_data_t *pd, int nbits) {
 		tailv = per_get_few_bits(pd, nleft);
 		if(tailv < 0) return -1;
 		/* Refill (replace pd contents with new data) */
-		if(!pd->refill || pd->refill(pd))
+		if(pd->refill(pd))
 			return -1;
 		nbits -= nleft;
 		vhead = per_get_few_bits(pd, nbits);
