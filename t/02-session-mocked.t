@@ -78,6 +78,10 @@ my %test_setup = (
                                },
                    "ssl" => 1,
                  },
+    "mocked-location" => {
+			   "latitude" => "6.768034",
+			   "longitude" => "51.221195"
+			 },
     "SUPLINIT" => {
                     "action" => "reply",
                     "modes"  => ["proxy"],
@@ -93,11 +97,7 @@ my %test_setup = (
         #                        "acquisitionAssistanceRequested" => 1,
         #                        "realTimeIntegrityRequested"     => 1
         #},
-        "estimated-location" => {
-                                  "latitudeSign" => 1,
-                                  "latitude"     => 23,
-                                  "longitude"    => 53
-                                }
+        "estimated-location" => 1
                      },
     "SUPLPOS" => {}
                  );
@@ -131,7 +131,8 @@ SKIP:
     --$skip_cnt;
 
     my $cfg_imsi = $test_setup{"modem-api"}->{"params"}->{"/test_0"}->{IMSI};
-    length($cfg_imsi) % 2 and $cfg_imsi .= "f";
+    $cfg_imsi .= "f" x (16 - length($cfg_imsi));
+    $cfg_imsi =~ s/(\w)(\w)/$2$1/g;
     my $computed_imsi = unpack( "H*", $supl_pdu->{sessionID}->{setSessionID}->{setId}->{choice}->{imsi} );
     cmp_ok( $computed_imsi, "eq", $cfg_imsi, "Submitted correct IMSI to identify SET" );
     --$skip_cnt;
