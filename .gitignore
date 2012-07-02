@@ -25,3 +25,6 @@ Build
 _build
 demo*.pkt
 *.log
+*.tmp
+MYMETA.*
+*.sample
