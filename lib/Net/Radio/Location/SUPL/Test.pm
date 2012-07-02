@@ -230,7 +230,7 @@ sub respond
     $response_struct->{pdu} //= $pdu;
     eval {
         # encode packet
-        $log->debugf( "encoding response ...\n%s", $response_struct->{pdu}->dump() );
+        $log->debugf( "encoding response ...\n%s", $response_struct->{pdu}->xml_dump() );
         $response_struct->{packet} = $response_struct->{pdu}->encode();
     };
     if ($@)
@@ -301,11 +301,12 @@ sub begin_ni_supl_seesion
     $self->{suplinit}->{packet} = $packet;
 
     my %mobile_ident;
-    @mobile_ident{qw(mcc mnc lac cellid imsi)} =
-      $self->_get_modem_info( [qw(MCC MNC LAC CI IMSI)] );
+    @mobile_ident{qw(mcc mnc lac cellid imsi msisdn)} =
+      $self->_get_modem_info( [qw(MCC MNC LAC CI IMSI MSISDN)] );
 
     my $pdu = $self->prepare_supl_response($supl_pdu);
     $pdu->setSetSessionId_to_imsi( _get_next_session_id(), $mobile_ident{imsi} );
+    # $pdu->setSetSessionId_to_msisdn( _get_next_session_id(), $mobile_ident{msisdn}->[0] // "4915220490147" );
 
     my ( $response_type, $response_addr, $response_typename, $response_supl );
     my $supl_init = $supl_pdu->{message}->{choice}->{msSUPLINIT};
@@ -358,16 +359,20 @@ sub begin_ni_supl_seesion
     {
         $response_supl->set_capabilities(
                                  Net::Radio::Location::SUPL::XS::setcap_pos_tech_agpsSETBased(),
-                                 Net::Radio::Location::SUPL::XS::PrefMethod_agpsSETBasedPreferred(),
+#                                 Net::Radio::Location::SUPL::XS::setcap_pos_tech_autonomousGPS(),
+                                 Net::Radio::Location::SUPL::XS::PrefMethod_noPreference(),
+#                                 Net::Radio::Location::SUPL::XS::PrefMethod_agpsSETBasedPreferred(),
                                  Net::Radio::Location::SUPL::XS::setcap_pos_proto_rrlp()
         );
         if ( $mobile_ident{cellid} > 65535 )
         {
+            $response_supl->{locationId}->{status} = Net::Radio::Location::SUPL::XS::Status_current;
             $response_supl->set_wcdma_location_info( map { 0 + $_ }
                                                      ( @mobile_ident{qw(mcc mnc cellid)} ) );
         }
         elsif ( defined( $mobile_ident{lac} ) )
         {
+            $response_supl->{locationId}->{status} = Net::Radio::Location::SUPL::XS::Status_current;
             $response_supl->set_gsm_location_info(
                 map { 0 + $_ } ( @mobile_ident{qw(mcc mnc lac cellid)} ),
                 1    # ta -- Terminal Adaptor
@@ -375,15 +380,20 @@ sub begin_ni_supl_seesion
         }
         else
         {
-            $self->_terminate();
-            $log->error("16-bit cellid and no LocationAreaCode -- can't construct CellInfo");
+            $response_supl->{locationId}->{status} = Net::Radio::Location::SUPL::XS::Status_stale;
+            $log->warning("16-bit cellid and no LocationAreaCode -- can't construct CellInfo");
         }
-        $response_supl->{locationId}->{status} = Net::Radio::Location::SUPL::XS::Status_stale;
-        my $estimated_pos_cfg = $self->{config}->{SUPLPOSINIT}->{"estimated-location"};
-        $log->debugf( "estimated_pos_cfg: %s", $estimated_pos_cfg );
-        $response_supl->set_position_estimate( time,
-                                          @$estimated_pos_cfg{qw(latitudeSign latitude longitude)} )
-          ;    # XXX enable NMEA 0183 using?
+
+        if ( $self->{config}->{"SUPLPOSINIT"}->{"estimated-location"} )
+        {
+            my $pos_cfg = $self->{config}->{"mocked-location"};
+            my ( $latitude, $longitude ) = @$pos_cfg{ "latitude", "longitude" };
+            $log->debugf( "mocked-pos: %s", $pos_cfg );
+            $response_supl->set_position_estimate( time,
+                                                   int( $latitude < 0 ),
+                                                   abs( int($latitude) ),
+                                                   int($longitude) );
+        }
 
         if ( _HASH( $self->{config}->{SUPLPOSINIT}->{"request-assistant-data"} ) )
         {
@@ -441,14 +451,79 @@ sub send_supl_rrlp_response
 
     my $supl_pos = $pdu->{message}->{choice}->{msSUPLPOS};
 
-    $log->debugf( "rrlp response\n%s", $rrlp_resp_pdu->dump() );
+    $log->debugf( "rrlp response\n%s", $rrlp_resp_pdu->xml_dump() );
 
-    $supl_pos->{posPayLoad}->{present} = $Net::Radio::Location::SUPL::XSc::PosPayLoad_PR_rrlpPayload;
+    $supl_pos->{posPayLoad}->{present} =
+      $Net::Radio::Location::SUPL::XSc::PosPayLoad_PR_rrlpPayload;
     my $rrlp_pkt = $rrlp_resp_pdu->encode();
-    $log->debugf("encoded rrlp reponse pdu: [%s](%d)", unpack("H*", $rrlp_pkt), length($rrlp_pkt));
+    $log->debugf( "encoded rrlp reponse pdu: [%s](%d)",
+                  unpack( "H*", $rrlp_pkt ),
+                  length($rrlp_pkt) );
     $supl_pos->{posPayLoad}->{choice}->{rrlpPayload} = $rrlp_pkt;
 
     $self->respond( $pdu, "suplpos", $resp_name );
+
+    return;
+}
+
+my @set_posEstimate_params = (
+                               [ "latitude", "longitude" ],
+                               [ "latitude", "longitude", "uncertainty" ],
+                               [
+                                  "latitude",                  "longitude",
+                                  "uncertainty semi-major",    "uncertainty semi-minor",
+                                  "orientation of major axis", "confidence"
+                               ],
+                               [ "latitude", "longitude", "altitude" ],
+                               [
+                                  "latitude",               "longitude",
+                                  "altitude",               "uncertainty semi-major",
+                                  "uncertainty semi-minor", "orientation of major axis",
+                                  "uncertainty altitude",   "confidence"
+                               ],
+                               [
+                                  "latitude",
+                                  "longitude",
+                                  "inner radius",
+                                  "uncertainty radius",
+                                  "offset angle",
+                                  "inner angle",
+                                  "included angle",
+                                  "confidence"
+                               ],
+                             );
+
+# Location_posEstimate_fixpoint_arith_multiplier
+my $loc_fpmult = Net::Radio::Location::SUPL::XS::LocationInfo_t::get_fixpoint_arith_multiplier();
+my %set_posEstimate_paramHook = (
+                    "latitude"  => sub { ( int( $_[0] < 0 ), abs( int( $_[0] * $loc_fpmult ) ) ); },
+                    "longitude" => sub { int( $_[0] * $loc_fpmult ); },
+                    "altitude"  => sub { ( int( $_[0] < 0 ), abs( int( $_[0] ) ) ); },
+                                );
+
+sub _prepare_posEstimate_settings
+{
+    my $pos_cfg = $_[0];
+    my @params;
+    my @sp_in = sort keys %$pos_cfg;
+
+    foreach my $spep (@set_posEstimate_params)
+    {
+        my @sp_chk = sort @$spep;
+        $log->debugf( "Checking set_posEstimate parameter list: %s ~~ %s", \@sp_in, \@sp_chk );
+        @sp_in ~~ @sp_chk or next;
+        $log->debugf("Matched");
+        @params = map {
+            defined( $set_posEstimate_paramHook{$_} )
+              ? &{ $set_posEstimate_paramHook{$_} }( $pos_cfg->{$_} )
+              : int( $pos_cfg->{$_} )
+        } @$spep;
+        $log->debugf( "Calling with %s", \@params );
+        return @params;
+    }
+
+    $log->errorf( "Couldn't determin right set_posEstimate parameter list from",
+                  [ keys %$pos_cfg ] );
 
     return;
 }
@@ -464,15 +539,11 @@ RRLP PDU.
 
 assistanceData will be acknowledged (assistanceDataAck)
 
-=begin private
-
 =item *
 
 msrPositionReq will be responded with configured coordinates until access to
 NMEA standard documents is available and the time is provided to implement
 GSM location extraction.
-
-=end private
 
 =item *
 
@@ -488,7 +559,7 @@ sub handle_supl_pos_rrlp_packet
     my ( $supl_pkt, $supl_pdu, $rrlp_pkt, $rrlp_pdu ) =
       @params{ "supl_packet", "supl_pdu", "rrlp_packet", "rrlp_pdu" };
 
-    $log->debugf( "embedded rrlp packet:\n%s", $rrlp_pdu->dump() );
+    $log->debugf( "embedded rrlp packet:\n%s", $rrlp_pdu->xml_dump() );
 
     my $rrlp_resp_pdu = Net::Radio::Location::SUPL::XS::RRLP_PDU_t->new();
 
@@ -505,28 +576,47 @@ sub handle_supl_pos_rrlp_packet
             # XXX probably RRLP_Component_PR_protocolError?
             $rrlp_resp_pdu->set_component_type(
                              $Net::Radio::Location::SUPL::XSc::RRLP_Component_PR_assistanceDataAck);
-	    $rrlp_resp_type = "assistanceDataAck";
+            $rrlp_resp_type = "assistanceDataAck";
         }
         when ($Net::Radio::Location::SUPL::XSc::RRLP_Component_PR_msrPositionReq)
         {
             $self->{suplpos}->{msrPositionReq}->{pdu}    = $supl_pdu;
             $self->{suplpos}->{msrPositionReq}->{packet} = $supl_pkt;
 
-            $rrlp_resp_pdu->set_component_type(
-                             $Net::Radio::Location::SUPL::XSc::RRLP_Component_PR_protocolError);
-	    # incomplete data, but to be true - we don't have them ...
-	    # see 3GPP TS 44.031 A.3 to understand why
-	    $rrlp_resp_pdu->{component}->{choice}->{protocolError}->{errorCause} = 2;
-	    $rrlp_resp_type = "protocolError";
+            my $pos_cfg          = $self->{config}->{"mocked-location"};
+            my @set_posEst_parms = _prepare_posEstimate_settings($pos_cfg);
+            if (@set_posEst_parms)
+            {
+                $rrlp_resp_pdu->set_component_type(
+                                $Net::Radio::Location::SUPL::XSc::RRLP_Component_PR_msrPositionRsp);
+                my $locationInfo =
+                  $rrlp_resp_pdu->{component}->{choice}->{msrPositionRsp}->{locationInfo} =
+                  Net::Radio::Location::SUPL::XS::LocationInfo_t->new(
+                       65535,    # ignored by GMLC between 42432..65535 - see 3GPP TS 44.031 A.3.2.4
+                       1         # 3D fix
+                                                                     );
+
+                # see TS 23.032 for encoding
+                $locationInfo->set_posEstimate(@set_posEst_parms);
+                $rrlp_resp_type = "msrPositionRsp";
+            }
+            else
+            {
+                $rrlp_resp_pdu->set_component_type(
+                                 $Net::Radio::Location::SUPL::XSc::RRLP_Component_PR_protocolError);
+                # incorrect data
+                $rrlp_resp_pdu->{component}->{choice}->{protocolError}->{errorCause} = 2;
+                $rrlp_resp_type = "protocolError";
+            }
         }
         default
-	{
+        {
             $rrlp_resp_pdu->set_component_type(
-                             $Net::Radio::Location::SUPL::XSc::RRLP_Component_PR_protocolError);
-	    # missing data
-	    $rrlp_resp_pdu->{component}->{choice}->{protocolError}->{errorCause} = 1;
-	    $rrlp_resp_type = "protocolError";
-	}
+                                 $Net::Radio::Location::SUPL::XSc::RRLP_Component_PR_protocolError);
+            # missing component
+            $rrlp_resp_pdu->{component}->{choice}->{protocolError}->{errorCause} = 1;
+            $rrlp_resp_type = "protocolError";
+        }
     }
 
     $self->send_supl_rrlp_response( $supl_pdu, $rrlp_resp_pdu, $rrlp_resp_type );
@@ -552,7 +642,7 @@ sub handle_supl_pdu
       and $log->debugf( "received pdu containing message type %d of %d bytes length",
                         $supl_pdu->{message}->{present},
                         $supl_pdu->{length} );
-    $log->is_debug() and $log->debugf( "pdu: %s", $supl_pdu->dump() );
+    $log->is_debug() and $log->debugf( "pdu: %s", $supl_pdu->xml_dump() );
 
     # decode_ulp_pdu croaks on error ...
     given ( $supl_pdu->{message}->{present} )
@@ -647,7 +737,7 @@ sub trigger_read
             $self->_terminate();
         }
         $pkt .= $buf;
-	$pending = $self->{connection}->pending();
+        $pending = $self->{connection}->pending();
         $log->debugf( "Received %d bytes, %d pending", $rb, $pending );
     } while ( $pending > 0 );
     $log->debugf( "Entire data of %d bytes read", length $pkt );

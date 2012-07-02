@@ -30,6 +30,16 @@
 		    },
 		    "ssl" : 1,
 		},
+		"mocked-location" : {
+		    "longitude" : "51.221195",
+		    "latitude" : "6.768034",
+		    "altitude" : 3,
+		    "uncertainty altitude" : 1,
+		    "uncertainty semi-major" : 1,
+		    "uncertainty semi-minor" : 1,
+		    "orientation of major axis" : 0,
+		    "confidence" : 99
+		},
 		"SUPLINIT" : {
 		    "action" : "reply",
 		    "modes" : ["proxy"],
@@ -45,11 +55,7 @@
 		#	"acquisitionAssistanceRequested" : 1,
 		#	"realTimeIntegrityRequested" : 1
 		#    },
-		    "estimated-location" : {
-			"latitudeSign" : 1,
-			"latitude" : 23,
-			"longitude" : 53
-		    }
+		    "estimated-location" : 1
 		},
 		"SUPLPOS" : {
 		}
