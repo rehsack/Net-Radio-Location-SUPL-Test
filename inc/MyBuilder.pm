@@ -1103,11 +1103,24 @@ sub ACTION_code {
     $self->SUPER::ACTION_code;
 }
 
+sub compile_asn1src {
+    #my $self = shift;
+
+    #my $asn1_exe = IPC::Cmd->can_run( "asn1c" );
+    #my @asn1_opt = qw(-gen-PER -fskeletons-copy -fnative-types -fcompound-names);
+    #my @rrlp_src = qw(MAP-BS-Code.asn MAP-CommonDataTypes.asn MAP-ER-DataTypes.asn MAP-ExtensionDataTypes.asn MAP-LCS-DataTypes.asn MAP-MS-DataTypes.asn MAP-OM-DataTypes.asn MAP-SM-DataTypes.asn MAP-SS-Code.asn MAP-SS-DataTypes.asn MAP-TS-Code.asn RRLP-Components.asn RRLP-Messages.asn);
+    #my @supl_src = qw(SUPL-AUTH-REQ.asn SUPL-AUTH-RESP.asn SUPL-END.asn SUPL-INIT.asn SUPL-POS.asn SUPL-POS-INIT.asn SUPL-RESPONSE.asn SUPL-START.asn ULP.asn ULP-Components.asn);
+    #my @asn1_src = map { File::Spec->catfile( "../asn1src", $_ } @rrlp_src, @supl_src;
+    #cd asn1
+    #$self->execute_command( $asn1_exe, @asn1_opt, @asn1_src );
+    #cd ..
+}
+
 sub ACTION_compile_swig {
     #my $self = shift;
 
     #my $swig_exe = IPC::Cmd->can_run( "swig" );
-    #$self->execute_command( $swig_exe, "-Iasn1", "-perl", "SUPL_X.swg" );
+    #$self->execute_command( $swig_exe, "-Iasn1", "-perl", "SUPL_XS.swg" );
     #...
     # rename XS.pm => lib/SUPL/XS.pm
 }
