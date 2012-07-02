@@ -33,6 +33,29 @@ Net::Radio::Location::SUPL::Test - Run Test Use-Cases for SUPL
 
 This module implements state machine for handling SUPL packets.
 
+The ASN.1 Compiler L<http://lionet.info/asn1c/compiler.html> is used
+bleeding edge from the github repository found at
+C<git://github.com/vlm/asn1c.git>.
+The used asn1 skeletons has some patches as C<patches/asn1c/> shows.
+It's recommended to apply them before regenerating C sources from
+the ASN.1 source files.
+
+See L<Net::Radio::Location::SUPL::XS> for details about the implemented
+SUPL capabilities.
+
+Following documents has been used for implementation:
+
+=over 4
+
+=item *
+
+Open Mobile Alliance
+Secure UserPlace Location Architecture Candidate Version 1.0, 22th Jan 2007
+
+OMA-AD-SUPL-V1_0-20070122-C
+
+=back
+
 =head1 METHODS
 
 =cut

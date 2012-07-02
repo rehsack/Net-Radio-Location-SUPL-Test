@@ -33,10 +33,6 @@ An appropriate mmsd configuration looks like follows:
 The C<TargetService> and the C<TargetPath> must passed when instantiating
 this object as C<< @cfg{"bus-name", "object-path"} >>.
 
-Currently the patch distributed below patches/mmsd/ must be applied to the
-mmsd sources to allow mmsd to identify WAP Application ID's submitted as
-text.
-
 =head1 METHODS
 
 =cut

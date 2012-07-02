@@ -7,7 +7,7 @@ use 5.010;
 
 =head1 NAME
 
-Net::Radio::Location::SUPL::DBusObject::RecvPushMsg - DBus Server Object to receive SUPL PushMessages
+Net::Radio::Location::SUPL::DBusObject::Translator - DBus Server Object to receive messages to translate
 
 =head1 DESCRIPTION
 
