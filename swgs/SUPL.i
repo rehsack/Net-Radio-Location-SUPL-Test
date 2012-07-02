@@ -1,4 +1,52 @@
 // mapping has to be done before 1st struct/class defined which uses it ...
+%{
+static int
+encode_phone_numer(OCTET_STRING_t *tgt, const char *number, ssize_t nsiz)
+{
+    ssize_t slen, i;
+
+    if(NULL == tgt)
+        return -EINVAL;
+
+    if(NULL == number && nsiz > 0)
+        return -EINVAL;
+
+    asn_DEF_OCTET_STRING.free_struct( &asn_DEF_OCTET_STRING, tgt, 1);
+    tgt->buf = calloc( 9, 1 );
+    memset( tgt->buf, 0xFF, 8 );
+    tgt->size = 8;
+
+    if(NULL == number)
+        return 0;
+
+    slen = nsiz < 0 ? strlen(number) : nsiz;
+
+    for(i = 0; i < slen; ++i) {
+        uint8_t c;
+        /* ssize_t n = i + 1;
+        ssize_t p = 2*(n-1)+1; */
+
+        c = number[i] - '0';
+        if(c > 9) {
+            FREEMEM(tgt->buf);
+            errno = EINVAL;
+            return -1;
+        }
+
+        if(i%2) {
+            /* lower half-byte - overwrites previously written 0xF */
+            tgt->buf[i/2] = c * 16 + (tgt->buf[i/2] & 0x0F);
+        } else {
+            /* upper half-byte - always write 0xF into lower half-byte */
+            tgt->buf[i/2] &= 0xF0;
+            tgt->buf[i/2] |= c;
+        }
+    }
+    tgt->buf[8] = '\0';	/* Couldn't use memcpy(len+1)! */
+
+    return 0;
+}
+%}
 
 %typemap(in) SatelliteInfo_t * {
     AV *tempav;
@@ -306,9 +354,10 @@ typedef long Status_t;
 	}
         else
             $self->sessionID.setSessionID = calloc(1, sizeof(*($self->sessionID.setSessionID)));
+
         $self->sessionID.setSessionID->sessionId = sessionId;
         $self->sessionID.setSessionID->setId.present = SETId_PR_imsi;
-	BCD_OCTET_STRING_fromString(&$self->sessionID.setSessionID->setId.choice.imsi, imsi);
+	encode_phone_numer(&$self->sessionID.setSessionID->setId.choice.imsi, imsi, -1);
     }
 
     void setSetSessionId_to_msisdn(int sessionId, char *msisdn) {
@@ -318,9 +367,10 @@ typedef long Status_t;
 	}
         else
             $self->sessionID.setSessionID = calloc(1, sizeof(*($self->sessionID.setSessionID)));
+
         $self->sessionID.setSessionID->sessionId = sessionId;
 	$self->sessionID.setSessionID->setId.present = SETId_PR_msisdn;
-	BCD_OCTET_STRING_fromString(&$self->sessionID.setSessionID->setId.choice.msisdn, msisdn);
+	encode_phone_numer(&$self->sessionID.setSessionID->setId.choice.msisdn, msisdn, -1);
     }
 
     void copy_SetSessionId(struct ULP_PDU *src_pdu) {
@@ -410,7 +460,6 @@ typedef long Status_t;
 
         if(srcaddr)
             OCTET_STRING_fromBuf(dstaddr, srcaddr->buf, srcaddr->size);
-
 
         return;
     }
@@ -749,6 +798,15 @@ typedef long Status_t;
 
     void set_position_estimate( time_t when, long latitudeSign, long latitude, long longitude ) {
 	struct tm *gm_when;
+
+        if( latitudeSign < 0 || latitudeSign > 1 )
+            croak("latitudeSign must be 0 or 1");
+
+        if( latitude < 0 || latitude > 179 )
+            croak("latitude exceeds range (0..179)");
+
+        if( longitude < 0 || longitude > 359 )
+            croak("longitude exceeds range (0..359)");
 
         if( NULL == $self->position ) {
             $self->position = calloc(1, sizeof(*($self->position)));

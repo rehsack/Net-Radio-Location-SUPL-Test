@@ -1486,99 +1486,110 @@ SWIG_Perl_SetModule(swig_module_info *module) {
 /* -------- TYPES TABLE (BEGIN) -------- */
 
 #define SWIGTYPE_p_AccuracyOpt_t swig_types[0]
-#define SWIGTYPE_p_AssistanceData_t swig_types[1]
-#define SWIGTYPE_p_BIT_STRING_t swig_types[2]
-#define SWIGTYPE_p_CellInfo_t swig_types[3]
-#define SWIGTYPE_p_EnvironmentCharacter_t swig_types[4]
-#define SWIGTYPE_p_ExtensionContainer swig_types[5]
-#define SWIGTYPE_p_FQDN_t swig_types[6]
-#define SWIGTYPE_p_GPS_AssistData swig_types[7]
-#define SWIGTYPE_p_GPS_MeasureInfo swig_types[8]
-#define SWIGTYPE_p_IA5String_t swig_types[9]
-#define SWIGTYPE_p_IPAddress_t swig_types[10]
-#define SWIGTYPE_p_KeyIdentity2_t swig_types[11]
-#define SWIGTYPE_p_KeyIdentity3_t swig_types[12]
-#define SWIGTYPE_p_KeyIdentity4_t swig_types[13]
-#define SWIGTYPE_p_KeyIdentity_t swig_types[14]
-#define SWIGTYPE_p_LocationError swig_types[15]
-#define SWIGTYPE_p_LocationId swig_types[16]
-#define SWIGTYPE_p_LocationInfo swig_types[17]
-#define SWIGTYPE_p_MAC_t swig_types[18]
-#define SWIGTYPE_p_MeasureResponseTime_t swig_types[19]
-#define SWIGTYPE_p_MethodType swig_types[20]
-#define SWIGTYPE_p_MethodType_PR swig_types[21]
-#define SWIGTYPE_p_MethodType_t_choice swig_types[22]
-#define SWIGTYPE_p_MsgBuffer swig_types[23]
-#define SWIGTYPE_p_MsrAssistData swig_types[24]
-#define SWIGTYPE_p_MsrPosition_Req swig_types[25]
-#define SWIGTYPE_p_MsrPosition_Rsp swig_types[26]
-#define SWIGTYPE_p_MultipleSets swig_types[27]
-#define SWIGTYPE_p_NULL_t swig_types[28]
-#define SWIGTYPE_p_Notification swig_types[29]
-#define SWIGTYPE_p_OCTET_STRING_t swig_types[30]
-#define SWIGTYPE_p_OTD_MeasureInfo swig_types[31]
-#define SWIGTYPE_p_PosCapability_Req_t swig_types[32]
-#define SWIGTYPE_p_PosCapability_Rsp_t swig_types[33]
-#define SWIGTYPE_p_PosMethod_t swig_types[34]
-#define SWIGTYPE_p_PosPayLoad swig_types[35]
-#define SWIGTYPE_p_PosPayLoad_PR swig_types[36]
-#define SWIGTYPE_p_PosPayLoad_t_choice swig_types[37]
-#define SWIGTYPE_p_Position swig_types[38]
-#define SWIGTYPE_p_PositionInstruct swig_types[39]
-#define SWIGTYPE_p_PositionMethod_t swig_types[40]
-#define SWIGTYPE_p_ProtocolError swig_types[41]
-#define SWIGTYPE_p_QoP swig_types[42]
-#define SWIGTYPE_p_RRLP_Component swig_types[43]
-#define SWIGTYPE_p_RRLP_Component_PR swig_types[44]
-#define SWIGTYPE_p_RRLP_Component_t_choice swig_types[45]
-#define SWIGTYPE_p_RRLP_PDU swig_types[46]
-#define SWIGTYPE_p_ReferenceAssistData swig_types[47]
-#define SWIGTYPE_p_ReferenceIdentity swig_types[48]
-#define SWIGTYPE_p_Rel5_MsrPosition_Req_Extension swig_types[49]
-#define SWIGTYPE_p_Rel7_MsrPosition_Req_Extension swig_types[50]
-#define SWIGTYPE_p_Rel98_MsrPosition_Req_Extension swig_types[51]
-#define SWIGTYPE_p_Rel_5_MsrPosition_Rsp_Extension swig_types[52]
-#define SWIGTYPE_p_Rel_5_ProtocolError_Extension swig_types[53]
-#define SWIGTYPE_p_Rel_7_MsrPosition_Rsp_Extension swig_types[54]
-#define SWIGTYPE_p_Rel_98_MsrPosition_Rsp_Extension swig_types[55]
-#define SWIGTYPE_p_RequestedAssistData swig_types[56]
-#define SWIGTYPE_p_SETAuthKey swig_types[57]
-#define SWIGTYPE_p_SETCapabilities_t swig_types[58]
-#define SWIGTYPE_p_SETId swig_types[59]
-#define SWIGTYPE_p_SETId_PR swig_types[60]
-#define SWIGTYPE_p_SETId_t_choice swig_types[61]
-#define SWIGTYPE_p_SETNonce_t swig_types[62]
-#define SWIGTYPE_p_SLPAddress swig_types[63]
-#define SWIGTYPE_p_SLPAddress_PR swig_types[64]
-#define SWIGTYPE_p_SLPAddress_t_choice swig_types[65]
-#define SWIGTYPE_p_SPCAuthKey swig_types[66]
-#define SWIGTYPE_p_SUPLAUTHREQ swig_types[67]
-#define SWIGTYPE_p_SUPLAUTHRESP swig_types[68]
-#define SWIGTYPE_p_SUPLEND swig_types[69]
-#define SWIGTYPE_p_SUPLINIT swig_types[70]
-#define SWIGTYPE_p_SUPLPOS swig_types[71]
-#define SWIGTYPE_p_SUPLPOSINIT swig_types[72]
-#define SWIGTYPE_p_SUPLRESPONSE swig_types[73]
-#define SWIGTYPE_p_SUPLSTART swig_types[74]
-#define SWIGTYPE_p_SatelliteInfo_t swig_types[75]
-#define SWIGTYPE_p_SessionID swig_types[76]
-#define SWIGTYPE_p_SetSessionID swig_types[77]
-#define SWIGTYPE_p_SlpSessionID swig_types[78]
-#define SWIGTYPE_p_StatusCode_t swig_types[79]
-#define SWIGTYPE_p_SystemInfoAssistData swig_types[80]
-#define SWIGTYPE_p_ULP_PDU swig_types[81]
-#define SWIGTYPE_p_UlpMessage swig_types[82]
-#define SWIGTYPE_p_UlpMessage_PR swig_types[83]
-#define SWIGTYPE_p_UlpMessage_t_choice swig_types[84]
-#define SWIGTYPE_p_UseMultipleSets_t swig_types[85]
-#define SWIGTYPE_p_Velocity swig_types[86]
-#define SWIGTYPE_p_Ver_t swig_types[87]
-#define SWIGTYPE_p_Version_t swig_types[88]
-#define SWIGTYPE_p_asn_TYPE_descriptor_t swig_types[89]
-#define SWIGTYPE_p_char swig_types[90]
-#define SWIGTYPE_p_long swig_types[91]
-static swig_type_info *swig_types[93];
-static swig_module_info swig_module = {swig_types, 92, 0, 0, 0, 0};
+#define SWIGTYPE_p_AssistanceData swig_types[1]
+#define SWIGTYPE_p_AssistanceNeeded swig_types[2]
+#define SWIGTYPE_p_AssistanceSupported swig_types[3]
+#define SWIGTYPE_p_BIT_STRING_t swig_types[4]
+#define SWIGTYPE_p_CellInfo_t swig_types[5]
+#define SWIGTYPE_p_EnvironmentCharacter_t swig_types[6]
+#define SWIGTYPE_p_Ext_GeographicalInformation_t swig_types[7]
+#define SWIGTYPE_p_Extended_reference_t swig_types[8]
+#define SWIGTYPE_p_ExtensionContainer swig_types[9]
+#define SWIGTYPE_p_FQDN_t swig_types[10]
+#define SWIGTYPE_p_GANSSPositionMethods swig_types[11]
+#define SWIGTYPE_p_GPS_AssistData swig_types[12]
+#define SWIGTYPE_p_GPS_MeasureInfo swig_types[13]
+#define SWIGTYPE_p_IA5String_t swig_types[14]
+#define SWIGTYPE_p_IPAddress_t swig_types[15]
+#define SWIGTYPE_p_KeyIdentity2_t swig_types[16]
+#define SWIGTYPE_p_KeyIdentity3_t swig_types[17]
+#define SWIGTYPE_p_KeyIdentity4_t swig_types[18]
+#define SWIGTYPE_p_KeyIdentity_t swig_types[19]
+#define SWIGTYPE_p_LocationError swig_types[20]
+#define SWIGTYPE_p_LocationId swig_types[21]
+#define SWIGTYPE_p_LocationInfo swig_types[22]
+#define SWIGTYPE_p_MAC_t swig_types[23]
+#define SWIGTYPE_p_MeasureResponseTime_t swig_types[24]
+#define SWIGTYPE_p_MethodType swig_types[25]
+#define SWIGTYPE_p_MethodType_PR swig_types[26]
+#define SWIGTYPE_p_MethodType_t_choice swig_types[27]
+#define SWIGTYPE_p_MoreAssDataToBeSent_t swig_types[28]
+#define SWIGTYPE_p_MsgBuffer swig_types[29]
+#define SWIGTYPE_p_MsrAssistData swig_types[30]
+#define SWIGTYPE_p_MsrPosition_Req swig_types[31]
+#define SWIGTYPE_p_MsrPosition_Rsp swig_types[32]
+#define SWIGTYPE_p_MultipleSets swig_types[33]
+#define SWIGTYPE_p_NULL_t swig_types[34]
+#define SWIGTYPE_p_Notification swig_types[35]
+#define SWIGTYPE_p_OCTET_STRING_t swig_types[36]
+#define SWIGTYPE_p_OTD_MeasureInfo swig_types[37]
+#define SWIGTYPE_p_PosCapabilities_t swig_types[38]
+#define SWIGTYPE_p_PosCapability_Req swig_types[39]
+#define SWIGTYPE_p_PosCapability_Rsp swig_types[40]
+#define SWIGTYPE_p_PosMethod_t swig_types[41]
+#define SWIGTYPE_p_PosPayLoad swig_types[42]
+#define SWIGTYPE_p_PosPayLoad_PR swig_types[43]
+#define SWIGTYPE_p_PosPayLoad_t_choice swig_types[44]
+#define SWIGTYPE_p_Position swig_types[45]
+#define SWIGTYPE_p_PositionInstruct swig_types[46]
+#define SWIGTYPE_p_PositionMethod_t swig_types[47]
+#define SWIGTYPE_p_ProtocolError swig_types[48]
+#define SWIGTYPE_p_QoP swig_types[49]
+#define SWIGTYPE_p_RRLP_Component swig_types[50]
+#define SWIGTYPE_p_RRLP_Component_PR swig_types[51]
+#define SWIGTYPE_p_RRLP_Component_t_choice swig_types[52]
+#define SWIGTYPE_p_RRLP_PDU swig_types[53]
+#define SWIGTYPE_p_ReferenceAssistData swig_types[54]
+#define SWIGTYPE_p_ReferenceIdentity swig_types[55]
+#define SWIGTYPE_p_Rel5_AssistanceData_Extension swig_types[56]
+#define SWIGTYPE_p_Rel5_MsrPosition_Req_Extension swig_types[57]
+#define SWIGTYPE_p_Rel7_AssistanceData_Extension swig_types[58]
+#define SWIGTYPE_p_Rel7_MsrPosition_Req_Extension swig_types[59]
+#define SWIGTYPE_p_Rel98_AssistanceData_Extension swig_types[60]
+#define SWIGTYPE_p_Rel98_MsrPosition_Req_Extension swig_types[61]
+#define SWIGTYPE_p_Rel_5_MsrPosition_Rsp_Extension swig_types[62]
+#define SWIGTYPE_p_Rel_5_ProtocolError_Extension swig_types[63]
+#define SWIGTYPE_p_Rel_7_MsrPosition_Rsp_Extension swig_types[64]
+#define SWIGTYPE_p_Rel_98_MsrPosition_Rsp_Extension swig_types[65]
+#define SWIGTYPE_p_RequestedAssistData swig_types[66]
+#define SWIGTYPE_p_SETAuthKey swig_types[67]
+#define SWIGTYPE_p_SETCapabilities_t swig_types[68]
+#define SWIGTYPE_p_SETId swig_types[69]
+#define SWIGTYPE_p_SETId_PR swig_types[70]
+#define SWIGTYPE_p_SETId_t_choice swig_types[71]
+#define SWIGTYPE_p_SETNonce_t swig_types[72]
+#define SWIGTYPE_p_SLPAddress swig_types[73]
+#define SWIGTYPE_p_SLPAddress_PR swig_types[74]
+#define SWIGTYPE_p_SLPAddress_t_choice swig_types[75]
+#define SWIGTYPE_p_SPCAuthKey swig_types[76]
+#define SWIGTYPE_p_SUPLAUTHREQ swig_types[77]
+#define SWIGTYPE_p_SUPLAUTHRESP swig_types[78]
+#define SWIGTYPE_p_SUPLEND swig_types[79]
+#define SWIGTYPE_p_SUPLINIT swig_types[80]
+#define SWIGTYPE_p_SUPLPOS swig_types[81]
+#define SWIGTYPE_p_SUPLPOSINIT swig_types[82]
+#define SWIGTYPE_p_SUPLRESPONSE swig_types[83]
+#define SWIGTYPE_p_SUPLSTART swig_types[84]
+#define SWIGTYPE_p_SatelliteInfo_t swig_types[85]
+#define SWIGTYPE_p_SessionID swig_types[86]
+#define SWIGTYPE_p_SetSessionID swig_types[87]
+#define SWIGTYPE_p_SlpSessionID swig_types[88]
+#define SWIGTYPE_p_StatusCode_t swig_types[89]
+#define SWIGTYPE_p_SystemInfoAssistData swig_types[90]
+#define SWIGTYPE_p_ULP_PDU swig_types[91]
+#define SWIGTYPE_p_UlpMessage swig_types[92]
+#define SWIGTYPE_p_UlpMessage_PR swig_types[93]
+#define SWIGTYPE_p_UlpMessage_t_choice swig_types[94]
+#define SWIGTYPE_p_UseMultipleSets_t swig_types[95]
+#define SWIGTYPE_p_Velocity swig_types[96]
+#define SWIGTYPE_p_Ver_t swig_types[97]
+#define SWIGTYPE_p_Version_t swig_types[98]
+#define SWIGTYPE_p_asn_TYPE_descriptor_t swig_types[99]
+#define SWIGTYPE_p_char swig_types[100]
+#define SWIGTYPE_p_ellipsoid_point swig_types[101]
+#define SWIGTYPE_p_long swig_types[102]
+static swig_type_info *swig_types[104];
+static swig_module_info swig_module = {swig_types, 103, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -1631,6 +1642,54 @@ typedef struct _MsgBuffer
 } MsgBuffer;
 
 static MsgBuffer encode_ulp_pdu(struct ULP_PDU *pdu);
+
+
+static int
+encode_phone_numer(OCTET_STRING_t *tgt, const char *number, ssize_t nsiz)
+{
+    ssize_t slen, i;
+
+    if(NULL == tgt)
+        return -EINVAL;
+
+    if(NULL == number && nsiz > 0)
+        return -EINVAL;
+
+    asn_DEF_OCTET_STRING.free_struct( &asn_DEF_OCTET_STRING, tgt, 1);
+    tgt->buf = calloc( 9, 1 );
+    memset( tgt->buf, 0xFF, 8 );
+    tgt->size = 8;
+
+    if(NULL == number)
+        return 0;
+
+    slen = nsiz < 0 ? strlen(number) : nsiz;
+
+    for(i = 0; i < slen; ++i) {
+        uint8_t c;
+        /* ssize_t n = i + 1;
+        ssize_t p = 2*(n-1)+1; */
+
+        c = number[i] - '0';
+        if(c > 9) {
+            FREEMEM(tgt->buf);
+            errno = EINVAL;
+            return -1;
+        }
+
+        if(i%2) {
+            /* lower half-byte - overwrites previously written 0xF */
+            tgt->buf[i/2] = c * 16 + (tgt->buf[i/2] & 0x0F);
+        } else {
+            /* upper half-byte - always write 0xF into lower half-byte */
+            tgt->buf[i/2] &= 0xF0;
+            tgt->buf[i/2] |= c;
+        }
+    }
+    tgt->buf[8] = '\0';	/* Couldn't use memcpy(len+1)! */
+
+    return 0;
+}
 
 SWIGINTERN void delete_SUPLAUTHREQ(struct SUPLAUTHREQ *self){
 	asn_DEF_SUPLAUTHREQ.free_struct(&asn_DEF_SUPLAUTHREQ, self, 1);
@@ -2101,6 +2160,15 @@ SWIGINTERN void SUPLPOSINIT_set_wcdma_location_info(struct SUPLPOSINIT *self,lon
 SWIGINTERN void SUPLPOSINIT_set_position_estimate(struct SUPLPOSINIT *self,time_t when,long latitudeSign,long latitude,long longitude){
 	struct tm *gm_when;
 
+        if( latitudeSign < 0 || latitudeSign > 1 )
+            croak("latitudeSign must be 0 or 1");
+
+        if( latitude < 0 || latitude > 179 )
+            croak("latitude exceeds range (0..179)");
+
+        if( longitude < 0 || longitude > 359 )
+            croak("longitude exceeds range (0..359)");
+
         if( NULL == self->position ) {
             self->position = calloc(1, sizeof(*(self->position)));
             if( NULL == self->position )
@@ -2336,9 +2404,10 @@ SWIGINTERN void ULP_PDU_setSetSessionId_to_imsi(struct ULP_PDU *self,int session
 	}
         else
             self->sessionID.setSessionID = calloc(1, sizeof(*(self->sessionID.setSessionID)));
+
         self->sessionID.setSessionID->sessionId = sessionId;
         self->sessionID.setSessionID->setId.present = SETId_PR_imsi;
-	BCD_OCTET_STRING_fromString(&self->sessionID.setSessionID->setId.choice.imsi, imsi);
+	encode_phone_numer(&self->sessionID.setSessionID->setId.choice.imsi, imsi, -1);
     }
 SWIGINTERN void ULP_PDU_setSetSessionId_to_msisdn(struct ULP_PDU *self,int sessionId,char *msisdn){
 	if( NULL != self->sessionID.setSessionID ) {
@@ -2347,9 +2416,10 @@ SWIGINTERN void ULP_PDU_setSetSessionId_to_msisdn(struct ULP_PDU *self,int sessi
 	}
         else
             self->sessionID.setSessionID = calloc(1, sizeof(*(self->sessionID.setSessionID)));
+
         self->sessionID.setSessionID->sessionId = sessionId;
 	self->sessionID.setSessionID->setId.present = SETId_PR_msisdn;
-	BCD_OCTET_STRING_fromString(&self->sessionID.setSessionID->setId.choice.msisdn, msisdn);
+	encode_phone_numer(&self->sessionID.setSessionID->setId.choice.msisdn, msisdn, -1);
     }
 SWIGINTERN void ULP_PDU_copy_SetSessionId(struct ULP_PDU *self,struct ULP_PDU *src_pdu){
 	struct SetSessionID *src, *dst;
@@ -2438,7 +2508,6 @@ SWIGINTERN void ULP_PDU_copy_SetSessionId(struct ULP_PDU *self,struct ULP_PDU *s
 
         if(srcaddr)
             OCTET_STRING_fromBuf(dstaddr, srcaddr->buf, srcaddr->size);
-
 
         return;
     }
@@ -2586,6 +2655,169 @@ typedef union {
 } SETId_t_choice;
 
 
+
+enum {
+    posEstimate_type_ellipsoid_point = 0, // 0000
+    posEstimate_type_ellipsoid_point_with_uncertainty_circle = 1, // 0001
+    posEstimate_type_ellipsoid_point_with_uncertainty_ellipse = 3, // 0011
+    posEstimate_type_polygon = 5, // 0101
+    posEstimate_type_ellipsoid_point_with_altitude = 8, // 1000
+    posEstimate_type_ellipsoid_point_with_altitude_and_uncertainty_ellipse = 9, // 1001
+    posEstimate_type_ellipsoid_arc = 10, // 1010
+};
+
+struct ellipsoid_point {
+    enum {
+        ellipsoid_point_north = 0,
+        ellipsoid_point_south = 1
+    } sign_of_latitude;
+    unsigned int latitude;
+    unsigned int longitude;
+};
+
+#if __BYTE_ORDER == __LITTLE_ENDIAN
+#define MAKE_OCTET_TUPLE2(i1,l1,i2,l2) \
+uint8_t i2:l2; \
+uint8_t i1:l1
+#elif __BYTE_ORDER == __BIG_ENDIAN
+#define MAKE_OCTET_TUPLE2(i1,l1,i2,l2) \
+uint8_t i1:l1; \
+uint8_t i2:l2
+#else
+# error "Please fix <bits/endian.h>"
+#endif
+
+struct ellipsoid_point_shape_data {
+    MAKE_OCTET_TUPLE2(sign,1, latitude_high,7);
+    uint8_t latitude_mid;
+    uint8_t latitude_low;
+    uint8_t longitude_high;
+    uint8_t longitude_mid;
+    uint8_t longitude_low;
+};
+
+struct ellipsoid_point_shape {
+    MAKE_OCTET_TUPLE2(type,4, padding,4);
+    struct ellipsoid_point_shape_data ellipsoid_point;
+};
+
+struct ellipsoid_point_shape_with_uncertainy_circle {
+    MAKE_OCTET_TUPLE2(type,4, padding,4);
+    struct ellipsoid_point_shape_data ellipsoid_point;
+    MAKE_OCTET_TUPLE2(spare,1, uncertainty_code,7);
+};
+
+struct ellipsoid_point_shape_with_uncertainy_ellipse {
+    MAKE_OCTET_TUPLE2(type,4, padding,4);
+    struct ellipsoid_point_shape_data ellipsoid_point;
+    MAKE_OCTET_TUPLE2(spare0,1, uncertainty_semi_major,7);
+    MAKE_OCTET_TUPLE2(spare1,1, uncertainty_semi_minor,7);
+    uint8_t orientation_of_major_axis;
+    MAKE_OCTET_TUPLE2(spare2,1, confidence,7);
+};
+
+struct polygon {
+    MAKE_OCTET_TUPLE2(type,4, npoints,4);
+    struct ellipsoid_point_shape_data points[];
+};
+
+enum {
+    altitude_expresses_height = 0,
+    altitude_expresses_depth = 1
+};
+
+struct ellipsoid_point_shape_with_altitude {
+    MAKE_OCTET_TUPLE2(type,4, padding,4);
+    struct ellipsoid_point_shape_data ellipsoid_point;
+    MAKE_OCTET_TUPLE2(altitude_direction,1, altitude_high,7);
+    uint8_t altitude_low;
+};
+
+struct ellipsoid_point_shape_with_altitude_and_uncertainy_ellipse {
+    MAKE_OCTET_TUPLE2(type,4, padding,4);
+    struct ellipsoid_point_shape_data ellipsoid_point;
+    MAKE_OCTET_TUPLE2(altitude_direction,1, altitude_high,7);
+    uint8_t altitude_low;
+    MAKE_OCTET_TUPLE2(spare0,1, uncertainty_semi_major,7);
+    MAKE_OCTET_TUPLE2(spare1,1, uncertainty_semi_minor,7);
+    uint8_t orientation_of_major_axis;
+    MAKE_OCTET_TUPLE2(spare2,1, uncertainty_altitude,7);
+    MAKE_OCTET_TUPLE2(spare3,1, confidence,7);
+};
+
+struct ellipsoid_arc {
+    MAKE_OCTET_TUPLE2(type,4, padding,4);
+    struct ellipsoid_point_shape_data ellipsoid_point;
+    uint8_t inner_radius_high;
+    uint8_t inner_radius_low;
+    MAKE_OCTET_TUPLE2(spare0,1, uncertainty_radius,7);
+    uint8_t offset_angle;
+    uint8_t included_angle;
+    MAKE_OCTET_TUPLE2(space1,1, confidence,7);
+};
+
+static double
+get_fixpoint_arith_multiplier() {
+    double fpam = 1E6;
+    return fpam;
+}
+
+static void
+encode_ellipsoid_point(struct ellipsoid_point_shape_data *point, unsigned int south, unsigned int latitude, unsigned int longitude) {
+    double dtmp;
+    unsigned int utmp;
+    int itmp;
+
+    point->sign = south;
+
+    dtmp = latitude;
+    dtmp /= get_fixpoint_arith_multiplier();
+    dtmp *= (1<<23);
+    dtmp /= 90;
+    utmp = (unsigned int)dtmp;
+    point->latitude_high = (utmp >> 16) & 0x7F;
+    point->latitude_mid = (utmp >> 8) & 0xFF;
+    point->latitude_low = utmp & 0xFF;
+
+    dtmp = longitude;
+    dtmp /= get_fixpoint_arith_multiplier();
+    dtmp *= (1<<24);
+    dtmp /= 360;
+    itmp = (int)dtmp;
+    point->longitude_high = (itmp >> 16) & 0xFF;
+    point->longitude_mid = (itmp >> 8) & 0xFF;
+    point->longitude_low = itmp & 0xFF;
+}
+
+static unsigned int
+calc_uncertainty_code(unsigned int uncertainty, unsigned int C, double x) {
+    double tmp;
+    double num, denum;
+
+    tmp = uncertainty;
+    tmp /= C;
+    tmp += 1;
+    num = log(tmp);
+
+    tmp = 1 + x;
+    denum = log(tmp);
+
+    tmp = num/denum;
+    return (unsigned int)tmp;
+}
+
+static void *
+prepare_geographical_information_buf(OCTET_STRING_t *posEstimate, size_t shape_size, const char *type_for_err) {
+    asn_DEF_OCTET_STRING.free_struct(&asn_DEF_OCTET_STRING, posEstimate, 1);
+
+    posEstimate->buf = calloc( 1, shape_size );
+    if( NULL == posEstimate->buf )
+        croak("Couldn't allocate memory to encode %s", type_for_err);
+    posEstimate->size = shape_size;
+
+    return posEstimate->buf;
+}
+
 SWIGINTERN struct RRLP_PDU *new_RRLP_PDU__SWIG_0(){
 	struct RRLP_PDU *newobj;
         newobj = calloc( 1, sizeof(*newobj) );
@@ -2713,6 +2945,172 @@ typedef union {
   Accuracy_t	 msAssistedPref;
 } MethodType_t_choice;
 
+
+SWIGINTERN struct LocationInfo *new_LocationInfo__SWIG_0(long refFrame,unsigned int fixType){
+	struct LocationInfo *newobj;
+        if( refFrame < 0 || refFrame > 65535 )
+            croak("refFrame exceeds range (0..65535)");
+
+        if( fixType != FixType_twoDFix && fixType != FixType_threeDFix )
+	    croak( "fixType must be one of following values: FixType_twoDFix, FixType_threeDFix" );
+
+	newobj = calloc( 1, sizeof(*newobj) );
+	if( NULL == newobj )
+	    croak( "Can't allocate memory for new LocationInfo object" );
+
+	newobj->refFrame = refFrame;
+        newobj->fixType = fixType;
+
+        return newobj;
+    }
+SWIGINTERN struct LocationInfo *new_LocationInfo__SWIG_1(long refFrame,long gpsTOW,unsigned int fixType){
+	struct LocationInfo *newobj;
+        if( refFrame < 0 || refFrame > 65535 )
+            croak("refFrame exceeds range (0..65535)");
+
+        if( gpsTOW < 0 || gpsTOW > 14399999 )
+            croak("gpsTOW exceeds range (0..14399999)");
+
+        if( fixType != FixType_twoDFix && fixType != FixType_threeDFix )
+	    croak( "fixType must be one of following values: FixType_twoDFix, FixType_threeDFix" );
+
+	newobj = calloc( 1, sizeof(*newobj) );
+	if( NULL == newobj )
+	    croak( "Can't allocate memory for new LocationInfo object" );
+
+        newobj->gpsTOW = calloc( 1, sizeof(*newobj) );;
+	if( NULL == newobj->gpsTOW ) {
+            asn_DEF_LocationInfo.free_struct(&asn_DEF_LocationInfo, newobj, 0);
+	    croak( "Can't allocate memory for new gpsTOW object" );
+        }
+	newobj->refFrame = refFrame;
+	*(newobj->gpsTOW) = gpsTOW;
+        newobj->fixType = fixType;
+
+        return newobj;
+    }
+SWIGINTERN void delete_LocationInfo(struct LocationInfo *self){
+	asn_DEF_LocationInfo.free_struct(&asn_DEF_LocationInfo, self, 0);
+    }
+SWIGINTERN void LocationInfo_set_posEstimate__SWIG_0(struct LocationInfo *self,unsigned int south,unsigned int latitude,unsigned int longitude){
+        struct ellipsoid_point_shape *target;
+
+	target = prepare_geographical_information_buf(&self->posEstimate, sizeof(*target), "ellipsoid point");
+        target->type = posEstimate_type_ellipsoid_point;
+
+        encode_ellipsoid_point( &target->ellipsoid_point, south, latitude, longitude);
+
+        return;
+    }
+SWIGINTERN void LocationInfo_set_posEstimate__SWIG_1(struct LocationInfo *self,unsigned int south,unsigned int latitude,unsigned int longitude,unsigned int uncertainty){
+        struct ellipsoid_point_shape_with_uncertainy_circle *target;
+
+	target = prepare_geographical_information_buf(&self->posEstimate, sizeof(*target), "ellipsoid point with uncertainy circle");
+        target->type = posEstimate_type_ellipsoid_point_with_uncertainty_circle;
+
+        encode_ellipsoid_point( &target->ellipsoid_point, south, latitude, longitude);
+        // uncertainty = C((1 + x )^K − 1) .. with C = 10 and x = 0,1.
+        target->uncertainty_code = calc_uncertainty_code(uncertainty, 10, 0.1);
+
+        return;
+    }
+SWIGINTERN void LocationInfo_set_posEstimate__SWIG_2(struct LocationInfo *self,int south,unsigned int latitude,unsigned int longitude,unsigned int uncertainty_semi_major,unsigned int uncertainty_semi_minor,unsigned int orientation_of_major_axis,unsigned int confidence){
+        struct ellipsoid_point_shape_with_uncertainy_ellipse *target;
+
+	target = prepare_geographical_information_buf(&self->posEstimate, sizeof(*target), "ellipsoid point with uncertainy ellipse");
+        target->type = posEstimate_type_ellipsoid_point_with_uncertainty_ellipse;
+
+        encode_ellipsoid_point( &target->ellipsoid_point, south, latitude, longitude);
+        // uncertainty = C((1 + x )^K − 1) .. with C = 10 and x = 0,1.
+        target->uncertainty_semi_major = calc_uncertainty_code(uncertainty_semi_major, 10, 0.1);
+        target->uncertainty_semi_minor = calc_uncertainty_code(uncertainty_semi_minor, 10, 0.1);
+        target->orientation_of_major_axis = orientation_of_major_axis / 2;
+        target->confidence = confidence;
+
+        return;
+    }
+SWIGINTERN void LocationInfo_set_posEstimate__SWIG_3(struct LocationInfo *self,struct ellipsoid_point *points,unsigned int amount){
+        struct polygon *target;
+        unsigned i;
+
+	target = prepare_geographical_information_buf(&self->posEstimate, sizeof(*target) + amount * sizeof(target->points[0]), "polygon");
+        target->type = posEstimate_type_polygon;
+        target->npoints = amount;
+
+        for( i = 0; i < amount; ++i ) {
+            encode_ellipsoid_point( &target->points[i], points[i].sign_of_latitude, points[i].latitude, points[i].longitude);
+        }
+
+        return;
+    }
+SWIGINTERN void LocationInfo_set_posEstimate__SWIG_4(struct LocationInfo *self,int south,unsigned int latitude,unsigned int longitude,int depth_altitude,unsigned int altitude){
+        struct ellipsoid_point_shape_with_altitude *target;
+
+	target = prepare_geographical_information_buf(&self->posEstimate, sizeof(*target), "ellipsoid point with altitude");
+        target->type = posEstimate_type_ellipsoid_point_with_altitude;
+
+        encode_ellipsoid_point( &target->ellipsoid_point, south, latitude, longitude);
+
+        target->altitude_direction = depth_altitude;
+        target->altitude_high = (altitude >> 8) & 0x7F;
+        target->altitude_low = altitude & 0xFF;
+
+        return;
+    }
+SWIGINTERN void LocationInfo_set_posEstimate__SWIG_5(struct LocationInfo *self,int south,unsigned int latitude,unsigned int longitude,int depth_altitude,unsigned int altitude,unsigned int uncertainty_semi_major,unsigned int uncertainty_semi_minor,unsigned int orientation_of_major_axis,unsigned int uncertainty_altitude,unsigned int confidence){
+        struct ellipsoid_point_shape_with_altitude_and_uncertainy_ellipse *target;
+
+	target = prepare_geographical_information_buf(&self->posEstimate, sizeof(*target), "ellipsoid point with altitude and uncertainy ellipse");
+        target->type = posEstimate_type_ellipsoid_point_with_altitude_and_uncertainty_ellipse;
+
+        encode_ellipsoid_point( &target->ellipsoid_point, south, latitude, longitude);
+
+        target->altitude_direction = depth_altitude;
+        target->altitude_high = (altitude >> 8) & 0x7F;
+        target->altitude_low = altitude & 0xFF;
+
+        // uncertainty = C((1 + x )^K − 1) .. with C = 10 and x = 0,1.
+        target->uncertainty_semi_major = calc_uncertainty_code(uncertainty_semi_major, 10, 0.1);
+        target->uncertainty_semi_minor = calc_uncertainty_code(uncertainty_semi_minor, 10, 0.1);
+        target->orientation_of_major_axis = orientation_of_major_axis / 2;
+
+        // Uncertainty Altitude h = C((1 + x )^K − 1) .. with C = 45 and x = 0,025.
+        target->uncertainty_altitude = calc_uncertainty_code(uncertainty_altitude, 45, 0.025);
+
+        target->confidence = confidence;
+
+        return;
+    }
+SWIGINTERN void LocationInfo_set_posEstimate__SWIG_6(struct LocationInfo *self,int south,unsigned int latitude,unsigned int longitude,unsigned int inner_radius,unsigned int uncertainty_radius,unsigned int offset_angle,unsigned int included_angle,unsigned int confidence){
+        struct ellipsoid_arc *target;
+        uint16_t inner;
+
+	target = prepare_geographical_information_buf(&self->posEstimate, sizeof(*target), "ellipsoid arc");
+        target->type = posEstimate_type_ellipsoid_arc;
+
+        encode_ellipsoid_point( &target->ellipsoid_point, south, latitude, longitude);
+
+        inner = inner_radius / 5;
+        target->inner_radius_high = (inner >> 8) & 0xFF;
+        target->inner_radius_low = inner & 0xFF;
+
+        // uncertainty = C((1 + x )^K − 1) .. with C = 10 and x = 0,1.
+        target->uncertainty_radius = calc_uncertainty_code(uncertainty_radius, 10, 0.1);
+
+        target->offset_angle = offset_angle / 2;
+        target->included_angle = (included_angle + 1) / 2; // good enough ?
+
+        target->confidence = confidence;
+    }
+SWIGINTERN double LocationInfo_get_fixpoint_arith_multiplier(){
+        return get_fixpoint_arith_multiplier();
+    }
+
+SWIGINTERNINLINE SV *
+SWIG_From_double  SWIG_PERL_DECL_ARGS_1(double value)
+{
+  return sv_2mortal(newSVnv(value));
+}
 
 
 static int
@@ -3003,18 +3401,18 @@ SWIGCLASS_STATIC int _wrap_asn_DEF_SlpSessionID_get(pTHX_ SV *sv, MAGIC *SWIGUNU
 }
 
 
-SWIGCLASS_STATIC int _wrap_asn_DEF_ProtocolError_set(pTHX_ SV* sv, MAGIC * SWIGUNUSEDPARM(mg)) {
+SWIGCLASS_STATIC int _wrap_asn_DEF_AssistanceData_set(pTHX_ SV* sv, MAGIC * SWIGUNUSEDPARM(mg)) {
   MAGIC_PPERL
   {
     void *argp = 0;
     int res = SWIG_ConvertPtr(sv, &argp, SWIGTYPE_p_asn_TYPE_descriptor_t,  0 );
     if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_ArgError(res), "in variable '""asn_DEF_ProtocolError""' of type '""asn_TYPE_descriptor_t""'");
+      SWIG_exception_fail(SWIG_ArgError(res), "in variable '""asn_DEF_AssistanceData""' of type '""asn_TYPE_descriptor_t""'");
     }
     if (!argp) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in variable '""asn_DEF_ProtocolError""' of type '""asn_TYPE_descriptor_t""'");
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in variable '""asn_DEF_AssistanceData""' of type '""asn_TYPE_descriptor_t""'");
     } else {
-      asn_DEF_ProtocolError = *((asn_TYPE_descriptor_t *)(argp));
+      asn_DEF_AssistanceData = *((asn_TYPE_descriptor_t *)(argp));
     }
   }
 fail:
@@ -3022,9 +3420,61 @@ fail:
 }
 
 
-SWIGCLASS_STATIC int _wrap_asn_DEF_ProtocolError_get(pTHX_ SV *sv, MAGIC *SWIGUNUSEDPARM(mg)) {
+SWIGCLASS_STATIC int _wrap_asn_DEF_AssistanceData_get(pTHX_ SV *sv, MAGIC *SWIGUNUSEDPARM(mg)) {
   MAGIC_PPERL
-  sv_setiv(SvRV(sv), PTR2IV(&asn_DEF_ProtocolError));
+  sv_setiv(SvRV(sv), PTR2IV(&asn_DEF_AssistanceData));
+  return 1;
+}
+
+
+SWIGCLASS_STATIC int _wrap_asn_DEF_PosCapability_Req_set(pTHX_ SV* sv, MAGIC * SWIGUNUSEDPARM(mg)) {
+  MAGIC_PPERL
+  {
+    void *argp = 0;
+    int res = SWIG_ConvertPtr(sv, &argp, SWIGTYPE_p_asn_TYPE_descriptor_t,  0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in variable '""asn_DEF_PosCapability_Req""' of type '""asn_TYPE_descriptor_t""'");
+    }
+    if (!argp) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in variable '""asn_DEF_PosCapability_Req""' of type '""asn_TYPE_descriptor_t""'");
+    } else {
+      asn_DEF_PosCapability_Req = *((asn_TYPE_descriptor_t *)(argp));
+    }
+  }
+fail:
+  return 1;
+}
+
+
+SWIGCLASS_STATIC int _wrap_asn_DEF_PosCapability_Req_get(pTHX_ SV *sv, MAGIC *SWIGUNUSEDPARM(mg)) {
+  MAGIC_PPERL
+  sv_setiv(SvRV(sv), PTR2IV(&asn_DEF_PosCapability_Req));
+  return 1;
+}
+
+
+SWIGCLASS_STATIC int _wrap_asn_DEF_PosCapability_Rsp_set(pTHX_ SV* sv, MAGIC * SWIGUNUSEDPARM(mg)) {
+  MAGIC_PPERL
+  {
+    void *argp = 0;
+    int res = SWIG_ConvertPtr(sv, &argp, SWIGTYPE_p_asn_TYPE_descriptor_t,  0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in variable '""asn_DEF_PosCapability_Rsp""' of type '""asn_TYPE_descriptor_t""'");
+    }
+    if (!argp) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in variable '""asn_DEF_PosCapability_Rsp""' of type '""asn_TYPE_descriptor_t""'");
+    } else {
+      asn_DEF_PosCapability_Rsp = *((asn_TYPE_descriptor_t *)(argp));
+    }
+  }
+fail:
+  return 1;
+}
+
+
+SWIGCLASS_STATIC int _wrap_asn_DEF_PosCapability_Rsp_get(pTHX_ SV *sv, MAGIC *SWIGUNUSEDPARM(mg)) {
+  MAGIC_PPERL
+  sv_setiv(SvRV(sv), PTR2IV(&asn_DEF_PosCapability_Rsp));
   return 1;
 }
 
@@ -10817,10 +11267,10 @@ XS(_wrap_RRLP_Component_t_choice_msrPositionRsp_get) {
 XS(_wrap_RRLP_Component_t_choice_assistanceData_set) {
   {
     RRLP_Component_t_choice *arg1 = (RRLP_Component_t_choice *) 0 ;
-    AssistanceData_t arg2 ;
+    AssistanceData_t *arg2 = (AssistanceData_t *) 0 ;
     void *argp1 = 0 ;
     int res1 = 0 ;
-    void *argp2 ;
+    void *argp2 = 0 ;
     int res2 = 0 ;
     int argvi = 0;
     dXSARGS;
@@ -10833,22 +11283,18 @@ XS(_wrap_RRLP_Component_t_choice_assistanceData_set) {
       SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "RRLP_Component_t_choice_assistanceData_set" "', argument " "1"" of type '" "RRLP_Component_t_choice *""'"); 
     }
     arg1 = (RRLP_Component_t_choice *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_AssistanceData_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "RRLP_Component_t_choice_assistanceData_set" "', argument " "2"" of type '" "AssistanceData_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "RRLP_Component_t_choice_assistanceData_set" "', argument " "2"" of type '" "AssistanceData_t""'");
-      } else {
-        arg2 = *((AssistanceData_t *)(argp2));
-      }
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_AssistanceData, 0 |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "RRLP_Component_t_choice_assistanceData_set" "', argument " "2"" of type '" "AssistanceData_t *""'"); 
     }
-    if (arg1) (arg1)->assistanceData = arg2;
+    arg2 = (AssistanceData_t *)(argp2);
+    if (arg1) (arg1)->assistanceData = *arg2;
     ST(argvi) = sv_newmortal();
+    
     
     XSRETURN(argvi);
   fail:
+    
     
     SWIG_croak_null();
   }
@@ -10861,7 +11307,7 @@ XS(_wrap_RRLP_Component_t_choice_assistanceData_get) {
     void *argp1 = 0 ;
     int res1 = 0 ;
     int argvi = 0;
-    AssistanceData_t result;
+    AssistanceData_t *result = 0 ;
     dXSARGS;
     
     if ((items < 1) || (items > 1)) {
@@ -10872,8 +11318,8 @@ XS(_wrap_RRLP_Component_t_choice_assistanceData_get) {
       SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "RRLP_Component_t_choice_assistanceData_get" "', argument " "1"" of type '" "RRLP_Component_t_choice *""'"); 
     }
     arg1 = (RRLP_Component_t_choice *)(argp1);
-    result =  ((arg1)->assistanceData);
-    ST(argvi) = SWIG_NewPointerObj((AssistanceData_t *)memcpy((AssistanceData_t *)malloc(sizeof(AssistanceData_t)),&result,sizeof(AssistanceData_t)), SWIGTYPE_p_AssistanceData_t, SWIG_POINTER_OWN | 0); argvi++ ;
+    result = (AssistanceData_t *)& ((arg1)->assistanceData);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_AssistanceData, 0 | SWIG_SHADOW); argvi++ ;
     
     XSRETURN(argvi);
   fail:
@@ -11020,10 +11466,10 @@ XS(_wrap_RRLP_Component_t_choice_protocolError_get) {
 XS(_wrap_RRLP_Component_t_choice_posCapabilityReq_set) {
   {
     RRLP_Component_t_choice *arg1 = (RRLP_Component_t_choice *) 0 ;
-    PosCapability_Req_t arg2 ;
+    PosCapability_Req_t *arg2 = (PosCapability_Req_t *) 0 ;
     void *argp1 = 0 ;
     int res1 = 0 ;
-    void *argp2 ;
+    void *argp2 = 0 ;
     int res2 = 0 ;
     int argvi = 0;
     dXSARGS;
@@ -11036,22 +11482,18 @@ XS(_wrap_RRLP_Component_t_choice_posCapabilityReq_set) {
       SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "RRLP_Component_t_choice_posCapabilityReq_set" "', argument " "1"" of type '" "RRLP_Component_t_choice *""'"); 
     }
     arg1 = (RRLP_Component_t_choice *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_PosCapability_Req_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "RRLP_Component_t_choice_posCapabilityReq_set" "', argument " "2"" of type '" "PosCapability_Req_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "RRLP_Component_t_choice_posCapabilityReq_set" "', argument " "2"" of type '" "PosCapability_Req_t""'");
-      } else {
-        arg2 = *((PosCapability_Req_t *)(argp2));
-      }
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_PosCapability_Req, 0 |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "RRLP_Component_t_choice_posCapabilityReq_set" "', argument " "2"" of type '" "PosCapability_Req_t *""'"); 
     }
-    if (arg1) (arg1)->posCapabilityReq = arg2;
+    arg2 = (PosCapability_Req_t *)(argp2);
+    if (arg1) (arg1)->posCapabilityReq = *arg2;
     ST(argvi) = sv_newmortal();
+    
     
     XSRETURN(argvi);
   fail:
+    
     
     SWIG_croak_null();
   }
@@ -11064,7 +11506,7 @@ XS(_wrap_RRLP_Component_t_choice_posCapabilityReq_get) {
     void *argp1 = 0 ;
     int res1 = 0 ;
     int argvi = 0;
-    PosCapability_Req_t result;
+    PosCapability_Req_t *result = 0 ;
     dXSARGS;
     
     if ((items < 1) || (items > 1)) {
@@ -11075,8 +11517,8 @@ XS(_wrap_RRLP_Component_t_choice_posCapabilityReq_get) {
       SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "RRLP_Component_t_choice_posCapabilityReq_get" "', argument " "1"" of type '" "RRLP_Component_t_choice *""'"); 
     }
     arg1 = (RRLP_Component_t_choice *)(argp1);
-    result =  ((arg1)->posCapabilityReq);
-    ST(argvi) = SWIG_NewPointerObj((PosCapability_Req_t *)memcpy((PosCapability_Req_t *)malloc(sizeof(PosCapability_Req_t)),&result,sizeof(PosCapability_Req_t)), SWIGTYPE_p_PosCapability_Req_t, SWIG_POINTER_OWN | 0); argvi++ ;
+    result = (PosCapability_Req_t *)& ((arg1)->posCapabilityReq);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_PosCapability_Req, 0 | SWIG_SHADOW); argvi++ ;
     
     XSRETURN(argvi);
   fail:
@@ -11089,10 +11531,10 @@ XS(_wrap_RRLP_Component_t_choice_posCapabilityReq_get) {
 XS(_wrap_RRLP_Component_t_choice_posCapabilityRsp_set) {
   {
     RRLP_Component_t_choice *arg1 = (RRLP_Component_t_choice *) 0 ;
-    PosCapability_Rsp_t arg2 ;
+    PosCapability_Rsp_t *arg2 = (PosCapability_Rsp_t *) 0 ;
     void *argp1 = 0 ;
     int res1 = 0 ;
-    void *argp2 ;
+    void *argp2 = 0 ;
     int res2 = 0 ;
     int argvi = 0;
     dXSARGS;
@@ -11105,22 +11547,18 @@ XS(_wrap_RRLP_Component_t_choice_posCapabilityRsp_set) {
       SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "RRLP_Component_t_choice_posCapabilityRsp_set" "', argument " "1"" of type '" "RRLP_Component_t_choice *""'"); 
     }
     arg1 = (RRLP_Component_t_choice *)(argp1);
-    {
-      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_PosCapability_Rsp_t,  0 );
-      if (!SWIG_IsOK(res2)) {
-        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "RRLP_Component_t_choice_posCapabilityRsp_set" "', argument " "2"" of type '" "PosCapability_Rsp_t""'"); 
-      }  
-      if (!argp2) {
-        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "RRLP_Component_t_choice_posCapabilityRsp_set" "', argument " "2"" of type '" "PosCapability_Rsp_t""'");
-      } else {
-        arg2 = *((PosCapability_Rsp_t *)(argp2));
-      }
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_PosCapability_Rsp, 0 |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "RRLP_Component_t_choice_posCapabilityRsp_set" "', argument " "2"" of type '" "PosCapability_Rsp_t *""'"); 
     }
-    if (arg1) (arg1)->posCapabilityRsp = arg2;
+    arg2 = (PosCapability_Rsp_t *)(argp2);
+    if (arg1) (arg1)->posCapabilityRsp = *arg2;
     ST(argvi) = sv_newmortal();
+    
     
     XSRETURN(argvi);
   fail:
+    
     
     SWIG_croak_null();
   }
@@ -11133,7 +11571,7 @@ XS(_wrap_RRLP_Component_t_choice_posCapabilityRsp_get) {
     void *argp1 = 0 ;
     int res1 = 0 ;
     int argvi = 0;
-    PosCapability_Rsp_t result;
+    PosCapability_Rsp_t *result = 0 ;
     dXSARGS;
     
     if ((items < 1) || (items > 1)) {
@@ -11144,8 +11582,8 @@ XS(_wrap_RRLP_Component_t_choice_posCapabilityRsp_get) {
       SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "RRLP_Component_t_choice_posCapabilityRsp_get" "', argument " "1"" of type '" "RRLP_Component_t_choice *""'"); 
     }
     arg1 = (RRLP_Component_t_choice *)(argp1);
-    result =  ((arg1)->posCapabilityRsp);
-    ST(argvi) = SWIG_NewPointerObj((PosCapability_Rsp_t *)memcpy((PosCapability_Rsp_t *)malloc(sizeof(PosCapability_Rsp_t)),&result,sizeof(PosCapability_Rsp_t)), SWIGTYPE_p_PosCapability_Rsp_t, SWIG_POINTER_OWN | 0); argvi++ ;
+    result = (PosCapability_Rsp_t *)& ((arg1)->posCapabilityRsp);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_PosCapability_Rsp, 0 | SWIG_SHADOW); argvi++ ;
     
     XSRETURN(argvi);
   fail:
@@ -12080,7 +12518,7 @@ XS(_wrap_MsrPosition_Rsp_t_locationInfo_get) {
     }
     arg1 = (struct MsrPosition_Rsp *)(argp1);
     result = (struct LocationInfo *) ((arg1)->locationInfo);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LocationInfo, 0 | 0); argvi++ ;
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LocationInfo, 0 | SWIG_SHADOW); argvi++ ;
     
     XSRETURN(argvi);
   fail:
@@ -13608,6 +14046,2895 @@ XS(_wrap_delete_ProtocolError_t) {
 }
 
 
+XS(_wrap_LocationInfo_t_refFrame_set) {
+  {
+    struct LocationInfo *arg1 = (struct LocationInfo *) 0 ;
+    long arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    long val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: LocationInfo_t_refFrame_set(self,refFrame);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_LocationInfo, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LocationInfo_t_refFrame_set" "', argument " "1"" of type '" "struct LocationInfo *""'"); 
+    }
+    arg1 = (struct LocationInfo *)(argp1);
+    ecode2 = SWIG_AsVal_long SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "LocationInfo_t_refFrame_set" "', argument " "2"" of type '" "long""'");
+    } 
+    arg2 = (long)(val2);
+    if (arg1) (arg1)->refFrame = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_LocationInfo_t_refFrame_get) {
+  {
+    struct LocationInfo *arg1 = (struct LocationInfo *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    long result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: LocationInfo_t_refFrame_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_LocationInfo, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LocationInfo_t_refFrame_get" "', argument " "1"" of type '" "struct LocationInfo *""'"); 
+    }
+    arg1 = (struct LocationInfo *)(argp1);
+    result = (long) ((arg1)->refFrame);
+    ST(argvi) = SWIG_From_long  SWIG_PERL_CALL_ARGS_1((long)(result)); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_LocationInfo_t_gpsTOW_set) {
+  {
+    struct LocationInfo *arg1 = (struct LocationInfo *) 0 ;
+    long *arg2 = (long *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: LocationInfo_t_gpsTOW_set(self,gpsTOW);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_LocationInfo, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LocationInfo_t_gpsTOW_set" "', argument " "1"" of type '" "struct LocationInfo *""'"); 
+    }
+    arg1 = (struct LocationInfo *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_long, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "LocationInfo_t_gpsTOW_set" "', argument " "2"" of type '" "long *""'"); 
+    }
+    arg2 = (long *)(argp2);
+    if (arg1) (arg1)->gpsTOW = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_LocationInfo_t_gpsTOW_get) {
+  {
+    struct LocationInfo *arg1 = (struct LocationInfo *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    long *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: LocationInfo_t_gpsTOW_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_LocationInfo, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LocationInfo_t_gpsTOW_get" "', argument " "1"" of type '" "struct LocationInfo *""'"); 
+    }
+    arg1 = (struct LocationInfo *)(argp1);
+    result = (long *) ((arg1)->gpsTOW);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_long, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_LocationInfo_t_fixType_set) {
+  {
+    struct LocationInfo *arg1 = (struct LocationInfo *) 0 ;
+    FixType_t arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    long val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: LocationInfo_t_fixType_set(self,fixType);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_LocationInfo, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LocationInfo_t_fixType_set" "', argument " "1"" of type '" "struct LocationInfo *""'"); 
+    }
+    arg1 = (struct LocationInfo *)(argp1);
+    ecode2 = SWIG_AsVal_long SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "LocationInfo_t_fixType_set" "', argument " "2"" of type '" "FixType_t""'");
+    } 
+    arg2 = (FixType_t)(val2);
+    if (arg1) (arg1)->fixType = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_LocationInfo_t_fixType_get) {
+  {
+    struct LocationInfo *arg1 = (struct LocationInfo *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    FixType_t result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: LocationInfo_t_fixType_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_LocationInfo, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LocationInfo_t_fixType_get" "', argument " "1"" of type '" "struct LocationInfo *""'"); 
+    }
+    arg1 = (struct LocationInfo *)(argp1);
+    result = (FixType_t) ((arg1)->fixType);
+    ST(argvi) = SWIG_From_long  SWIG_PERL_CALL_ARGS_1((long)(result)); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_LocationInfo_t_posEstimate_set) {
+  {
+    struct LocationInfo *arg1 = (struct LocationInfo *) 0 ;
+    Ext_GeographicalInformation_t arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    {
+      memset(&arg2, 0, sizeof(arg2));
+    }
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: LocationInfo_t_posEstimate_set(self,posEstimate);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_LocationInfo, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LocationInfo_t_posEstimate_set" "', argument " "1"" of type '" "struct LocationInfo *""'"); 
+    }
+    arg1 = (struct LocationInfo *)(argp1);
+    {
+      if( 0 == (SvFLAGS(ST(1)) & (SVf_OK & ~SVf_ROK)) )
+      croak("Argument 2 is not a string.");
+      OCTET_STRING_fromBuf((OCTET_STRING_t *)(&arg2), SvPV_nolen(ST(1)), SvCUR(ST(1)));
+    }
+    if (arg1) (arg1)->posEstimate = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_LocationInfo_t_posEstimate_get) {
+  {
+    struct LocationInfo *arg1 = (struct LocationInfo *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    Ext_GeographicalInformation_t result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: LocationInfo_t_posEstimate_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_LocationInfo, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LocationInfo_t_posEstimate_get" "', argument " "1"" of type '" "struct LocationInfo *""'"); 
+    }
+    arg1 = (struct LocationInfo *)(argp1);
+    result =  ((arg1)->posEstimate);
+    {
+      if (argvi >= items) {
+        EXTEND(sp,1); /* Extend the stack by 1 object */
+      }
+      ST(argvi) = sv_newmortal();
+      sv_setpvn(ST(argvi), (char *)((&result)->buf), (&result)->size);
+      
+      ++argvi; /* intentional - not portable between languages */
+    }
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_LocationInfo_t__SWIG_0) {
+  {
+    long arg1 ;
+    unsigned int arg2 ;
+    long val1 ;
+    int ecode1 = 0 ;
+    unsigned int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    struct LocationInfo *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: new_LocationInfo_t(refFrame,fixType);");
+    }
+    ecode1 = SWIG_AsVal_long SWIG_PERL_CALL_ARGS_2(ST(0), &val1);
+    if (!SWIG_IsOK(ecode1)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "new_LocationInfo_t" "', argument " "1"" of type '" "long""'");
+    } 
+    arg1 = (long)(val1);
+    ecode2 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "new_LocationInfo_t" "', argument " "2"" of type '" "unsigned int""'");
+    } 
+    arg2 = (unsigned int)(val2);
+    result = (struct LocationInfo *)new_LocationInfo__SWIG_0(arg1,arg2);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LocationInfo, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_LocationInfo_t__SWIG_1) {
+  {
+    long arg1 ;
+    long arg2 ;
+    unsigned int arg3 ;
+    long val1 ;
+    int ecode1 = 0 ;
+    long val2 ;
+    int ecode2 = 0 ;
+    unsigned int val3 ;
+    int ecode3 = 0 ;
+    int argvi = 0;
+    struct LocationInfo *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 3) || (items > 3)) {
+      SWIG_croak("Usage: new_LocationInfo_t(refFrame,gpsTOW,fixType);");
+    }
+    ecode1 = SWIG_AsVal_long SWIG_PERL_CALL_ARGS_2(ST(0), &val1);
+    if (!SWIG_IsOK(ecode1)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "new_LocationInfo_t" "', argument " "1"" of type '" "long""'");
+    } 
+    arg1 = (long)(val1);
+    ecode2 = SWIG_AsVal_long SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "new_LocationInfo_t" "', argument " "2"" of type '" "long""'");
+    } 
+    arg2 = (long)(val2);
+    ecode3 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(2), &val3);
+    if (!SWIG_IsOK(ecode3)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "new_LocationInfo_t" "', argument " "3"" of type '" "unsigned int""'");
+    } 
+    arg3 = (unsigned int)(val3);
+    result = (struct LocationInfo *)new_LocationInfo__SWIG_1(arg1,arg2,arg3);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_LocationInfo, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_LocationInfo_t) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        {
+          int res = SWIG_AsVal_long SWIG_PERL_CALL_ARGS_2(ST(0), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 3) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        {
+          int res = SWIG_AsVal_long SWIG_PERL_CALL_ARGS_2(ST(0), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_long SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(2), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      PUSHMARK(MARK); SWIG_CALLXS(_wrap_new_LocationInfo_t__SWIG_0); return;
+    case 2:
+      PUSHMARK(MARK); SWIG_CALLXS(_wrap_new_LocationInfo_t__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'new_LocationInfo_t'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_delete_LocationInfo_t) {
+  {
+    struct LocationInfo *arg1 = (struct LocationInfo *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: delete_LocationInfo_t(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_LocationInfo, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_LocationInfo_t" "', argument " "1"" of type '" "struct LocationInfo *""'"); 
+    }
+    arg1 = (struct LocationInfo *)(argp1);
+    delete_LocationInfo(arg1);
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_LocationInfo_t_set_posEstimate__SWIG_0) {
+  {
+    struct LocationInfo *arg1 = (struct LocationInfo *) 0 ;
+    unsigned int arg2 ;
+    unsigned int arg3 ;
+    unsigned int arg4 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    unsigned int val2 ;
+    int ecode2 = 0 ;
+    unsigned int val3 ;
+    int ecode3 = 0 ;
+    unsigned int val4 ;
+    int ecode4 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 4) || (items > 4)) {
+      SWIG_croak("Usage: LocationInfo_t_set_posEstimate(self,south,latitude,longitude);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_LocationInfo, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "1"" of type '" "struct LocationInfo *""'"); 
+    }
+    arg1 = (struct LocationInfo *)(argp1);
+    ecode2 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "2"" of type '" "unsigned int""'");
+    } 
+    arg2 = (unsigned int)(val2);
+    ecode3 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(2), &val3);
+    if (!SWIG_IsOK(ecode3)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "3"" of type '" "unsigned int""'");
+    } 
+    arg3 = (unsigned int)(val3);
+    ecode4 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(3), &val4);
+    if (!SWIG_IsOK(ecode4)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "4"" of type '" "unsigned int""'");
+    } 
+    arg4 = (unsigned int)(val4);
+    LocationInfo_set_posEstimate__SWIG_0(arg1,arg2,arg3,arg4);
+    ST(argvi) = sv_newmortal();
+    
+    
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_LocationInfo_t_set_posEstimate__SWIG_1) {
+  {
+    struct LocationInfo *arg1 = (struct LocationInfo *) 0 ;
+    unsigned int arg2 ;
+    unsigned int arg3 ;
+    unsigned int arg4 ;
+    unsigned int arg5 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    unsigned int val2 ;
+    int ecode2 = 0 ;
+    unsigned int val3 ;
+    int ecode3 = 0 ;
+    unsigned int val4 ;
+    int ecode4 = 0 ;
+    unsigned int val5 ;
+    int ecode5 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 5) || (items > 5)) {
+      SWIG_croak("Usage: LocationInfo_t_set_posEstimate(self,south,latitude,longitude,uncertainty);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_LocationInfo, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "1"" of type '" "struct LocationInfo *""'"); 
+    }
+    arg1 = (struct LocationInfo *)(argp1);
+    ecode2 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "2"" of type '" "unsigned int""'");
+    } 
+    arg2 = (unsigned int)(val2);
+    ecode3 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(2), &val3);
+    if (!SWIG_IsOK(ecode3)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "3"" of type '" "unsigned int""'");
+    } 
+    arg3 = (unsigned int)(val3);
+    ecode4 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(3), &val4);
+    if (!SWIG_IsOK(ecode4)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "4"" of type '" "unsigned int""'");
+    } 
+    arg4 = (unsigned int)(val4);
+    ecode5 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(4), &val5);
+    if (!SWIG_IsOK(ecode5)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "5"" of type '" "unsigned int""'");
+    } 
+    arg5 = (unsigned int)(val5);
+    LocationInfo_set_posEstimate__SWIG_1(arg1,arg2,arg3,arg4,arg5);
+    ST(argvi) = sv_newmortal();
+    
+    
+    
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_LocationInfo_t_set_posEstimate__SWIG_2) {
+  {
+    struct LocationInfo *arg1 = (struct LocationInfo *) 0 ;
+    int arg2 ;
+    unsigned int arg3 ;
+    unsigned int arg4 ;
+    unsigned int arg5 ;
+    unsigned int arg6 ;
+    unsigned int arg7 ;
+    unsigned int arg8 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int val2 ;
+    int ecode2 = 0 ;
+    unsigned int val3 ;
+    int ecode3 = 0 ;
+    unsigned int val4 ;
+    int ecode4 = 0 ;
+    unsigned int val5 ;
+    int ecode5 = 0 ;
+    unsigned int val6 ;
+    int ecode6 = 0 ;
+    unsigned int val7 ;
+    int ecode7 = 0 ;
+    unsigned int val8 ;
+    int ecode8 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 8) || (items > 8)) {
+      SWIG_croak("Usage: LocationInfo_t_set_posEstimate(self,south,latitude,longitude,uncertainty_semi_major,uncertainty_semi_minor,orientation_of_major_axis,confidence);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_LocationInfo, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "1"" of type '" "struct LocationInfo *""'"); 
+    }
+    arg1 = (struct LocationInfo *)(argp1);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "2"" of type '" "int""'");
+    } 
+    arg2 = (int)(val2);
+    ecode3 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(2), &val3);
+    if (!SWIG_IsOK(ecode3)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "3"" of type '" "unsigned int""'");
+    } 
+    arg3 = (unsigned int)(val3);
+    ecode4 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(3), &val4);
+    if (!SWIG_IsOK(ecode4)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "4"" of type '" "unsigned int""'");
+    } 
+    arg4 = (unsigned int)(val4);
+    ecode5 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(4), &val5);
+    if (!SWIG_IsOK(ecode5)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "5"" of type '" "unsigned int""'");
+    } 
+    arg5 = (unsigned int)(val5);
+    ecode6 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(5), &val6);
+    if (!SWIG_IsOK(ecode6)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "6"" of type '" "unsigned int""'");
+    } 
+    arg6 = (unsigned int)(val6);
+    ecode7 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(6), &val7);
+    if (!SWIG_IsOK(ecode7)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode7), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "7"" of type '" "unsigned int""'");
+    } 
+    arg7 = (unsigned int)(val7);
+    ecode8 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(7), &val8);
+    if (!SWIG_IsOK(ecode8)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode8), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "8"" of type '" "unsigned int""'");
+    } 
+    arg8 = (unsigned int)(val8);
+    LocationInfo_set_posEstimate__SWIG_2(arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8);
+    ST(argvi) = sv_newmortal();
+    
+    
+    
+    
+    
+    
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    
+    
+    
+    
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_LocationInfo_t_set_posEstimate__SWIG_3) {
+  {
+    struct LocationInfo *arg1 = (struct LocationInfo *) 0 ;
+    struct ellipsoid_point *arg2 = (struct ellipsoid_point *) 0 ;
+    unsigned int arg3 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    unsigned int val3 ;
+    int ecode3 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 3) || (items > 3)) {
+      SWIG_croak("Usage: LocationInfo_t_set_posEstimate(self,points,amount);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_LocationInfo, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "1"" of type '" "struct LocationInfo *""'"); 
+    }
+    arg1 = (struct LocationInfo *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_ellipsoid_point, 0 |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "2"" of type '" "struct ellipsoid_point *""'"); 
+    }
+    arg2 = (struct ellipsoid_point *)(argp2);
+    ecode3 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(2), &val3);
+    if (!SWIG_IsOK(ecode3)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "3"" of type '" "unsigned int""'");
+    } 
+    arg3 = (unsigned int)(val3);
+    LocationInfo_set_posEstimate__SWIG_3(arg1,arg2,arg3);
+    ST(argvi) = sv_newmortal();
+    
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_LocationInfo_t_set_posEstimate__SWIG_4) {
+  {
+    struct LocationInfo *arg1 = (struct LocationInfo *) 0 ;
+    int arg2 ;
+    unsigned int arg3 ;
+    unsigned int arg4 ;
+    int arg5 ;
+    unsigned int arg6 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int val2 ;
+    int ecode2 = 0 ;
+    unsigned int val3 ;
+    int ecode3 = 0 ;
+    unsigned int val4 ;
+    int ecode4 = 0 ;
+    int val5 ;
+    int ecode5 = 0 ;
+    unsigned int val6 ;
+    int ecode6 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 6) || (items > 6)) {
+      SWIG_croak("Usage: LocationInfo_t_set_posEstimate(self,south,latitude,longitude,depth_altitude,altitude);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_LocationInfo, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "1"" of type '" "struct LocationInfo *""'"); 
+    }
+    arg1 = (struct LocationInfo *)(argp1);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "2"" of type '" "int""'");
+    } 
+    arg2 = (int)(val2);
+    ecode3 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(2), &val3);
+    if (!SWIG_IsOK(ecode3)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "3"" of type '" "unsigned int""'");
+    } 
+    arg3 = (unsigned int)(val3);
+    ecode4 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(3), &val4);
+    if (!SWIG_IsOK(ecode4)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "4"" of type '" "unsigned int""'");
+    } 
+    arg4 = (unsigned int)(val4);
+    ecode5 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(4), &val5);
+    if (!SWIG_IsOK(ecode5)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "5"" of type '" "int""'");
+    } 
+    arg5 = (int)(val5);
+    ecode6 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(5), &val6);
+    if (!SWIG_IsOK(ecode6)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "6"" of type '" "unsigned int""'");
+    } 
+    arg6 = (unsigned int)(val6);
+    LocationInfo_set_posEstimate__SWIG_4(arg1,arg2,arg3,arg4,arg5,arg6);
+    ST(argvi) = sv_newmortal();
+    
+    
+    
+    
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    
+    
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_LocationInfo_t_set_posEstimate__SWIG_5) {
+  {
+    struct LocationInfo *arg1 = (struct LocationInfo *) 0 ;
+    int arg2 ;
+    unsigned int arg3 ;
+    unsigned int arg4 ;
+    int arg5 ;
+    unsigned int arg6 ;
+    unsigned int arg7 ;
+    unsigned int arg8 ;
+    unsigned int arg9 ;
+    unsigned int arg10 ;
+    unsigned int arg11 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int val2 ;
+    int ecode2 = 0 ;
+    unsigned int val3 ;
+    int ecode3 = 0 ;
+    unsigned int val4 ;
+    int ecode4 = 0 ;
+    int val5 ;
+    int ecode5 = 0 ;
+    unsigned int val6 ;
+    int ecode6 = 0 ;
+    unsigned int val7 ;
+    int ecode7 = 0 ;
+    unsigned int val8 ;
+    int ecode8 = 0 ;
+    unsigned int val9 ;
+    int ecode9 = 0 ;
+    unsigned int val10 ;
+    int ecode10 = 0 ;
+    unsigned int val11 ;
+    int ecode11 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 11) || (items > 11)) {
+      SWIG_croak("Usage: LocationInfo_t_set_posEstimate(self,south,latitude,longitude,depth_altitude,altitude,uncertainty_semi_major,uncertainty_semi_minor,orientation_of_major_axis,uncertainty_altitude,confidence);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_LocationInfo, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "1"" of type '" "struct LocationInfo *""'"); 
+    }
+    arg1 = (struct LocationInfo *)(argp1);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "2"" of type '" "int""'");
+    } 
+    arg2 = (int)(val2);
+    ecode3 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(2), &val3);
+    if (!SWIG_IsOK(ecode3)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "3"" of type '" "unsigned int""'");
+    } 
+    arg3 = (unsigned int)(val3);
+    ecode4 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(3), &val4);
+    if (!SWIG_IsOK(ecode4)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "4"" of type '" "unsigned int""'");
+    } 
+    arg4 = (unsigned int)(val4);
+    ecode5 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(4), &val5);
+    if (!SWIG_IsOK(ecode5)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "5"" of type '" "int""'");
+    } 
+    arg5 = (int)(val5);
+    ecode6 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(5), &val6);
+    if (!SWIG_IsOK(ecode6)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "6"" of type '" "unsigned int""'");
+    } 
+    arg6 = (unsigned int)(val6);
+    ecode7 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(6), &val7);
+    if (!SWIG_IsOK(ecode7)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode7), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "7"" of type '" "unsigned int""'");
+    } 
+    arg7 = (unsigned int)(val7);
+    ecode8 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(7), &val8);
+    if (!SWIG_IsOK(ecode8)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode8), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "8"" of type '" "unsigned int""'");
+    } 
+    arg8 = (unsigned int)(val8);
+    ecode9 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(8), &val9);
+    if (!SWIG_IsOK(ecode9)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode9), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "9"" of type '" "unsigned int""'");
+    } 
+    arg9 = (unsigned int)(val9);
+    ecode10 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(9), &val10);
+    if (!SWIG_IsOK(ecode10)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode10), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "10"" of type '" "unsigned int""'");
+    } 
+    arg10 = (unsigned int)(val10);
+    ecode11 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(10), &val11);
+    if (!SWIG_IsOK(ecode11)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode11), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "11"" of type '" "unsigned int""'");
+    } 
+    arg11 = (unsigned int)(val11);
+    LocationInfo_set_posEstimate__SWIG_5(arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9,arg10,arg11);
+    ST(argvi) = sv_newmortal();
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_LocationInfo_t_set_posEstimate__SWIG_6) {
+  {
+    struct LocationInfo *arg1 = (struct LocationInfo *) 0 ;
+    int arg2 ;
+    unsigned int arg3 ;
+    unsigned int arg4 ;
+    unsigned int arg5 ;
+    unsigned int arg6 ;
+    unsigned int arg7 ;
+    unsigned int arg8 ;
+    unsigned int arg9 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int val2 ;
+    int ecode2 = 0 ;
+    unsigned int val3 ;
+    int ecode3 = 0 ;
+    unsigned int val4 ;
+    int ecode4 = 0 ;
+    unsigned int val5 ;
+    int ecode5 = 0 ;
+    unsigned int val6 ;
+    int ecode6 = 0 ;
+    unsigned int val7 ;
+    int ecode7 = 0 ;
+    unsigned int val8 ;
+    int ecode8 = 0 ;
+    unsigned int val9 ;
+    int ecode9 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 9) || (items > 9)) {
+      SWIG_croak("Usage: LocationInfo_t_set_posEstimate(self,south,latitude,longitude,inner_radius,uncertainty_radius,offset_angle,included_angle,confidence);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_LocationInfo, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "1"" of type '" "struct LocationInfo *""'"); 
+    }
+    arg1 = (struct LocationInfo *)(argp1);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "2"" of type '" "int""'");
+    } 
+    arg2 = (int)(val2);
+    ecode3 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(2), &val3);
+    if (!SWIG_IsOK(ecode3)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "3"" of type '" "unsigned int""'");
+    } 
+    arg3 = (unsigned int)(val3);
+    ecode4 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(3), &val4);
+    if (!SWIG_IsOK(ecode4)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "4"" of type '" "unsigned int""'");
+    } 
+    arg4 = (unsigned int)(val4);
+    ecode5 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(4), &val5);
+    if (!SWIG_IsOK(ecode5)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "5"" of type '" "unsigned int""'");
+    } 
+    arg5 = (unsigned int)(val5);
+    ecode6 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(5), &val6);
+    if (!SWIG_IsOK(ecode6)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "6"" of type '" "unsigned int""'");
+    } 
+    arg6 = (unsigned int)(val6);
+    ecode7 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(6), &val7);
+    if (!SWIG_IsOK(ecode7)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode7), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "7"" of type '" "unsigned int""'");
+    } 
+    arg7 = (unsigned int)(val7);
+    ecode8 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(7), &val8);
+    if (!SWIG_IsOK(ecode8)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode8), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "8"" of type '" "unsigned int""'");
+    } 
+    arg8 = (unsigned int)(val8);
+    ecode9 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(8), &val9);
+    if (!SWIG_IsOK(ecode9)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode9), "in method '" "LocationInfo_t_set_posEstimate" "', argument " "9"" of type '" "unsigned int""'");
+    } 
+    arg9 = (unsigned int)(val9);
+    LocationInfo_set_posEstimate__SWIG_6(arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9);
+    ST(argvi) = sv_newmortal();
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_LocationInfo_t_set_posEstimate) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 3) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_LocationInfo, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(1), &vptr, SWIGTYPE_p_ellipsoid_point, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(2), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 4) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_LocationInfo, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(2), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(3), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+    if (items == 5) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_LocationInfo, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_3;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_3;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(2), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_3;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(3), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_3;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(4), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_3;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 3;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_3:
+    
+    if (items == 6) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_LocationInfo, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_4;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_4;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(2), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_4;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(3), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_4;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(4), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_4;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(5), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_4;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 4;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_4:
+    
+    if (items == 8) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_LocationInfo, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_5;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_5;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(2), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_5;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(3), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_5;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(4), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_5;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(5), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_5;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(6), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_5;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(7), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_5;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 5;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_5:
+    
+    if (items == 9) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_LocationInfo, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_6;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_6;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(2), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_6;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(3), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_6;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(4), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_6;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(5), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_6;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(6), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_6;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(7), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_6;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(8), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_6;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 6;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_6:
+    
+    if (items == 11) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_LocationInfo, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_7;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_7;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(2), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_7;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(3), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_7;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(4), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_7;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(5), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_7;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(6), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_7;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(7), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_7;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(8), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_7;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(9), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_7;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(10), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_7;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 7;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_7:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      PUSHMARK(MARK); SWIG_CALLXS(_wrap_LocationInfo_t_set_posEstimate__SWIG_3); return;
+    case 2:
+      PUSHMARK(MARK); SWIG_CALLXS(_wrap_LocationInfo_t_set_posEstimate__SWIG_0); return;
+    case 3:
+      PUSHMARK(MARK); SWIG_CALLXS(_wrap_LocationInfo_t_set_posEstimate__SWIG_1); return;
+    case 4:
+      PUSHMARK(MARK); SWIG_CALLXS(_wrap_LocationInfo_t_set_posEstimate__SWIG_4); return;
+    case 5:
+      PUSHMARK(MARK); SWIG_CALLXS(_wrap_LocationInfo_t_set_posEstimate__SWIG_2); return;
+    case 6:
+      PUSHMARK(MARK); SWIG_CALLXS(_wrap_LocationInfo_t_set_posEstimate__SWIG_6); return;
+    case 7:
+      PUSHMARK(MARK); SWIG_CALLXS(_wrap_LocationInfo_t_set_posEstimate__SWIG_5); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'LocationInfo_t_set_posEstimate'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_LocationInfo_t_get_fixpoint_arith_multiplier) {
+  {
+    int argvi = 0;
+    double result;
+    dXSARGS;
+    
+    if ((items < 0) || (items > 0)) {
+      SWIG_croak("Usage: LocationInfo_t_get_fixpoint_arith_multiplier();");
+    }
+    result = (double)LocationInfo_get_fixpoint_arith_multiplier();
+    ST(argvi) = SWIG_From_double  SWIG_PERL_CALL_ARGS_1((double)(result)); argvi++ ;
+    XSRETURN(argvi);
+  fail:
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_AssistanceData_t_referenceAssistData_set) {
+  {
+    struct AssistanceData *arg1 = (struct AssistanceData *) 0 ;
+    struct ReferenceAssistData *arg2 = (struct ReferenceAssistData *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: AssistanceData_t_referenceAssistData_set(self,referenceAssistData);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_AssistanceData, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AssistanceData_t_referenceAssistData_set" "', argument " "1"" of type '" "struct AssistanceData *""'"); 
+    }
+    arg1 = (struct AssistanceData *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_ReferenceAssistData, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "AssistanceData_t_referenceAssistData_set" "', argument " "2"" of type '" "struct ReferenceAssistData *""'"); 
+    }
+    arg2 = (struct ReferenceAssistData *)(argp2);
+    if (arg1) (arg1)->referenceAssistData = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_AssistanceData_t_referenceAssistData_get) {
+  {
+    struct AssistanceData *arg1 = (struct AssistanceData *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    struct ReferenceAssistData *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: AssistanceData_t_referenceAssistData_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_AssistanceData, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AssistanceData_t_referenceAssistData_get" "', argument " "1"" of type '" "struct AssistanceData *""'"); 
+    }
+    arg1 = (struct AssistanceData *)(argp1);
+    result = (struct ReferenceAssistData *) ((arg1)->referenceAssistData);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_ReferenceAssistData, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_AssistanceData_t_msrAssistData_set) {
+  {
+    struct AssistanceData *arg1 = (struct AssistanceData *) 0 ;
+    struct MsrAssistData *arg2 = (struct MsrAssistData *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: AssistanceData_t_msrAssistData_set(self,msrAssistData);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_AssistanceData, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AssistanceData_t_msrAssistData_set" "', argument " "1"" of type '" "struct AssistanceData *""'"); 
+    }
+    arg1 = (struct AssistanceData *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_MsrAssistData, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "AssistanceData_t_msrAssistData_set" "', argument " "2"" of type '" "struct MsrAssistData *""'"); 
+    }
+    arg2 = (struct MsrAssistData *)(argp2);
+    if (arg1) (arg1)->msrAssistData = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_AssistanceData_t_msrAssistData_get) {
+  {
+    struct AssistanceData *arg1 = (struct AssistanceData *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    struct MsrAssistData *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: AssistanceData_t_msrAssistData_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_AssistanceData, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AssistanceData_t_msrAssistData_get" "', argument " "1"" of type '" "struct AssistanceData *""'"); 
+    }
+    arg1 = (struct AssistanceData *)(argp1);
+    result = (struct MsrAssistData *) ((arg1)->msrAssistData);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_MsrAssistData, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_AssistanceData_t_systemInfoAssistData_set) {
+  {
+    struct AssistanceData *arg1 = (struct AssistanceData *) 0 ;
+    struct SystemInfoAssistData *arg2 = (struct SystemInfoAssistData *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: AssistanceData_t_systemInfoAssistData_set(self,systemInfoAssistData);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_AssistanceData, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AssistanceData_t_systemInfoAssistData_set" "', argument " "1"" of type '" "struct AssistanceData *""'"); 
+    }
+    arg1 = (struct AssistanceData *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_SystemInfoAssistData, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "AssistanceData_t_systemInfoAssistData_set" "', argument " "2"" of type '" "struct SystemInfoAssistData *""'"); 
+    }
+    arg2 = (struct SystemInfoAssistData *)(argp2);
+    if (arg1) (arg1)->systemInfoAssistData = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_AssistanceData_t_systemInfoAssistData_get) {
+  {
+    struct AssistanceData *arg1 = (struct AssistanceData *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    struct SystemInfoAssistData *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: AssistanceData_t_systemInfoAssistData_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_AssistanceData, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AssistanceData_t_systemInfoAssistData_get" "', argument " "1"" of type '" "struct AssistanceData *""'"); 
+    }
+    arg1 = (struct AssistanceData *)(argp1);
+    result = (struct SystemInfoAssistData *) ((arg1)->systemInfoAssistData);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SystemInfoAssistData, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_AssistanceData_t_gps_AssistData_set) {
+  {
+    struct AssistanceData *arg1 = (struct AssistanceData *) 0 ;
+    struct GPS_AssistData *arg2 = (struct GPS_AssistData *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: AssistanceData_t_gps_AssistData_set(self,gps_AssistData);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_AssistanceData, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AssistanceData_t_gps_AssistData_set" "', argument " "1"" of type '" "struct AssistanceData *""'"); 
+    }
+    arg1 = (struct AssistanceData *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_GPS_AssistData, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "AssistanceData_t_gps_AssistData_set" "', argument " "2"" of type '" "struct GPS_AssistData *""'"); 
+    }
+    arg2 = (struct GPS_AssistData *)(argp2);
+    if (arg1) (arg1)->gps_AssistData = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_AssistanceData_t_gps_AssistData_get) {
+  {
+    struct AssistanceData *arg1 = (struct AssistanceData *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    struct GPS_AssistData *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: AssistanceData_t_gps_AssistData_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_AssistanceData, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AssistanceData_t_gps_AssistData_get" "', argument " "1"" of type '" "struct AssistanceData *""'"); 
+    }
+    arg1 = (struct AssistanceData *)(argp1);
+    result = (struct GPS_AssistData *) ((arg1)->gps_AssistData);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GPS_AssistData, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_AssistanceData_t_moreAssDataToBeSent_set) {
+  {
+    struct AssistanceData *arg1 = (struct AssistanceData *) 0 ;
+    MoreAssDataToBeSent_t *arg2 = (MoreAssDataToBeSent_t *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: AssistanceData_t_moreAssDataToBeSent_set(self,moreAssDataToBeSent);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_AssistanceData, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AssistanceData_t_moreAssDataToBeSent_set" "', argument " "1"" of type '" "struct AssistanceData *""'"); 
+    }
+    arg1 = (struct AssistanceData *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_MoreAssDataToBeSent_t, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "AssistanceData_t_moreAssDataToBeSent_set" "', argument " "2"" of type '" "MoreAssDataToBeSent_t *""'"); 
+    }
+    arg2 = (MoreAssDataToBeSent_t *)(argp2);
+    if (arg1) (arg1)->moreAssDataToBeSent = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_AssistanceData_t_moreAssDataToBeSent_get) {
+  {
+    struct AssistanceData *arg1 = (struct AssistanceData *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    MoreAssDataToBeSent_t *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: AssistanceData_t_moreAssDataToBeSent_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_AssistanceData, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AssistanceData_t_moreAssDataToBeSent_get" "', argument " "1"" of type '" "struct AssistanceData *""'"); 
+    }
+    arg1 = (struct AssistanceData *)(argp1);
+    result = (MoreAssDataToBeSent_t *) ((arg1)->moreAssDataToBeSent);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_MoreAssDataToBeSent_t, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_AssistanceData_t_extensionContainer_set) {
+  {
+    struct AssistanceData *arg1 = (struct AssistanceData *) 0 ;
+    struct ExtensionContainer *arg2 = (struct ExtensionContainer *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: AssistanceData_t_extensionContainer_set(self,extensionContainer);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_AssistanceData, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AssistanceData_t_extensionContainer_set" "', argument " "1"" of type '" "struct AssistanceData *""'"); 
+    }
+    arg1 = (struct AssistanceData *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_ExtensionContainer, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "AssistanceData_t_extensionContainer_set" "', argument " "2"" of type '" "struct ExtensionContainer *""'"); 
+    }
+    arg2 = (struct ExtensionContainer *)(argp2);
+    if (arg1) (arg1)->extensionContainer = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_AssistanceData_t_extensionContainer_get) {
+  {
+    struct AssistanceData *arg1 = (struct AssistanceData *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    struct ExtensionContainer *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: AssistanceData_t_extensionContainer_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_AssistanceData, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AssistanceData_t_extensionContainer_get" "', argument " "1"" of type '" "struct AssistanceData *""'"); 
+    }
+    arg1 = (struct AssistanceData *)(argp1);
+    result = (struct ExtensionContainer *) ((arg1)->extensionContainer);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_ExtensionContainer, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_AssistanceData_t_rel98_AssistanceData_Extension_set) {
+  {
+    struct AssistanceData *arg1 = (struct AssistanceData *) 0 ;
+    struct Rel98_AssistanceData_Extension *arg2 = (struct Rel98_AssistanceData_Extension *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: AssistanceData_t_rel98_AssistanceData_Extension_set(self,rel98_AssistanceData_Extension);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_AssistanceData, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AssistanceData_t_rel98_AssistanceData_Extension_set" "', argument " "1"" of type '" "struct AssistanceData *""'"); 
+    }
+    arg1 = (struct AssistanceData *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_Rel98_AssistanceData_Extension, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "AssistanceData_t_rel98_AssistanceData_Extension_set" "', argument " "2"" of type '" "struct Rel98_AssistanceData_Extension *""'"); 
+    }
+    arg2 = (struct Rel98_AssistanceData_Extension *)(argp2);
+    if (arg1) (arg1)->rel98_AssistanceData_Extension = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_AssistanceData_t_rel98_AssistanceData_Extension_get) {
+  {
+    struct AssistanceData *arg1 = (struct AssistanceData *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    struct Rel98_AssistanceData_Extension *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: AssistanceData_t_rel98_AssistanceData_Extension_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_AssistanceData, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AssistanceData_t_rel98_AssistanceData_Extension_get" "', argument " "1"" of type '" "struct AssistanceData *""'"); 
+    }
+    arg1 = (struct AssistanceData *)(argp1);
+    result = (struct Rel98_AssistanceData_Extension *) ((arg1)->rel98_AssistanceData_Extension);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_Rel98_AssistanceData_Extension, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_AssistanceData_t_rel5_AssistanceData_Extension_set) {
+  {
+    struct AssistanceData *arg1 = (struct AssistanceData *) 0 ;
+    struct Rel5_AssistanceData_Extension *arg2 = (struct Rel5_AssistanceData_Extension *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: AssistanceData_t_rel5_AssistanceData_Extension_set(self,rel5_AssistanceData_Extension);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_AssistanceData, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AssistanceData_t_rel5_AssistanceData_Extension_set" "', argument " "1"" of type '" "struct AssistanceData *""'"); 
+    }
+    arg1 = (struct AssistanceData *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_Rel5_AssistanceData_Extension, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "AssistanceData_t_rel5_AssistanceData_Extension_set" "', argument " "2"" of type '" "struct Rel5_AssistanceData_Extension *""'"); 
+    }
+    arg2 = (struct Rel5_AssistanceData_Extension *)(argp2);
+    if (arg1) (arg1)->rel5_AssistanceData_Extension = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_AssistanceData_t_rel5_AssistanceData_Extension_get) {
+  {
+    struct AssistanceData *arg1 = (struct AssistanceData *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    struct Rel5_AssistanceData_Extension *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: AssistanceData_t_rel5_AssistanceData_Extension_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_AssistanceData, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AssistanceData_t_rel5_AssistanceData_Extension_get" "', argument " "1"" of type '" "struct AssistanceData *""'"); 
+    }
+    arg1 = (struct AssistanceData *)(argp1);
+    result = (struct Rel5_AssistanceData_Extension *) ((arg1)->rel5_AssistanceData_Extension);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_Rel5_AssistanceData_Extension, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_AssistanceData_t_rel7_AssistanceData_Extension_set) {
+  {
+    struct AssistanceData *arg1 = (struct AssistanceData *) 0 ;
+    struct Rel7_AssistanceData_Extension *arg2 = (struct Rel7_AssistanceData_Extension *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: AssistanceData_t_rel7_AssistanceData_Extension_set(self,rel7_AssistanceData_Extension);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_AssistanceData, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AssistanceData_t_rel7_AssistanceData_Extension_set" "', argument " "1"" of type '" "struct AssistanceData *""'"); 
+    }
+    arg1 = (struct AssistanceData *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_Rel7_AssistanceData_Extension, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "AssistanceData_t_rel7_AssistanceData_Extension_set" "', argument " "2"" of type '" "struct Rel7_AssistanceData_Extension *""'"); 
+    }
+    arg2 = (struct Rel7_AssistanceData_Extension *)(argp2);
+    if (arg1) (arg1)->rel7_AssistanceData_Extension = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_AssistanceData_t_rel7_AssistanceData_Extension_get) {
+  {
+    struct AssistanceData *arg1 = (struct AssistanceData *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    struct Rel7_AssistanceData_Extension *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: AssistanceData_t_rel7_AssistanceData_Extension_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_AssistanceData, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AssistanceData_t_rel7_AssistanceData_Extension_get" "', argument " "1"" of type '" "struct AssistanceData *""'"); 
+    }
+    arg1 = (struct AssistanceData *)(argp1);
+    result = (struct Rel7_AssistanceData_Extension *) ((arg1)->rel7_AssistanceData_Extension);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_Rel7_AssistanceData_Extension, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_AssistanceData_t) {
+  {
+    int argvi = 0;
+    struct AssistanceData *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 0) || (items > 0)) {
+      SWIG_croak("Usage: new_AssistanceData_t();");
+    }
+    result = (struct AssistanceData *)calloc(1, sizeof(struct AssistanceData));
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_AssistanceData, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    XSRETURN(argvi);
+  fail:
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_delete_AssistanceData_t) {
+  {
+    struct AssistanceData *arg1 = (struct AssistanceData *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: delete_AssistanceData_t(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_AssistanceData, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_AssistanceData_t" "', argument " "1"" of type '" "struct AssistanceData *""'"); 
+    }
+    arg1 = (struct AssistanceData *)(argp1);
+    free((char *) arg1);
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_PosCapability_Req_t_extended_reference_set) {
+  {
+    struct PosCapability_Req *arg1 = (struct PosCapability_Req *) 0 ;
+    Extended_reference_t arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: PosCapability_Req_t_extended_reference_set(self,extended_reference);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_PosCapability_Req, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PosCapability_Req_t_extended_reference_set" "', argument " "1"" of type '" "struct PosCapability_Req *""'"); 
+    }
+    arg1 = (struct PosCapability_Req *)(argp1);
+    {
+      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_Extended_reference_t,  0 );
+      if (!SWIG_IsOK(res2)) {
+        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "PosCapability_Req_t_extended_reference_set" "', argument " "2"" of type '" "Extended_reference_t""'"); 
+      }  
+      if (!argp2) {
+        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "PosCapability_Req_t_extended_reference_set" "', argument " "2"" of type '" "Extended_reference_t""'");
+      } else {
+        arg2 = *((Extended_reference_t *)(argp2));
+      }
+    }
+    if (arg1) (arg1)->extended_reference = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_PosCapability_Req_t_extended_reference_get) {
+  {
+    struct PosCapability_Req *arg1 = (struct PosCapability_Req *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    Extended_reference_t result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: PosCapability_Req_t_extended_reference_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_PosCapability_Req, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PosCapability_Req_t_extended_reference_get" "', argument " "1"" of type '" "struct PosCapability_Req *""'"); 
+    }
+    arg1 = (struct PosCapability_Req *)(argp1);
+    result =  ((arg1)->extended_reference);
+    ST(argvi) = SWIG_NewPointerObj((Extended_reference_t *)memcpy((Extended_reference_t *)malloc(sizeof(Extended_reference_t)),&result,sizeof(Extended_reference_t)), SWIGTYPE_p_Extended_reference_t, SWIG_POINTER_OWN | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_PosCapability_Req_t_gANSSPositionMethods_set) {
+  {
+    struct PosCapability_Req *arg1 = (struct PosCapability_Req *) 0 ;
+    struct GANSSPositionMethods *arg2 = (struct GANSSPositionMethods *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: PosCapability_Req_t_gANSSPositionMethods_set(self,gANSSPositionMethods);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_PosCapability_Req, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PosCapability_Req_t_gANSSPositionMethods_set" "', argument " "1"" of type '" "struct PosCapability_Req *""'"); 
+    }
+    arg1 = (struct PosCapability_Req *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_GANSSPositionMethods, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "PosCapability_Req_t_gANSSPositionMethods_set" "', argument " "2"" of type '" "struct GANSSPositionMethods *""'"); 
+    }
+    arg2 = (struct GANSSPositionMethods *)(argp2);
+    if (arg1) (arg1)->gANSSPositionMethods = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_PosCapability_Req_t_gANSSPositionMethods_get) {
+  {
+    struct PosCapability_Req *arg1 = (struct PosCapability_Req *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    struct GANSSPositionMethods *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: PosCapability_Req_t_gANSSPositionMethods_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_PosCapability_Req, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PosCapability_Req_t_gANSSPositionMethods_get" "', argument " "1"" of type '" "struct PosCapability_Req *""'"); 
+    }
+    arg1 = (struct PosCapability_Req *)(argp1);
+    result = (struct GANSSPositionMethods *) ((arg1)->gANSSPositionMethods);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GANSSPositionMethods, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_PosCapability_Req_t_extensionContainer_set) {
+  {
+    struct PosCapability_Req *arg1 = (struct PosCapability_Req *) 0 ;
+    struct ExtensionContainer *arg2 = (struct ExtensionContainer *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: PosCapability_Req_t_extensionContainer_set(self,extensionContainer);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_PosCapability_Req, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PosCapability_Req_t_extensionContainer_set" "', argument " "1"" of type '" "struct PosCapability_Req *""'"); 
+    }
+    arg1 = (struct PosCapability_Req *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_ExtensionContainer, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "PosCapability_Req_t_extensionContainer_set" "', argument " "2"" of type '" "struct ExtensionContainer *""'"); 
+    }
+    arg2 = (struct ExtensionContainer *)(argp2);
+    if (arg1) (arg1)->extensionContainer = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_PosCapability_Req_t_extensionContainer_get) {
+  {
+    struct PosCapability_Req *arg1 = (struct PosCapability_Req *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    struct ExtensionContainer *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: PosCapability_Req_t_extensionContainer_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_PosCapability_Req, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PosCapability_Req_t_extensionContainer_get" "', argument " "1"" of type '" "struct PosCapability_Req *""'"); 
+    }
+    arg1 = (struct PosCapability_Req *)(argp1);
+    result = (struct ExtensionContainer *) ((arg1)->extensionContainer);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_ExtensionContainer, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_PosCapability_Req_t) {
+  {
+    int argvi = 0;
+    struct PosCapability_Req *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 0) || (items > 0)) {
+      SWIG_croak("Usage: new_PosCapability_Req_t();");
+    }
+    result = (struct PosCapability_Req *)calloc(1, sizeof(struct PosCapability_Req));
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_PosCapability_Req, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    XSRETURN(argvi);
+  fail:
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_delete_PosCapability_Req_t) {
+  {
+    struct PosCapability_Req *arg1 = (struct PosCapability_Req *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: delete_PosCapability_Req_t(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_PosCapability_Req, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_PosCapability_Req_t" "', argument " "1"" of type '" "struct PosCapability_Req *""'"); 
+    }
+    arg1 = (struct PosCapability_Req *)(argp1);
+    free((char *) arg1);
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_PosCapability_Rsp_t_extended_reference_set) {
+  {
+    struct PosCapability_Rsp *arg1 = (struct PosCapability_Rsp *) 0 ;
+    Extended_reference_t arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: PosCapability_Rsp_t_extended_reference_set(self,extended_reference);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_PosCapability_Rsp, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PosCapability_Rsp_t_extended_reference_set" "', argument " "1"" of type '" "struct PosCapability_Rsp *""'"); 
+    }
+    arg1 = (struct PosCapability_Rsp *)(argp1);
+    {
+      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_Extended_reference_t,  0 );
+      if (!SWIG_IsOK(res2)) {
+        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "PosCapability_Rsp_t_extended_reference_set" "', argument " "2"" of type '" "Extended_reference_t""'"); 
+      }  
+      if (!argp2) {
+        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "PosCapability_Rsp_t_extended_reference_set" "', argument " "2"" of type '" "Extended_reference_t""'");
+      } else {
+        arg2 = *((Extended_reference_t *)(argp2));
+      }
+    }
+    if (arg1) (arg1)->extended_reference = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_PosCapability_Rsp_t_extended_reference_get) {
+  {
+    struct PosCapability_Rsp *arg1 = (struct PosCapability_Rsp *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    Extended_reference_t result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: PosCapability_Rsp_t_extended_reference_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_PosCapability_Rsp, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PosCapability_Rsp_t_extended_reference_get" "', argument " "1"" of type '" "struct PosCapability_Rsp *""'"); 
+    }
+    arg1 = (struct PosCapability_Rsp *)(argp1);
+    result =  ((arg1)->extended_reference);
+    ST(argvi) = SWIG_NewPointerObj((Extended_reference_t *)memcpy((Extended_reference_t *)malloc(sizeof(Extended_reference_t)),&result,sizeof(Extended_reference_t)), SWIGTYPE_p_Extended_reference_t, SWIG_POINTER_OWN | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_PosCapability_Rsp_t_posCapabilities_set) {
+  {
+    struct PosCapability_Rsp *arg1 = (struct PosCapability_Rsp *) 0 ;
+    PosCapabilities_t arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: PosCapability_Rsp_t_posCapabilities_set(self,posCapabilities);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_PosCapability_Rsp, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PosCapability_Rsp_t_posCapabilities_set" "', argument " "1"" of type '" "struct PosCapability_Rsp *""'"); 
+    }
+    arg1 = (struct PosCapability_Rsp *)(argp1);
+    {
+      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_PosCapabilities_t,  0 );
+      if (!SWIG_IsOK(res2)) {
+        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "PosCapability_Rsp_t_posCapabilities_set" "', argument " "2"" of type '" "PosCapabilities_t""'"); 
+      }  
+      if (!argp2) {
+        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "PosCapability_Rsp_t_posCapabilities_set" "', argument " "2"" of type '" "PosCapabilities_t""'");
+      } else {
+        arg2 = *((PosCapabilities_t *)(argp2));
+      }
+    }
+    if (arg1) (arg1)->posCapabilities = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_PosCapability_Rsp_t_posCapabilities_get) {
+  {
+    struct PosCapability_Rsp *arg1 = (struct PosCapability_Rsp *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    PosCapabilities_t result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: PosCapability_Rsp_t_posCapabilities_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_PosCapability_Rsp, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PosCapability_Rsp_t_posCapabilities_get" "', argument " "1"" of type '" "struct PosCapability_Rsp *""'"); 
+    }
+    arg1 = (struct PosCapability_Rsp *)(argp1);
+    result =  ((arg1)->posCapabilities);
+    ST(argvi) = SWIG_NewPointerObj((PosCapabilities_t *)memcpy((PosCapabilities_t *)malloc(sizeof(PosCapabilities_t)),&result,sizeof(PosCapabilities_t)), SWIGTYPE_p_PosCapabilities_t, SWIG_POINTER_OWN | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_PosCapability_Rsp_t_assistanceSupported_set) {
+  {
+    struct PosCapability_Rsp *arg1 = (struct PosCapability_Rsp *) 0 ;
+    struct AssistanceSupported *arg2 = (struct AssistanceSupported *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: PosCapability_Rsp_t_assistanceSupported_set(self,assistanceSupported);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_PosCapability_Rsp, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PosCapability_Rsp_t_assistanceSupported_set" "', argument " "1"" of type '" "struct PosCapability_Rsp *""'"); 
+    }
+    arg1 = (struct PosCapability_Rsp *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_AssistanceSupported, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "PosCapability_Rsp_t_assistanceSupported_set" "', argument " "2"" of type '" "struct AssistanceSupported *""'"); 
+    }
+    arg2 = (struct AssistanceSupported *)(argp2);
+    if (arg1) (arg1)->assistanceSupported = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_PosCapability_Rsp_t_assistanceSupported_get) {
+  {
+    struct PosCapability_Rsp *arg1 = (struct PosCapability_Rsp *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    struct AssistanceSupported *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: PosCapability_Rsp_t_assistanceSupported_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_PosCapability_Rsp, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PosCapability_Rsp_t_assistanceSupported_get" "', argument " "1"" of type '" "struct PosCapability_Rsp *""'"); 
+    }
+    arg1 = (struct PosCapability_Rsp *)(argp1);
+    result = (struct AssistanceSupported *) ((arg1)->assistanceSupported);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_AssistanceSupported, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_PosCapability_Rsp_t_assistanceNeeded_set) {
+  {
+    struct PosCapability_Rsp *arg1 = (struct PosCapability_Rsp *) 0 ;
+    struct AssistanceNeeded *arg2 = (struct AssistanceNeeded *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: PosCapability_Rsp_t_assistanceNeeded_set(self,assistanceNeeded);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_PosCapability_Rsp, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PosCapability_Rsp_t_assistanceNeeded_set" "', argument " "1"" of type '" "struct PosCapability_Rsp *""'"); 
+    }
+    arg1 = (struct PosCapability_Rsp *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_AssistanceNeeded, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "PosCapability_Rsp_t_assistanceNeeded_set" "', argument " "2"" of type '" "struct AssistanceNeeded *""'"); 
+    }
+    arg2 = (struct AssistanceNeeded *)(argp2);
+    if (arg1) (arg1)->assistanceNeeded = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_PosCapability_Rsp_t_assistanceNeeded_get) {
+  {
+    struct PosCapability_Rsp *arg1 = (struct PosCapability_Rsp *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    struct AssistanceNeeded *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: PosCapability_Rsp_t_assistanceNeeded_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_PosCapability_Rsp, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PosCapability_Rsp_t_assistanceNeeded_get" "', argument " "1"" of type '" "struct PosCapability_Rsp *""'"); 
+    }
+    arg1 = (struct PosCapability_Rsp *)(argp1);
+    result = (struct AssistanceNeeded *) ((arg1)->assistanceNeeded);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_AssistanceNeeded, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_PosCapability_Rsp_t_extensionContainer_set) {
+  {
+    struct PosCapability_Rsp *arg1 = (struct PosCapability_Rsp *) 0 ;
+    struct ExtensionContainer *arg2 = (struct ExtensionContainer *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: PosCapability_Rsp_t_extensionContainer_set(self,extensionContainer);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_PosCapability_Rsp, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PosCapability_Rsp_t_extensionContainer_set" "', argument " "1"" of type '" "struct PosCapability_Rsp *""'"); 
+    }
+    arg1 = (struct PosCapability_Rsp *)(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_ExtensionContainer, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "PosCapability_Rsp_t_extensionContainer_set" "', argument " "2"" of type '" "struct ExtensionContainer *""'"); 
+    }
+    arg2 = (struct ExtensionContainer *)(argp2);
+    if (arg1) (arg1)->extensionContainer = arg2;
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_PosCapability_Rsp_t_extensionContainer_get) {
+  {
+    struct PosCapability_Rsp *arg1 = (struct PosCapability_Rsp *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    struct ExtensionContainer *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: PosCapability_Rsp_t_extensionContainer_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_PosCapability_Rsp, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PosCapability_Rsp_t_extensionContainer_get" "', argument " "1"" of type '" "struct PosCapability_Rsp *""'"); 
+    }
+    arg1 = (struct PosCapability_Rsp *)(argp1);
+    result = (struct ExtensionContainer *) ((arg1)->extensionContainer);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_ExtensionContainer, 0 | 0); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_PosCapability_Rsp_t) {
+  {
+    int argvi = 0;
+    struct PosCapability_Rsp *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 0) || (items > 0)) {
+      SWIG_croak("Usage: new_PosCapability_Rsp_t();");
+    }
+    result = (struct PosCapability_Rsp *)calloc(1, sizeof(struct PosCapability_Rsp));
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_PosCapability_Rsp, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    XSRETURN(argvi);
+  fail:
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_delete_PosCapability_Rsp_t) {
+  {
+    struct PosCapability_Rsp *arg1 = (struct PosCapability_Rsp *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: delete_PosCapability_Rsp_t(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_PosCapability_Rsp, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_PosCapability_Rsp_t" "', argument " "1"" of type '" "struct PosCapability_Rsp *""'"); 
+    }
+    arg1 = (struct PosCapability_Rsp *)(argp1);
+    free((char *) arg1);
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
 XS(_wrap_encode_ulp_pdu) {
   {
     struct ULP_PDU *arg1 = (struct ULP_PDU *) 0 ;
@@ -13747,12 +17074,17 @@ XS(_wrap_dump_ulp_pdu) {
 /* -------- TYPE CONVERSION AND EQUIVALENCE RULES (BEGIN) -------- */
 
 static swig_type_info _swigt__p_AccuracyOpt_t = {"_p_AccuracyOpt_t", "AccuracyOpt_t *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_AssistanceData_t = {"_p_AssistanceData_t", "AssistanceData_t *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_AssistanceData = {"_p_AssistanceData", "AssistanceData_t *|struct AssistanceData *|AssistanceData *", 0, 0, (void*)"Net::Radio::Location::SUPL::XS::AssistanceData_t", 0};
+static swig_type_info _swigt__p_AssistanceNeeded = {"_p_AssistanceNeeded", "struct AssistanceNeeded *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_AssistanceSupported = {"_p_AssistanceSupported", "struct AssistanceSupported *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_BIT_STRING_t = {"_p_BIT_STRING_t", "BIT_STRING_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_CellInfo_t = {"_p_CellInfo_t", "CellInfo_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_EnvironmentCharacter_t = {"_p_EnvironmentCharacter_t", "EnvironmentCharacter_t *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_Ext_GeographicalInformation_t = {"_p_Ext_GeographicalInformation_t", "Ext_GeographicalInformation_t *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_Extended_reference_t = {"_p_Extended_reference_t", "Extended_reference_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ExtensionContainer = {"_p_ExtensionContainer", "struct ExtensionContainer *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_FQDN_t = {"_p_FQDN_t", "FQDN_t *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_GANSSPositionMethods = {"_p_GANSSPositionMethods", "struct GANSSPositionMethods *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_GPS_AssistData = {"_p_GPS_AssistData", "struct GPS_AssistData *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_GPS_MeasureInfo = {"_p_GPS_MeasureInfo", "struct GPS_MeasureInfo *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_IA5String_t = {"_p_IA5String_t", "IA5String_t *", 0, 0, (void*)0, 0};
@@ -13763,12 +17095,13 @@ static swig_type_info _swigt__p_KeyIdentity4_t = {"_p_KeyIdentity4_t", "KeyIdent
 static swig_type_info _swigt__p_KeyIdentity_t = {"_p_KeyIdentity_t", "KeyIdentity_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_LocationError = {"_p_LocationError", "struct LocationError *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_LocationId = {"_p_LocationId", "struct LocationId *|LocationId *|LocationId_t *", 0, 0, (void*)"Net::Radio::Location::SUPL::XS::LocationId_t", 0};
-static swig_type_info _swigt__p_LocationInfo = {"_p_LocationInfo", "struct LocationInfo *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_LocationInfo = {"_p_LocationInfo", "struct LocationInfo *|LocationInfo *|LocationInfo_t *", 0, 0, (void*)"Net::Radio::Location::SUPL::XS::LocationInfo_t", 0};
 static swig_type_info _swigt__p_MAC_t = {"_p_MAC_t", "MAC_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_MeasureResponseTime_t = {"_p_MeasureResponseTime_t", "MeasureResponseTime_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_MethodType = {"_p_MethodType", "struct MethodType *|MethodType *|MethodType_t *", 0, 0, (void*)"Net::Radio::Location::SUPL::XS::MethodType_t", 0};
 static swig_type_info _swigt__p_MethodType_PR = {"_p_MethodType_PR", "enum MethodType_PR *|MethodType_PR *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_MethodType_t_choice = {"_p_MethodType_t_choice", "MethodType_t_choice *", 0, 0, (void*)"Net::Radio::Location::SUPL::XS::MethodType_t_choice", 0};
+static swig_type_info _swigt__p_MoreAssDataToBeSent_t = {"_p_MoreAssDataToBeSent_t", "MoreAssDataToBeSent_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_MsgBuffer = {"_p_MsgBuffer", "MsgBuffer *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_MsrAssistData = {"_p_MsrAssistData", "struct MsrAssistData *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_MsrPosition_Req = {"_p_MsrPosition_Req", "MsrPosition_Req_t *|struct MsrPosition_Req *|MsrPosition_Req *", 0, 0, (void*)"Net::Radio::Location::SUPL::XS::MsrPosition_Req_t", 0};
@@ -13778,8 +17111,9 @@ static swig_type_info _swigt__p_NULL_t = {"_p_NULL_t", "NULL_t *", 0, 0, (void*)
 static swig_type_info _swigt__p_Notification = {"_p_Notification", "struct Notification *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_OCTET_STRING_t = {"_p_OCTET_STRING_t", "OCTET_STRING_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_OTD_MeasureInfo = {"_p_OTD_MeasureInfo", "struct OTD_MeasureInfo *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_PosCapability_Req_t = {"_p_PosCapability_Req_t", "PosCapability_Req_t *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_PosCapability_Rsp_t = {"_p_PosCapability_Rsp_t", "PosCapability_Rsp_t *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_PosCapabilities_t = {"_p_PosCapabilities_t", "PosCapabilities_t *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_PosCapability_Req = {"_p_PosCapability_Req", "PosCapability_Req_t *|struct PosCapability_Req *|PosCapability_Req *", 0, 0, (void*)"Net::Radio::Location::SUPL::XS::PosCapability_Req_t", 0};
+static swig_type_info _swigt__p_PosCapability_Rsp = {"_p_PosCapability_Rsp", "struct PosCapability_Rsp *|PosCapability_Rsp *|PosCapability_Rsp_t *", 0, 0, (void*)"Net::Radio::Location::SUPL::XS::PosCapability_Rsp_t", 0};
 static swig_type_info _swigt__p_PosMethod_t = {"_p_PosMethod_t", "PosMethod_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_PosPayLoad = {"_p_PosPayLoad", "PosPayLoad_t *|struct PosPayLoad *|PosPayLoad *", 0, 0, (void*)"Net::Radio::Location::SUPL::XS::PosPayLoad_t", 0};
 static swig_type_info _swigt__p_PosPayLoad_PR = {"_p_PosPayLoad_PR", "enum PosPayLoad_PR *|PosPayLoad_PR *", 0, 0, (void*)0, 0};
@@ -13795,8 +17129,11 @@ static swig_type_info _swigt__p_RRLP_Component_t_choice = {"_p_RRLP_Component_t_
 static swig_type_info _swigt__p_RRLP_PDU = {"_p_RRLP_PDU", "RRLP_PDU_t *|struct RRLP_PDU *|RRLP_PDU *", 0, 0, (void*)"Net::Radio::Location::SUPL::XS::RRLP_PDU_t", 0};
 static swig_type_info _swigt__p_ReferenceAssistData = {"_p_ReferenceAssistData", "struct ReferenceAssistData *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ReferenceIdentity = {"_p_ReferenceIdentity", "struct ReferenceIdentity *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_Rel5_AssistanceData_Extension = {"_p_Rel5_AssistanceData_Extension", "struct Rel5_AssistanceData_Extension *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Rel5_MsrPosition_Req_Extension = {"_p_Rel5_MsrPosition_Req_Extension", "struct Rel5_MsrPosition_Req_Extension *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_Rel7_AssistanceData_Extension = {"_p_Rel7_AssistanceData_Extension", "struct Rel7_AssistanceData_Extension *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Rel7_MsrPosition_Req_Extension = {"_p_Rel7_MsrPosition_Req_Extension", "struct Rel7_MsrPosition_Req_Extension *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_Rel98_AssistanceData_Extension = {"_p_Rel98_AssistanceData_Extension", "struct Rel98_AssistanceData_Extension *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Rel98_MsrPosition_Req_Extension = {"_p_Rel98_MsrPosition_Req_Extension", "struct Rel98_MsrPosition_Req_Extension *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Rel_5_MsrPosition_Rsp_Extension = {"_p_Rel_5_MsrPosition_Rsp_Extension", "struct Rel_5_MsrPosition_Rsp_Extension *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Rel_5_ProtocolError_Extension = {"_p_Rel_5_ProtocolError_Extension", "struct Rel_5_ProtocolError_Extension *", 0, 0, (void*)0, 0};
@@ -13837,16 +17174,22 @@ static swig_type_info _swigt__p_Ver_t = {"_p_Ver_t", "Ver_t *", 0, 0, (void*)0, 
 static swig_type_info _swigt__p_Version_t = {"_p_Version_t", "Version_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_asn_TYPE_descriptor_t = {"_p_asn_TYPE_descriptor_t", "asn_TYPE_descriptor_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_char = {"_p_char", "char *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_long = {"_p_long", "Accuracy_t *|ErrorCodes_t *|long *|PrefMethod_t *|SLPMode_t *|Status_t *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_ellipsoid_point = {"_p_ellipsoid_point", "struct ellipsoid_point *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_long = {"_p_long", "Accuracy_t *|ErrorCodes_t *|FixType_t *|long *|PrefMethod_t *|SLPMode_t *|Status_t *", 0, 0, (void*)0, 0};
 
 static swig_type_info *swig_type_initial[] = {
   &_swigt__p_AccuracyOpt_t,
-  &_swigt__p_AssistanceData_t,
+  &_swigt__p_AssistanceData,
+  &_swigt__p_AssistanceNeeded,
+  &_swigt__p_AssistanceSupported,
   &_swigt__p_BIT_STRING_t,
   &_swigt__p_CellInfo_t,
   &_swigt__p_EnvironmentCharacter_t,
+  &_swigt__p_Ext_GeographicalInformation_t,
+  &_swigt__p_Extended_reference_t,
   &_swigt__p_ExtensionContainer,
   &_swigt__p_FQDN_t,
+  &_swigt__p_GANSSPositionMethods,
   &_swigt__p_GPS_AssistData,
   &_swigt__p_GPS_MeasureInfo,
   &_swigt__p_IA5String_t,
@@ -13863,6 +17206,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_MethodType,
   &_swigt__p_MethodType_PR,
   &_swigt__p_MethodType_t_choice,
+  &_swigt__p_MoreAssDataToBeSent_t,
   &_swigt__p_MsgBuffer,
   &_swigt__p_MsrAssistData,
   &_swigt__p_MsrPosition_Req,
@@ -13872,8 +17216,9 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_Notification,
   &_swigt__p_OCTET_STRING_t,
   &_swigt__p_OTD_MeasureInfo,
-  &_swigt__p_PosCapability_Req_t,
-  &_swigt__p_PosCapability_Rsp_t,
+  &_swigt__p_PosCapabilities_t,
+  &_swigt__p_PosCapability_Req,
+  &_swigt__p_PosCapability_Rsp,
   &_swigt__p_PosMethod_t,
   &_swigt__p_PosPayLoad,
   &_swigt__p_PosPayLoad_PR,
@@ -13889,8 +17234,11 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_RRLP_PDU,
   &_swigt__p_ReferenceAssistData,
   &_swigt__p_ReferenceIdentity,
+  &_swigt__p_Rel5_AssistanceData_Extension,
   &_swigt__p_Rel5_MsrPosition_Req_Extension,
+  &_swigt__p_Rel7_AssistanceData_Extension,
   &_swigt__p_Rel7_MsrPosition_Req_Extension,
+  &_swigt__p_Rel98_AssistanceData_Extension,
   &_swigt__p_Rel98_MsrPosition_Req_Extension,
   &_swigt__p_Rel_5_MsrPosition_Rsp_Extension,
   &_swigt__p_Rel_5_ProtocolError_Extension,
@@ -13931,16 +17279,22 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_Version_t,
   &_swigt__p_asn_TYPE_descriptor_t,
   &_swigt__p_char,
+  &_swigt__p_ellipsoid_point,
   &_swigt__p_long,
 };
 
 static swig_cast_info _swigc__p_AccuracyOpt_t[] = {  {&_swigt__p_AccuracyOpt_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_AssistanceData_t[] = {  {&_swigt__p_AssistanceData_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_AssistanceData[] = {  {&_swigt__p_AssistanceData, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_AssistanceNeeded[] = {  {&_swigt__p_AssistanceNeeded, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_AssistanceSupported[] = {  {&_swigt__p_AssistanceSupported, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_BIT_STRING_t[] = {  {&_swigt__p_BIT_STRING_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_CellInfo_t[] = {  {&_swigt__p_CellInfo_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_EnvironmentCharacter_t[] = {  {&_swigt__p_EnvironmentCharacter_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Ext_GeographicalInformation_t[] = {  {&_swigt__p_Ext_GeographicalInformation_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Extended_reference_t[] = {  {&_swigt__p_Extended_reference_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ExtensionContainer[] = {  {&_swigt__p_ExtensionContainer, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_FQDN_t[] = {  {&_swigt__p_FQDN_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_GANSSPositionMethods[] = {  {&_swigt__p_GANSSPositionMethods, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_GPS_AssistData[] = {  {&_swigt__p_GPS_AssistData, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_GPS_MeasureInfo[] = {  {&_swigt__p_GPS_MeasureInfo, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_IA5String_t[] = {  {&_swigt__p_IA5String_t, 0, 0, 0},{0, 0, 0, 0}};
@@ -13957,6 +17311,7 @@ static swig_cast_info _swigc__p_MeasureResponseTime_t[] = {  {&_swigt__p_Measure
 static swig_cast_info _swigc__p_MethodType[] = {  {&_swigt__p_MethodType, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_MethodType_PR[] = {  {&_swigt__p_MethodType_PR, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_MethodType_t_choice[] = {  {&_swigt__p_MethodType_t_choice, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_MoreAssDataToBeSent_t[] = {  {&_swigt__p_MoreAssDataToBeSent_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_MsgBuffer[] = {  {&_swigt__p_MsgBuffer, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_MsrAssistData[] = {  {&_swigt__p_MsrAssistData, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_MsrPosition_Req[] = {  {&_swigt__p_MsrPosition_Req, 0, 0, 0},{0, 0, 0, 0}};
@@ -13966,8 +17321,9 @@ static swig_cast_info _swigc__p_NULL_t[] = {  {&_swigt__p_NULL_t, 0, 0, 0},{0, 0
 static swig_cast_info _swigc__p_Notification[] = {  {&_swigt__p_Notification, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_OCTET_STRING_t[] = {  {&_swigt__p_OCTET_STRING_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_OTD_MeasureInfo[] = {  {&_swigt__p_OTD_MeasureInfo, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_PosCapability_Req_t[] = {  {&_swigt__p_PosCapability_Req_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_PosCapability_Rsp_t[] = {  {&_swigt__p_PosCapability_Rsp_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_PosCapabilities_t[] = {  {&_swigt__p_PosCapabilities_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_PosCapability_Req[] = {  {&_swigt__p_PosCapability_Req, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_PosCapability_Rsp[] = {  {&_swigt__p_PosCapability_Rsp, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_PosMethod_t[] = {  {&_swigt__p_PosMethod_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_PosPayLoad[] = {  {&_swigt__p_PosPayLoad, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_PosPayLoad_PR[] = {  {&_swigt__p_PosPayLoad_PR, 0, 0, 0},{0, 0, 0, 0}};
@@ -13983,8 +17339,11 @@ static swig_cast_info _swigc__p_RRLP_Component_t_choice[] = {  {&_swigt__p_RRLP_
 static swig_cast_info _swigc__p_RRLP_PDU[] = {  {&_swigt__p_RRLP_PDU, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ReferenceAssistData[] = {  {&_swigt__p_ReferenceAssistData, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ReferenceIdentity[] = {  {&_swigt__p_ReferenceIdentity, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Rel5_AssistanceData_Extension[] = {  {&_swigt__p_Rel5_AssistanceData_Extension, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Rel5_MsrPosition_Req_Extension[] = {  {&_swigt__p_Rel5_MsrPosition_Req_Extension, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Rel7_AssistanceData_Extension[] = {  {&_swigt__p_Rel7_AssistanceData_Extension, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Rel7_MsrPosition_Req_Extension[] = {  {&_swigt__p_Rel7_MsrPosition_Req_Extension, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Rel98_AssistanceData_Extension[] = {  {&_swigt__p_Rel98_AssistanceData_Extension, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Rel98_MsrPosition_Req_Extension[] = {  {&_swigt__p_Rel98_MsrPosition_Req_Extension, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Rel_5_MsrPosition_Rsp_Extension[] = {  {&_swigt__p_Rel_5_MsrPosition_Rsp_Extension, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Rel_5_ProtocolError_Extension[] = {  {&_swigt__p_Rel_5_ProtocolError_Extension, 0, 0, 0},{0, 0, 0, 0}};
@@ -14025,16 +17384,22 @@ static swig_cast_info _swigc__p_Ver_t[] = {  {&_swigt__p_Ver_t, 0, 0, 0},{0, 0, 
 static swig_cast_info _swigc__p_Version_t[] = {  {&_swigt__p_Version_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_asn_TYPE_descriptor_t[] = {  {&_swigt__p_asn_TYPE_descriptor_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_char[] = {  {&_swigt__p_char, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ellipsoid_point[] = {  {&_swigt__p_ellipsoid_point, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_long[] = {  {&_swigt__p_long, 0, 0, 0},{0, 0, 0, 0}};
 
 static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_AccuracyOpt_t,
-  _swigc__p_AssistanceData_t,
+  _swigc__p_AssistanceData,
+  _swigc__p_AssistanceNeeded,
+  _swigc__p_AssistanceSupported,
   _swigc__p_BIT_STRING_t,
   _swigc__p_CellInfo_t,
   _swigc__p_EnvironmentCharacter_t,
+  _swigc__p_Ext_GeographicalInformation_t,
+  _swigc__p_Extended_reference_t,
   _swigc__p_ExtensionContainer,
   _swigc__p_FQDN_t,
+  _swigc__p_GANSSPositionMethods,
   _swigc__p_GPS_AssistData,
   _swigc__p_GPS_MeasureInfo,
   _swigc__p_IA5String_t,
@@ -14051,6 +17416,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_MethodType,
   _swigc__p_MethodType_PR,
   _swigc__p_MethodType_t_choice,
+  _swigc__p_MoreAssDataToBeSent_t,
   _swigc__p_MsgBuffer,
   _swigc__p_MsrAssistData,
   _swigc__p_MsrPosition_Req,
@@ -14060,8 +17426,9 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_Notification,
   _swigc__p_OCTET_STRING_t,
   _swigc__p_OTD_MeasureInfo,
-  _swigc__p_PosCapability_Req_t,
-  _swigc__p_PosCapability_Rsp_t,
+  _swigc__p_PosCapabilities_t,
+  _swigc__p_PosCapability_Req,
+  _swigc__p_PosCapability_Rsp,
   _swigc__p_PosMethod_t,
   _swigc__p_PosPayLoad,
   _swigc__p_PosPayLoad_PR,
@@ -14077,8 +17444,11 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_RRLP_PDU,
   _swigc__p_ReferenceAssistData,
   _swigc__p_ReferenceIdentity,
+  _swigc__p_Rel5_AssistanceData_Extension,
   _swigc__p_Rel5_MsrPosition_Req_Extension,
+  _swigc__p_Rel7_AssistanceData_Extension,
   _swigc__p_Rel7_MsrPosition_Req_Extension,
+  _swigc__p_Rel98_AssistanceData_Extension,
   _swigc__p_Rel98_MsrPosition_Req_Extension,
   _swigc__p_Rel_5_MsrPosition_Rsp_Extension,
   _swigc__p_Rel_5_ProtocolError_Extension,
@@ -14119,6 +17489,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_Version_t,
   _swigc__p_asn_TYPE_descriptor_t,
   _swigc__p_char,
+  _swigc__p_ellipsoid_point,
   _swigc__p_long,
 };
 
@@ -14136,7 +17507,9 @@ static swig_variable_info swig_variables[] = {
     { "Net::Radio::Location::SUPL::XSc::asn_DEF_SetSessionID", MAGIC_CLASS _wrap_asn_DEF_SetSessionID_set, MAGIC_CLASS _wrap_asn_DEF_SetSessionID_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
     { "Net::Radio::Location::SUPL::XSc::asn_DEF_SETId", MAGIC_CLASS _wrap_asn_DEF_SETId_set, MAGIC_CLASS _wrap_asn_DEF_SETId_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
     { "Net::Radio::Location::SUPL::XSc::asn_DEF_SlpSessionID", MAGIC_CLASS _wrap_asn_DEF_SlpSessionID_set, MAGIC_CLASS _wrap_asn_DEF_SlpSessionID_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
-    { "Net::Radio::Location::SUPL::XSc::asn_DEF_ProtocolError", MAGIC_CLASS _wrap_asn_DEF_ProtocolError_set, MAGIC_CLASS _wrap_asn_DEF_ProtocolError_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
+    { "Net::Radio::Location::SUPL::XSc::asn_DEF_AssistanceData", MAGIC_CLASS _wrap_asn_DEF_AssistanceData_set, MAGIC_CLASS _wrap_asn_DEF_AssistanceData_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
+    { "Net::Radio::Location::SUPL::XSc::asn_DEF_PosCapability_Req", MAGIC_CLASS _wrap_asn_DEF_PosCapability_Req_set, MAGIC_CLASS _wrap_asn_DEF_PosCapability_Req_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
+    { "Net::Radio::Location::SUPL::XSc::asn_DEF_PosCapability_Rsp", MAGIC_CLASS _wrap_asn_DEF_PosCapability_Rsp_set, MAGIC_CLASS _wrap_asn_DEF_PosCapability_Rsp_get,&SWIGTYPE_p_asn_TYPE_descriptor_t },
 {0,0,0,0}
 };
 static swig_command_info swig_commands[] = {
@@ -14464,6 +17837,58 @@ static swig_command_info swig_commands[] = {
 {"Net::Radio::Location::SUPL::XSc::ProtocolError_t_rel_5_ProtocolError_Extension_get", _wrap_ProtocolError_t_rel_5_ProtocolError_Extension_get},
 {"Net::Radio::Location::SUPL::XSc::new_ProtocolError_t", _wrap_new_ProtocolError_t},
 {"Net::Radio::Location::SUPL::XSc::delete_ProtocolError_t", _wrap_delete_ProtocolError_t},
+{"Net::Radio::Location::SUPL::XSc::LocationInfo_t_refFrame_set", _wrap_LocationInfo_t_refFrame_set},
+{"Net::Radio::Location::SUPL::XSc::LocationInfo_t_refFrame_get", _wrap_LocationInfo_t_refFrame_get},
+{"Net::Radio::Location::SUPL::XSc::LocationInfo_t_gpsTOW_set", _wrap_LocationInfo_t_gpsTOW_set},
+{"Net::Radio::Location::SUPL::XSc::LocationInfo_t_gpsTOW_get", _wrap_LocationInfo_t_gpsTOW_get},
+{"Net::Radio::Location::SUPL::XSc::LocationInfo_t_fixType_set", _wrap_LocationInfo_t_fixType_set},
+{"Net::Radio::Location::SUPL::XSc::LocationInfo_t_fixType_get", _wrap_LocationInfo_t_fixType_get},
+{"Net::Radio::Location::SUPL::XSc::LocationInfo_t_posEstimate_set", _wrap_LocationInfo_t_posEstimate_set},
+{"Net::Radio::Location::SUPL::XSc::LocationInfo_t_posEstimate_get", _wrap_LocationInfo_t_posEstimate_get},
+{"Net::Radio::Location::SUPL::XSc::new_LocationInfo_t", _wrap_new_LocationInfo_t},
+{"Net::Radio::Location::SUPL::XSc::delete_LocationInfo_t", _wrap_delete_LocationInfo_t},
+{"Net::Radio::Location::SUPL::XSc::LocationInfo_t_set_posEstimate", _wrap_LocationInfo_t_set_posEstimate},
+{"Net::Radio::Location::SUPL::XSc::LocationInfo_t_get_fixpoint_arith_multiplier", _wrap_LocationInfo_t_get_fixpoint_arith_multiplier},
+{"Net::Radio::Location::SUPL::XSc::AssistanceData_t_referenceAssistData_set", _wrap_AssistanceData_t_referenceAssistData_set},
+{"Net::Radio::Location::SUPL::XSc::AssistanceData_t_referenceAssistData_get", _wrap_AssistanceData_t_referenceAssistData_get},
+{"Net::Radio::Location::SUPL::XSc::AssistanceData_t_msrAssistData_set", _wrap_AssistanceData_t_msrAssistData_set},
+{"Net::Radio::Location::SUPL::XSc::AssistanceData_t_msrAssistData_get", _wrap_AssistanceData_t_msrAssistData_get},
+{"Net::Radio::Location::SUPL::XSc::AssistanceData_t_systemInfoAssistData_set", _wrap_AssistanceData_t_systemInfoAssistData_set},
+{"Net::Radio::Location::SUPL::XSc::AssistanceData_t_systemInfoAssistData_get", _wrap_AssistanceData_t_systemInfoAssistData_get},
+{"Net::Radio::Location::SUPL::XSc::AssistanceData_t_gps_AssistData_set", _wrap_AssistanceData_t_gps_AssistData_set},
+{"Net::Radio::Location::SUPL::XSc::AssistanceData_t_gps_AssistData_get", _wrap_AssistanceData_t_gps_AssistData_get},
+{"Net::Radio::Location::SUPL::XSc::AssistanceData_t_moreAssDataToBeSent_set", _wrap_AssistanceData_t_moreAssDataToBeSent_set},
+{"Net::Radio::Location::SUPL::XSc::AssistanceData_t_moreAssDataToBeSent_get", _wrap_AssistanceData_t_moreAssDataToBeSent_get},
+{"Net::Radio::Location::SUPL::XSc::AssistanceData_t_extensionContainer_set", _wrap_AssistanceData_t_extensionContainer_set},
+{"Net::Radio::Location::SUPL::XSc::AssistanceData_t_extensionContainer_get", _wrap_AssistanceData_t_extensionContainer_get},
+{"Net::Radio::Location::SUPL::XSc::AssistanceData_t_rel98_AssistanceData_Extension_set", _wrap_AssistanceData_t_rel98_AssistanceData_Extension_set},
+{"Net::Radio::Location::SUPL::XSc::AssistanceData_t_rel98_AssistanceData_Extension_get", _wrap_AssistanceData_t_rel98_AssistanceData_Extension_get},
+{"Net::Radio::Location::SUPL::XSc::AssistanceData_t_rel5_AssistanceData_Extension_set", _wrap_AssistanceData_t_rel5_AssistanceData_Extension_set},
+{"Net::Radio::Location::SUPL::XSc::AssistanceData_t_rel5_AssistanceData_Extension_get", _wrap_AssistanceData_t_rel5_AssistanceData_Extension_get},
+{"Net::Radio::Location::SUPL::XSc::AssistanceData_t_rel7_AssistanceData_Extension_set", _wrap_AssistanceData_t_rel7_AssistanceData_Extension_set},
+{"Net::Radio::Location::SUPL::XSc::AssistanceData_t_rel7_AssistanceData_Extension_get", _wrap_AssistanceData_t_rel7_AssistanceData_Extension_get},
+{"Net::Radio::Location::SUPL::XSc::new_AssistanceData_t", _wrap_new_AssistanceData_t},
+{"Net::Radio::Location::SUPL::XSc::delete_AssistanceData_t", _wrap_delete_AssistanceData_t},
+{"Net::Radio::Location::SUPL::XSc::PosCapability_Req_t_extended_reference_set", _wrap_PosCapability_Req_t_extended_reference_set},
+{"Net::Radio::Location::SUPL::XSc::PosCapability_Req_t_extended_reference_get", _wrap_PosCapability_Req_t_extended_reference_get},
+{"Net::Radio::Location::SUPL::XSc::PosCapability_Req_t_gANSSPositionMethods_set", _wrap_PosCapability_Req_t_gANSSPositionMethods_set},
+{"Net::Radio::Location::SUPL::XSc::PosCapability_Req_t_gANSSPositionMethods_get", _wrap_PosCapability_Req_t_gANSSPositionMethods_get},
+{"Net::Radio::Location::SUPL::XSc::PosCapability_Req_t_extensionContainer_set", _wrap_PosCapability_Req_t_extensionContainer_set},
+{"Net::Radio::Location::SUPL::XSc::PosCapability_Req_t_extensionContainer_get", _wrap_PosCapability_Req_t_extensionContainer_get},
+{"Net::Radio::Location::SUPL::XSc::new_PosCapability_Req_t", _wrap_new_PosCapability_Req_t},
+{"Net::Radio::Location::SUPL::XSc::delete_PosCapability_Req_t", _wrap_delete_PosCapability_Req_t},
+{"Net::Radio::Location::SUPL::XSc::PosCapability_Rsp_t_extended_reference_set", _wrap_PosCapability_Rsp_t_extended_reference_set},
+{"Net::Radio::Location::SUPL::XSc::PosCapability_Rsp_t_extended_reference_get", _wrap_PosCapability_Rsp_t_extended_reference_get},
+{"Net::Radio::Location::SUPL::XSc::PosCapability_Rsp_t_posCapabilities_set", _wrap_PosCapability_Rsp_t_posCapabilities_set},
+{"Net::Radio::Location::SUPL::XSc::PosCapability_Rsp_t_posCapabilities_get", _wrap_PosCapability_Rsp_t_posCapabilities_get},
+{"Net::Radio::Location::SUPL::XSc::PosCapability_Rsp_t_assistanceSupported_set", _wrap_PosCapability_Rsp_t_assistanceSupported_set},
+{"Net::Radio::Location::SUPL::XSc::PosCapability_Rsp_t_assistanceSupported_get", _wrap_PosCapability_Rsp_t_assistanceSupported_get},
+{"Net::Radio::Location::SUPL::XSc::PosCapability_Rsp_t_assistanceNeeded_set", _wrap_PosCapability_Rsp_t_assistanceNeeded_set},
+{"Net::Radio::Location::SUPL::XSc::PosCapability_Rsp_t_assistanceNeeded_get", _wrap_PosCapability_Rsp_t_assistanceNeeded_get},
+{"Net::Radio::Location::SUPL::XSc::PosCapability_Rsp_t_extensionContainer_set", _wrap_PosCapability_Rsp_t_extensionContainer_set},
+{"Net::Radio::Location::SUPL::XSc::PosCapability_Rsp_t_extensionContainer_get", _wrap_PosCapability_Rsp_t_extensionContainer_get},
+{"Net::Radio::Location::SUPL::XSc::new_PosCapability_Rsp_t", _wrap_new_PosCapability_Rsp_t},
+{"Net::Radio::Location::SUPL::XSc::delete_PosCapability_Rsp_t", _wrap_delete_PosCapability_Rsp_t},
 {"Net::Radio::Location::SUPL::XSc::encode_ulp_pdu", _wrap_encode_ulp_pdu},
 {"Net::Radio::Location::SUPL::XSc::decode_ulp_pdu", _wrap_decode_ulp_pdu},
 {"Net::Radio::Location::SUPL::XSc::ulp_pdu_to_xml", _wrap_ulp_pdu_to_xml},
@@ -15107,6 +18532,20 @@ XS(SWIG_init) {
   SWIG_TypeClientData(SWIGTYPE_p_MethodType, (void*) "Net::Radio::Location::SUPL::XS::MethodType_t");
   SWIG_TypeClientData(SWIGTYPE_p_MethodType_t_choice, (void*) "Net::Radio::Location::SUPL::XS::MethodType_t_choice");
   SWIG_TypeClientData(SWIGTYPE_p_ProtocolError, (void*) "Net::Radio::Location::SUPL::XS::ProtocolError_t");
+  SWIG_TypeClientData(SWIGTYPE_p_LocationInfo, (void*) "Net::Radio::Location::SUPL::XS::LocationInfo_t");
+  SWIG_TypeClientData(SWIGTYPE_p_AssistanceData, (void*) "Net::Radio::Location::SUPL::XS::AssistanceData_t");
+  SWIG_TypeClientData(SWIGTYPE_p_PosCapability_Req, (void*) "Net::Radio::Location::SUPL::XS::PosCapability_Req_t");
+  SWIG_TypeClientData(SWIGTYPE_p_PosCapability_Rsp, (void*) "Net::Radio::Location::SUPL::XS::PosCapability_Rsp_t");
+  /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
+    SV *sv = get_sv((char*) SWIG_prefix "FixType_twoDFix", TRUE | 0x2 | GV_ADDMULTI);
+    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(FixType_twoDFix)));
+    SvREADONLY_on(sv);
+  } while(0) /*@SWIG@*/;
+  /*@SWIG:/usr/local/swig-2.0.6/share/swig/2.0.6/perl5/perltypemaps.swg,65,%set_constant@*/ do {
+    SV *sv = get_sv((char*) SWIG_prefix "FixType_threeDFix", TRUE | 0x2 | GV_ADDMULTI);
+    sv_setsv(sv, SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(FixType_threeDFix)));
+    SvREADONLY_on(sv);
+  } while(0) /*@SWIG@*/;
   ST(0) = &PL_sv_yes;
   XSRETURN(1);
 }

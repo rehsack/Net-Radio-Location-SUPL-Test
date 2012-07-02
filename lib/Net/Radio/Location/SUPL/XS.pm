@@ -1434,6 +1434,198 @@ sub ACQUIRE {
 }
 
 
+############# Class : Net::Radio::Location::SUPL::XS::LocationInfo_t ##############
+
+package Net::Radio::Location::SUPL::XS::LocationInfo_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( Net::Radio::Location::SUPL::XS );
+%OWNER = ();
+%ITERATORS = ();
+*swig_refFrame_get = *Net::Radio::Location::SUPL::XSc::LocationInfo_t_refFrame_get;
+*swig_refFrame_set = *Net::Radio::Location::SUPL::XSc::LocationInfo_t_refFrame_set;
+*swig_gpsTOW_get = *Net::Radio::Location::SUPL::XSc::LocationInfo_t_gpsTOW_get;
+*swig_gpsTOW_set = *Net::Radio::Location::SUPL::XSc::LocationInfo_t_gpsTOW_set;
+*swig_fixType_get = *Net::Radio::Location::SUPL::XSc::LocationInfo_t_fixType_get;
+*swig_fixType_set = *Net::Radio::Location::SUPL::XSc::LocationInfo_t_fixType_set;
+*swig_posEstimate_get = *Net::Radio::Location::SUPL::XSc::LocationInfo_t_posEstimate_get;
+*swig_posEstimate_set = *Net::Radio::Location::SUPL::XSc::LocationInfo_t_posEstimate_set;
+sub new {
+    my $pkg = shift;
+    my $self = Net::Radio::Location::SUPL::XSc::new_LocationInfo_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        Net::Radio::Location::SUPL::XSc::delete_LocationInfo_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+*set_posEstimate = *Net::Radio::Location::SUPL::XSc::LocationInfo_t_set_posEstimate;
+*get_fixpoint_arith_multiplier = *Net::Radio::Location::SUPL::XSc::LocationInfo_t_get_fixpoint_arith_multiplier;
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : Net::Radio::Location::SUPL::XS::AssistanceData_t ##############
+
+package Net::Radio::Location::SUPL::XS::AssistanceData_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( Net::Radio::Location::SUPL::XS );
+%OWNER = ();
+%ITERATORS = ();
+*swig_referenceAssistData_get = *Net::Radio::Location::SUPL::XSc::AssistanceData_t_referenceAssistData_get;
+*swig_referenceAssistData_set = *Net::Radio::Location::SUPL::XSc::AssistanceData_t_referenceAssistData_set;
+*swig_msrAssistData_get = *Net::Radio::Location::SUPL::XSc::AssistanceData_t_msrAssistData_get;
+*swig_msrAssistData_set = *Net::Radio::Location::SUPL::XSc::AssistanceData_t_msrAssistData_set;
+*swig_systemInfoAssistData_get = *Net::Radio::Location::SUPL::XSc::AssistanceData_t_systemInfoAssistData_get;
+*swig_systemInfoAssistData_set = *Net::Radio::Location::SUPL::XSc::AssistanceData_t_systemInfoAssistData_set;
+*swig_gps_AssistData_get = *Net::Radio::Location::SUPL::XSc::AssistanceData_t_gps_AssistData_get;
+*swig_gps_AssistData_set = *Net::Radio::Location::SUPL::XSc::AssistanceData_t_gps_AssistData_set;
+*swig_moreAssDataToBeSent_get = *Net::Radio::Location::SUPL::XSc::AssistanceData_t_moreAssDataToBeSent_get;
+*swig_moreAssDataToBeSent_set = *Net::Radio::Location::SUPL::XSc::AssistanceData_t_moreAssDataToBeSent_set;
+*swig_extensionContainer_get = *Net::Radio::Location::SUPL::XSc::AssistanceData_t_extensionContainer_get;
+*swig_extensionContainer_set = *Net::Radio::Location::SUPL::XSc::AssistanceData_t_extensionContainer_set;
+*swig_rel98_AssistanceData_Extension_get = *Net::Radio::Location::SUPL::XSc::AssistanceData_t_rel98_AssistanceData_Extension_get;
+*swig_rel98_AssistanceData_Extension_set = *Net::Radio::Location::SUPL::XSc::AssistanceData_t_rel98_AssistanceData_Extension_set;
+*swig_rel5_AssistanceData_Extension_get = *Net::Radio::Location::SUPL::XSc::AssistanceData_t_rel5_AssistanceData_Extension_get;
+*swig_rel5_AssistanceData_Extension_set = *Net::Radio::Location::SUPL::XSc::AssistanceData_t_rel5_AssistanceData_Extension_set;
+*swig_rel7_AssistanceData_Extension_get = *Net::Radio::Location::SUPL::XSc::AssistanceData_t_rel7_AssistanceData_Extension_get;
+*swig_rel7_AssistanceData_Extension_set = *Net::Radio::Location::SUPL::XSc::AssistanceData_t_rel7_AssistanceData_Extension_set;
+sub new {
+    my $pkg = shift;
+    my $self = Net::Radio::Location::SUPL::XSc::new_AssistanceData_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        Net::Radio::Location::SUPL::XSc::delete_AssistanceData_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : Net::Radio::Location::SUPL::XS::PosCapability_Req_t ##############
+
+package Net::Radio::Location::SUPL::XS::PosCapability_Req_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( Net::Radio::Location::SUPL::XS );
+%OWNER = ();
+%ITERATORS = ();
+*swig_extended_reference_get = *Net::Radio::Location::SUPL::XSc::PosCapability_Req_t_extended_reference_get;
+*swig_extended_reference_set = *Net::Radio::Location::SUPL::XSc::PosCapability_Req_t_extended_reference_set;
+*swig_gANSSPositionMethods_get = *Net::Radio::Location::SUPL::XSc::PosCapability_Req_t_gANSSPositionMethods_get;
+*swig_gANSSPositionMethods_set = *Net::Radio::Location::SUPL::XSc::PosCapability_Req_t_gANSSPositionMethods_set;
+*swig_extensionContainer_get = *Net::Radio::Location::SUPL::XSc::PosCapability_Req_t_extensionContainer_get;
+*swig_extensionContainer_set = *Net::Radio::Location::SUPL::XSc::PosCapability_Req_t_extensionContainer_set;
+sub new {
+    my $pkg = shift;
+    my $self = Net::Radio::Location::SUPL::XSc::new_PosCapability_Req_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        Net::Radio::Location::SUPL::XSc::delete_PosCapability_Req_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : Net::Radio::Location::SUPL::XS::PosCapability_Rsp_t ##############
+
+package Net::Radio::Location::SUPL::XS::PosCapability_Rsp_t;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( Net::Radio::Location::SUPL::XS );
+%OWNER = ();
+%ITERATORS = ();
+*swig_extended_reference_get = *Net::Radio::Location::SUPL::XSc::PosCapability_Rsp_t_extended_reference_get;
+*swig_extended_reference_set = *Net::Radio::Location::SUPL::XSc::PosCapability_Rsp_t_extended_reference_set;
+*swig_posCapabilities_get = *Net::Radio::Location::SUPL::XSc::PosCapability_Rsp_t_posCapabilities_get;
+*swig_posCapabilities_set = *Net::Radio::Location::SUPL::XSc::PosCapability_Rsp_t_posCapabilities_set;
+*swig_assistanceSupported_get = *Net::Radio::Location::SUPL::XSc::PosCapability_Rsp_t_assistanceSupported_get;
+*swig_assistanceSupported_set = *Net::Radio::Location::SUPL::XSc::PosCapability_Rsp_t_assistanceSupported_set;
+*swig_assistanceNeeded_get = *Net::Radio::Location::SUPL::XSc::PosCapability_Rsp_t_assistanceNeeded_get;
+*swig_assistanceNeeded_set = *Net::Radio::Location::SUPL::XSc::PosCapability_Rsp_t_assistanceNeeded_set;
+*swig_extensionContainer_get = *Net::Radio::Location::SUPL::XSc::PosCapability_Rsp_t_extensionContainer_get;
+*swig_extensionContainer_set = *Net::Radio::Location::SUPL::XSc::PosCapability_Rsp_t_extensionContainer_set;
+sub new {
+    my $pkg = shift;
+    my $self = Net::Radio::Location::SUPL::XSc::new_PosCapability_Rsp_t(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        Net::Radio::Location::SUPL::XSc::delete_PosCapability_Rsp_t($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
 # ------- CONSTANT STUBS -------
 
 package Net::Radio::Location::SUPL::XS;
@@ -1500,6 +1692,8 @@ sub MethodType_PR_msAssisted () { $Net::Radio::Location::SUPL::XSc::MethodType_P
 sub MethodType_PR_msBased () { $Net::Radio::Location::SUPL::XSc::MethodType_PR_msBased }
 sub MethodType_PR_msBasedPref () { $Net::Radio::Location::SUPL::XSc::MethodType_PR_msBasedPref }
 sub MethodType_PR_msAssistedPref () { $Net::Radio::Location::SUPL::XSc::MethodType_PR_msAssistedPref }
+sub FixType_twoDFix () { $Net::Radio::Location::SUPL::XSc::FixType_twoDFix }
+sub FixType_threeDFix () { $Net::Radio::Location::SUPL::XSc::FixType_threeDFix }
 
 # ------- VARIABLE STUBS --------
 
@@ -1509,5 +1703,7 @@ package Net::Radio::Location::SUPL::XS;
 *asn_DEF_SetSessionID = *Net::Radio::Location::SUPL::XSc::asn_DEF_SetSessionID;
 *asn_DEF_SETId = *Net::Radio::Location::SUPL::XSc::asn_DEF_SETId;
 *asn_DEF_SlpSessionID = *Net::Radio::Location::SUPL::XSc::asn_DEF_SlpSessionID;
-*asn_DEF_ProtocolError = *Net::Radio::Location::SUPL::XSc::asn_DEF_ProtocolError;
+*asn_DEF_AssistanceData = *Net::Radio::Location::SUPL::XSc::asn_DEF_AssistanceData;
+*asn_DEF_PosCapability_Req = *Net::Radio::Location::SUPL::XSc::asn_DEF_PosCapability_Req;
+*asn_DEF_PosCapability_Rsp = *Net::Radio::Location::SUPL::XSc::asn_DEF_PosCapability_Rsp;
 1;
