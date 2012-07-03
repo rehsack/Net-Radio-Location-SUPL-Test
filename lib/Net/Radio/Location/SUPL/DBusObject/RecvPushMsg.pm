@@ -128,10 +128,6 @@ sub Release
     # Net::Radio::Location::SUPL::MainLoop->remove($self);
 }
 
-=head1 AUTHOR
-
-Jens Rehsack, C<< <rehsack at cpan.org> >>
-
 =head1 BUGS
 
 Please report any bugs or feature requests to
@@ -139,6 +135,10 @@ C<bug-supl-test at rt.cpan.org>, or through the web interface at
 L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=SUPL-Test>.
 I will be notified, and then you'll automatically be notified of progress
 on your bug as I make changes.
+
+If you think you've found a bug then please read "How to Report Bugs
+Effectively" by Simon Tatham:
+L<http://www.chiark.greenend.org.uk/~sgtatham/bugs.html>.
 
 =head1 SUPPORT
 
@@ -154,6 +154,10 @@ You can also look for information at:
 
 L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=SUPL-Test>
 
+If you think you've found a bug then please read "How to Report Bugs
+Effectively" by Simon Tatham:
+L<http://www.chiark.greenend.org.uk/~sgtatham/bugs.html>.
+
 =item * AnnoCPAN: Annotated CPAN documentation
 
 L<http://annocpan.org/dist/SUPL-Test>
@@ -168,8 +172,28 @@ L<http://search.cpan.org/dist/SUPL-Test/>
 
 =back
 
+=head2 Where can I go for help with a concrete version?
+
+Bugs and feature requests are accepted against the latest version
+only. To get patches for earlier versions, you need to get an
+agreement with a developer of your choice - who may or not report the
+issue and a suggested fix upstream (depends on the license you have
+chosen).
+
+=head2 Business support and maintenance
+
+For business support you can contact Jens via his CPAN email
+address rehsackATcpan.org. Please keep in mind that business
+support is neither available for free nor are you eligible to
+receive any support based on the license distributed with this
+package.
+
 =head1 ACKNOWLEDGEMENTS
 
+
+=head1 AUTHOR
+
+Jens Rehsack, C<< <rehsack at cpan.org> >>
 
 =head1 LICENSE AND COPYRIGHT
 
