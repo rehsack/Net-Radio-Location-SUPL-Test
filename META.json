@@ -68,7 +68,15 @@
          "file" : "lib/Net/Radio/Location/SUPL/XS.pm",
          "version" : 0
       },
+      "Net::Radio::Location::SUPL::XS::AssistanceData_t" : {
+         "file" : "lib/Net/Radio/Location/SUPL/XS.pm",
+         "version" : 0
+      },
       "Net::Radio::Location::SUPL::XS::LocationId_t" : {
+         "file" : "lib/Net/Radio/Location/SUPL/XS.pm",
+         "version" : 0
+      },
+      "Net::Radio::Location::SUPL::XS::LocationInfo_t" : {
          "file" : "lib/Net/Radio/Location/SUPL/XS.pm",
          "version" : 0
       },
@@ -88,6 +96,14 @@
          "file" : "lib/Net/Radio/Location/SUPL/XS.pm",
          "version" : 0
       },
+      "Net::Radio::Location::SUPL::XS::PosCapability_Req_t" : {
+         "file" : "lib/Net/Radio/Location/SUPL/XS.pm",
+         "version" : 0
+      },
+      "Net::Radio::Location::SUPL::XS::PosCapability_Rsp_t" : {
+         "file" : "lib/Net/Radio/Location/SUPL/XS.pm",
+         "version" : 0
+      },
       "Net::Radio::Location::SUPL::XS::PosPayLoad_t" : {
          "file" : "lib/Net/Radio/Location/SUPL/XS.pm",
          "version" : 0
@@ -97,6 +113,10 @@
          "version" : 0
       },
       "Net::Radio::Location::SUPL::XS::PositionInstruct_t" : {
+         "file" : "lib/Net/Radio/Location/SUPL/XS.pm",
+         "version" : 0
+      },
+      "Net::Radio::Location::SUPL::XS::ProtocolError_t" : {
          "file" : "lib/Net/Radio/Location/SUPL/XS.pm",
          "version" : 0
       },

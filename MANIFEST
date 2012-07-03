@@ -2188,6 +2188,10 @@ lib/Net/Radio/Location/SUPL/XS.pod
 MANIFEST
 META.json
 META.yml
+patches/asn1c/0001-fix-warning-about-non-literal-format-string.patch
+patches/asn1c/0002-fix-use-of-uninitialized-values.patch
+patches/asn1c/0003-fix-orthographic-typo-in-comment.patch
+patches/asn1c/0004-ASN.1-identifiers-are-case-sensitive-C-identifiers-t.patch
 script/supl-test
 SUPL_XS.swg
 SUPL_XS_wrap.c
